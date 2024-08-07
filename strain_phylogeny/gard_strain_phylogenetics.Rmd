@@ -1,0 +1,219 @@
+---
+title: "Phylogenetics of Gardnerella Strains"
+author: "Hanna Berman"
+date: "10/13/2022"
+output: html_document
+---
+
+  Describe the phylogenetic identities of cultured isolates.
+
+```{r, warning=FALSE}
+library(tidyverse)
+library(formattable)
+library(ape)
+library(ggtree)
+library(kableExtra)
+`%!in%` <- negate(`%in%`)
+```
+
+```{r, message=FALSE, warning=FALSE}
+figureOut <- "../experiments_figures"
+
+species <- c("Gardnerella vaginalis", "Gardnerella sp. 2", "Gardnerella sp. 3", "Gardnerella piotii", "Gardnerella leopoldii", "Gardnerella swidsinskii", "Gardnerella sp. 7", "Gardnerella sp. 8", "Gardnerella sp. 10", "Gardnerella sp. 11", "Gardnerella sp. 12")
+
+genomoNames <- tribble(~species_name, ~refGenomospecies,
+      "Gardnerella vaginalis", "GS1",
+      "Gardnerella sp. 2", "GS2",
+      "Gardnerella sp. 3", "GS3", 
+      "Gardnerella piotii", "GS4", 
+      "Gardnerella leopoldii", "GS5",
+      "Gardnerella swidsinskii", "GS6",
+      "Gardnerella sp. 7", "GS7",
+      "Gardnerella sp. 8", "GS8",
+      "Gardnerella sp. 9", "GS9",
+      "Gardnerella sp. 10", "GS10",
+      "Gardnerella sp. 11", "GS11",
+      "Gardnerella sp. 12", "GS12",
+      "Gardnerella sp. 13", "GS13",
+      "Gardnerella sp. 14", "GS14")
+```
+
+# Genomes
+
+## Isolates
+  Isolate genome files and metadata
+```{r, message=FALSE, warning=FALSE}
+strainCladesGenomos <- "./strainIDs.csv" %>%
+  read_csv
+
+# path to strain assemblies
+prokka_path <- "./prokka_annotated_genomes"
+
+newGenomes <- file.path(prokka_path, "fna") %>%
+  list.files(full.names = TRUE)
+```
+
+## Reference genomes
+  Read in reference genomes and metadata
+```{r, message=FALSE, warning=FALSE}
+# reference Gardnerella dataframe
+gardDF <- "../../metagenome_gardnerella/pregnancy_metagenome/gard_phylogeny/GardnerellaMetadata.csv" %>%
+  read_csv
+
+refCladesGenomos <- "../../metagenome_gardnerella/pregnancy_metagenome/refGardnerellaCladesGenomos.csv" %>%
+  read_csv %>%
+  dplyr::rename(refStrain=Strain,
+                refClade=Clade,
+                refGenomospecies=Genomospecies)
+
+refGardMetada <- "../../metagenome_gardnerella/pregnancy_metagenome/gard_phylogeny/GardnerellaMetadata.csv" %>%
+  read_csv %>%
+  select(Strain, GenBank_accession) %>%
+  dplyr::rename(refStrain=Strain)
+
+#List of genome files
+refGenomes <- "../../metagenome_gardnerella/gardPhylogeny/prokka_annotated_genomes/fna" %>%
+  list.files(full.names = TRUE)
+```
+
+## Genome tables
+```{r, message=FALSE, warning=FALSE}
+strainTable <- strainCladesGenomos %>%
+  select(strain, species_name, ncsu_sequence, genbank_accession) %>%
+  replace_na(list(ncsu_sequence="",
+                  genbank_accession="")) %>%
+  mutate(species_name=factor(species_name, species)) %>%
+  arrange(species_name) %>%
+  dplyr::rename(`Strain ID`=strain,
+                `Species Name`=species_name,
+                `Sequenced as Part of this Study`=ncsu_sequence,
+                `GenBank Accession`=genbank_accession) %>%
+  kbl(align=c("llcl"), caption ="Table S1. Strain Species and Genomes") %>%
+  kable_classic(full_width=TRUE, html_font = "Arial")
+
+
+strainTable
+
+#strainTable %>%
+#  save_kable(file = file.path(figureOut, paste(Sys.Date(), "TableS1_StrainSpeciesGenomes.png")), zoom=5)
+```
+
+```{r, message=FALSE, warning=FALSE}
+refTable <- refCladesGenomos %>%
+  filter(refStrain %!in% c(strainCladesGenomos$strain, "101", "5-1")) %>%
+  left_join(refGardMetada) %>%
+  left_join(genomoNames) %>%
+  select(refStrain, species_name, GenBank_accession) %>%
+  mutate(species_name=factor(species_name, levels=species)) %>%
+  arrange(species_name) %>%
+  dplyr::rename(Strain=refStrain,
+                `Species Name`=species_name,
+                `GenBank Accession`=GenBank_accession) %>%
+  kbl(caption="Table S2. Refence Gardnerella Genomes") %>%
+  kable_classic(full_width=TRUE, html_font = "Arial")
+
+refTable
+  
+#refTable %>%  
+#  save_kable(file = file.path(figureOut, paste(Sys.Date(), "TableS2_refStrainGenomes.png")), zoom=5)
+```
+
+
+# Annotation Stats
+  Genome sizes and gene counts from Prokka outputs
+```{r, message=FALSE, warning=FALSE}
+annoStats0 <- file.path(prokka_path, "txt") %>%
+  list.files(full.names = TRUE) %>%
+  map(read_tsv) %>%
+  map(~separate(.x, 1, c("cat", "count"), ": "))
+
+names(annoStats0) <- list.files(file.path(prokka_path, "txt"))
+
+annoStats <- annoStats0 %>%
+  map2(., names(.), ~mutate(.x, Strain=.y)) %>%
+  map(~spread(.x, cat, count)) %>%
+  purrr::reduce(full_join) %>%
+  mutate(Strain=str_extract(Strain, ".*(?=\\.txt)"))
+```
+
+# Genomospecies of strains not on phylogeny
+ Compute approximate ANI with Mash  Version 2.2
+  14018 genome from NCBI is inlcuded because 14019 is on our reference phylogeny. 14018 was removed for de-replication as these strains are likely the same.
+```{r, message=FALSE, warning=FALSE}
+# read in sequences for mash
+refGenomes <- "../../metagenome_gardnerella/gardPhylogeny/prokka_annotated_genomes/fna" %>%
+  list.files(full.names = TRUE)
+
+newGenomes <- file.path(prokka_path, "fna") %>%
+  list.files(full.names = TRUE)
+```
+
+```{r, warning=FALSE, message=FALSE}
+# compute alignments and keep match of smallest distance (closest refrence genome)
+getGenomospecies <- function(inputGenome){
+  genomospecies <- refGenomes %>%
+    map(~system(paste("mash dist", inputGenome,  .x), intern = TRUE)) %>%
+    map(as.data.frame) %>%
+    map(~separate(.x, 1, c("Strain", "refStrain", "distance", "p", "matching_hashes"), sep="\t")) %>%
+    map(~mutate(.x, Strain=str_extract(Strain, "(?<=fna/).*(?=\\.fna)"))) %>%
+    map(~mutate(.x, refStrain=str_extract(refStrain, "(?<=fna/).*(?=\\.fna)"))) %>%
+    purrr::reduce(full_join) %>%
+    mutate_at(vars("distance", "p"), as.numeric) %>%
+    left_join(strainCladesGenomos[,c("Strain","strainGenomospecies")], by="Strain") %>%
+    left_join(refCladesGenomos[,c("refStrain", "refGenomospecies")], by="refStrain") %>%
+    filter(distance==min(distance)) %>%
+    mutate(ANI=round((1-distance)*100, 2)) %>%
+  return(genomospecies)
+}
+
+# add assigned genomospecies of strain and reference genomes
+genomoTable <- newGenomes %>%
+  map(getGenomospecies) %>%
+  purrr::reduce(full_join)
+
+# print table
+genomoTable %>%
+  dplyr::rename("Reference Strain"=refStrain,
+                "Strain Genomospecies"=strainGenomospecies,
+                "Reference Genomospecies"=refGenomospecies,
+                "ANI (%)"=ANI) %>%
+  select(Strain, `Reference Strain`, `Strain Genomospecies`, `Reference Genomospecies`, `ANI (%)`) %>%
+  formattable()
+```
+
+
+#  Phylogeny
+```{r}
+ape::read.tree("./20221027_ml_phylogeny/RAxML_bestTree.gardTree") 
+test <- ape::read.tree("./20221027_ml_phylogeny/RAxML_bipartitionsBranchLabels.bootstrappedGardTree")
+test
+
+
+# ## load `tree_anole` and `df_svl` from 'TDbook'
+# svl <- as.matrix(df_svl)[,1]
+# fit <- phytools::fastAnc(tree_anole, svl, vars=TRUE, CI=TRUE)
+# 
+# td <- data.frame(node = nodeid(tree_anole, names(svl)),
+#                trait = svl)
+# nd <- data.frame(node = names(fit$ace), trait = fit$ace)
+# 
+# d <- rbind(td, nd)
+# d$node <- as.numeric(d$node)
+# tree <- full_join(tree_anole, d, by = 'node')
+
+strainLabels <- tibble(tip.label=test$tip.label) %>%
+  mutate(trait=tip.label %in% strainCladesGenomos$strain)
+
+test %>%
+  #full_join(strainLabels, by="tip.label") %>%
+  ape::root.phylo(node=140) %>%
+  ggtree() +
+  geom_tiplab(size=1.5) # as_ylab = TRUE)
+  #geom_treescale(fontsize=2, linesize=2, offset=1)
+  
+```
+
+
+```{r}
+sessionInfo()
+```

@@ -1,0 +1,2306 @@
+well,Row,Column,BioRep,pH,Batch,Plate,Number,Species,Strain,Protocol,BatchN,OD
+A1,A,1,A,3.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.064
+B1,B,1,A,3.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.0628
+C1,C,1,A,3.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.063
+D1,D,1,B,3.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.0644
+E1,E,1,B,3.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.0647
+F1,F,1,B,3.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.0652
+G1,G,1,Blank,3.5,1A1,0102,Blank,NA,NA,NA,NA,0.0558
+H1,H,1,A,7,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,1.0085
+A2,A,2,A,4,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.0705
+B2,B,2,A,4,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.0709
+C2,C,2,A,4,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.0704
+D2,D,2,B,4,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.0704
+E2,E,2,B,4,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.0712
+F2,F,2,B,4,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.0705
+G2,G,2,Blank,4,1A1,0102,Blank,NA,NA,NA,NA,0.0623
+H2,H,2,A,7,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.9475
+A3,A,3,A,4.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.1193
+B3,B,3,A,4.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.1472
+C3,C,3,A,4.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.1444
+D3,D,3,B,4.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.1232
+E3,E,3,B,4.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.1183
+F3,F,3,B,4.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.1274
+G3,G,3,Blank,4.5,1A1,0102,Blank,NA,NA,NA,NA,0.0971
+H3,H,3,A,7,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.9531
+A4,A,4,A,5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.2729
+B4,B,4,A,5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.2683
+C4,C,4,A,5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.264
+D4,D,4,B,5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.2649
+E4,E,4,B,5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.2778
+F4,F,4,B,5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.2827
+G4,G,4,Blank,5,1A1,0102,Blank,NA,NA,NA,NA,0.0731
+H4,H,4,B,7,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,1.032
+A5,A,5,A,5.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.3141
+B5,B,5,A,5.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.3021
+C5,C,5,A,5.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.328
+D5,D,5,B,5.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.3331
+E5,E,5,B,5.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.3398
+F5,F,5,B,5.5,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.3478
+G5,G,5,Blank,5.5,1A1,0102,Blank,NA,NA,NA,NA,0.0522
+H5,H,5,B,7,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,1.0294
+A6,A,6,A,6,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.3426
+B6,B,6,A,6,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.3782
+C6,C,6,A,6,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.3964
+D6,D,6,B,6,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.4067
+E6,E,6,B,6,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.4051
+F6,F,6,B,6,1A1,0102,1,Gardnerella vaginalis,C0011E4,1,1,0.3832
+G6,G,6,Blank,6,1A1,0102,Blank,NA,NA,NA,NA,0.0506
+H6,H,6,Blank,7,1A1,0102,Blank,NA,NA,NA,NA,0.0542
+A7,A,7,A,3.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0589
+B7,B,7,A,3.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0588
+C7,C,7,A,3.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0783
+D7,D,7,B,3.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0645
+E7,E,7,B,3.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0641
+F7,F,7,B,3.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0678
+G7,G,7,Blank,3.5,1A1,0102,Blank,NA,NA,NA,NA,0.0574
+H7,H,7,A,7,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.5825
+A8,A,8,A,4,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0658
+B8,B,8,A,4,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0656
+C8,C,8,A,4,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0826
+D8,D,8,B,4,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0672
+E8,E,8,B,4,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.1133
+F8,F,8,B,4,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0755
+G8,G,8,Blank,4,1A1,0102,Blank,NA,NA,NA,NA,0.0642
+H8,H,8,A,7,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.5944
+A9,A,9,A,4.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0941
+B9,B,9,A,4.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0976
+C9,C,9,A,4.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.1013
+D9,D,9,B,4.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0974
+E9,E,9,B,4.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.1142
+F9,F,9,B,4.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0999
+G9,G,9,Blank,4.5,1A1,0102,Blank,NA,NA,NA,NA,0.0998
+H9,H,9,A,7,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.6083
+A10,A,10,A,5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0745
+B10,B,10,A,5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0773
+C10,C,10,A,5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0752
+D10,D,10,B,5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.075
+E10,E,10,B,5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0733
+F10,F,10,B,5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.0819
+G10,G,10,Blank,5,1A1,0102,Blank,NA,NA,NA,NA,0.0739
+H10,H,10,B,7,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.6104
+A11,A,11,A,5.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.1741
+B11,B,11,A,5.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.1917
+C11,C,11,A,5.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.1715
+D11,D,11,B,5.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.1806
+E11,E,11,B,5.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.1645
+F11,F,11,B,5.5,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.1466
+G11,G,11,Blank,5.5,1A1,0102,Blank,NA,NA,NA,NA,0.0527
+H11,H,11,B,7,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.5882
+A12,A,12,A,6,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.2933
+B12,B,12,A,6,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.3253
+C12,C,12,A,6,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.34
+D12,D,12,B,6,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.3376
+E12,E,12,B,6,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.3609
+F12,F,12,B,6,1A1,0102,2,Gardnerella sp. 3,C0040C2,1,1,0.3093
+G12,G,12,Blank,6,1A1,0102,Blank,NA,NA,NA,NA,0.0505
+H12,H,12,Blank,7,1A1,0102,Blank,NA,NA,NA,NA,0.0537
+A1,A,1,A,3.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0622
+B1,B,1,A,3.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.061
+C1,C,1,A,3.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0607
+D1,D,1,B,3.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0603
+E1,E,1,B,3.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0601
+F1,F,1,B,3.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0614
+G1,G,1,Blank,3.5,1A1,0304,Blank,NA,NA,NA,NA,0.0556
+H1,H,1,A,7,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.7295
+A2,A,2,A,4,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0686
+B2,B,2,A,4,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0707
+C2,C,2,A,4,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0683
+D2,D,2,B,4,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0683
+E2,E,2,B,4,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0685
+F2,F,2,B,4,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0685
+G2,G,2,Blank,4,1A1,0304,Blank,NA,NA,NA,NA,0.0642
+H2,H,2,A,7,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.7488
+A3,A,3,A,4.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0986
+B3,B,3,A,4.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1097
+C3,C,3,A,4.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1092
+D3,D,3,B,4.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1022
+E3,E,3,B,4.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.099
+F3,F,3,B,4.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1035
+G3,G,3,Blank,4.5,1A1,0304,Blank,NA,NA,NA,NA,0.0946
+H3,H,3,A,7,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.7819
+A4,A,4,A,5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0861
+B4,B,4,A,5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1127
+C4,C,4,A,5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1051
+D4,D,4,B,5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0924
+E4,E,4,B,5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0918
+F4,F,4,B,5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1015
+G4,G,4,Blank,5,1A1,0304,Blank,NA,NA,NA,NA,0.0699
+H4,H,4,B,7,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.722
+A5,A,5,A,5.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1084
+B5,B,5,A,5.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1265
+C5,C,5,A,5.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1087
+D5,D,5,B,5.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1121
+E5,E,5,B,5.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1013
+F5,F,5,B,5.5,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.0993
+G5,G,5,Blank,5.5,1A1,0304,Blank,NA,NA,NA,NA,0.0509
+H5,H,5,B,7,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.8004
+A6,A,6,A,6,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1522
+B6,B,6,A,6,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1528
+C6,C,6,A,6,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1654
+D6,D,6,B,6,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1646
+E6,E,6,B,6,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1883
+F6,F,6,B,6,1A1,0304,3,Gardnerella vaginalis,14018,1,1,0.1588
+G6,G,6,Blank,6,1A1,0304,Blank,NA,NA,NA,NA,0.0499
+H6,H,6,Blank,7,1A1,0304,Blank,NA,NA,NA,NA,0.0541
+A7,A,7,A,3.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0619
+B7,B,7,A,3.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0692
+C7,C,7,A,3.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0581
+D7,D,7,B,3.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0643
+E7,E,7,B,3.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0657
+F7,F,7,B,3.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0894
+G7,G,7,Blank,3.5,1A1,0304,Blank,NA,NA,NA,NA,0.0559
+H7,H,7,A,7,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.2788
+A8,A,8,A,4,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0813
+B8,B,8,A,4,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.07
+C8,C,8,A,4,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.084
+D8,D,8,B,4,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0803
+E8,E,8,B,4,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0832
+F8,F,8,B,4,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0793
+G8,G,8,Blank,4,1A1,0304,Blank,NA,NA,NA,NA,0.0629
+H8,H,8,A,7,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.3316
+A9,A,9,A,4.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.1069
+B9,B,9,A,4.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.1004
+C9,C,9,A,4.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0991
+D9,D,9,B,4.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.1129
+E9,E,9,B,4.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.1036
+F9,F,9,B,4.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.1032
+G9,G,9,Blank,4.5,1A1,0304,Blank,NA,NA,NA,NA,0.0985
+H9,H,9,A,7,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.4655
+A10,A,10,A,5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.1542
+B10,B,10,A,5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0819
+C10,C,10,A,5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0891
+D10,D,10,B,5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.1133
+E10,E,10,B,5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0994
+F10,F,10,B,5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.0936
+G10,G,10,Blank,5,1A1,0304,Blank,NA,NA,NA,NA,0.0698
+H10,H,10,B,7,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.4412
+A11,A,11,A,5.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.6166
+B11,B,11,A,5.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.3491
+C11,C,11,A,5.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.3248
+D11,D,11,B,5.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.2524
+E11,E,11,B,5.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.4554
+F11,F,11,B,5.5,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.3028
+G11,G,11,Blank,5.5,1A1,0304,Blank,NA,NA,NA,NA,0.0514
+H11,H,11,B,7,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.3714
+A12,A,12,A,6,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.564
+B12,B,12,A,6,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.655
+C12,C,12,A,6,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.3727
+D12,D,12,B,6,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.3242
+E12,E,12,B,6,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.3561
+F12,F,12,B,6,1A1,0304,4,Gardnerella sp. 8,C0056B5,1,1,0.3244
+G12,G,12,Blank,6,1A1,0304,Blank,NA,NA,NA,NA,0.0509
+H12,H,12,Blank,7,1A1,0304,Blank,NA,NA,NA,NA,0.0542
+A1,A,1,A,3.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.0675
+B1,B,1,A,3.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.0666
+C1,C,1,A,3.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.0666
+D1,D,1,B,3.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.0653
+E1,E,1,B,3.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.0657
+F1,F,1,B,3.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.0671
+G1,G,1,Blank,3.5,1A1,0506,Blank,NA,NA,NA,NA,0.0553
+H1,H,1,A,7,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.6959
+A2,A,2,A,4,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.0684
+B2,B,2,A,4,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.0685
+C2,C,2,A,4,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.0691
+D2,D,2,B,4,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.0685
+E2,E,2,B,4,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.0693
+F2,F,2,B,4,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.0687
+G2,G,2,Blank,4,1A1,0506,Blank,NA,NA,NA,NA,0.0622
+H2,H,2,A,7,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.7193
+A3,A,3,A,4.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1055
+B3,B,3,A,4.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1542
+C3,C,3,A,4.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1244
+D3,D,3,B,4.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1081
+E3,E,3,B,4.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1057
+F3,F,3,B,4.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.10780000000000001
+G3,G,3,Blank,4.5,1A1,0506,Blank,NA,NA,NA,NA,0.0953
+H3,H,3,A,7,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.736
+A4,A,4,A,5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.0957
+B4,B,4,A,5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1472
+C4,C,4,A,5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1079
+D4,D,4,B,5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1076
+E4,E,4,B,5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1062
+F4,F,4,B,5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1155
+G4,G,4,Blank,5,1A1,0506,Blank,NA,NA,NA,NA,0.0713
+H4,H,4,B,7,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.7508
+A5,A,5,A,5.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.0896
+B5,B,5,A,5.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1438
+C5,C,5,A,5.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.133
+D5,D,5,B,5.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1318
+E5,E,5,B,5.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1145
+F5,F,5,B,5.5,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1348
+G5,G,5,Blank,5.5,1A1,0506,Blank,NA,NA,NA,NA,0.0509
+H5,H,5,B,7,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.7892
+A6,A,6,A,6,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1265
+B6,B,6,A,6,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1616
+C6,C,6,A,6,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.193
+D6,D,6,B,6,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.2103
+E6,E,6,B,6,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.1979
+F6,F,6,B,6,1A1,0506,5,Gardnerella swidsinskii,Gv5-1,1,1,0.2008
+G6,G,6,Blank,6,1A1,0506,Blank,NA,NA,NA,NA,0.0501
+H6,H,6,Blank,7,1A1,0506,Blank,NA,NA,NA,NA,0.0545
+A7,A,7,A,3.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.062
+B7,B,7,A,3.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.0648
+C7,C,7,A,3.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.0715
+D7,D,7,B,3.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.0706
+E7,E,7,B,3.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.0711
+F7,F,7,B,3.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.0687
+G7,G,7,Blank,3.5,1A1,0506,Blank,NA,NA,NA,NA,0.0561
+H7,H,7,A,7,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.7577
+A8,A,8,A,4,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.07
+B8,B,8,A,4,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.0831
+C8,C,8,A,4,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.0864
+D8,D,8,B,4,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.0991
+E8,E,8,B,4,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.0908
+F8,F,8,B,4,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.0862
+G8,G,8,Blank,4,1A1,0506,Blank,NA,NA,NA,NA,0.0628
+H8,H,8,A,7,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.769
+A9,A,9,A,4.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.1053
+B9,B,9,A,4.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.1413
+C9,C,9,A,4.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.1335
+D9,D,9,B,4.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.1696
+E9,E,9,B,4.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.1617
+F9,F,9,B,4.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.1506
+G9,G,9,Blank,4.5,1A1,0506,Blank,NA,NA,NA,NA,0.0968
+H9,H,9,A,7,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.7452
+A10,A,10,A,5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.1433
+B10,B,10,A,5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.223
+C10,C,10,A,5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.186
+D10,D,10,B,5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.2113
+E10,E,10,B,5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.2242
+F10,F,10,B,5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.1581
+G10,G,10,Blank,5,1A1,0506,Blank,NA,NA,NA,NA,0.071
+H10,H,10,B,7,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.847
+A11,A,11,A,5.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.2064
+B11,B,11,A,5.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.2199
+C11,C,11,A,5.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.2294
+D11,D,11,B,5.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.303
+E11,E,11,B,5.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.2906
+F11,F,11,B,5.5,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.238
+G11,G,11,Blank,5.5,1A1,0506,Blank,NA,NA,NA,NA,0.0513
+H11,H,11,B,7,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.92490000000000006
+A12,A,12,A,6,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.2642
+B12,B,12,A,6,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.3022
+C12,C,12,A,6,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.2512
+D12,D,12,B,6,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.4107
+E12,E,12,B,6,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.4175
+F12,F,12,B,6,1A1,0506,6,Gardnerella vaginalis,315-A,1,1,0.4062
+G12,G,12,Blank,6,1A1,0506,Blank,NA,NA,NA,NA,0.051
+H12,H,12,Blank,7,1A1,0506,Blank,NA,NA,NA,NA,0.0544
+A1,A,1,A,3.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0599
+B1,B,1,A,3.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0598
+C1,C,1,A,3.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0608
+D1,D,1,B,3.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0599
+E1,E,1,B,3.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0611
+F1,F,1,B,3.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0617
+G1,G,1,Blank,3.5,1A1,0708,Blank,NA,NA,NA,NA,0.0565
+H1,H,1,A,7,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.613
+A2,A,2,A,4,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0694
+B2,B,2,A,4,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0705
+C2,C,2,A,4,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0704
+D2,D,2,B,4,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0674
+E2,E,2,B,4,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0671
+F2,F,2,B,4,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0678
+G2,G,2,Blank,4,1A1,0708,Blank,NA,NA,NA,NA,0.0628
+H2,H,2,A,7,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.7017
+A3,A,3,A,4.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.1097
+B3,B,3,A,4.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.1191
+C3,C,3,A,4.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.1131
+D3,D,3,B,4.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.1116
+E3,E,3,B,4.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.1147
+F3,F,3,B,4.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.116
+G3,G,3,Blank,4.5,1A1,0708,Blank,NA,NA,NA,NA,0.0976
+H3,H,3,A,7,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.7029
+A4,A,4,A,5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0911
+B4,B,4,A,5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0947
+C4,C,4,A,5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0959
+D4,D,4,B,5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.106
+E4,E,4,B,5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.1026
+F4,F,4,B,5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.1025
+G4,G,4,Blank,5,1A1,0708,Blank,NA,NA,NA,NA,0.0708
+H4,H,4,B,7,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.7448
+A5,A,5,A,5.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0875
+B5,B,5,A,5.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.0899
+C5,C,5,A,5.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.1262
+D5,D,5,B,5.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.1175
+E5,E,5,B,5.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.1196
+F5,F,5,B,5.5,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.1107
+G5,G,5,Blank,5.5,1A1,0708,Blank,NA,NA,NA,NA,0.0511
+H5,H,5,B,7,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.768
+A6,A,6,A,6,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.162
+B6,B,6,A,6,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.129
+C6,C,6,A,6,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.1922
+D6,D,6,B,6,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.2265
+E6,E,6,B,6,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.3198
+F6,F,6,B,6,1A1,0708,7,Gardnerella piotii,JCP8066,1,1,0.248
+G6,G,6,Blank,6,1A1,0708,Blank,NA,NA,NA,NA,0.0503
+H6,H,6,Blank,7,1A1,0708,Blank,NA,NA,NA,NA,0.0557
+A7,A,7,A,3.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.0615
+B7,B,7,A,3.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.0633
+C7,C,7,A,3.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.0628
+D7,D,7,B,3.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.0654
+E7,E,7,B,3.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.0658
+F7,F,7,B,3.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.0638
+G7,G,7,Blank,3.5,1A1,0708,Blank,NA,NA,NA,NA,0.0561
+H7,H,7,A,7,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.0513
+A8,A,8,A,4,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.0687
+B8,B,8,A,4,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.071
+C8,C,8,A,4,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.0716
+D8,D,8,B,4,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.0734
+E8,E,8,B,4,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.0765
+F8,F,8,B,4,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.0824
+G8,G,8,Blank,4,1A1,0708,Blank,NA,NA,NA,NA,0.0655
+H8,H,8,A,7,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.0514
+A9,A,9,A,4.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1145
+B9,B,9,A,4.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1359
+C9,C,9,A,4.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1199
+D9,D,9,B,4.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1276
+E9,E,9,B,4.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.132
+F9,F,9,B,4.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1382
+G9,G,9,Blank,4.5,1A1,0708,Blank,NA,NA,NA,NA,0.1008
+H9,H,9,A,7,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.0558
+A10,A,10,A,5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1053
+B10,B,10,A,5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1359
+C10,C,10,A,5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1093
+D10,D,10,B,5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1239
+E10,E,10,B,5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1077
+F10,F,10,B,5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1169
+G10,G,10,Blank,5,1A1,0708,Blank,NA,NA,NA,NA,0.0701
+H10,H,10,B,7,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.7197
+A11,A,11,A,5.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1627
+B11,B,11,A,5.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1656
+C11,C,11,A,5.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1544
+D11,D,11,B,5.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1551
+E11,E,11,B,5.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1414
+F11,F,11,B,5.5,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.1485
+G11,G,11,Blank,5.5,1A1,0708,Blank,NA,NA,NA,NA,0.0525
+H11,H,11,B,7,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.7398
+A12,A,12,A,6,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.2638
+B12,B,12,A,6,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.2593
+C12,C,12,A,6,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.2957
+D12,D,12,B,6,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.2474
+E12,E,12,B,6,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.2678
+F12,F,12,B,6,1A1,0708,8,Gardnerella sp. 8,Gv101,1,1,0.2493
+G12,G,12,Blank,6,1A1,0708,Blank,NA,NA,NA,NA,0.0497
+H12,H,12,Blank,7,1A1,0708,Blank,NA,NA,NA,NA,0.0552
+A1,A,1,A,3.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.07
+B1,B,1,A,3.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.07
+C1,C,1,A,3.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.07
+D1,D,1,B,3.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.075
+E1,E,1,B,3.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.076
+F1,F,1,B,3.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.078
+G1,G,1,Blank,3.5,1A2,0102,Blank,NA,NA,NA,NA,0.065
+H1,H,1,A,7,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.717
+A2,A,2,A,4,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.1
+B2,B,2,A,4,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.103
+C2,C,2,A,4,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.117
+D2,D,2,B,4,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.111
+E2,E,2,B,4,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.11
+F2,F,2,B,4,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.108
+G2,G,2,Blank,4,1A2,0102,Blank,NA,NA,NA,NA,0.094
+H2,H,2,A,7,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,1.047
+A3,A,3,A,4.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.154
+B3,B,3,A,4.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.171
+C3,C,3,A,4.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.17
+D3,D,3,B,4.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.159
+E3,E,3,B,4.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.156
+F3,F,3,B,4.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.162
+G3,G,3,Blank,4.5,1A2,0102,Blank,NA,NA,NA,NA,0.115
+H3,H,3,A,7,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,1.073
+A4,A,4,A,5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.305
+B4,B,4,A,5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.343
+C4,C,4,A,5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.328
+D4,D,4,B,5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.233
+E4,E,4,B,5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.272
+F4,F,4,B,5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.23
+G4,G,4,Blank,5,1A2,0102,Blank,NA,NA,NA,NA,0.086
+H4,H,4,B,7,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.525
+A5,A,5,A,5.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.453
+B5,B,5,A,5.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.538
+C5,C,5,A,5.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.554
+D5,D,5,B,5.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.24
+E5,E,5,B,5.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.255
+F5,F,5,B,5.5,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.27
+G5,G,5,Blank,5.5,1A2,0102,Blank,NA,NA,NA,NA,0.059
+H5,H,5,B,7,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.562
+A6,A,6,A,6,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.465
+B6,B,6,A,6,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.596
+C6,C,6,A,6,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.617
+D6,D,6,B,6,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.264
+E6,E,6,B,6,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.283
+F6,F,6,B,6,1A2,0102,1,Gardnerella vaginalis,C0011E4,1,2,0.278
+G6,G,6,Blank,6,1A2,0102,Blank,NA,NA,NA,NA,0.077
+H6,H,6,Blank,7,1A2,0102,Blank,NA,NA,NA,NA,0.057
+A7,A,7,A,3.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.075
+B7,B,7,A,3.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.081
+C7,C,7,A,3.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.079
+D7,D,7,B,3.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.075
+E7,E,7,B,3.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.074
+F7,F,7,B,3.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.076
+G7,G,7,Blank,3.5,1A2,0102,Blank,NA,NA,NA,NA,0.07
+H7,H,7,A,7,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.534
+A8,A,8,A,4,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.088
+B8,B,8,A,4,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.099
+C8,C,8,A,4,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.097
+D8,D,8,B,4,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.113
+E8,E,8,B,4,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.106
+F8,F,8,B,4,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.105
+G8,G,8,Blank,4,1A2,0102,Blank,NA,NA,NA,NA,0.097
+H8,H,8,A,7,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.567
+A9,A,9,A,4.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.093
+B9,B,9,A,4.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.11
+C9,C,9,A,4.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.116
+D9,D,9,B,4.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.1
+E9,E,9,B,4.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.117
+F9,F,9,B,4.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.118
+G9,G,9,Blank,4.5,1A2,0102,Blank,NA,NA,NA,NA,0.115
+H9,H,9,A,7,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.547
+A10,A,10,A,5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.095
+B10,B,10,A,5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.093
+C10,C,10,A,5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.093
+D10,D,10,B,5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.084
+E10,E,10,B,5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.081
+F10,F,10,B,5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.085
+G10,G,10,Blank,5,1A2,0102,Blank,NA,NA,NA,NA,0.083
+H10,H,10,B,7,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.547
+A11,A,11,A,5.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.288
+B11,B,11,A,5.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.235
+C11,C,11,A,5.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.226
+D11,D,11,B,5.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.218
+E11,E,11,B,5.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.19
+F11,F,11,B,5.5,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.195
+G11,G,11,Blank,5.5,1A2,0102,Blank,NA,NA,NA,NA,0.06
+H11,H,11,B,7,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.414
+A12,A,12,A,6,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.309
+B12,B,12,A,6,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.37
+C12,C,12,A,6,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.383
+D12,D,12,B,6,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.375
+E12,E,12,B,6,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.349
+F12,F,12,B,6,1A2,0102,2,Gardnerella sp. 3,C0040C2,1,2,0.339
+G12,G,12,Blank,6,1A2,0102,Blank,NA,NA,NA,NA,0.067
+H12,H,12,Blank,7,1A2,0102,Blank,NA,NA,NA,NA,0.054
+A1,A,1,A,3.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.075
+B1,B,1,A,3.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.075
+C1,C,1,A,3.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.074
+D1,D,1,B,3.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.071
+E1,E,1,B,3.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.072
+F1,F,1,B,3.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.075
+G1,G,1,Blank,3.5,1A2,0304,Blank,NA,NA,NA,NA,0.067
+H1,H,1,A,7,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.588
+A2,A,2,A,4,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.099
+B2,B,2,A,4,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.105
+C2,C,2,A,4,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.106
+D2,D,2,B,4,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.102
+E2,E,2,B,4,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.1
+F2,F,2,B,4,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.104
+G2,G,2,Blank,4,1A2,0304,Blank,NA,NA,NA,NA,0.095
+H2,H,2,A,7,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.82
+A3,A,3,A,4.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.132
+B3,B,3,A,4.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.149
+C3,C,3,A,4.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.14
+D3,D,3,B,4.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.138
+E3,E,3,B,4.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.128
+F3,F,3,B,4.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.137
+G3,G,3,Blank,4.5,1A2,0304,Blank,NA,NA,NA,NA,0.121
+H3,H,3,A,7,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.881
+A4,A,4,A,5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.162
+B4,B,4,A,5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.178
+C4,C,4,A,5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.17
+D4,D,4,B,5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.137
+E4,E,4,B,5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.139
+F4,F,4,B,5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.16
+G4,G,4,Blank,5,1A2,0304,Blank,NA,NA,NA,NA,0.085
+H4,H,4,B,7,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.831
+A5,A,5,A,5.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.282
+B5,B,5,A,5.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.284
+C5,C,5,A,5.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.263
+D5,D,5,B,5.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.246
+E5,E,5,B,5.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.263
+F5,F,5,B,5.5,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.262
+G5,G,5,Blank,5.5,1A2,0304,Blank,NA,NA,NA,NA,0.079
+H5,H,5,B,7,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.887
+A6,A,6,A,6,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.328
+B6,B,6,A,6,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.394
+C6,C,6,A,6,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.348
+D6,D,6,B,6,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.384
+E6,E,6,B,6,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.381
+F6,F,6,B,6,1A2,0304,3,Gardnerella vaginalis,14018,1,2,0.39
+G6,G,6,Blank,6,1A2,0304,Blank,NA,NA,NA,NA,0.148
+H6,H,6,Blank,7,1A2,0304,Blank,NA,NA,NA,NA,0.056
+A7,A,7,A,3.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.075
+B7,B,7,A,3.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.074
+C7,C,7,A,3.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.072
+D7,D,7,B,3.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.075
+E7,E,7,B,3.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.077
+F7,F,7,B,3.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.079
+G7,G,7,Blank,3.5,1A2,0304,Blank,NA,NA,NA,NA,0.07
+H7,H,7,A,7,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.185
+A8,A,8,A,4,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.095
+B8,B,8,A,4,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.097
+C8,C,8,A,4,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.099
+D8,D,8,B,4,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.105
+E8,E,8,B,4,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.104
+F8,F,8,B,4,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.107
+G8,G,8,Blank,4,1A2,0304,Blank,NA,NA,NA,NA,0.098
+H8,H,8,A,7,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.2
+A9,A,9,A,4.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.1
+B9,B,9,A,4.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.111
+C9,C,9,A,4.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.111
+D9,D,9,B,4.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.109
+E9,E,9,B,4.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.109
+F9,F,9,B,4.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.112
+G9,G,9,Blank,4.5,1A2,0304,Blank,NA,NA,NA,NA,0.114
+H9,H,9,A,7,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.162
+A10,A,10,A,5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.087
+B10,B,10,A,5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.094
+C10,C,10,A,5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.084
+D10,D,10,B,5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.085
+E10,E,10,B,5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.084
+F10,F,10,B,5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.084
+G10,G,10,Blank,5,1A2,0304,Blank,NA,NA,NA,NA,0.081
+H10,H,10,B,7,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.221
+A11,A,11,A,5.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.169
+B11,B,11,A,5.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.233
+C11,C,11,A,5.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.187
+D11,D,11,B,5.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.19
+E11,E,11,B,5.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.116
+F11,F,11,B,5.5,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.155
+G11,G,11,Blank,5.5,1A2,0304,Blank,NA,NA,NA,NA,0.055
+H11,H,11,B,7,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.247
+A12,A,12,A,6,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.1
+B12,B,12,A,6,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.272
+C12,C,12,A,6,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.269
+D12,D,12,B,6,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.289
+E12,E,12,B,6,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.3
+F12,F,12,B,6,1A2,0304,4,Gardnerella sp. 8,C0056B5,1,2,0.355
+G12,G,12,Blank,6,1A2,0304,Blank,NA,NA,NA,NA,0.07
+H12,H,12,Blank,7,1A2,0304,Blank,NA,NA,NA,NA,0.054
+A1,A,1,A,3.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.061
+B1,B,1,A,3.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.062
+C1,C,1,A,3.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.062
+D1,D,1,B,3.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.068
+E1,E,1,B,3.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.067
+F1,F,1,B,3.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.068
+G1,G,1,Blank,3.5,1A2,0506,Blank,NA,NA,NA,NA,0.063
+H1,H,1,A,7,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.054
+A2,A,2,A,4,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.087
+B2,B,2,A,4,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.093
+C2,C,2,A,4,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.093
+D2,D,2,B,4,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.097
+E2,E,2,B,4,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.096
+F2,F,2,B,4,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.096
+G2,G,2,Blank,4,1A2,0506,Blank,NA,NA,NA,NA,0.092
+H2,H,2,A,7,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.058
+A3,A,3,A,4.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.108
+B3,B,3,A,4.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.126
+C3,C,3,A,4.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.124
+D3,D,3,B,4.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.158
+E3,E,3,B,4.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.15
+F3,F,3,B,4.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.15
+G3,G,3,Blank,4.5,1A2,0506,Blank,NA,NA,NA,NA,0.122
+H3,H,3,A,7,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.057
+A4,A,4,A,5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.085
+B4,B,4,A,5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.09
+C4,C,4,A,5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.092
+D4,D,4,B,5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.138
+E4,E,4,B,5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.128
+F4,F,4,B,5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.132
+G4,G,4,Blank,5,1A2,0506,Blank,NA,NA,NA,NA,0.09
+H4,H,4,B,7,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.801
+A5,A,5,A,5.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.058
+B5,B,5,A,5.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.056
+C5,C,5,A,5.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.057
+D5,D,5,B,5.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.292
+E5,E,5,B,5.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.312
+F5,F,5,B,5.5,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.312
+G5,G,5,Blank,5.5,1A2,0506,Blank,NA,NA,NA,NA,0.062
+H5,H,5,B,7,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.825
+A6,A,6,A,6,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.101
+B6,B,6,A,6,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.107
+C6,C,6,A,6,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.104
+D6,D,6,B,6,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.466
+E6,E,6,B,6,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.497
+F6,F,6,B,6,1A2,0506,5,Gardnerella swidsinskii,Gv5-1,1,2,0.494
+G6,G,6,Blank,6,1A2,0506,Blank,NA,NA,NA,NA,0.103
+H6,H,6,Blank,7,1A2,0506,Blank,NA,NA,NA,NA,0.056
+A7,A,7,A,3.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.085
+B7,B,7,A,3.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.084
+C7,C,7,A,3.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.084
+D7,D,7,B,3.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.084
+E7,E,7,B,3.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.084
+F7,F,7,B,3.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.087
+G7,G,7,Blank,3.5,1A2,0506,Blank,NA,NA,NA,NA,0.073
+H7,H,7,A,7,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.7
+A8,A,8,A,4,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.104
+B8,B,8,A,4,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.108
+C8,C,8,A,4,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.108
+D8,D,8,B,4,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.107
+E8,E,8,B,4,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.107
+F8,F,8,B,4,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.112
+G8,G,8,Blank,4,1A2,0506,Blank,NA,NA,NA,NA,0.103
+H8,H,8,A,7,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.677
+A9,A,9,A,4.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.16
+B9,B,9,A,4.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.16
+C9,C,9,A,4.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.17
+D9,D,9,B,4.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.145
+E9,E,9,B,4.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.147
+F9,F,9,B,4.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.161
+G9,G,9,Blank,4.5,1A2,0506,Blank,NA,NA,NA,NA,0.113
+H9,H,9,A,7,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.668
+A10,A,10,A,5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.24
+B10,B,10,A,5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.219
+C10,C,10,A,5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.213
+D10,D,10,B,5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.171
+E10,E,10,B,5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.223
+F10,F,10,B,5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.219
+G10,G,10,Blank,5,1A2,0506,Blank,NA,NA,NA,NA,0.082
+H10,H,10,B,7,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.486
+A11,A,11,A,5.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.366
+B11,B,11,A,5.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.358
+C11,C,11,A,5.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.36
+D11,D,11,B,5.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.309
+E11,E,11,B,5.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.269
+F11,F,11,B,5.5,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.239
+G11,G,11,Blank,5.5,1A2,0506,Blank,NA,NA,NA,NA,0.053
+H11,H,11,B,7,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.463
+A12,A,12,A,6,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.397
+B12,B,12,A,6,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.36
+C12,C,12,A,6,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.343
+D12,D,12,B,6,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.307
+E12,E,12,B,6,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.302
+F12,F,12,B,6,1A2,0506,6,Gardnerella vaginalis,315-A,1,2,0.303
+G12,G,12,Blank,6,1A2,0506,Blank,NA,NA,NA,NA,0.072
+H12,H,12,Blank,7,1A2,0506,Blank,NA,NA,NA,NA,0.052
+A1,A,1,A,3.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.077
+B1,B,1,A,3.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.079
+C1,C,1,A,3.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.081
+D1,D,1,B,3.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.079
+E1,E,1,B,3.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.079
+F1,F,1,B,3.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.09
+G1,G,1,Blank,3.5,1A2,0708,Blank,NA,NA,NA,NA,0.072
+H1,H,1,A,7,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.64
+A2,A,2,A,4,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.108
+B2,B,2,A,4,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.134
+C2,C,2,A,4,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.132
+D2,D,2,B,4,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.133
+E2,E,2,B,4,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.125
+F2,F,2,B,4,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.133
+G2,G,2,Blank,4,1A2,0708,Blank,NA,NA,NA,NA,0.117
+H2,H,2,A,7,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.741
+A3,A,3,A,4.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.151
+B3,B,3,A,4.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.188
+C3,C,3,A,4.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.171
+D3,D,3,B,4.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.185
+E3,E,3,B,4.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.178
+F3,F,3,B,4.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.167
+G3,G,3,Blank,4.5,1A2,0708,Blank,NA,NA,NA,NA,0.138
+H3,H,3,A,7,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.766
+A4,A,4,A,5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.131
+B4,B,4,A,5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.144
+C4,C,4,A,5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.155
+D4,D,4,B,5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.161
+E4,E,4,B,5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.14
+F4,F,4,B,5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.142
+G4,G,4,Blank,5,1A2,0708,Blank,NA,NA,NA,NA,0.11
+H4,H,4,B,7,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.734
+A5,A,5,A,5.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.164
+B5,B,5,A,5.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.193
+C5,C,5,A,5.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.204
+D5,D,5,B,5.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.187
+E5,E,5,B,5.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.174
+F5,F,5,B,5.5,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.178
+G5,G,5,Blank,5.5,1A2,0708,Blank,NA,NA,NA,NA,0.07
+H5,H,5,B,7,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.758
+A6,A,6,A,6,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.299
+B6,B,6,A,6,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.359
+C6,C,6,A,6,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.38
+D6,D,6,B,6,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.367
+E6,E,6,B,6,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.375
+F6,F,6,B,6,1A2,0708,7,Gardnerella piotii,JCP8066,1,2,0.371
+G6,G,6,Blank,6,1A2,0708,Blank,NA,NA,NA,NA,0.126
+H6,H,6,Blank,7,1A2,0708,Blank,NA,NA,NA,NA,0.074
+A7,A,7,A,3.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.079
+B7,B,7,A,3.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.086
+C7,C,7,A,3.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.096
+D7,D,7,B,3.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.096
+E7,E,7,B,3.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.098
+F7,F,7,B,3.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.096
+G7,G,7,Blank,3.5,1A2,0708,Blank,NA,NA,NA,NA,0.082
+H7,H,7,A,7,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.786
+A8,A,8,A,4,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.097
+B8,B,8,A,4,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.111
+C8,C,8,A,4,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.118
+D8,D,8,B,4,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.118
+E8,E,8,B,4,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.122
+F8,F,8,B,4,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.12
+G8,G,8,Blank,4,1A2,0708,Blank,NA,NA,NA,NA,0.117
+H8,H,8,A,7,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.762
+A9,A,9,A,4.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.126
+B9,B,9,A,4.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.154
+C9,C,9,A,4.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.145
+D9,D,9,B,4.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.145
+E9,E,9,B,4.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.142
+F9,F,9,B,4.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.143
+G9,G,9,Blank,4.5,1A2,0708,Blank,NA,NA,NA,NA,0.127
+H9,H,9,A,7,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.743
+A10,A,10,A,5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.14
+B10,B,10,A,5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.182
+C10,C,10,A,5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.201
+D10,D,10,B,5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.175
+E10,E,10,B,5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.166
+F10,F,10,B,5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.185
+G10,G,10,Blank,5,1A2,0708,Blank,NA,NA,NA,NA,0.099
+H10,H,10,B,7,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.733
+A11,A,11,A,5.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.326
+B11,B,11,A,5.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.371
+C11,C,11,A,5.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.378
+D11,D,11,B,5.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.358
+E11,E,11,B,5.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.365
+F11,F,11,B,5.5,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.391
+G11,G,11,Blank,5.5,1A2,0708,Blank,NA,NA,NA,NA,0.061
+H11,H,11,B,7,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.682
+A12,A,12,A,6,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.325
+B12,B,12,A,6,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.34
+C12,C,12,A,6,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.315
+D12,D,12,B,6,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.309
+E12,E,12,B,6,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.293
+F12,F,12,B,6,1A2,0708,8,Gardnerella sp. 8,Gv101,1,2,0.297
+G12,G,12,Blank,6,1A2,0708,Blank,NA,NA,NA,NA,0.06
+H12,H,12,Blank,7,1A2,0708,Blank,NA,NA,NA,NA,0.059
+A1,A,1,A,3.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.066
+B1,B,1,A,3.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.062
+C1,C,1,A,3.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.064
+D1,D,1,B,3.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.06
+E1,E,1,B,3.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.061
+F1,F,1,B,3.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.061
+G1,G,1,Blank,3.5,3A1,0102,Blank,NA,NA,NA,NA,0.058
+H1,H,1,A,7,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.712
+A2,A,2,A,4,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.077
+B2,B,2,A,4,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.086
+C2,C,2,A,4,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.088
+D2,D,2,B,4,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.083
+E2,E,2,B,4,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.081
+F2,F,2,B,4,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.079
+G2,G,2,Blank,4,3A1,0102,Blank,NA,NA,NA,NA,0.071
+H2,H,2,A,7,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.818
+A3,A,3,A,4.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.253
+B3,B,3,A,4.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.358
+C3,C,3,A,4.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.301
+D3,D,3,B,4.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.188
+E3,E,3,B,4.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.196
+F3,F,3,B,4.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.211
+G3,G,3,Blank,4.5,3A1,0102,Blank,NA,NA,NA,NA,0.115
+H3,H,3,A,7,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.842
+A4,A,4,A,5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.394
+B4,B,4,A,5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.434
+C4,C,4,A,5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.402
+D4,D,4,B,5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.294
+E4,E,4,B,5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.38
+F4,F,4,B,5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.297
+G4,G,4,Blank,5,3A1,0102,Blank,NA,NA,NA,NA,0.094
+H4,H,4,B,7,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.872
+A5,A,5,A,5.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.429
+B5,B,5,A,5.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.508
+C5,C,5,A,5.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.462
+D5,D,5,B,5.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.333
+E5,E,5,B,5.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.36
+F5,F,5,B,5.5,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.331
+G5,G,5,Blank,5.5,3A1,0102,Blank,NA,NA,NA,NA,0.063
+H5,H,5,B,7,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.904
+A6,A,6,A,6,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.624
+B6,B,6,A,6,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.703
+C6,C,6,A,6,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.725
+D6,D,6,B,6,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.522
+E6,E,6,B,6,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.645
+F6,F,6,B,6,3A1,0102,1,Gardnerella sp. 2,C0084H9,3,1,0.528
+G6,G,6,Blank,6,3A1,0102,Blank,NA,NA,NA,NA,1.18
+H6,H,6,Blank,7,3A1,0102,Blank,NA,NA,NA,NA,0.061
+A7,A,7,A,3.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.064
+B7,B,7,A,3.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.076
+C7,C,7,A,3.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.071
+D7,D,7,B,3.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.086
+E7,E,7,B,3.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.076
+F7,F,7,B,3.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.09
+G7,G,7,Blank,3.5,3A1,0102,Blank,NA,NA,NA,NA,0.063
+H7,H,7,A,7,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.668
+A8,A,8,A,4,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.071
+B8,B,8,A,4,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.088
+C8,C,8,A,4,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.084
+D8,D,8,B,4,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.082
+E8,E,8,B,4,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.082
+F8,F,8,B,4,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.085
+G8,G,8,Blank,4,3A1,0102,Blank,NA,NA,NA,NA,0.071
+H8,H,8,A,7,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.665
+A9,A,9,A,4.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.158
+B9,B,9,A,4.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.18
+C9,C,9,A,4.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.15
+D9,D,9,B,4.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.156
+E9,E,9,B,4.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.179
+F9,F,9,B,4.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.209
+G9,G,9,Blank,4.5,3A1,0102,Blank,NA,NA,NA,NA,0.113
+H9,H,9,A,7,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.669
+A10,A,10,A,5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.193
+B10,B,10,A,5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.238
+C10,C,10,A,5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.223
+D10,D,10,B,5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.194
+E10,E,10,B,5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.201
+F10,F,10,B,5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.207
+G10,G,10,Blank,5,3A1,0102,Blank,NA,NA,NA,NA,0.142
+H10,H,10,B,7,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.612
+A11,A,11,A,5.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.264
+B11,B,11,A,5.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.313
+C11,C,11,A,5.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.326
+D11,D,11,B,5.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.325
+E11,E,11,B,5.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.321
+F11,F,11,B,5.5,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.343
+G11,G,11,Blank,5.5,3A1,0102,Blank,NA,NA,NA,NA,0.056
+H11,H,11,B,7,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.591
+A12,A,12,A,6,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.221
+B12,B,12,A,6,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.302
+C12,C,12,A,6,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.337
+D12,D,12,B,6,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.36
+E12,E,12,B,6,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.356
+F12,F,12,B,6,3A1,0102,2,Gardnerella sp. 11,C0101A1,3,1,0.345
+G12,G,12,Blank,6,3A1,0102,Blank,NA,NA,NA,NA,1.05
+H12,H,12,Blank,7,3A1,0102,Blank,NA,NA,NA,NA,0.049
+A1,A,1,A,3.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.066
+B1,B,1,A,3.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.061
+C1,C,1,A,3.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.06
+D1,D,1,B,3.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.061
+E1,E,1,B,3.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.06
+F1,F,1,B,3.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.061
+G1,G,1,Blank,3.5,3A1,0304,Blank,NA,NA,NA,NA,0.058
+H1,H,1,A,7,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.517
+A2,A,2,A,4,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.075
+B2,B,2,A,4,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.073
+C2,C,2,A,4,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.072
+D2,D,2,B,4,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.074
+E2,E,2,B,4,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.081
+F2,F,2,B,4,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.097
+G2,G,2,Blank,4,3A1,0304,Blank,NA,NA,NA,NA,0.085
+H2,H,2,A,7,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.73
+A3,A,3,A,4.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.122
+B3,B,3,A,4.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.13
+C3,C,3,A,4.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.128
+D3,D,3,B,4.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.125
+E3,E,3,B,4.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.132
+F3,F,3,B,4.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.146
+G3,G,3,Blank,4.5,3A1,0304,Blank,NA,NA,NA,NA,0.126
+H3,H,3,A,7,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.744
+A4,A,4,A,5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.111
+B4,B,4,A,5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.148
+C4,C,4,A,5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.106
+D4,D,4,B,5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.113
+E4,E,4,B,5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.111
+F4,F,4,B,5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.109
+G4,G,4,Blank,5,3A1,0304,Blank,NA,NA,NA,NA,0.118
+H4,H,4,B,7,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.671
+A5,A,5,A,5.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.154
+B5,B,5,A,5.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.155
+C5,C,5,A,5.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.146
+D5,D,5,B,5.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.157
+E5,E,5,B,5.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.162
+F5,F,5,B,5.5,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.122
+G5,G,5,Blank,5.5,3A1,0304,Blank,NA,NA,NA,NA,0.061
+H5,H,5,B,7,3A1,0304,3,Gardnerella piotii,UM35,3,1,0.832
+A6,A,6,A,6,3A1,0304,3,Gardnerella piotii,UM35,3,1,1.031
+B6,B,6,A,6,3A1,0304,3,Gardnerella piotii,UM35,3,1,1.093
+C6,C,6,A,6,3A1,0304,3,Gardnerella piotii,UM35,3,1,1.188
+D6,D,6,B,6,3A1,0304,3,Gardnerella piotii,UM35,3,1,1.226
+E6,E,6,B,6,3A1,0304,3,Gardnerella piotii,UM35,3,1,1.258
+F6,F,6,B,6,3A1,0304,3,Gardnerella piotii,UM35,3,1,1.203
+G6,G,6,Blank,6,3A1,0304,Blank,NA,NA,NA,NA,1.152
+H6,H,6,Blank,7,3A1,0304,Blank,NA,NA,NA,NA,0.058
+A7,A,7,A,3.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.092
+B7,B,7,A,3.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.109
+C7,C,7,A,3.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.112
+D7,D,7,B,3.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.116
+E7,E,7,B,3.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.11
+F7,F,7,B,3.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.101
+G7,G,7,Blank,3.5,3A1,0304,Blank,NA,NA,NA,NA,0.066
+H7,H,7,A,7,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.662
+A8,A,8,A,4,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.099
+B8,B,8,A,4,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.12
+C8,C,8,A,4,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.123
+D8,D,8,B,4,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.117
+E8,E,8,B,4,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.118
+F8,F,8,B,4,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.116
+G8,G,8,Blank,4,3A1,0304,Blank,NA,NA,NA,NA,0.077
+H8,H,8,A,7,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.646
+A9,A,9,A,4.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.182
+B9,B,9,A,4.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.201
+C9,C,9,A,4.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.199
+D9,D,9,B,4.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.178
+E9,E,9,B,4.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.189
+F9,F,9,B,4.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.197
+G9,G,9,Blank,4.5,3A1,0304,Blank,NA,NA,NA,NA,0.129
+H9,H,9,A,7,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.642
+A10,A,10,A,5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.279
+B10,B,10,A,5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.31
+C10,C,10,A,5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.304
+D10,D,10,B,5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.289
+E10,E,10,B,5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.305
+F10,F,10,B,5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.3
+G10,G,10,Blank,5,3A1,0304,Blank,NA,NA,NA,NA,0.109
+H10,H,10,B,7,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.636
+A11,A,11,A,5.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.312
+B11,B,11,A,5.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.343
+C11,C,11,A,5.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.358
+D11,D,11,B,5.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.346
+E11,E,11,B,5.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.339
+F11,F,11,B,5.5,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.338
+G11,G,11,Blank,5.5,3A1,0304,Blank,NA,NA,NA,NA,0.058
+H11,H,11,B,7,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.634
+A12,A,12,A,6,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.632
+B12,B,12,A,6,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.685
+C12,C,12,A,6,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.73
+D12,D,12,B,6,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.749
+E12,E,12,B,6,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.776
+F12,F,12,B,6,3A1,0304,4,Gardnerella piotii,C0093B3,3,1,0.757
+G12,G,12,Blank,6,3A1,0304,Blank,NA,NA,NA,NA,1.113
+H12,H,12,Blank,7,3A1,0304,Blank,NA,NA,NA,NA,0.052
+A1,A,1,A,3.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.073
+B1,B,1,A,3.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.07
+C1,C,1,A,3.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.071
+D1,D,1,B,3.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.07
+E1,E,1,B,3.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.072
+F1,F,1,B,3.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.074
+G1,G,1,Blank,3.5,3A2,0102,Blank,NA,NA,NA,NA,0.072
+H1,H,1,A,7,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.66
+A2,A,2,A,4,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.088
+B2,B,2,A,4,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.107
+C2,C,2,A,4,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.107
+D2,D,2,B,4,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.104
+E2,E,2,B,4,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.108
+F2,F,2,B,4,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.114
+G2,G,2,Blank,4,3A2,0102,Blank,NA,NA,NA,NA,0.109
+H2,H,2,A,7,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.8
+A3,A,3,A,4.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.245
+B3,B,3,A,4.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.319
+C3,C,3,A,4.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.276
+D3,D,3,B,4.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.332
+E3,E,3,B,4.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.376
+F3,F,3,B,4.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.343
+G3,G,3,Blank,4.5,3A2,0102,Blank,NA,NA,NA,NA,0.142
+H3,H,3,A,7,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.795
+A4,A,4,A,5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.379
+B4,B,4,A,5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.554
+C4,C,4,A,5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.455
+D4,D,4,B,5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.485
+E4,E,4,B,5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.503
+F4,F,4,B,5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.415
+G4,G,4,Blank,5,3A2,0102,Blank,NA,NA,NA,NA,0.105
+H4,H,4,B,7,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.785
+A5,A,5,A,5.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.456
+B5,B,5,A,5.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.634
+C5,C,5,A,5.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.478
+D5,D,5,B,5.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.56
+E5,E,5,B,5.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.509
+F5,F,5,B,5.5,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.569
+G5,G,5,Blank,5.5,3A2,0102,Blank,NA,NA,NA,NA,0.073
+H5,H,5,B,7,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.791
+A6,A,6,A,6,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.491
+B6,B,6,A,6,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.714
+C6,C,6,A,6,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.6
+D6,D,6,B,6,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.598
+E6,E,6,B,6,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.616
+F6,F,6,B,6,3A2,0102,1,Gardnerella sp. 2,C0084H9,3,2,0.637
+G6,G,6,Blank,6,3A2,0102,Blank,NA,NA,NA,NA,0.837
+H6,H,6,Blank,7,3A2,0102,Blank,NA,NA,NA,NA,0.063
+A7,A,7,A,3.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.076
+B7,B,7,A,3.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.093
+C7,C,7,A,3.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.087
+D7,D,7,B,3.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.078
+E7,E,7,B,3.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.078
+F7,F,7,B,3.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.083
+G7,G,7,Blank,3.5,3A2,0102,Blank,NA,NA,NA,NA,0.076
+H7,H,7,A,7,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.59
+A8,A,8,A,4,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.096
+B8,B,8,A,4,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.128
+C8,C,8,A,4,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.108
+D8,D,8,B,4,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.109
+E8,E,8,B,4,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.106
+F8,F,8,B,4,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.112
+G8,G,8,Blank,4,3A2,0102,Blank,NA,NA,NA,NA,0.104
+H8,H,8,A,7,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.577
+A9,A,9,A,4.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.204
+B9,B,9,A,4.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.267
+C9,C,9,A,4.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.268
+D9,D,9,B,4.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.205
+E9,E,9,B,4.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.205
+F9,F,9,B,4.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.214
+G9,G,9,Blank,4.5,3A2,0102,Blank,NA,NA,NA,NA,0.143
+H9,H,9,A,7,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.545
+A10,A,10,A,5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.261
+B10,B,10,A,5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.268
+C10,C,10,A,5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.249
+D10,D,10,B,5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.254
+E10,E,10,B,5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.256
+F10,F,10,B,5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.264
+G10,G,10,Blank,5,3A2,0102,Blank,NA,NA,NA,NA,0.094
+H10,H,10,B,7,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.638
+A11,A,11,A,5.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.258
+B11,B,11,A,5.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.321
+C11,C,11,A,5.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.32
+D11,D,11,B,5.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.339
+E11,E,11,B,5.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.334
+F11,F,11,B,5.5,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.344
+G11,G,11,Blank,5.5,3A2,0102,Blank,NA,NA,NA,NA,0.054
+H11,H,11,B,7,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.604
+A12,A,12,A,6,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.381
+B12,B,12,A,6,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.461
+C12,C,12,A,6,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.466
+D12,D,12,B,6,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.472
+E12,E,12,B,6,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.487
+F12,F,12,B,6,3A2,0102,2,Gardnerella sp. 11,C0101A1,3,2,0.474
+G12,G,12,Blank,6,3A2,0102,Blank,NA,NA,NA,NA,0.89
+H12,H,12,Blank,7,3A2,0102,Blank,NA,NA,NA,NA,0.045
+A1,A,1,A,3.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.074
+B1,B,1,A,3.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.077
+C1,C,1,A,3.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.081
+D1,D,1,B,3.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.079
+E1,E,1,B,3.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.08
+F1,F,1,B,3.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.085
+G1,G,1,Blank,3.5,3A2,0304,Blank,NA,NA,NA,NA,0.079
+H1,H,1,A,7,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.539
+A2,A,2,A,4,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.103
+B2,B,2,A,4,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.114
+C2,C,2,A,4,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.122
+D2,D,2,B,4,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.127
+E2,E,2,B,4,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.13
+F2,F,2,B,4,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.143
+G2,G,2,Blank,4,3A2,0304,Blank,NA,NA,NA,NA,0.109
+H2,H,2,A,7,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.658
+A3,A,3,A,4.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.153
+B3,B,3,A,4.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.169
+C3,C,3,A,4.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.154
+D3,D,3,B,4.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.154
+E3,E,3,B,4.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.159
+F3,F,3,B,4.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.167
+G3,G,3,Blank,4.5,3A2,0304,Blank,NA,NA,NA,NA,0.126
+H3,H,3,A,7,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.684
+A4,A,4,A,5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.135
+B4,B,4,A,5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.127
+C4,C,4,A,5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.115
+D4,D,4,B,5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.119
+E4,E,4,B,5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.114
+F4,F,4,B,5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.133
+G4,G,4,Blank,5,3A2,0304,Blank,NA,NA,NA,NA,0.1
+H4,H,4,B,7,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.658
+A5,A,5,A,5.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.096
+B5,B,5,A,5.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.111
+C5,C,5,A,5.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.102
+D5,D,5,B,5.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.098
+E5,E,5,B,5.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.097
+F5,F,5,B,5.5,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.107
+G5,G,5,Blank,5.5,3A2,0304,Blank,NA,NA,NA,NA,0.069
+H5,H,5,B,7,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.677
+A6,A,6,A,6,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.824
+B6,B,6,A,6,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.922
+C6,C,6,A,6,3A2,0304,3,Gardnerella piotii,UM35,3,2,0.784
+D6,D,6,B,6,3A2,0304,3,Gardnerella piotii,UM35,3,2,1.056
+E6,E,6,B,6,3A2,0304,3,Gardnerella piotii,UM35,3,2,1.043
+F6,F,6,B,6,3A2,0304,3,Gardnerella piotii,UM35,3,2,1.114
+G6,G,6,Blank,6,3A2,0304,Blank,NA,NA,NA,NA,1.032
+H6,H,6,Blank,7,3A2,0304,Blank,NA,NA,NA,NA,0.066
+A7,A,7,A,3.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.083
+B7,B,7,A,3.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.088
+C7,C,7,A,3.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.088
+D7,D,7,B,3.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.091
+E7,E,7,B,3.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.087
+F7,F,7,B,3.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.099
+G7,G,7,Blank,3.5,3A2,0304,Blank,NA,NA,NA,NA,0.085
+H7,H,7,A,7,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.67
+A8,A,8,A,4,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.101
+B8,B,8,A,4,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.114
+C8,C,8,A,4,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.123
+D8,D,8,B,4,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.116
+E8,E,8,B,4,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.118
+F8,F,8,B,4,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.13
+G8,G,8,Blank,4,3A2,0304,Blank,NA,NA,NA,NA,0.106
+H8,H,8,A,7,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.645
+A9,A,9,A,4.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.146
+B9,B,9,A,4.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.2
+C9,C,9,A,4.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.184
+D9,D,9,B,4.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.175
+E9,E,9,B,4.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.17
+F9,F,9,B,4.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.173
+G9,G,9,Blank,4.5,3A2,0304,Blank,NA,NA,NA,NA,0.14
+H9,H,9,A,7,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.638
+A10,A,10,A,5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.201
+B10,B,10,A,5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.241
+C10,C,10,A,5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.223
+D10,D,10,B,5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.176
+E10,E,10,B,5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.19
+F10,F,10,B,5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.189
+G10,G,10,Blank,5,3A2,0304,Blank,NA,NA,NA,NA,0.092
+H10,H,10,B,7,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.637
+A11,A,11,A,5.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.25
+B11,B,11,A,5.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.319
+C11,C,11,A,5.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.33
+D11,D,11,B,5.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.288
+E11,E,11,B,5.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.293
+F11,F,11,B,5.5,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.304
+G11,G,11,Blank,5.5,3A2,0304,Blank,NA,NA,NA,NA,0.058
+H11,H,11,B,7,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.634
+A12,A,12,A,6,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.287
+B12,B,12,A,6,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.403
+C12,C,12,A,6,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.378
+D12,D,12,B,6,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,1.061
+E12,E,12,B,6,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,1.106
+F12,F,12,B,6,3A2,0304,4,Gardnerella piotii,C0093B3,3,2,0.836
+G12,G,12,Blank,6,3A2,0304,Blank,NA,NA,NA,NA,0.938
+H12,H,12,Blank,7,3A2,0304,Blank,NA,NA,NA,NA,0.053
+A1,A,1,A,3.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.069
+B1,B,1,A,3.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.069
+C1,C,1,A,3.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.071
+D1,D,1,B,3.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.08
+E1,E,1,B,3.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.075
+F1,F,1,B,3.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.077
+G1,G,1,Blank,3.5,1B1,0304,Blank,NA,NA,NA,NA,0.071
+H1,H,1,A,7,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.053
+A2,A,2,A,4,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.102
+B2,B,2,A,4,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.103
+C2,C,2,A,4,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.103
+D2,D,2,B,4,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.111
+E2,E,2,B,4,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.106
+F2,F,2,B,4,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.11
+G2,G,2,Blank,4,1B1,0304,Blank,NA,NA,NA,NA,0.104
+H2,H,2,A,7,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.058
+A3,A,3,A,4.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.18
+B3,B,3,A,4.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.201
+C3,C,3,A,4.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.171
+D3,D,3,B,4.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.192
+E3,E,3,B,4.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.185
+F3,F,3,B,4.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.182
+G3,G,3,Blank,4.5,1B1,0304,Blank,NA,NA,NA,NA,0.179
+H3,H,3,A,7,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.062
+A4,A,4,A,5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.09
+B4,B,4,A,5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.095
+C4,C,4,A,5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.074
+D4,D,4,B,5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.134
+E4,E,4,B,5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.11
+F4,F,4,B,5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.11
+G4,G,4,Blank,5,1B1,0304,Blank,NA,NA,NA,NA,0.073
+H4,H,4,B,7,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.374
+A5,A,5,A,5.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.063
+B5,B,5,A,5.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.062
+C5,C,5,A,5.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.062
+D5,D,5,B,5.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.142
+E5,E,5,B,5.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.142
+F5,F,5,B,5.5,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.114
+G5,G,5,Blank,5.5,1B1,0304,Blank,NA,NA,NA,NA,0.062
+H5,H,5,B,7,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.37
+A6,A,6,A,6,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.057
+B6,B,6,A,6,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.056
+C6,C,6,A,6,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.056
+D6,D,6,B,6,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.207
+E6,E,6,B,6,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.248
+F6,F,6,B,6,1B1,0304,3,Gardnerella swidsinskii,C0102A2,1,1,0.238
+G6,G,6,Blank,6,1B1,0304,Blank,NA,NA,NA,NA,0.065
+H6,H,6,Blank,7,1B1,0304,Blank,NA,NA,NA,NA,0.061
+A7,A,7,A,3.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.076
+B7,B,7,A,3.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.079
+C7,C,7,A,3.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.088
+D7,D,7,B,3.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.084
+E7,E,7,B,3.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.089
+F7,F,7,B,3.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.081
+G7,G,7,Blank,3.5,1B1,0304,Blank,NA,NA,NA,NA,0.072
+H7,H,7,A,7,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.436
+A8,A,8,A,4,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.101
+B8,B,8,A,4,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.103
+C8,C,8,A,4,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.112
+D8,D,8,B,4,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.113
+E8,E,8,B,4,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.114
+F8,F,8,B,4,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.117
+G8,G,8,Blank,4,1B1,0304,Blank,NA,NA,NA,NA,0.108
+H8,H,8,A,7,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.439
+A9,A,9,A,4.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.189
+B9,B,9,A,4.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.177
+C9,C,9,A,4.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.187
+D9,D,9,B,4.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.191
+E9,E,9,B,4.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.159
+F9,F,9,B,4.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.194
+G9,G,9,Blank,4.5,1B1,0304,Blank,NA,NA,NA,NA,0.17
+H9,H,9,A,7,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.441
+A10,A,10,A,5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.155
+B10,B,10,A,5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.132
+C10,C,10,A,5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.144
+D10,D,10,B,5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.149
+E10,E,10,B,5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.083
+F10,F,10,B,5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.15
+G10,G,10,Blank,5,1B1,0304,Blank,NA,NA,NA,NA,0.073
+H10,H,10,B,7,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.464
+A11,A,11,A,5.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.365
+B11,B,11,A,5.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.304
+C11,C,11,A,5.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.319
+D11,D,11,B,5.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.318
+E11,E,11,B,5.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.324
+F11,F,11,B,5.5,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.321
+G11,G,11,Blank,5.5,1B1,0304,Blank,NA,NA,NA,NA,0.057
+H11,H,11,B,7,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.514
+A12,A,12,A,6,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.559
+B12,B,12,A,6,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.537
+C12,C,12,A,6,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.525
+D12,D,12,B,6,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.516
+E12,E,12,B,6,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.489
+F12,F,12,B,6,1B1,0304,4,Gardnerella sp. 3,JCP8017B,1,1,0.499
+G12,G,12,Blank,6,1B1,0304,Blank,NA,NA,NA,NA,0.049
+H12,H,12,Blank,7,1B1,0304,Blank,NA,NA,NA,NA,0.051
+A1,A,1,A,3.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.072
+B1,B,1,A,3.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.073
+C1,C,1,A,3.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.073
+D1,D,1,B,3.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.072
+E1,E,1,B,3.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.071
+F1,F,1,B,3.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.073
+G1,G,1,Blank,3.5,1B1,050X,Blank,NA,NA,NA,NA,0.07
+H1,H,1,A,7,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.347
+A2,A,2,A,4,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.109
+B2,B,2,A,4,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.118
+C2,C,2,A,4,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.116
+D2,D,2,B,4,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.115
+E2,E,2,B,4,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.112
+F2,F,2,B,4,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.117
+G2,G,2,Blank,4,1B1,050X,Blank,NA,NA,NA,NA,0.105
+H2,H,2,A,7,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.379
+A3,A,3,A,4.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.199
+B3,B,3,A,4.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.202
+C3,C,3,A,4.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.199
+D3,D,3,B,4.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.201
+E3,E,3,B,4.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.191
+F3,F,3,B,4.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.197
+G3,G,3,Blank,4.5,1B1,050X,Blank,NA,NA,NA,NA,0.17
+H3,H,3,A,7,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.399
+A4,A,4,A,5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.137
+B4,B,4,A,5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.126
+C4,C,4,A,5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.128
+D4,D,4,B,5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.115
+E4,E,4,B,5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.108
+F4,F,4,B,5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.117
+G4,G,4,Blank,5,1B1,050X,Blank,NA,NA,NA,NA,0.085
+H4,H,4,B,7,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.382
+A5,A,5,A,5.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.156
+B5,B,5,A,5.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.14
+C5,C,5,A,5.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.145
+D5,D,5,B,5.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.141
+E5,E,5,B,5.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.138
+F5,F,5,B,5.5,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.144
+G5,G,5,Blank,5.5,1B1,050X,Blank,NA,NA,NA,NA,0.066
+H5,H,5,B,7,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.384
+A6,A,6,A,6,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.266
+B6,B,6,A,6,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.251
+C6,C,6,A,6,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.286
+D6,D,6,B,6,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.274
+E6,E,6,B,6,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.237
+F6,F,6,B,6,1B1,050X,5,Gardnerella swidsinskii,UM224,1,1,0.233
+G6,G,6,Blank,6,1B1,050X,Blank,NA,NA,NA,NA,0.059
+H6,H,6,Blank,7,1B1,050X,Blank,NA,NA,NA,NA,0.061
+G7,G,7,Blank,3.5,1B1,050X,Blank,NA,NA,NA,NA,0.072
+G8,G,8,Blank,4,1B1,050X,Blank,NA,NA,NA,NA,0.107
+G9,G,9,Blank,4.5,1B1,050X,Blank,NA,NA,NA,NA,0.174
+G10,G,10,Blank,5,1B1,050X,Blank,NA,NA,NA,NA,0.074
+G11,G,11,Blank,5.5,1B1,050X,Blank,NA,NA,NA,NA,0.059
+G12,G,12,Blank,6,1B1,050X,Blank,NA,NA,NA,NA,0.049
+H12,H,12,Blank,7,1B1,050X,Blank,NA,NA,NA,NA,0.05
+A1,A,1,A,3.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.073
+B1,B,1,A,3.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.072
+C1,C,1,A,3.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.072
+D1,D,1,B,3.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.072
+E1,E,1,B,3.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.072
+F1,F,1,B,3.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.074
+G1,G,1,Blank,3.5,1B1,0708,Blank,NA,NA,NA,NA,0.069
+H1,H,1,A,7,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.401
+A2,A,2,A,4,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.103
+B2,B,2,A,4,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.113
+C2,C,2,A,4,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.112
+D2,D,2,B,4,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.11
+E2,E,2,B,4,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.108
+F2,F,2,B,4,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.112
+G2,G,2,Blank,4,1B1,0708,Blank,NA,NA,NA,NA,0.104
+H2,H,2,A,7,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.46
+A3,A,3,A,4.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.187
+B3,B,3,A,4.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.194
+C3,C,3,A,4.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.182
+D3,D,3,B,4.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.193
+E3,E,3,B,4.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.197
+F3,F,3,B,4.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.199
+G3,G,3,Blank,4.5,1B1,0708,Blank,NA,NA,NA,NA,0.173
+H3,H,3,A,7,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.45
+A4,A,4,A,5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.173
+B4,B,4,A,5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.184
+C4,C,4,A,5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.184
+D4,D,4,B,5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.181
+E4,E,4,B,5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.183
+F4,F,4,B,5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.185
+G4,G,4,Blank,5,1B1,0708,Blank,NA,NA,NA,NA,0.086
+H4,H,4,B,7,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.42
+A5,A,5,A,5.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.237
+B5,B,5,A,5.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.243
+C5,C,5,A,5.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.25
+D5,D,5,B,5.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.231
+E5,E,5,B,5.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.234
+F5,F,5,B,5.5,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.254
+G5,G,5,Blank,5.5,1B1,0708,Blank,NA,NA,NA,NA,0.066
+H5,H,5,B,7,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.412
+A6,A,6,A,6,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.325
+B6,B,6,A,6,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.387
+C6,C,6,A,6,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.347
+D6,D,6,B,6,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.331
+E6,E,6,B,6,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.337
+F6,F,6,B,6,1B1,0708,7,Gardnerella sp. 2,JCP8108,1,1,0.325
+G6,G,6,Blank,6,1B1,0708,Blank,NA,NA,NA,NA,0.058
+H6,H,6,Blank,7,1B1,0708,Blank,NA,NA,NA,NA,0.061
+A7,A,7,A,3.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.077
+B7,B,7,A,3.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.089
+C7,C,7,A,3.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.088
+D7,D,7,B,3.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.091
+E7,E,7,B,3.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.093
+F7,F,7,B,3.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.096
+G7,G,7,Blank,3.5,1B1,0708,Blank,NA,NA,NA,NA,0.072
+H7,H,7,A,7,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.446
+A8,A,8,A,4,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.1
+B8,B,8,A,4,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.126
+C8,C,8,A,4,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.113
+D8,D,8,B,4,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.119
+E8,E,8,B,4,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.122
+F8,F,8,B,4,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.125
+G8,G,8,Blank,4,1B1,0708,Blank,NA,NA,NA,NA,0.108
+H8,H,8,A,7,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.428
+A9,A,9,A,4.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.173
+B9,B,9,A,4.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.195
+C9,C,9,A,4.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.186
+D9,D,9,B,4.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.205
+E9,E,9,B,4.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.201
+F9,F,9,B,4.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.203
+G9,G,9,Blank,4.5,1B1,0708,Blank,NA,NA,NA,NA,0.179
+H9,H,9,A,7,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.437
+A10,A,10,A,5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.118
+B10,B,10,A,5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.138
+C10,C,10,A,5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.128
+D10,D,10,B,5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.137
+E10,E,10,B,5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.137
+F10,F,10,B,5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.135
+G10,G,10,Blank,5,1B1,0708,Blank,NA,NA,NA,NA,0.079
+H10,H,10,B,7,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.432
+A11,A,11,A,5.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.138
+B11,B,11,A,5.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.146
+C11,C,11,A,5.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.155
+D11,D,11,B,5.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.16
+E11,E,11,B,5.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.159
+F11,F,11,B,5.5,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.16
+G11,G,11,Blank,5.5,1B1,0708,Blank,NA,NA,NA,NA,0.059
+H11,H,11,B,7,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.41
+A12,A,12,A,6,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.249
+B12,B,12,A,6,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.236
+C12,C,12,A,6,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.241
+D12,D,12,B,6,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.232
+E12,E,12,B,6,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.219
+F12,F,12,B,6,1B1,0708,8,Gardnerella swidsinskii,Gv5-1,1,1,0.231
+G12,G,12,Blank,6,1B1,0708,Blank,NA,NA,NA,NA,0.049
+H12,H,12,Blank,7,1B1,0708,Blank,NA,NA,NA,NA,0.05
+A1,A,1,A,3.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.081
+B1,B,1,A,3.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.08
+C1,C,1,A,3.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.081
+D1,D,1,B,3.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.071
+E1,E,1,B,3.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.069
+F1,F,1,B,3.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.071
+G1,G,1,Blank,3.5,1B1,090X,Blank,NA,NA,NA,NA,0.071
+H1,H,1,A,7,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.498
+A2,A,2,A,4,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.114
+B2,B,2,A,4,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.12
+C2,C,2,A,4,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.118
+D2,D,2,B,4,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.104
+E2,E,2,B,4,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.102
+F2,F,2,B,4,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.104
+G2,G,2,Blank,4,1B1,090X,Blank,NA,NA,NA,NA,0.105
+H2,H,2,A,7,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.58
+A3,A,3,A,4.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.211
+B3,B,3,A,4.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.221
+C3,C,3,A,4.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.22
+D3,D,3,B,4.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.173
+E3,E,3,B,4.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.172
+F3,F,3,B,4.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.174
+G3,G,3,Blank,4.5,1B1,090X,Blank,NA,NA,NA,NA,0.174
+H3,H,3,A,7,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.612
+A4,A,4,A,5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.196
+B4,B,4,A,5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.213
+C4,C,4,A,5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.199
+D4,D,4,B,5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.083
+E4,E,4,B,5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.081
+F4,F,4,B,5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.085
+G4,G,4,Blank,5,1B1,090X,Blank,NA,NA,NA,NA,0.087
+H4,H,4,B,7,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.062
+A5,A,5,A,5.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.283
+B5,B,5,A,5.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.301
+C5,C,5,A,5.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.313
+D5,D,5,B,5.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.068
+E5,E,5,B,5.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.065
+F5,F,5,B,5.5,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.068
+G5,G,5,Blank,5.5,1B1,090X,Blank,NA,NA,NA,NA,0.068
+H5,H,5,B,7,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.064
+A6,A,6,A,6,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.426
+B6,B,6,A,6,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.455
+C6,C,6,A,6,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.462
+D6,D,6,B,6,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.06
+E6,E,6,B,6,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.059
+F6,F,6,B,6,1B1,090X,9,Gardnerella sp. 8,Gv101,1,1,0.065
+G6,G,6,Blank,6,1B1,090X,Blank,NA,NA,NA,NA,0.062
+H6,H,6,Blank,7,1B1,090X,Blank,NA,NA,NA,NA,0.065
+G7,G,7,Blank,3.5,1B1,090X,Blank,NA,NA,NA,NA,0.073
+G8,G,8,Blank,4,1B1,090X,Blank,NA,NA,NA,NA,0.107
+G9,G,9,Blank,4.5,1B1,090X,Blank,NA,NA,NA,NA,0.186
+G10,G,10,Blank,5,1B1,090X,Blank,NA,NA,NA,NA,0.085
+G11,G,11,Blank,5.5,1B1,090X,Blank,NA,NA,NA,NA,0.061
+G12,G,12,Blank,6,1B1,090X,Blank,NA,NA,NA,NA,0.051
+H12,H,12,Blank,7,1B1,090X,Blank,NA,NA,NA,NA,0.052
+A1,A,1,A,3.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.072
+B1,B,1,A,3.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.075
+C1,C,1,A,3.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.075
+D1,D,1,B,3.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.073
+E1,E,1,B,3.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.072
+F1,F,1,B,3.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.074
+G1,G,1,Blank,3.5,2A1,0102,Blank,NA,NA,NA,NA,0.07
+H1,H,1,A,7,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.436
+A2,A,2,A,4,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.111
+B2,B,2,A,4,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.115
+C2,C,2,A,4,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.115
+D2,D,2,B,4,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.115
+E2,E,2,B,4,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.112
+F2,F,2,B,4,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.115
+G2,G,2,Blank,4,2A1,0102,Blank,NA,NA,NA,NA,0.106
+H2,H,2,A,7,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.497
+A3,A,3,A,4.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.189
+B3,B,3,A,4.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.201
+C3,C,3,A,4.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.192
+D3,D,3,B,4.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.199
+E3,E,3,B,4.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.203
+F3,F,3,B,4.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.221
+G3,G,3,Blank,4.5,2A1,0102,Blank,NA,NA,NA,NA,0.206
+H3,H,3,A,7,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.526
+A4,A,4,A,5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.146
+B4,B,4,A,5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.164
+C4,C,4,A,5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.149
+D4,D,4,B,5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.159
+E4,E,4,B,5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.152
+F4,F,4,B,5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.158
+G4,G,4,Blank,5,2A1,0102,Blank,NA,NA,NA,NA,0.09
+H4,H,4,B,7,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.527
+A5,A,5,A,5.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.211
+B5,B,5,A,5.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.211
+C5,C,5,A,5.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.205
+D5,D,5,B,5.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.204
+E5,E,5,B,5.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.213
+F5,F,5,B,5.5,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.212
+G5,G,5,Blank,5.5,2A1,0102,Blank,NA,NA,NA,NA,0.068
+H5,H,5,B,7,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.503
+A6,A,6,A,6,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.383
+B6,B,6,A,6,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.37
+C6,C,6,A,6,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.367
+D6,D,6,B,6,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.352
+E6,E,6,B,6,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.362
+F6,F,6,B,6,2A1,0102,1,Gardnerella leopoldii,AMD,2,1,0.356
+G6,G,6,Blank,6,2A1,0102,Blank,NA,NA,NA,NA,0.056
+H6,H,6,Blank,7,2A1,0102,Blank,NA,NA,NA,NA,0.058
+A7,A,7,A,3.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.076
+B7,B,7,A,3.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.082
+C7,C,7,A,3.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.079
+D7,D,7,B,3.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.081
+E7,E,7,B,3.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.083
+F7,F,7,B,3.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.087
+G7,G,7,Blank,3.5,2A1,0102,Blank,NA,NA,NA,NA,0.073
+H7,H,7,A,7,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.428
+A8,A,8,A,4,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.114
+B8,B,8,A,4,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.112
+C8,C,8,A,4,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.123
+D8,D,8,B,4,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.113
+E8,E,8,B,4,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.115
+F8,F,8,B,4,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.117
+G8,G,8,Blank,4,2A1,0102,Blank,NA,NA,NA,NA,0.114
+H8,H,8,A,7,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.389
+A9,A,9,A,4.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.187
+B9,B,9,A,4.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.183
+C9,C,9,A,4.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.184
+D9,D,9,B,4.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.183
+E9,E,9,B,4.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.186
+F9,F,9,B,4.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.187
+G9,G,9,Blank,4.5,2A1,0102,Blank,NA,NA,NA,NA,0.179
+H9,H,9,A,7,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.368
+A10,A,10,A,5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.133
+B10,B,10,A,5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.133
+C10,C,10,A,5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.124
+D10,D,10,B,5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.116
+E10,E,10,B,5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.122
+F10,F,10,B,5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.151
+G10,G,10,Blank,5,2A1,0102,Blank,NA,NA,NA,NA,0.092
+H10,H,10,B,7,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.364
+A11,A,11,A,5.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.22
+B11,B,11,A,5.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.228
+C11,C,11,A,5.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.248
+D11,D,11,B,5.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.25
+E11,E,11,B,5.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.262
+F11,F,11,B,5.5,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.278
+G11,G,11,Blank,5.5,2A1,0102,Blank,NA,NA,NA,NA,0.066
+H11,H,11,B,7,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.387
+A12,A,12,A,6,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.324
+B12,B,12,A,6,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.371
+C12,C,12,A,6,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.371
+D12,D,12,B,6,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.359
+E12,E,12,B,6,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.37
+F12,F,12,B,6,2A1,0102,2,Gardnerella leopoldii,C0096A1,2,1,0.341
+G12,G,12,Blank,6,2A1,0102,Blank,NA,NA,NA,NA,0.052
+H12,H,12,Blank,7,2A1,0102,Blank,NA,NA,NA,NA,0.055
+A1,A,1,A,3.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.079
+B1,B,1,A,3.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.08
+C1,C,1,A,3.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.081
+D1,D,1,B,3.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.078
+E1,E,1,B,3.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.078
+F1,F,1,B,3.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.08
+G1,G,1,Blank,3.5,2A1,030X,Blank,NA,NA,NA,NA,0.07
+H1,H,1,A,7,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.281
+A2,A,2,A,4,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.11
+B2,B,2,A,4,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.112
+C2,C,2,A,4,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.111
+D2,D,2,B,4,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.108
+E2,E,2,B,4,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.108
+F2,F,2,B,4,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.112
+G2,G,2,Blank,4,2A1,030X,Blank,NA,NA,NA,NA,0.105
+H2,H,2,A,7,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.373
+A3,A,3,A,4.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.176
+B3,B,3,A,4.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.191
+C3,C,3,A,4.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.185
+D3,D,3,B,4.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.174
+E3,E,3,B,4.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.177
+F3,F,3,B,4.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.187
+G3,G,3,Blank,4.5,2A1,030X,Blank,NA,NA,NA,NA,0.186
+H3,H,3,A,7,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.399
+A4,A,4,A,5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.094
+B4,B,4,A,5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.099
+C4,C,4,A,5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.097
+D4,D,4,B,5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.094
+E4,E,4,B,5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.093
+F4,F,4,B,5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.1
+G4,G,4,Blank,5,2A1,030X,Blank,NA,NA,NA,NA,0.084
+H4,H,4,B,7,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.407
+A5,A,5,A,5.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.093
+B5,B,5,A,5.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.102
+C5,C,5,A,5.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.094
+D5,D,5,B,5.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.091
+E5,E,5,B,5.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.087
+F5,F,5,B,5.5,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.1
+G5,G,5,Blank,5.5,2A1,030X,Blank,NA,NA,NA,NA,0.067
+H5,H,5,B,7,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.413
+A6,A,6,A,6,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.169
+B6,B,6,A,6,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.172
+C6,C,6,A,6,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.185
+D6,D,6,B,6,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.159
+E6,E,6,B,6,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.146
+F6,F,6,B,6,2A1,030X,3,Gardnerella sp. 12,CMW7778B,2,1,0.161
+G6,G,6,Blank,6,2A1,030X,Blank,NA,NA,NA,NA,0.061
+H6,H,6,Blank,7,2A1,030X,Blank,NA,NA,NA,NA,0.06
+G7,G,7,Blank,3.5,2A1,030X,Blank,NA,NA,NA,NA,0.074
+G8,G,8,Blank,4,2A1,030X,Blank,NA,NA,NA,NA,0.116
+G9,G,9,Blank,4.5,2A1,030X,Blank,NA,NA,NA,NA,0.202
+G10,G,10,Blank,5,2A1,030X,Blank,NA,NA,NA,NA,0.093
+G11,G,11,Blank,5.5,2A1,030X,Blank,NA,NA,NA,NA,0.064
+G12,G,12,Blank,6,2A1,030X,Blank,NA,NA,NA,NA,0.054
+H12,H,12,Blank,7,2A1,030X,Blank,NA,NA,NA,NA,0.055
+A1,A,1,A,3.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.074
+B1,B,1,A,3.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.082
+C1,C,1,A,3.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.073
+D1,D,1,B,3.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.079
+E1,E,1,B,3.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.077
+F1,F,1,B,3.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.068
+G1,G,1,Blank,3.5,1B2,0304,Blank,NA,NA,NA,NA,0.067
+H1,H,1,A,7,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.234
+A2,A,2,A,4,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.103
+B2,B,2,A,4,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.114
+C2,C,2,A,4,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.114
+D2,D,2,B,4,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.104
+E2,E,2,B,4,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.096
+F2,F,2,B,4,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.099
+G2,G,2,Blank,4,1B2,0304,Blank,NA,NA,NA,NA,0.108
+H2,H,2,A,7,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.254
+A3,A,3,A,4.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.211
+B3,B,3,A,4.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.229
+C3,C,3,A,4.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.187
+D3,D,3,B,4.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.188
+E3,E,3,B,4.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.183
+F3,F,3,B,4.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.204
+G3,G,3,Blank,4.5,1B2,0304,Blank,NA,NA,NA,NA,0.202
+H3,H,3,A,7,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.273
+A4,A,4,A,5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.136
+B4,B,4,A,5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.138
+C4,C,4,A,5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.143
+D4,D,4,B,5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.1
+E4,E,4,B,5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.113
+F4,F,4,B,5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.103
+G4,G,4,Blank,5,1B2,0304,Blank,NA,NA,NA,NA,0.101
+H4,H,4,B,7,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.063
+A5,A,5,A,5.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.166
+B5,B,5,A,5.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.176
+C5,C,5,A,5.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.184
+D5,D,5,B,5.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.058
+E5,E,5,B,5.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.067
+F5,F,5,B,5.5,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.061
+G5,G,5,Blank,5.5,1B2,0304,Blank,NA,NA,NA,NA,0.06
+H5,H,5,B,7,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.063
+A6,A,6,A,6,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.254
+B6,B,6,A,6,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.266
+C6,C,6,A,6,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.235
+D6,D,6,B,6,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.065
+E6,E,6,B,6,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.057
+F6,F,6,B,6,1B2,0304,3,Gardnerella swidsinskii,C0102A2,1,2,0.06
+G6,G,6,Blank,6,1B2,0304,Blank,NA,NA,NA,NA,0.06
+H6,H,6,Blank,7,1B2,0304,Blank,NA,NA,NA,NA,0.062
+A7,A,7,A,3.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.076
+B7,B,7,A,3.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.075
+C7,C,7,A,3.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.079
+D7,D,7,B,3.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.08
+E7,E,7,B,3.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.081
+F7,F,7,B,3.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.083
+G7,G,7,Blank,3.5,1B2,0304,Blank,NA,NA,NA,NA,0.07
+H7,H,7,A,7,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.752
+A8,A,8,A,4,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.098
+B8,B,8,A,4,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.102
+C8,C,8,A,4,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.107
+D8,D,8,B,4,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.108
+E8,E,8,B,4,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.109
+F8,F,8,B,4,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.113
+G8,G,8,Blank,4,1B2,0304,Blank,NA,NA,NA,NA,0.096
+H8,H,8,A,7,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.753
+A9,A,9,A,4.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.225
+B9,B,9,A,4.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.207
+C9,C,9,A,4.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.212
+D9,D,9,B,4.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.213
+E9,E,9,B,4.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.215
+F9,F,9,B,4.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.221
+G9,G,9,Blank,4.5,1B2,0304,Blank,NA,NA,NA,NA,0.19
+H9,H,9,A,7,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.713
+A10,A,10,A,5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.19
+B10,B,10,A,5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.166
+C10,C,10,A,5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.171
+D10,D,10,B,5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.168
+E10,E,10,B,5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.169
+F10,F,10,B,5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.169
+G10,G,10,Blank,5,1B2,0304,Blank,NA,NA,NA,NA,0.086
+H10,H,10,B,7,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.642
+A11,A,11,A,5.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.464
+B11,B,11,A,5.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.42
+C11,C,11,A,5.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.448
+D11,D,11,B,5.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.411
+E11,E,11,B,5.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.422
+F11,F,11,B,5.5,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.383
+G11,G,11,Blank,5.5,1B2,0304,Blank,NA,NA,NA,NA,0.094
+H11,H,11,B,7,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.622
+A12,A,12,A,6,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.557
+B12,B,12,A,6,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.481
+C12,C,12,A,6,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.489
+D12,D,12,B,6,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.482
+E12,E,12,B,6,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.478
+F12,F,12,B,6,1B2,0304,4,Gardnerella sp. 3,JCP8017B,1,2,0.494
+G12,G,12,Blank,6,1B2,0304,Blank,NA,NA,NA,NA,0.048
+H12,H,12,Blank,7,1B2,0304,Blank,NA,NA,NA,NA,0.048
+A1,A,1,A,3.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.069
+B1,B,1,A,3.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.069
+C1,C,1,A,3.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.07
+D1,D,1,B,3.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.07
+E1,E,1,B,3.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.068
+F1,F,1,B,3.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.069
+G1,G,1,Blank,3.5,1B2,050X,Blank,NA,NA,NA,NA,0.068
+H1,H,1,A,7,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.38
+A2,A,2,A,4,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.1
+B2,B,2,A,4,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.106
+C2,C,2,A,4,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.112
+D2,D,2,B,4,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.11
+E2,E,2,B,4,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.106
+F2,F,2,B,4,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.108
+G2,G,2,Blank,4,1B2,050X,Blank,NA,NA,NA,NA,0.101
+H2,H,2,A,7,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.402
+A3,A,3,A,4.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.226
+B3,B,3,A,4.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.207
+C3,C,3,A,4.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.211
+D3,D,3,B,4.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.215
+E3,E,3,B,4.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.222
+F3,F,3,B,4.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.214
+G3,G,3,Blank,4.5,1B2,050X,Blank,NA,NA,NA,NA,0.212
+H3,H,3,A,7,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.389
+A4,A,4,A,5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.151
+B4,B,4,A,5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.153
+C4,C,4,A,5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.157
+D4,D,4,B,5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.154
+E4,E,4,B,5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.153
+F4,F,4,B,5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.168
+G4,G,4,Blank,5,1B2,050X,Blank,NA,NA,NA,NA,0.12
+H4,H,4,B,7,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.375
+A5,A,5,A,5.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.2
+B5,B,5,A,5.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.21
+C5,C,5,A,5.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.213
+D5,D,5,B,5.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.204
+E5,E,5,B,5.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.207
+F5,F,5,B,5.5,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.214
+G5,G,5,Blank,5.5,1B2,050X,Blank,NA,NA,NA,NA,0.065
+H5,H,5,B,7,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.384
+A6,A,6,A,6,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.261
+B6,B,6,A,6,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.281
+C6,C,6,A,6,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.265
+D6,D,6,B,6,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.283
+E6,E,6,B,6,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.284
+F6,F,6,B,6,1B2,050X,5,Gardnerella swidsinskii,UM224,1,2,0.293
+G6,G,6,Blank,6,1B2,050X,Blank,NA,NA,NA,NA,0.06
+H6,H,6,Blank,7,1B2,050X,Blank,NA,NA,NA,NA,0.065
+G7,G,7,Blank,3.5,1B2,050X,Blank,NA,NA,NA,NA,0.072
+G8,G,8,Blank,4,1B2,050X,Blank,NA,NA,NA,NA,0.094
+G9,G,9,Blank,4.5,1B2,050X,Blank,NA,NA,NA,NA,0.212
+G10,G,10,Blank,5,1B2,050X,Blank,NA,NA,NA,NA,0.1
+G11,G,11,Blank,5.5,1B2,050X,Blank,NA,NA,NA,NA,0.054
+G12,G,12,Blank,6,1B2,050X,Blank,NA,NA,NA,NA,0.049
+H12,H,12,Blank,7,1B2,050X,Blank,NA,NA,NA,NA,0.049
+A1,A,1,A,3.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.073
+B1,B,1,A,3.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.072
+C1,C,1,A,3.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.072
+D1,D,1,B,3.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.072
+E1,E,1,B,3.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.07
+F1,F,1,B,3.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.072
+G1,G,1,Blank,3.5,1B2,070X,Blank,NA,NA,NA,NA,0.067
+H1,H,1,A,7,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.337
+A2,A,2,A,4,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.103
+B2,B,2,A,4,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.105
+C2,C,2,A,4,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.108
+D2,D,2,B,4,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.105
+E2,E,2,B,4,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.104
+F2,F,2,B,4,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.108
+G2,G,2,Blank,4,1B2,070X,Blank,NA,NA,NA,NA,0.099
+H2,H,2,A,7,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.349
+A3,A,3,A,4.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.237
+B3,B,3,A,4.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.226
+C3,C,3,A,4.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.227
+D3,D,3,B,4.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.222
+E3,E,3,B,4.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.211
+F3,F,3,B,4.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.218
+G3,G,3,Blank,4.5,1B2,070X,Blank,NA,NA,NA,NA,0.218
+H3,H,3,A,7,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.354
+A4,A,4,A,5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.213
+B4,B,4,A,5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.201
+C4,C,4,A,5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.194
+D4,D,4,B,5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.176
+E4,E,4,B,5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.179
+F4,F,4,B,5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.185
+G4,G,4,Blank,5,1B2,070X,Blank,NA,NA,NA,NA,0.122
+H4,H,4,B,7,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.336
+A5,A,5,A,5.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.295
+B5,B,5,A,5.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.273
+C5,C,5,A,5.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.268
+D5,D,5,B,5.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.233
+E5,E,5,B,5.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.245
+F5,F,5,B,5.5,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.252
+G5,G,5,Blank,5.5,1B2,070X,Blank,NA,NA,NA,NA,0.061
+H5,H,5,B,7,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.346
+A6,A,6,A,6,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.34
+B6,B,6,A,6,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.335
+C6,C,6,A,6,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.326
+D6,D,6,B,6,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.298
+E6,E,6,B,6,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.298
+F6,F,6,B,6,1B2,070X,7,Gardnerella sp. 2,JCP8108,1,2,0.302
+G6,G,6,Blank,6,1B2,070X,Blank,NA,NA,NA,NA,0.06
+H6,H,6,Blank,7,1B2,070X,Blank,NA,NA,NA,NA,0.06
+G7,G,7,Blank,3.5,1B2,070X,Blank,NA,NA,NA,NA,0.069
+G8,G,8,Blank,4,1B2,070X,Blank,NA,NA,NA,NA,0.099
+G9,G,9,Blank,4.5,1B2,070X,Blank,NA,NA,NA,NA,0.21
+G10,G,10,Blank,5,1B2,070X,Blank,NA,NA,NA,NA,0.11
+G11,G,11,Blank,5.5,1B2,070X,Blank,NA,NA,NA,NA,0.055
+G12,G,12,Blank,6,1B2,070X,Blank,NA,NA,NA,NA,0.05
+H12,H,12,Blank,7,1B2,070X,Blank,NA,NA,NA,NA,0.05
+A1,A,1,A,3.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.071
+B1,B,1,A,3.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.071
+C1,C,1,A,3.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.071
+D1,D,1,B,3.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.068
+E1,E,1,B,3.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.068
+F1,F,1,B,3.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.069
+G1,G,1,Blank,3.5,2A2,0102,Blank,NA,NA,NA,NA,0.067
+H1,H,1,A,7,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.413
+A2,A,2,A,4,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.102
+B2,B,2,A,4,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.12
+C2,C,2,A,4,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.121
+D2,D,2,B,4,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.108
+E2,E,2,B,4,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.106
+F2,F,2,B,4,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.107
+G2,G,2,Blank,4,2A2,0102,Blank,NA,NA,NA,NA,0.099
+H2,H,2,A,7,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.469
+A3,A,3,A,4.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.197
+B3,B,3,A,4.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.216
+C3,C,3,A,4.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.208
+D3,D,3,B,4.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.205
+E3,E,3,B,4.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.199
+F3,F,3,B,4.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.205
+G3,G,3,Blank,4.5,2A2,0102,Blank,NA,NA,NA,NA,0.201
+H3,H,3,A,7,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.062
+A4,A,4,A,5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.128
+B4,B,4,A,5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.14
+C4,C,4,A,5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.146
+D4,D,4,B,5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.15
+E4,E,4,B,5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.121
+F4,F,4,B,5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.129
+G4,G,4,Blank,5,2A2,0102,Blank,NA,NA,NA,NA,0.113
+H4,H,4,B,7,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.481
+A5,A,5,A,5.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.249
+B5,B,5,A,5.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.287
+C5,C,5,A,5.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.258
+D5,D,5,B,5.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.269
+E5,E,5,B,5.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.271
+F5,F,5,B,5.5,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.261
+G5,G,5,Blank,5.5,2A2,0102,Blank,NA,NA,NA,NA,0.06
+H5,H,5,B,7,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.484
+A6,A,6,A,6,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.344
+B6,B,6,A,6,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.378
+C6,C,6,A,6,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.359
+D6,D,6,B,6,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.349
+E6,E,6,B,6,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.346
+F6,F,6,B,6,2A2,0102,1,Gardnerella leopoldii,AMD,2,2,0.359
+G6,G,6,Blank,6,2A2,0102,Blank,NA,NA,NA,NA,0.066
+H6,H,6,Blank,7,2A2,0102,Blank,NA,NA,NA,NA,0.061
+A7,A,7,A,3.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.072
+B7,B,7,A,3.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.08
+C7,C,7,A,3.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.074
+D7,D,7,B,3.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.08
+E7,E,7,B,3.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.082
+F7,F,7,B,3.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.086
+G7,G,7,Blank,3.5,2A2,0102,Blank,NA,NA,NA,NA,0.069
+H7,H,7,A,7,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.39
+A8,A,8,A,4,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.1
+B8,B,8,A,4,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.108
+C8,C,8,A,4,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.106
+D8,D,8,B,4,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.109
+E8,E,8,B,4,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.107
+F8,F,8,B,4,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.11
+G8,G,8,Blank,4,2A2,0102,Blank,NA,NA,NA,NA,0.101
+H8,H,8,A,7,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.361
+A9,A,9,A,4.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.196
+B9,B,9,A,4.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.22
+C9,C,9,A,4.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.198
+D9,D,9,B,4.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.209
+E9,E,9,B,4.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.205
+F9,F,9,B,4.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.208
+G9,G,9,Blank,4.5,2A2,0102,Blank,NA,NA,NA,NA,0.201
+H9,H,9,A,7,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.276
+A10,A,10,A,5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.153
+B10,B,10,A,5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.185
+C10,C,10,A,5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.144
+D10,D,10,B,5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.172
+E10,E,10,B,5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.164
+F10,F,10,B,5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.174
+G10,G,10,Blank,5,2A2,0102,Blank,NA,NA,NA,NA,0.11
+H10,H,10,B,7,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.457
+A11,A,11,A,5.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.25
+B11,B,11,A,5.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.288
+C11,C,11,A,5.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.255
+D11,D,11,B,5.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.314
+E11,E,11,B,5.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.331
+F11,F,11,B,5.5,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.316
+G11,G,11,Blank,5.5,2A2,0102,Blank,NA,NA,NA,NA,0.066
+H11,H,11,B,7,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.431
+A12,A,12,A,6,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.28
+B12,B,12,A,6,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.26
+C12,C,12,A,6,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.199
+D12,D,12,B,6,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.276
+E12,E,12,B,6,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.296
+F12,F,12,B,6,2A2,0102,2,Gardnerella leopoldii,C0096A1,2,2,0.341
+G12,G,12,Blank,6,2A2,0102,Blank,NA,NA,NA,NA,0.059
+H12,H,12,Blank,7,2A2,0102,Blank,NA,NA,NA,NA,0.057
+A1,A,1,A,3.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.077
+B1,B,1,A,3.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.078
+C1,C,1,A,3.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.077
+D1,D,1,B,3.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.075
+E1,E,1,B,3.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.087
+F1,F,1,B,3.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.084
+G1,G,1,Blank,3.5,2A2,030X,Blank,NA,NA,NA,NA,0.071
+H1,H,1,A,7,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.262
+A2,A,2,A,4,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.104
+B2,B,2,A,4,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.106
+C2,C,2,A,4,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.104
+D2,D,2,B,4,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.102
+E2,E,2,B,4,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.105
+F2,F,2,B,4,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.108
+G2,G,2,Blank,4,2A2,030X,Blank,NA,NA,NA,NA,0.1
+H2,H,2,A,7,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.356
+A3,A,3,A,4.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.193
+B3,B,3,A,4.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.209
+C3,C,3,A,4.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.196
+D3,D,3,B,4.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.193
+E3,E,3,B,4.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.192
+F3,F,3,B,4.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.198
+G3,G,3,Blank,4.5,2A2,030X,Blank,NA,NA,NA,NA,0.202
+H3,H,3,A,7,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.404
+A4,A,4,A,5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.118
+B4,B,4,A,5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.13
+C4,C,4,A,5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.12
+D4,D,4,B,5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.118
+E4,E,4,B,5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.128
+F4,F,4,B,5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.128
+G4,G,4,Blank,5,2A2,030X,Blank,NA,NA,NA,NA,0.11
+H4,H,4,B,7,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.429
+A5,A,5,A,5.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.098
+B5,B,5,A,5.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.123
+C5,C,5,A,5.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.1
+D5,D,5,B,5.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.099
+E5,E,5,B,5.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.09
+F5,F,5,B,5.5,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.109
+G5,G,5,Blank,5.5,2A2,030X,Blank,NA,NA,NA,NA,0.066
+H5,H,5,B,7,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.438
+A6,A,6,A,6,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.152
+B6,B,6,A,6,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.185
+C6,C,6,A,6,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.169
+D6,D,6,B,6,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.18
+E6,E,6,B,6,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.17
+F6,F,6,B,6,2A2,030X,3,Gardnerella sp. 12,CMW7778B,2,2,0.149
+G6,G,6,Blank,6,2A2,030X,Blank,NA,NA,NA,NA,0.06
+H6,H,6,Blank,7,2A2,030X,Blank,NA,NA,NA,NA,0.06
+G7,G,7,Blank,3.5,2A2,030X,Blank,NA,NA,NA,NA,0.071
+G8,G,8,Blank,4,2A2,030X,Blank,NA,NA,NA,NA,0.121
+G9,G,9,Blank,4.5,2A2,030X,Blank,NA,NA,NA,NA,0.189
+G10,G,10,Blank,5,2A2,030X,Blank,NA,NA,NA,NA,0.105
+G11,G,11,Blank,5.5,2A2,030X,Blank,NA,NA,NA,NA,0.057
+G12,G,12,Blank,6,2A2,030X,Blank,NA,NA,NA,NA,0.052
+H12,H,12,Blank,7,2A2,030X,Blank,NA,NA,NA,NA,0.052
+A1,A,1,A,3.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.074
+B1,B,1,A,3.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.075
+C1,C,1,A,3.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.077
+D1,D,1,B,3.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.078
+E1,E,1,B,3.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.079
+F1,F,1,B,3.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.078
+G1,G,1,Blank,3.5,1B3,0102,Blank,NA,NA,NA,NA,0.069
+H1,H,1,A,7,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.574
+A2,A,2,A,4,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.102
+B2,B,2,A,4,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.112
+C2,C,2,A,4,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.113
+D2,D,2,B,4,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.114
+E2,E,2,B,4,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.101
+F2,F,2,B,4,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.118
+G2,G,2,Blank,4,1B3,0102,Blank,NA,NA,NA,NA,0.104
+H2,H,2,A,7,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.655
+A3,A,3,A,4.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.223
+B3,B,3,A,4.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.222
+C3,C,3,A,4.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.218
+D3,D,3,B,4.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.213
+E3,E,3,B,4.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.215
+F3,F,3,B,4.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.217
+G3,G,3,Blank,4.5,1B3,0102,Blank,NA,NA,NA,NA,0.204
+H3,H,3,A,7,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.649
+A4,A,4,A,5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.184
+B4,B,4,A,5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.181
+C4,C,4,A,5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.173
+D4,D,4,B,5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.171
+E4,E,4,B,5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.165
+F4,F,4,B,5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.178
+G4,G,4,Blank,5,1B3,0102,Blank,NA,NA,NA,NA,0.106
+H4,H,4,B,7,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.743
+A5,A,5,A,5.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.334
+B5,B,5,A,5.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.318
+C5,C,5,A,5.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.269
+D5,D,5,B,5.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.296
+E5,E,5,B,5.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.328
+F5,F,5,B,5.5,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.327
+G5,G,5,Blank,5.5,1B3,0102,Blank,NA,NA,NA,NA,0.069
+H5,H,5,B,7,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.755
+A6,A,6,A,6,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.44
+B6,B,6,A,6,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.399
+C6,C,6,A,6,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.343
+D6,D,6,B,6,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.411
+E6,E,6,B,6,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.444
+F6,F,6,B,6,1B3,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.455
+G6,G,6,Blank,6,1B3,0102,Blank,NA,NA,NA,NA,0.062
+H6,H,6,Blank,7,1B3,0102,Blank,NA,NA,NA,NA,0.069
+A7,A,7,A,3.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.075
+B7,B,7,A,3.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.079
+C7,C,7,A,3.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.076
+D7,D,7,B,3.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.078
+E7,E,7,B,3.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.082
+F7,F,7,B,3.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.093
+G7,G,7,Blank,3.5,1B3,0102,Blank,NA,NA,NA,NA,0.073
+H7,H,7,A,7,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.649
+A8,A,8,A,4,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.098
+B8,B,8,A,4,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.102
+C8,C,8,A,4,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.1
+D8,D,8,B,4,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.109
+E8,E,8,B,4,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.111
+F8,F,8,B,4,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.115
+G8,G,8,Blank,4,1B3,0102,Blank,NA,NA,NA,NA,0.105
+H8,H,8,A,7,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.691
+A9,A,9,A,4.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.227
+B9,B,9,A,4.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.223
+C9,C,9,A,4.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.204
+D9,D,9,B,4.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.198
+E9,E,9,B,4.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.202
+F9,F,9,B,4.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.215
+G9,G,9,Blank,4.5,1B3,0102,Blank,NA,NA,NA,NA,0.195
+H9,H,9,A,7,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.686
+A10,A,10,A,5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.179
+B10,B,10,A,5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.185
+C10,C,10,A,5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.18
+D10,D,10,B,5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.175
+E10,E,10,B,5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.169
+F10,F,10,B,5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.191
+G10,G,10,Blank,5,1B3,0102,Blank,NA,NA,NA,NA,0.107
+H10,H,10,B,7,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.668
+A11,A,11,A,5.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.301
+B11,B,11,A,5.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.312
+C11,C,11,A,5.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.292
+D11,D,11,B,5.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.289
+E11,E,11,B,5.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.275
+F11,F,11,B,5.5,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.312
+G11,G,11,Blank,5.5,1B3,0102,Blank,NA,NA,NA,NA,0.058
+H11,H,11,B,7,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.636
+A12,A,12,A,6,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.381
+B12,B,12,A,6,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.385
+C12,C,12,A,6,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.392
+D12,D,12,B,6,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.347
+E12,E,12,B,6,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.355
+F12,F,12,B,6,1B3,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.374
+G12,G,12,Blank,6,1B3,0102,Blank,NA,NA,NA,NA,0.053
+H12,H,12,Blank,7,1B3,0102,Blank,NA,NA,NA,NA,0.055
+G1,G,1,Blank,3.5,1B3,0X04,Blank,NA,NA,NA,NA,0.072
+G2,G,2,Blank,4,1B3,0X04,Blank,NA,NA,NA,NA,0.108
+G3,G,3,Blank,4.5,1B3,0X04,Blank,NA,NA,NA,NA,0.186
+G4,G,4,Blank,5,1B3,0X04,Blank,NA,NA,NA,NA,0.104
+G5,G,5,Blank,5.5,1B3,0X04,Blank,NA,NA,NA,NA,0.06
+G6,G,6,Blank,6,1B3,0X04,Blank,NA,NA,NA,NA,0.062
+H6,H,6,Blank,7,1B3,0X04,Blank,NA,NA,NA,NA,0.06
+A7,A,7,A,3.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.076
+B7,B,7,A,3.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.079
+C7,C,7,A,3.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.081
+D7,D,7,B,3.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.081
+E7,E,7,B,3.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.084
+F7,F,7,B,3.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.085
+G7,G,7,Blank,3.5,1B3,0X04,Blank,NA,NA,NA,NA,0.079
+H7,H,7,A,7,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.949
+A8,A,8,A,4,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.102
+B8,B,8,A,4,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.102
+C8,C,8,A,4,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.117
+D8,D,8,B,4,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.129
+E8,E,8,B,4,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.124
+F8,F,8,B,4,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.124
+G8,G,8,Blank,4,1B3,0X04,Blank,NA,NA,NA,NA,0.109
+H8,H,8,A,7,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.909
+A9,A,9,A,4.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.197
+B9,B,9,A,4.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.209
+C9,C,9,A,4.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.213
+D9,D,9,B,4.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.22
+E9,E,9,B,4.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.217
+F9,F,9,B,4.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.215
+G9,G,9,Blank,4.5,1B3,0X04,Blank,NA,NA,NA,NA,0.168
+H9,H,9,A,7,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.891
+A10,A,10,A,5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.236
+B10,B,10,A,5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.181
+C10,C,10,A,5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.199
+D10,D,10,B,5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.193
+E10,E,10,B,5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.209
+F10,F,10,B,5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.197
+G10,G,10,Blank,5,1B3,0X04,Blank,NA,NA,NA,NA,0.099
+H10,H,10,B,7,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.859
+A11,A,11,A,5.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.533
+B11,B,11,A,5.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.375
+C11,C,11,A,5.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.414
+D11,D,11,B,5.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.395
+E11,E,11,B,5.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.417
+F11,F,11,B,5.5,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.446
+G11,G,11,Blank,5.5,1B3,0X04,Blank,NA,NA,NA,NA,0.054
+H11,H,11,B,7,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.855
+A12,A,12,A,6,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.62
+B12,B,12,A,6,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.662
+C12,C,12,A,6,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.65
+D12,D,12,B,6,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.628
+E12,E,12,B,6,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.615
+F12,F,12,B,6,1B3,0X04,4,Gardnerella swidsinskii,C0102A2,1,NA,0.597
+G12,G,12,Blank,6,1B3,0X04,Blank,NA,NA,NA,NA,0.05
+H12,H,12,Blank,7,1B3,0X04,Blank,NA,NA,NA,NA,0.052
+A1,A,1,A,3.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.072
+B1,B,1,A,3.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.074
+C1,C,1,A,3.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.076
+D1,D,1,B,3.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.074
+E1,E,1,B,3.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.073
+F1,F,1,B,3.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.074
+G1,G,1,Blank,3.5,1B4,0102,Blank,NA,NA,NA,NA,0.068
+H1,H,1,A,7,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.497
+A2,A,2,A,4,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.099
+B2,B,2,A,4,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.126
+C2,C,2,A,4,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.115
+D2,D,2,B,4,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.11
+E2,E,2,B,4,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.11
+F2,F,2,B,4,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.11
+G2,G,2,Blank,4,1B4,0102,Blank,NA,NA,NA,NA,0.099
+H2,H,2,A,7,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.595
+A3,A,3,A,4.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.188
+B3,B,3,A,4.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.215
+C3,C,3,A,4.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.185
+D3,D,3,B,4.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.183
+E3,E,3,B,4.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.191
+F3,F,3,B,4.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.194
+G3,G,3,Blank,4.5,1B4,0102,Blank,NA,NA,NA,NA,0.146
+H3,H,3,A,7,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.598
+A4,A,4,A,5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.143
+B4,B,4,A,5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.193
+C4,C,4,A,5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.153
+D4,D,4,B,5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.139
+E4,E,4,B,5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.141
+F4,F,4,B,5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.137
+G4,G,4,Blank,5,1B4,0102,Blank,NA,NA,NA,NA,0.07
+H4,H,4,B,7,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.594
+A5,A,5,A,5.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.307
+B5,B,5,A,5.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.335
+C5,C,5,A,5.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.319
+D5,D,5,B,5.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.288
+E5,E,5,B,5.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.284
+F5,F,5,B,5.5,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.293
+G5,G,5,Blank,5.5,1B4,0102,Blank,NA,NA,NA,NA,0.057
+H5,H,5,B,7,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.593
+A6,A,6,A,6,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.391
+B6,B,6,A,6,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.439
+C6,C,6,A,6,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.404
+D6,D,6,B,6,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.376
+E6,E,6,B,6,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.372
+F6,F,6,B,6,1B4,0102,1,Gardnerella sp. 10,C0100B2,1,NA,0.385
+G6,G,6,Blank,6,1B4,0102,Blank,NA,NA,NA,NA,0.057
+H6,H,6,Blank,7,1B4,0102,Blank,NA,NA,NA,NA,0.06
+A7,A,7,A,3.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.072
+B7,B,7,A,3.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.079
+C7,C,7,A,3.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.083
+D7,D,7,B,3.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.098
+E7,E,7,B,3.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.087
+F7,F,7,B,3.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.091
+G7,G,7,Blank,3.5,1B4,0102,Blank,NA,NA,NA,NA,0.07
+H7,H,7,A,7,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.634
+A8,A,8,A,4,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.093
+B8,B,8,A,4,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.107
+C8,C,8,A,4,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.102
+D8,D,8,B,4,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.111
+E8,E,8,B,4,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.107
+F8,F,8,B,4,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.112
+G8,G,8,Blank,4,1B4,0102,Blank,NA,NA,NA,NA,0.097
+H8,H,8,A,7,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.635
+A9,A,9,A,4.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.192
+B9,B,9,A,4.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.226
+C9,C,9,A,4.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.195
+D9,D,9,B,4.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.198
+E9,E,9,B,4.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.207
+F9,F,9,B,4.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.213
+G9,G,9,Blank,4.5,1B4,0102,Blank,NA,NA,NA,NA,0.16
+H9,H,9,A,7,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.652
+A10,A,10,A,5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.147
+B10,B,10,A,5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.158
+C10,C,10,A,5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.173
+D10,D,10,B,5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.182
+E10,E,10,B,5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.17
+F10,F,10,B,5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.17
+G10,G,10,Blank,5,1B4,0102,Blank,NA,NA,NA,NA,0.068
+H10,H,10,B,7,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.651
+A11,A,11,A,5.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.261
+B11,B,11,A,5.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.282
+C11,C,11,A,5.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.255
+D11,D,11,B,5.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.307
+E11,E,11,B,5.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.308
+F11,F,11,B,5.5,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.324
+G11,G,11,Blank,5.5,1B4,0102,Blank,NA,NA,NA,NA,0.053
+H11,H,11,B,7,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.612
+A12,A,12,A,6,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.336
+B12,B,12,A,6,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.352
+C12,C,12,A,6,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.354
+D12,D,12,B,6,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.375
+E12,E,12,B,6,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.391
+F12,F,12,B,6,1B4,0102,2,Gardnerella sp. 7,C0179B4,1,NA,0.383
+G12,G,12,Blank,6,1B4,0102,Blank,NA,NA,NA,NA,0.049
+H12,H,12,Blank,7,1B4,0102,Blank,NA,NA,NA,NA,0.051
+A1,A,1,A,3.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.078
+B1,B,1,A,3.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.077
+C1,C,1,A,3.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.078
+D1,D,1,B,3.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.079
+E1,E,1,B,3.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.077
+F1,F,1,B,3.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.079
+G1,G,1,Blank,3.5,1B4,0304,Blank,NA,NA,NA,NA,0.072
+H1,H,1,A,7,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.294
+A2,A,2,A,4,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.107
+B2,B,2,A,4,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.11
+C2,C,2,A,4,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.11
+D2,D,2,B,4,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.109
+E2,E,2,B,4,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.106
+F2,F,2,B,4,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.109
+G2,G,2,Blank,4,1B4,0304,Blank,NA,NA,NA,NA,0.103
+H2,H,2,A,7,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.337
+A3,A,3,A,4.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.151
+B3,B,3,A,4.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.153
+C3,C,3,A,4.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.201
+D3,D,3,B,4.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.148
+E3,E,3,B,4.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.144
+F3,F,3,B,4.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.149
+G3,G,3,Blank,4.5,1B4,0304,Blank,NA,NA,NA,NA,0.137
+H3,H,3,A,7,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.314
+A4,A,4,A,5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.139
+B4,B,4,A,5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.167
+C4,C,4,A,5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.168
+D4,D,4,B,5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.153
+E4,E,4,B,5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.148
+F4,F,4,B,5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.155
+G4,G,4,Blank,5,1B4,0304,Blank,NA,NA,NA,NA,0.11
+H4,H,4,B,7,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.356
+A5,A,5,A,5.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.17
+B5,B,5,A,5.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.234
+C5,C,5,A,5.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.213
+D5,D,5,B,5.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.245
+E5,E,5,B,5.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.224
+F5,F,5,B,5.5,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.224
+G5,G,5,Blank,5.5,1B4,0304,Blank,NA,NA,NA,NA,0.093
+H5,H,5,B,7,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.351
+A6,A,6,A,6,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.211
+B6,B,6,A,6,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.249
+C6,C,6,A,6,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.29
+D6,D,6,B,6,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.312
+E6,E,6,B,6,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.304
+F6,F,6,B,6,1B4,0304,3,Gardnerella sp. 2,JCP7275,1,NA,0.321
+G6,G,6,Blank,6,1B4,0304,Blank,NA,NA,NA,NA,0.114
+H6,H,6,Blank,7,1B4,0304,Blank,NA,NA,NA,NA,0.068
+A7,A,7,A,3.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.077
+B7,B,7,A,3.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.078
+C7,C,7,A,3.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.078
+D7,D,7,B,3.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.082
+E7,E,7,B,3.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.077
+F7,F,7,B,3.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.079
+G7,G,7,Blank,3.5,1B4,0304,Blank,NA,NA,NA,NA,0.08
+H7,H,7,A,7,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.34
+A8,A,8,A,4,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.099
+B8,B,8,A,4,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.102
+C8,C,8,A,4,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.103
+D8,D,8,B,4,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.103
+E8,E,8,B,4,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.101
+F8,F,8,B,4,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.105
+G8,G,8,Blank,4,1B4,0304,Blank,NA,NA,NA,NA,0.1
+H8,H,8,A,7,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.32
+A9,A,9,A,4.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.164
+B9,B,9,A,4.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.182
+C9,C,9,A,4.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.183
+D9,D,9,B,4.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.243
+E9,E,9,B,4.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.188
+F9,F,9,B,4.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.244
+G9,G,9,Blank,4.5,1B4,0304,Blank,NA,NA,NA,NA,0.166
+H9,H,9,A,7,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.347
+A10,A,10,A,5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.157
+B10,B,10,A,5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.163
+C10,C,10,A,5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.173
+D10,D,10,B,5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.181
+E10,E,10,B,5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.171
+F10,F,10,B,5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.104
+G10,G,10,Blank,5,1B4,0304,Blank,NA,NA,NA,NA,0.072
+H10,H,10,B,7,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.3
+A11,A,11,A,5.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.203
+B11,B,11,A,5.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.227
+C11,C,11,A,5.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.177
+D11,D,11,B,5.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.197
+E11,E,11,B,5.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.193
+F11,F,11,B,5.5,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.194
+G11,G,11,Blank,5.5,1B4,0304,Blank,NA,NA,NA,NA,0.057
+H11,H,11,B,7,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.342
+A12,A,12,A,6,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.215
+B12,B,12,A,6,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.243
+C12,C,12,A,6,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.259
+D12,D,12,B,6,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.276
+E12,E,12,B,6,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.273
+F12,F,12,B,6,1B4,0304,4,Gardnerella sp. 2,JCP7275,1,NA,0.29
+G12,G,12,Blank,6,1B4,0304,Blank,NA,NA,NA,NA,0.105
+H12,H,12,Blank,7,1B4,0304,Blank,NA,NA,NA,NA,0.055

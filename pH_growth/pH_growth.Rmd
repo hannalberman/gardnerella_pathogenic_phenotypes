@@ -1,0 +1,578 @@
+---
+title: "Growth at Varying pH"
+author: "Hanna Berman"
+output: html_document
+---
+
+**Purpose:**
+  To measure the growth of each strain in media with pH adjusted using lactic acid to 3.5, 4, 4.5, 5, 5.5, 6, and 7 (no lactic acid)
+  
+**Protocol:**
+  
+* Streak out strains on BHI Plates and incubate at 37$^\circ$C anaerobically for 48 hours
+* Pick two colonies of each strain and inoculate each colony into 1 mL NYC-III media and incubate for 24 (protocols 1 and 2) or 48 hours (protocol 3) at 37$^\circ$C anaerobically
+* Measure OD~600~ and back-dilute cultures 1:100 in 1 mL fresh NYC-III media and incubate for 24 (protocols 1 and 2) or 48 hours (protocol 3) at 37$^\circ$C anaerobically
+* Measure OD~600~ and back dilute cultures 1:10 in fresh NYC-III media and incubate for 4 (protocol 1), 7 (protocol 2) or 15 hours (protocol 3) at 37$^\circ$C anaerobically
+* Measure OD~600~ and dilute cultures to OD~600~=0.01 in NYC-III media with pH adjusted using lactic acid to 3.5, 4, 4.5, 5, 5.5, 6, and 7 (no lactic acid) in and seed into non treated 96-well culture plates
+* Incubate for 24 (protocols 1 and 2) or 48 (protocol 3) hours at 37$^\circ$C anaerobically and measure OD~600~
+
+
+```{r, message=FALSE,warning=FALSE}
+library(tidyverse)
+library(xlsx)
+library(broom)
+library(rstatix)
+library(ape)
+library(ggbeeswarm)
+library(formattable)
+library(ggpubr)
+library(cowplot)
+library(corrplot)
+library(kableExtra)
+
+library(grid)
+library(gridGraphics)
+
+`%!in%` <- negate(`%in%`)
+```
+
+  Short cuts and file paths
+```{r, message=FALSE, warning=FALSE}
+strains <- c("14018", "315-A", "C0011E4", "JCP7275", "C0084H9", "JCP8108", "JCP8017B", "C0040C2" , "UM35",  "JCP8066", "C0093B3", "AMD", "C0096A1", "C0102A2",  "UM224", "Gv5-1", "C0179B4", "C0056B5", "Gv101", "C0100B2", "C0101A1", "CMW7778B")
+
+strains0 <- c("14018", "315-A", "C0011E4", "JCP7275", "C0084H9", "JCP8108", "JCP8017B", "C0040C2" , "UM35",  "JCP8066", "C0093B3", "AMD", "C0096A1", "C0102A2",  "UM224", "5-1", "C0179B4", "C0056B5", "101", "C0100B2", "C0101A1", "CMW7778B")
+
+species <- c("Gardnerella vaginalis", "Gardnerella sp. 2", "Gardnerella sp. 3", "Gardnerella piotii", "Gardnerella leopoldii", "Gardnerella swidsinskii", "Gardnerella sp. 7", "Gardnerella sp. 8", "Gardnerella sp. 10", "Gardnerella sp. 11", "Gardnerella sp. 12")
+
+
+figureOut <- "../../experiments_figures"
+suppTableOut <- "../../experiments_figures/supplementary_posthoc_tables.xlsx"
+
+```
+
+  Import data
+```{r, warning=FALSE, message=FALSE}
+midlog_raw_data <- read_csv("./data/pH_midlog_raw_data.csv")
+pH_raw_data <- read_csv("./data/pH_raw_data.csv")
+```
+
+
+  Plot settings
+```{r, message=FALSE, warning=FALSE}
+theme_set(theme_bw())
+
+speciesColor <- scale_color_manual(values=c("#CC79A7", "#D55E00", "#56B4E9", "#0072B2", "#E69F00", "#009E73", 
+                                                 "darkgreen", "gold3", "darkred", "darkblue",
+                                                 "mediumpurple4"))
+
+speciesFill <- scale_fill_manual(values=c("#CC79A7", "#D55E00", "#56B4E9", "#0072B2", "#E69F00", "#009E73", 
+                                                 "darkgreen", "gold3", "darkred", "darkblue",
+                                                 "mediumpurple4"))
+```
+
+
+# Set up growth
+  Propagate twice and then incubate to mid log.
+  1:10 Dilution for mid Log: 
+  Protocol 1: 4 hour incubation
+  Protocol 2: 7 hour incubation
+  Protocol 3: 15 hour incubation
+## Clean data
+```{r, warning=FALSE, message=FALSE}
+setupDF <- midlog_raw_data %>%
+  group_by(Number, BioRep, Species, Strain, Batch, Step) %>%
+  mutate(OD=OD-mean(.$OD[.$Number=="Blank"]),
+                      OD=case_when(OD>0~OD,
+                      OD<=0~0)) %>%
+  filter(Number!="Blank") %>%
+  mutate(Step=factor(Step, levels=c("Overnight 1", "Overnight 2", "Mid Log"))) %>%
+  mutate(Strain=factor(Strain, levels=strains),
+         Species=factor(Species, levels=species),
+         Sample=paste(Strain, Batch, BioRep, sep="."),
+         BatchNum=str_extract(Batch, "(?<=[A|B])[0-9]"),
+         BatchRep=paste(BatchNum, BioRep, sep="."),
+         StrainN=as.numeric(Strain),
+         rectFill=case_when(StrainN %% 2 == 0 ~ "A",
+                           StrainN %% 2 != 0 ~ "B")) %>%
+  ungroup %>%
+  with_groups(c("Sample", "Number", "BioRep", "Batch", "BatchNum", "BatchRep", "StrainN", "rectFill", "Species", "Strain", "Protocol",  "Step"), summarize, ODm=mean(OD), ODsd=sd(OD))
+```
+
+
+  Assess mid log growth for removing poor growers with OD~600~ < 0.05
+```{r, message=FALSE, warning=FALSE}
+setupDF %>%
+  filter(Step=="Mid Log") %>%
+  ggplot(aes(x=Strain, y=ODm)) +
+  geom_point(aes(shape=BioRep)) +
+  geom_hline(aes(yintercept=0.05), linetype=2, color="gray") +
+  theme(axis.text.x = element_text(angle=45, hjust=1)) +
+  labs(x=NULL, y=bquote(OD[600]), shape="Biological Replicate", color="Experiment Batch")
+```
+
+```{r, message=FALSE, warning=FALSE}
+failGrowthSamples <- setupDF %>%
+  filter(Step=="Mid Log", ODm<0.05) %>%
+  .$Sample
+  
+failGrowthSamples
+```
+
+
+```{r, message=FALSE, warning=FALSE}
+overnightPlot <- setupDF %>%
+  filter(Sample %!in% failGrowthSamples) %>%
+  ggplot(aes(x=Strain, y=ODm)) +
+  geom_rect(aes(xmin=StrainN-.5, xmax=StrainN+.5, ymin = 0, ymax = 1, fill=rectFill), alpha = 0.2, show.legend = FALSE) +
+  geom_pointrange(aes(ymin=(ODm-ODsd), ymax=(ODm+ODsd), shape=BatchNum, color=Species), position = position_quasirandom(), size=0.3, alpha=0.7, show.legend = FALSE) +
+  geom_point(aes(shape=BatchNum), alpha=0) +
+  speciesColor +
+  scale_fill_manual(values=c("white", "gray"), labels=c("A","B")) +
+  ylim(0,1) +
+  facet_grid(.~Step) +
+  coord_flip() +
+  scale_x_discrete(limits=rev) +
+  theme(axis.text.x = element_text(size=8),
+        axis.text.y = element_text(size=8),
+        axis.title = element_text(size=11),
+        panel.grid = element_blank(),
+        legend.position = "none") +
+  labs(x=NULL, y=bquote(OD[600]), shape="Experiment Batch")
+
+## annotation portions of plot
+#protocol bar
+protocolBar <- setupDF %>%
+  select(Strain, Species, Protocol) %>%
+  unique %>%
+  mutate(Protocol=as.character(Protocol)) %>%
+  ggplot() +
+    geom_bar(aes(x=Strain, y=2, fill=Protocol), stat="identity", width = 1.1) +
+    scale_x_discrete(limits=rev) +
+    scale_fill_manual(values=c("cornflowerblue", "burlywood1", "forestgreen")) +
+    coord_flip() +
+    theme_void() +
+    theme(legend.position = "none")
+
+speciesBar <- setupDF %>%
+  select(Strain, Species, Protocol) %>%
+  unique %>%
+  ggplot() +
+    geom_bar(aes(x=Strain, y=1, fill=Species), stat="identity", width=1.1) +
+    scale_x_discrete(limits=rev) +
+    speciesFill +
+    coord_flip() +
+    theme_void() +
+    theme(legend.position = "none")
+
+#Legends
+protocol_legend <- ggpubr::get_legend(
+    protocolBar + 
+    guides(color = guide_legend(nrow = 1)) +
+    theme(legend.position = "bottom"))
+species_legend <- ggpubr::get_legend(
+    speciesBar +
+    guides(color=guide_legend(ncol = 1)) +
+    theme(legend.position = "bottom"))
+experiment_legend <- ggpubr::get_legend(
+  overnightPlot +
+  guides(shape=guide_legend(nrow = 1, override.aes = list(alpha=1, size=4))) +
+  theme(legend.position = "bottom"))
+
+a <- plot_grid(overnightPlot, speciesBar, protocolBar, nrow = 1, align = "h", axis = "bt", rel_widths = c(1, 0.02, 0.02))
+b <- plot_grid(a, as_ggplot(species_legend), nrow=2, rel_heights = c(1, 0.3))
+c <- plot_grid(as_ggplot(protocol_legend), as_ggplot(experiment_legend), nrow=1)
+setUpGrowthFigure <- plot_grid(b, c, ncol=1, nrow=2, rel_heights = c(1, 0.1))
+setUpGrowthFigure
+```
+
+# Calculate growth in media with lactic acid-adjusted pH
+  Measured as OD~600~ in stationary phase
+## Organize data
+```{r, message=FALSE, warning=FALSE}
+blankDF <- pH_raw_data %>%
+    filter(Number=="Blank")
+
+pH_results_raw <- pH_raw_data %>%
+    filter(Number !="Blank")
+```
+
+  Assess Blanks
+```{r, message=FALSE, warning=FALSE}
+blankDF %>%
+  ggplot(aes(x=Plate, y=OD)) +
+  geom_point(alpha=0.5) +
+  facet_grid(pH~Batch, scales = "free_x")
+```
+  
+  May need to remove pH 6 data from protocol 3 strains.
+  
+  Perform blank subtraction
+```{r, message=FALSE, warning=FALSE}
+meanBlankODs <- blankDF %>%
+  with_groups(c(Plate, Batch, pH), summarize, blankOD=mean(OD))
+
+
+DF0 <- pH_results_raw %>%
+  left_join(meanBlankODs) %>%
+  mutate(OD=OD-blankOD,
+         Species=factor(Species, levels=species),
+         Strain=factor(Strain, levels=strains),
+         Sample=paste(Batch, Strain, BioRep, sep=".")) %>%
+  filter(Sample %!in% failGrowthSamples)
+```
+
+  Crude assessment of results
+```{r, message=FALSE, warning=FALSE}
+DF0 %>%
+  ggplot(aes(x=pH, y=OD, color=pH, shape=BioRep)) +
+  geom_point() +
+  geom_hline(yintercept = 0, linetype=2, color="red") +
+  facet_wrap(~Strain) +
+  theme(axis.text.x = element_text(size=5)) +
+  labs(x="pH", y=bquote(OD[600]), shape="Biological Replicate")
+```
+
+  May be some issues with some pH = 7 samples.
+
+  Look at issues with low pH 7 results
+```{r, message=FALSE, warning=FALSE}
+DF0 %>%
+  filter(Strain %in% c("14018", "315-A", "C0011E4", "AMD", "Gv5-1", "Gv101"), 
+         pH==7) %>%
+  mutate(PlateSet=str_extract(Batch, "(?<=[A|B])[1|2]"), 
+         BatchRep=paste(Batch, BioRep, sep="."),
+         BioRep=case_when(BatchRep=="1A1.A"~"A",
+                          BatchRep=="1A1.B"~"B",
+                          BatchRep=="1A2.A"~"C",
+                          BatchRep=="1A2.B"~"D",
+                          BatchRep=="1B1.A"~"E",
+                          BatchRep=="1B1.B"~"F",
+                          BatchRep=="2A1.A"~"A",
+                          BatchRep=="2A1.B"~"B",
+                          BatchRep=="2A2.A"~"C",
+                          BatchRep=="2A2.B"~"D")) %>%
+  ggplot(aes(x=Strain, y=OD, color=BioRep)) +
+  geom_quasirandom(size=2, alpha=0.5) +
+  labs(y=bquote(OD[600]), x=NULL)
+  
+```
+
+  All of Gv101 biological replicate A and one technical replicate of AMD
+
+```{r, warning=FALSE, message=FALSE}
+filterWells <- DF0 %>%
+  filter(pH==7, 
+         OD<0.005) %>%
+  mutate(SampleWell=paste(Sample, well, sep=".")) %>%
+  .$SampleWell
+filterWells
+```
+
+  Filter sample with no pH 7 values
+```{r, message=FALSE, warning=FALSE}
+filterSamples <- DF0 %>%
+  mutate(SampleWell=paste(Sample, well, sep=".")) %>%
+  filter(SampleWell %!in% filterWells) %>%
+  count(Sample, pH) %>%
+  spread(pH, n) %>%
+  filter(is.na(`7`)) %>%
+  .$Sample
+filterSamples
+```
+
+  Filter pH 6 protocol 3
+```{r, message=FALSE, warning=FALSE}
+filterpHwells <- DF0 %>%
+  mutate(SampleWell=paste(Sample, well, sep=".")) %>%
+  filter(SampleWell %!in% filterWells,
+         Protocol=="3",
+         pH==6) %>%
+  unique %>%
+  .$SampleWell
+filterpHwells
+```
+  Create final data frame
+```{r, measure=FALSE, warning=FALSE}
+DF <- DF0 %>%
+  mutate(SampleWell=paste(Sample, well, sep=".")) %>%
+  filter(SampleWell %!in% filterWells,
+         Sample %!in% filterSamples,
+         SampleWell %!in% filterpHwells)
+```
+
+## Plot
+```{r, message=FALSE, warning=FALSE}
+annotationDF <- DF %>%
+  filter(pH==7) %>%
+  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
+  with_groups(c(Species, Strain), summarize, y=mean(mOD)) %>%
+  with_groups(Species, mutate, y=1.2-.2*rank(Strain))
+
+pHGrowthPlot <- DF %>%
+  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
+  mutate(pH=as.numeric(pH)) %>%
+  ggplot() +
+  stat_summary(aes(x=pH, y=mOD, group=Strain, linetype=Strain, color=Strain), fun="mean", geom = "line", show.legend = FALSE) +
+  geom_pointrange(aes(x=pH, y=mOD, ymin=(mOD-sdOD), ymax=(mOD+sdOD), color=Strain, shape=Strain),size=0.3, show.legend = FALSE) +
+  geom_text(data=annotationDF, aes(label=Strain, color=Strain, x=3.5, y=y), size=3, show.legend = FALSE, hjust=0) +
+  facet_wrap(~Species) +
+  scale_shape_manual(values=c(15, 16, 17, 15, 16, 17, 15, 16, 15, 16, 17, 15, 16, 15, 16, 17, 15, 15, 16, 15, 15, 15)) +
+  scale_linetype_manual(values=c(1, 2, 3, 1, 2, 3, 1, 2, 1, 2, 3, 1, 2, 3, 1, 2, 1, 1, 2, 1, 1, 1)) +
+  scale_color_manual(values=c("black", "gray47", "brown", "black", "gray47", "brown", "black", "gray47", "black", "gray47", "brown", "black", "gray47", "black", "gray47",  "brown", "black", "black", "gray47", "black", "black", "black")) +
+  #theme(panel.grid = element_blank()) +
+  labs(y=bquote(OD[600]), x="pH")
+pHGrowthPlot
+```
+  
+## Minimum pH with non-zero growth per strain
+### T-test
+```{r message=FALSE, warning=FALSE}
+ttest <- DF %>%
+  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
+  group_by(Species, Strain, pH) %>%
+  t_test(mOD~1, mu=0.01, alternative = "greater") %>%
+  add_significance("p")
+```
+
+```{r, warning=FALSE, message=FALSE}
+minpHtable <- ttest %>%
+  group_by(Strain, Species) %>%
+  filter(p.signif!="ns") %>%
+  filter(pH==min(pH)) %>%
+  select(Species, Strain, pH) %>%
+  arrange(pH) %>%
+  kbl(caption="Table 1. Minimum pH with growth") %>%
+  kable_classic(full_width=TRUE, html_font = "Arial")
+
+minpHtable
+
+#save_kable(minpHtable, file = file.path(figureOut, paste(Sys.Date(), "Table1_minpHTable.png", sep="_")), zoom=6)
+```
+
+### Moran's I
+  Is minimum pH phylogenetically correlated by Moran's I?
+```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=FALSE}
+# pHvals0 <- ttest %>%
+#   group_by(Strain, Species) %>%
+#   filter(p.signif!="ns") %>%
+#   filter(pH==min(pH)) %>%
+#   mutate(Strain=as.character(Strain),
+#          Strain=case_when(Strain=="Gv101"~"101",
+#                           Strain=="Gv5-1"~"5-1",
+#                           Strain %!in% c("101", "5-1")~Strain),
+#          Strain=factor(Strain, levels=strains0),
+#          pH=as.numeric(pH))
+# 
+# pHvals <- set_names(pHvals0$pH, pHvals0$Strain)
+# pHvals
+```
+
+  Load tree
+```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=FALSE}
+# tr <- read.tree("../strain_genomes/20221101_ml_phylogeny/RAxML_bestTree.gardTree")
+```
+
+  We choose the weights as $_{wij} = 1/d_{ij}$ , where the d’s is the distances measured on the
+tree:
+```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=FALSE}
+# w <- 1/cophenetic(tr)
+# diag(w) <- 0 # set diagonals to zero
+```
+
+```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=FALSE}
+# W <- w[rownames(w) %in% names(pHvals),colnames(w) %in% names(pHvals)]
+# W
+```
+
+  We can now perform the analysis with Moran’s I:
+```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=FALSE}
+# Moran.I(pHvals, W)
+```
+
+
+## Compare growth at pHs
+### Isolate Anova
+#### One-way Anovas
+```{r, message=FALSE, warning=FALSE}
+DF %>%
+  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
+  select(Species, Strain, Protocol, pH, mOD, sdOD) %>%
+  group_by(pH) %>%
+  anova_test(mOD~Strain) %>%
+  formattable()
+```
+
+#### Tukey's HSD
+```{r, message=FALSE, warning=FALSE}
+odPostHocs <- DF %>%
+  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
+  select(Species, Strain, Protocol, pH, mOD, sdOD) %>%
+  group_by(pH) %>%
+  tukey_hsd(mOD~Strain, p.adjust.method = "BH")
+
+# odPostHocs %>%
+#  arrange(pH, p.adj) %>%
+#  write.xlsx(file=suppTableOut, sheetName="TablesS7_pH_posthocs", col.names=TRUE, append=TRUE)
+```
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+pHODpvals <- odPostHocs %>%
+  split(.$pH) %>%
+  map(~select(.x, group1, group2, p.adj)) %>%
+  map(~dplyr::rename(.x, var1=group2, var2=group1, cor=p.adj)) %>%
+  map(cor_spread) %>%
+  map(~column_to_rownames(.x, var="rowname")) %>%
+  map(as.matrix)
+
+pHODcorplotInput <-  odPostHocs %>%
+  split(.$pH) %>%
+  map(~select(.x, group1, group2, estimate)) %>%
+  map(~dplyr::rename(.x, var1=group2, var2=group1, cor=estimate)) %>%
+  map(cor_spread) %>%
+  map(~column_to_rownames(.x, var="rowname")) %>%
+  map(as.matrix)
+
+makeCorrPlots <- function(inputMatrix, pvalMatrix) {
+  dev.new()
+  par(xpd = NA, # switch off clipping, necessary to always see axis labels
+  bg = "transparent", # switch off background to avoid obscuring adjacent plots
+  oma = c(2, 2, 0, 0)) # move plot to the right and up
+  corrplot(inputMatrix, is.corr=FALSE, type = "lower", tl.col="black", p.mat = pvalMatrix, insig = "label_sig", sig.level = c(0.001, 0.01, 0.05), pch.cex = 0.9)
+  grid.echo()
+  plot <- grid.grab()
+  dev.off()
+  return(plot)
+}
+
+pHODcorrPlots <- map2(pHODcorplotInput, pHODpvals, makeCorrPlots)
+```
+
+#### Moran's I
+```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=FALSE}
+# pHODs0 <- DF %>%
+#   with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
+#   with_groups(c(pH, Strain), summarize, OD=mean(mOD)) %>%
+#   mutate(Strain=as.character(Strain),
+#          Strain=case_when(Strain=="Gv101"~"101",
+#                           Strain=="Gv5-1"~"5-1",
+#                           Strain %!in% c("101", "5-1")~Strain),
+#          Strain=factor(Strain, levels=strains0)) %>%
+#   split(.$pH)
+#
+# pHODs <- map(pHODs0, ~set_names(.x$OD, .x$Strain))
+```
+
+```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=FALSE}
+#map(pHODs, ~Moran.I(.x, W))
+```
+
+# Proportion of pH 7 growth
+```{r, message=FALSE, warning=FALSE}
+ratioDF <- DF %>%
+  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD)) %>%
+  spread(pH, mOD) %>%
+  mutate_at(vars("3.5", "4", "4.5", "5", "5.5", "6", "7"), ~.x/`7`) %>%
+  gather("pH", "ratio", c("3.5", "4", "4.5", "5", "5.5", "6", "7"))
+```
+
+## Plot
+```{r, message=FALSE, warning=FALSE}
+
+annotationDFratio <- DF %>%
+  filter(pH==7) %>%
+  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
+  with_groups(c(Species, Strain), summarize, y=mean(mOD)) %>%
+  with_groups(Species, mutate, y=2.5-.5*rank(Strain))
+
+pHratioPlot <- ratioDF %>%
+  mutate(pH=as.numeric(pH)) %>%
+  ggplot() +
+  stat_summary(aes(x=pH, y=ratio, group=Strain, linetype=Strain, color=Strain), fun="mean", geom = "line", show.legend = FALSE) +
+  geom_point(aes(x=pH, y=ratio, color=Strain, shape=Strain), show.legend = FALSE) +
+  geom_text(data=annotationDFratio, aes(label=Strain, color=Strain, x=3.5, y=y), size=3, show.legend = FALSE, hjust=0) +
+  facet_wrap(~Species) +
+  scale_shape_manual(values=c(15, 16, 17, 15, 16, 17, 15, 16, 15, 16, 17, 15, 16, 15, 16, 17, 15, 15, 16, 15, 15, 15)) +
+  scale_linetype_manual(values=c(1, 2, 3, 1, 2, 3, 1, 2, 1, 2, 3, 1, 2, 3, 1, 2, 1, 1, 2, 1, 1, 1)) +
+  scale_color_manual(values=c("black", "gray47", "brown", "black", "gray47", "brown", "black", "gray47", "black", "gray47", "brown", "black", "gray47", "black", "gray47",  "brown", "black", "black", "gray47", "black", "black", "black")) +
+  labs(y="Proportion pH 7 growth", x="pH")
+pHratioPlot
+```
+
+## Compare
+### Average proportion pH 7 growth at each pH
+```{r, message=FALSE, warning=FALSE}
+ratioDF %>%
+  filter(pH!=7) %>%
+  with_groups(pH, summarize, perc=mean(ratio, na.rm=TRUE)*100)
+```
+
+
+### Isolate Anova
+#### One-way Anovas
+```{r, message=FALSE, warning=FALSE}
+ratioDF %>%
+  filter(pH!="7") %>%
+  select(Species, Strain, Protocol, pH,ratio) %>%
+  group_by(pH) %>%
+  anova_test(ratio~Strain) %>%
+  formattable()
+```
+
+#### Tukey's HSD
+```{r, message=FALSE, warning=FALSE}
+ratioPostHocs <- ratioDF %>%
+  filter(pH!="7") %>%
+  select(Species, Strain, Protocol, pH,ratio) %>%
+  group_by(pH) %>%
+  tukey_hsd(ratio~Strain, p.adjust.method = "BH")
+
+# ratioPostHocs %>%
+#  arrange(pH, p.adj) %>%
+#  write.xlsx(file=suppTableOut, sheetName="TablesS8_pH_ratio_posthocs", col.names=TRUE, append=TRUE)
+```
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+pHratiopvals <- ratioPostHocs %>%
+  filter(pH!="7") %>%
+  split(.$pH) %>%
+  map(~select(.x, group1, group2, p.adj)) %>%
+  map(~dplyr::rename(.x, var1=group2, var2=group1, cor=p.adj)) %>%
+  map(cor_spread) %>%
+  map(~column_to_rownames(.x, var="rowname")) %>%
+  map(as.matrix)
+
+pHratiocorplotInput <-  ratioPostHocs %>%
+  filter(pH!="7") %>%
+  split(.$pH) %>%
+  map(~select(.x, group1, group2, estimate)) %>%
+  map(~dplyr::rename(.x, var1=group2, var2=group1, cor=estimate)) %>%
+  map(cor_spread) %>%
+  map(~column_to_rownames(.x, var="rowname")) %>%
+  map(as.matrix)
+
+pHratiocorrPlots <- map2(pHratiocorplotInput, pHratiopvals, makeCorrPlots)
+```
+
+
+# Figure 5: Growth at varying pH's
+```{r, warning=FALSE, message=FALSE, fig.width=10, fig.height=4}
+plot_grid(pHGrowthPlot+theme(axis.title.y = element_text(size=18), strip.text.x = element_text(size=7)), pHratioPlot+theme(axis.title.y = element_text(size=18), strip.text.x = element_text(size=7)), labels = c("A", "B"), label_size = 15)
+#ggsave(filename = file.path(figureOut, paste(Sys.Date(), "Figure5_pHGrowth.png", sep = "_")))
+```
+
+# Figure S4: Post Hoc Test Results
+```{r, message=FALSE, warning=FALSE, fig.width=15, fig.height=31} 
+
+ODPostHocPlots <- plot_grid(pHODcorrPlots$`3.5`, pHODcorrPlots$`4`, pHODcorrPlots$`4.5`, pHODcorrPlots$`5`, pHODcorrPlots$`5.5`, pHODcorrPlots$`6`, pHODcorrPlots$`7`, ncol=1,  labels = c("A", "C", "E", "G", "I", "K", "M"), label_size = 20)
+
+ratioPostHocPlots <- plot_grid(pHratiocorrPlots$`3.5`, pHratiocorrPlots$`4`,pHratiocorrPlots$`4.5`, pHratiocorrPlots$`5`, pHratiocorrPlots$`5.5`, pHratiocorrPlots$`6`, ggplot+geom_blank(),  ncol=1, labels = c("B", "D", "F", "H",  "J",  "L", " "), label_size = 20)
+
+plot_grid(ODPostHocPlots, ratioPostHocPlots, ncol=2, align = "hv") 
+
+#ggsave(file.path(figureOut, paste(Sys.Date(), "FigureS4_pH_posthocs.png", sep = "_")))
+```
+
+
+```{r}
+sessionInfo()
+```

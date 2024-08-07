@@ -1,0 +1,652 @@
+---
+title: "Biofilm Formation"
+author: "Hanna Berman"
+output: html_document
+---
+**Purpose:**
+  To measure the capacity for each strain to grow as a biofilm
+  
+**Protocol:**
+  
+* Streak out strains on BHI Plates and incubate at 37$^\circ$C anaerobically for 48 hours
+* Pick two colonies of each strain and inoculate each colony into 1 mL NYC-III media and incubate for 24 (protocols 1 and 2) or 48 hours (protocol 3) at 37$^\circ$C anaerobically
+* Measure OD~600~ and back-dilute cultures 1:100 in 1 mL fresh NYC-III media and incubate for 24 (protocols 1 and 2) or 48 hours (protocol 3) at 37$^\circ$C anaerobically
+* Measure OD~600~ and back dilute cultures 1:10 in fresh NYC-III media and incubate for 4 (protocol 1), 7 (protocol 2) or 15 hours (protocol 3) at 37$^\circ$C anaerobically
+* Measure OD~600~ and dilute cultures to OD~600~=0.01 in NYC-III media in and seed into two sets of tissue-culture treated sterile culture plates. Incubate for 24 (protocols 1 and 2) or 48 (protocol 3) hours at 37$^\circ$C anaerobically.
+* For Percent OD plate: 
+  + Remove supernatant and measure OD~600~ for optical density of planktonic growth
+  + Resuspend biofilms in 200uL fresh NYC-III media per well and measure OD~600~
+  + Calculate percent growth as biofilm by $OD_{600(biofilm)}~/(OD_{600(biofilm)}+OD_{600(planktonic)})$
+* For safranin plate
+  + Remove supernatant and measure OD~600~ of planktonic growth
+  + Let biofilms dry overnight
+  + Stain biofilms with safranin stain: pour stain over plates, incubate for two minutes then rinse with diH~2~O. Let dry for two hours or overnight
+  + Resuspend stained biofilms in 33% acetic acid and measure OD~450~
+ 
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(xlsx)
+library(broom)
+library(rstatix)
+library(ape)
+library(ggbeeswarm)
+library(formattable)
+library(ggpubr)
+library(cowplot)
+library(corrplot)
+library(ggpubr)
+library(grid)
+library(gridGraphics)
+
+`%!in%` <- negate(`%in%`)
+```
+
+# Formatting and set up
+  Short cuts:
+```{r, message=FALSE, warning=FALSE}
+strains <- c("14018", "315-A", "C0011E4", "JCP7275", "C0084H9", "JCP8108", "JCP8017B", "C0040C2" , "UM35",  "JCP8066", "C0093B3", "AMD", "C0096A1", "C0102A2",  "UM224", "Gv5-1", "C0179B4", "C0056B5", "Gv101", "C0100B2", "C0101A1", "CMW7778B")
+
+strains0 <- c("14018", "315-A", "C0011E4", "JCP7275", "C0084H9", "JCP8108", "JCP8017B", "C0040C2" , "UM35",  "JCP8066", "C0093B3", "AMD", "C0096A1", "C0102A2",  "UM224", "5-1", "C0179B4", "C0056B5", "101", "C0100B2", "C0101A1", "CMW7778B")
+
+species <- c("Gardnerella vaginalis", "Gardnerella sp. 2", "Gardnerella sp. 3", "Gardnerella piotii", "Gardnerella leopoldii", "Gardnerella swidsinskii", "Gardnerella sp. 7", "Gardnerella sp. 8", "Gardnerella sp. 10", "Gardnerella sp. 11", "Gardnerella sp. 12")
+
+figureOut <- "../../experiments_figures"
+suppTableOut <- "../../experiments_figures/supplementary_posthoc_tables.xlsx"
+```
+
+  Import data 
+```{r, message=FALSE, warning=FALSE}
+midlog_raw_data <- read_csv("./data/biofilm_midlog_raw_data.csv")
+rawPlanktonicODs <- read_csv("./data/planktonic_od_raw_data.csv")
+rawBiofilmODs <- read_csv("./data/biofilm_od_raw_data.csv")
+rawSafPlanktonicODs <- read_csv("./data/safranin_planktonic_raw_data.csv")
+rawSafBiofilmODs <- read_csv("./data/safranin_biofilm_raw_data.csv")
+```
+
+  Plot settings
+```{r, message=FALSE, warning=FALSE}
+theme_set(theme_bw()+
+          theme(panel.grid = element_blank()))
+
+speciesColor <- scale_color_manual(values=c("#CC79A7", "#D55E00", "#56B4E9", "#0072B2", "#E69F00", "#009E73", 
+                                                 "darkgreen", "gold3", "darkred", "darkblue",
+                                                 "mediumpurple4"))
+
+speciesFill <- scale_fill_manual(values=c("#CC79A7", "#D55E00", "#56B4E9", "#0072B2", "#E69F00", "#009E73", 
+                                                 "darkgreen", "gold3", "darkred", "darkblue",
+                                                 "mediumpurple4"))
+```
+
+# Set up growth
+  Propagate twice and then incubate to mid log.
+  1:10 Dilution for mid Log: 
+  Protocol 1: 4 hour incubation
+  Protocol 2: 7 hour incubation
+  Protocol 3: 15 hour incubation
+## Clean data
+```{r, warning=FALSE, message=FALSE}
+setupDF <- midlog_raw_data %>%
+  group_by(Number, BioRep, Species, Strain, Batch, Step) %>%
+  mutate(OD=OD-mean(.$OD[.$Number=="Blank"]),
+                      OD=case_when(OD>0~OD,
+                      OD<=0~0)) %>%
+  filter(Number!="Blank") %>%
+  mutate(Step=factor(Step, levels=c("Overnight 1", "Overnight 2", "Mid Log"))) %>%
+  mutate(Strain=factor(Strain, levels=strains),
+         Species=factor(Species, levels=species),
+         Sample=paste(Strain, Batch, BioRep, sep="."),
+         BatchNum=str_extract(Batch, "(?<=[A|B])[0-9]"),
+         BatchRep=paste(BatchNum, BioRep, sep="."),
+         StrainN=as.numeric(Strain),
+         rectFill=case_when(StrainN %% 2 == 0 ~ "A",
+                           StrainN %% 2 != 0 ~ "B")) %>%
+  ungroup %>%
+  with_groups(c("Sample", "Number", "BioRep", "Batch", "BatchNum", "BatchRep", "StrainN", "rectFill", "Species", "Strain", "Protocol",  "Step"), summarize, ODm=mean(OD), ODsd=sd(OD))
+```
+
+
+  Assess mid log growth for removing poor growers with OD~600~ < 0.05
+```{r, message=FALSE, warning=FALSE}
+setupDF %>%
+  filter(Step=="Mid Log") %>%
+  ggplot(aes(x=Strain, y=ODm)) +
+  geom_point(aes(shape=BioRep)) +
+  geom_hline(aes(yintercept=0.05), linetype=2, color="gray") +
+  theme(axis.text.x = element_text(angle=45, hjust=1)) +
+  labs(x=NULL, y=bquote(OD[600]), shape="Biological Replicate")
+```
+
+  Create quality filter for OD~600~ > 0.05
+```{r, message=FALSE, warning=FALSE}
+midLogFail <- setupDF %>%
+  filter(Step=="Mid Log", 
+         ODm < 0.05) %>%
+  .$Sample
+  
+midLogFail
+```
+
+```{r, message=FALSE, warning=FALSE}
+overnightPlot <- setupDF %>%
+  filter(Sample %!in% midLogFail) %>%
+  ggplot(aes(x=Strain, y=ODm)) +
+  geom_point(aes(shape=BatchNum), alpha=0) +
+  geom_rect(aes(xmin=StrainN-.5, xmax=StrainN+.5, ymin = 0, ymax = 1, fill=rectFill), alpha = 0.2, show.legend = FALSE) +
+  geom_pointrange(aes(ymin=(ODm-ODsd), ymax=(ODm+ODsd), shape=BatchNum, color=Species), position = position_quasirandom(), size=0.3, alpha=0.7, show.legend = FALSE) +
+  speciesColor +
+  scale_fill_manual(values=c("white", "gray"), labels=c("A","B")) +
+  ylim(0,1) +
+  facet_grid(.~Step) +
+  coord_flip() +
+  scale_x_discrete(limits=rev) +
+  theme(axis.text.x = element_text(size=8),
+        axis.text.y = element_text(size=8),
+        axis.title = element_text(size=11),
+        panel.grid = element_blank(),
+        legend.position = "none") +
+  labs(x=NULL, y=bquote(OD[600]), shape="Experiment Batch")
+
+#annotation bars
+protocolBar <- setupDF %>%
+  select(Strain, Species, Protocol) %>%
+  mutate(Protocol=as.character(Protocol)) %>%
+  unique %>%
+  ggplot() +
+    geom_bar(aes(x=Strain, y=2, fill=Protocol), stat="identity", width = 1.1) +
+    scale_x_discrete(limits=rev) +
+    scale_fill_manual(values=c("cornflowerblue", "burlywood1", "forestgreen")) +
+    coord_flip() +
+    theme_void() +
+    theme(legend.position = "none")
+
+speciesBar <- setupDF %>%
+  select(Strain, Species, Protocol) %>%
+  unique %>%
+  ggplot() +
+    geom_bar(aes(x=Strain, y=1, fill=Species), stat="identity", width=1.1) +
+    scale_x_discrete(limits=rev) +
+    speciesFill +
+    coord_flip() +
+    theme_void() +
+    theme(legend.position = "none")
+
+#Legends
+protocol_legend <- ggpubr::get_legend(protocolBar +
+    guides(color=guide_legend(ncol = 1)) +
+    theme(legend.position = "bottom",
+          legend.direction = "horizontal"))
+
+species_legend <- ggpubr::get_legend(speciesBar +
+    guides(color=guide_legend(ncol = 1)) +
+    theme(legend.position = "bottom",
+          legend.direction = "horizontal"))
+
+experiment_legend <- ggpubr::get_legend(
+  overnightPlot +
+  guides(shape=guide_legend(nrow = 1, override.aes = list(alpha=1, size=4))) +
+  theme(legend.position = "bottom"))
+
+
+a <- plot_grid(overnightPlot, speciesBar, protocolBar, nrow = 1, align = "h", axis = "bt", rel_widths = c(1, 0.02, 0.02))
+b <- plot_grid(a, as_ggplot(species_legend), nrow=2, rel_heights = c(1, 0.3))
+c <- plot_grid(as_ggplot(protocol_legend), as_ggplot(experiment_legend), nrow=1)
+plot_grid(b, c, ncol=1, nrow=2, rel_heights = c(1, 0.1))
+```
+
+# Percent Biofilm 
+## Calculate percent OD
+```{r, message=FALSE, warning=FALSE}
+planktonicODs <- rawPlanktonicODs %>%
+  group_by(Batch) %>%
+  mutate(planktonicOD=OD-mean(.$OD[.$Number=="Blank"]),
+         planktonicOD=case_when(planktonicOD>0~planktonicOD,
+                                planktonicOD<=0~0)) %>%
+  filter(Number!="Blank") %>%
+  select(-OD, -Measure) %>%
+  ungroup
+
+biofilmODs <- rawBiofilmODs %>%
+  group_by(Batch) %>%
+  mutate(biofilmOD=OD-mean(.$OD[.$Number=="Blank"]),
+         biofilmOD=case_when(biofilmOD>0~biofilmOD,
+                             biofilmOD<=0~0)) %>%
+  filter(Number!="Blank") %>%
+  select(-OD, -Measure) %>%
+  ungroup
+
+percentOD <- planktonicODs %>%
+  left_join(biofilmODs) %>%
+  mutate(Sample=paste(Strain, Batch, BioRep, sep=".")) %>%
+  filter(Sample %!in% midLogFail) %>% # quality filter for poor growth at mid log phase 
+  mutate(edgeWell=str_detect(well, pattern="[A|H]"),
+         edgeWell=factor(edgeWell, levels=c(TRUE, FALSE)),
+         innerWell=str_detect(well, pattern="[D|E]"),
+         innerWell=factor(innerWell, levels=c(TRUE, FALSE)),
+         topWell=str_detect(well, pattern="A"),
+         topWell=factor(topWell, levels=c(TRUE, FALSE)))
+
+head(percentOD)
+```
+
+```{r, message=FALSE, warning=FALSE}
+edgeWellPlot <- percentOD %>%
+  mutate(percentBiofilm=(biofilmOD/(biofilmOD+planktonicOD))*100,
+         Strain=factor(Strain, levels = strains),
+         Species=factor(Species, levels = species)) %>%
+  ggplot(aes(x=Strain, y=percentBiofilm, shape=BioRep, color=edgeWell)) +
+  geom_quasirandom() + 
+  theme(axis.text.x = element_text(angle=45, hjust=1), 
+        legend.position = "bottom",
+        legend.direction = "vertical") +
+  labs(x=NULL, y="Percent Biofilm", shape="Biological Replicate", title="Edge Wells")
+
+innerWellPlot <- percentOD %>%
+  mutate(percentBiofilm=(biofilmOD/(biofilmOD+planktonicOD))*100,
+         Strain=factor(Strain, levels = strains),
+         Species=factor(Species, levels = species)) %>%
+  ggplot(aes(x=Strain, y=percentBiofilm, shape=BioRep, color=innerWell)) +
+  geom_quasirandom() + 
+  theme(axis.text.x = element_text(angle=45, hjust=1),
+        legend.position = "bottom",
+        legend.direction = "vertical") +
+  labs(x=NULL, y=NULL, shape="Biological Replicate", title="Inner Wells")
+
+plot_grid(edgeWellPlot, innerWellPlot, nrow=1)
+```
+  
+
+```{r, message=FALSE, warning=FALSE}
+percentODDF0 <- percentOD %>%
+  mutate(percentBiofilm=(biofilmOD/(biofilmOD+planktonicOD))*100,
+         Strain=factor(Strain, levels = strains),
+         Species=factor(Species, levels = species), 
+         Protocol=as.character(Protocol), 
+         BatchRep=paste(Batch, BioRep, sep=".")) %>%
+  gather("measure", "value", c(planktonicOD, biofilmOD, percentBiofilm)) %>%
+  mutate(measure=factor(measure, levels=c("biofilmOD", "planktonicOD", "percentBiofilm"), labels=c("Biofilm OD", "Planktonic OD", "Percent OD")),
+         BatchNum=str_extract(Batch, "(?<=[A|B])[0-9]"),
+         BatchRep=paste(BatchNum, BioRep, sep="."))
+
+percentODDF0 %>%
+  ggplot(aes(x=Strain, y=value)) +
+    geom_boxplot(alpha=0) +
+    geom_quasirandom(aes(color=edgeWell), alpha=0.7) +
+    scale_y_continuous(position = "right") +
+    facet_grid(measure~., scales="free") +
+    theme(axis.text.x = element_text(angle=45, hjust=1)) +
+    labs(x=NULL, y=NULL, shape="Biological Replicate")
+```
+  
+  Remove Edge Wells
+
+```{r, message=FALSE, warning=FALSE}
+naSamples <- percentODDF0 %>%
+  filter(edgeWell==FALSE) %>%
+  spread(measure, value) %>%
+  filter(is.na(`Percent OD`)) %>%
+  .$Sample %>%
+  unique
+
+naSamples
+
+percentODDF <- percentODDF0 %>%
+  filter(edgeWell==FALSE, # remove samples
+         Sample %!in% naSamples) %>% # remove samples with no growth
+  mutate(method="Percent OD")
+```
+
+### Isolates with extra samples
+```{r, message=FALSE, warning=FALSE}
+non4StrainsPOD <- percentODDF0 %>%
+ mutate(Sample=paste(Number, Sample, sep=".")) %>%
+ with_groups(Strain, summarize, n=n_distinct(Sample)) %>%
+ filter(n!=4) %>%
+ .$Strain
+
+percentODDF %>%
+  filter(Strain %in% non4StrainsPOD) %>%
+  mutate(Sample=paste(Number, Sample, sep=".")) %>%
+  with_groups(Strain, mutate, n=n_distinct(Sample)) %>%
+  with_groups(c("Number", "Strain", "Species", "Protocol", "Batch", "method", "Sample", "BatchRep", "measure", "BatchNum", "n"), summarize, valueM=mean(value), valueSD=sd(value)) %>%
+  mutate(labelYpos=case_when(measure=="Biofilm OD"~0.75,
+                             measure=="Planktonic OD"~0.75,
+                             measure=="Percent OD"~110)) %>%
+  ggplot() +
+  geom_boxplot(aes(x=Strain, y=valueM), alpha=0) +
+  geom_pointrange(aes(x=Strain, y=valueM, ymin=valueM-valueSD, ymax=valueM+valueSD, shape=BatchRep), alpha=0.7, size=0.25, position=position_quasirandom()) + 
+  geom_text(aes(x=Strain, y=labelYpos, label=n)) +
+  scale_y_continuous(position = "right") +
+  facet_grid(measure~., scales="free") +
+  theme(axis.text.x = element_text(angle=45, hjust=1)) +
+  labs(x=NULL, y=NULL)
+```
+
+## Plot
+```{r, message=FALSE, warning=FALSE}
+## annotation portions of plot
+#protocol bar
+protocolBar <- percentODDF %>%
+  select(Strain, Species, Protocol) %>%
+  unique %>%
+  ggplot() +
+    geom_bar(aes(x=Strain, y=2, fill=Protocol), stat="identity", width = 1.1) +
+    scale_fill_manual(values=c("cornflowerblue", "burlywood1", "forestgreen")) +
+    theme_void() +
+    theme(legend.position = "none")
+
+# species bar
+speciesBar <- percentODDF %>%
+  select(Strain, Species, Protocol) %>%
+  unique %>%
+  ggplot() +
+    geom_bar(aes(x=Strain, y=1, fill=Species), stat="identity", width=1.1) +
+    speciesFill +
+    theme_void() +
+    theme(legend.position = "none")
+
+percentODPlot <- percentODDF %>%
+  with_groups(c("Number", "Strain", "Species", "Protocol", "Batch", "method", "Sample", "BatchRep", "measure", "BatchNum"), summarize, valueM=mean(value), valueSD=sd(value)) %>%
+  ggplot() +
+  geom_boxplot(aes(x=Strain, y=valueM), alpha=0) +
+  geom_pointrange(aes(x=Strain, y=valueM, ymin=valueM-valueSD, ymax=valueM+valueSD, color=Species), alpha=0.7, size=0.25, position=position_quasirandom()) + 
+  speciesColor +
+  facet_grid(measure~., scales="free", switch = "y") +
+  theme(axis.text.x = element_text(angle=45, hjust=1),
+        legend.position = "none",
+        strip.placement = "outside") +
+  labs(x=NULL, y=NULL)
+
+ODPlots <- plot_grid(protocolBar, speciesBar, percentODPlot, ncol = 1, rel_heights = c(0.06, 0.06, 1), align = "v", axis = "lr")
+ODPlots
+```
+
+## Compare Percent OD
+### Isolate ANOVA
+```{r, message=FALSE, warning=FALSE}
+strain_OD_DF <- percentODDF %>%
+  spread(measure, value) %>%
+  select(-`Biofilm OD`, -`Planktonic OD`) %>%
+  dplyr::rename(percentOD=`Percent OD`) %>%
+  with_groups(c(Sample, Species, Strain, Batch, BioRep), summarize, mPercentOD=mean(percentOD), sdPercentOD=sd(percentOD))
+
+strain_OD_DF %>%
+  ggplot(aes(sample=mPercentOD)) +
+  geom_qq_line() +
+  geom_qq()
+```
+#### One-way ANOVA
+```{r, message=FALSE, warning=FALSE}
+strain_OD_DF %>%
+  anova_test(mPercentOD~Strain) %>%
+  formattable
+```
+
+#### Tukey's HSD
+```{r, message=FALSE, warning=FALSE}
+ODPostHoc <- strain_OD_DF %>%
+  tukey_hsd(mPercentOD~Strain, p.adjust.method = "BH")
+
+# ODPostHoc %>%
+#   arrange(p.adj) %>%
+#   write.xlsx(file=suppTableOut, sheetName="TableS5_percent_od_posthoc", col.names=TRUE, append=TRUE)
+```
+  
+```{r, message=FALSE, warning=FALSE, results='hide'}
+pvals <- ODPostHoc %>%
+  select(group1, group2, p.adj) %>%
+  dplyr::rename(var1=group2, var2=group1, cor=p.adj) %>%
+  cor_spread() %>%
+  column_to_rownames(var="rowname") %>%
+  as.matrix()
+
+ODPostHoc %>%
+  select(group1, group2, estimate) %>%
+  dplyr::rename(var1=group2, var2=group1, cor=estimate) %>%
+  cor_spread() %>%
+  column_to_rownames(var="rowname") %>%
+  as.matrix() %>%
+  corrplot(is.corr=FALSE, type = "lower", tl.col="black", p.mat = pvals, insig = "label_sig", sig.level = c(0.001, 0.01, 0.05), pch.cex = 0.9)
+grid.echo()
+percODPostHocPlot <- grid.grab()
+```
+
+  Percent biofilm of Strains
+```{r, message=FALSE, warning=FALSE}
+strain_OD_DF %>%
+  with_groups(Strain, summarize, `Percent OD Biofilm`=mean(mPercentOD)) %>%
+  arrange(-`Percent OD Biofilm`) %>%
+  formattable()
+```
+
+  Average of all strains
+```{r, message=FALSE, warning=FALSE}
+strain_OD_DF %>%
+  summarize(`Average Percent OD Biofilm`=mean(mPercentOD)) %>%
+  formattable()
+```
+
+### Moran's I
+```{r, message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
+# odVals <- strain_OD_DF %>%
+#   with_groups(Strain, summarize, x=mean(mPercentOD)) %>%
+#   mutate(Strain=as.character(Strain),
+#          Strain=case_when(Strain=="Gv101"~"101",
+#                           Strain=="Gv5-1"~"5-1",
+#                           Strain %!in% c("101", "5-1")~Strain),
+#          Strain=factor(Strain, levels=strains0)) %>%
+#   .$x
+# names(odVals) <- strains0
+```
+
+  Load tree
+```{r, message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
+# tr <- read.tree("../strain_genomes/20221101_ml_phylogeny/RAxML_bestTree.gardTree")
+```
+
+  We choose the weights as $_{wij} = 1/d_{ij}$ , where the d’s is the distances measured on the
+tree:
+```{r, message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
+# w <- 1/cophenetic(tr)
+# diag(w) <- 0 # set diagonals to zero
+```
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
+# W <- w[rownames(w) %in% strains0 ,colnames(w) %in% strains0]
+# W
+```
+
+  We can now perform the analysis with Moran’s I:
+```{r, message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
+# Moran.I(odVals, W)
+```
+
+
+# Safranin
+```{r, message=FALSE, warning=FALSE}
+safPlankODDF <- rawSafPlanktonicODs %>% 
+  group_by(Batch) %>%
+  mutate(safPlanktonicOD=OD-mean(.$OD[.$Number=="Blank"]),
+                      OD=case_when(OD>0~OD,
+                               OD<=0~0)) %>%
+  filter(Number!="Blank") %>%
+  ungroup %>%
+  mutate(row=str_extract(well, pattern="[A-H]")) %>%
+  select(-OD, -Measure, -well)
+
+safSafODDF <- rawSafBiofilmODs %>% 
+  group_by(Batch) %>%
+  mutate(safraninOD=OD-mean(.$OD[.$Number=="Blank"]),
+                      OD=case_when(OD>0~OD,
+                               OD<=0~0)) %>%
+  filter(Number!="Blank") %>%
+  ungroup %>%
+  mutate(row=str_extract(well, pattern="[A-H]")) %>%
+  select(-OD, -Measure, -well)
+
+
+safraninOD1 <- safPlankODDF %>%
+  full_join(safSafODDF) %>%
+  select(row, everything(), safPlanktonicOD, safraninOD) %>%
+  mutate(Sample=paste(Strain, Batch, BioRep, sep=".")) %>%
+  filter(Sample %!in% midLogFail) %>% # quality filter for poor growth at mid log phase 
+  mutate(edgeWell=str_detect(row, pattern="[A|H]"),
+         edgeWell=factor(edgeWell, levels=c(TRUE, FALSE)),
+         innerWell=str_detect(row, pattern="[D|E]"),
+         innerWell=factor(innerWell, levels=c(TRUE, FALSE)),
+         topWell=str_detect(row, pattern="A"),
+         topWell=factor(topWell, levels=c(TRUE, FALSE)))
+head(safraninOD1)
+```
+
+
+  Organize data and create dataframe
+```{r, message=FALSE, warning=FALSE}
+safDF <- safraninOD1 %>%
+  mutate(Strain=factor(Strain, levels = strains),
+         Species=factor(Species, levels = species),
+         Protocol=as.character(Protocol),
+         BatchNum=str_extract(Batch, "(?<=[A|B])[0-9]"),
+         BatchRep=paste(BatchNum, BioRep, sep="."), 
+         method="Safranin Stain")  %>%
+  filter(Sample %!in% naSamples) # remove samples with no growth
+```
+
+  Check if edge wells should be removed
+```{r, message=FALSE, warning=FALSE}
+safDF %>%
+  ggplot(aes(x=Strain, y=safraninOD)) +
+    geom_boxplot(alpha=0) +
+    geom_quasirandom(aes(color=edgeWell), alpha=0.7) +
+    scale_y_continuous(position = "right") +
+    theme(axis.text.x = element_text(angle=45, hjust=1)) +
+    labs(x=NULL, y=NULL, shape="Biological Replicate")
+```  
+  Do not remove edge wells
+## Extra biological replicates
+```{r, message=FALSE, warning=FALSE}
+non4StrainsSaf <- safDF %>%
+ mutate(Sample=paste(Number, Sample, sep=".")) %>%
+ with_groups(Strain, summarize, n=n_distinct(Sample)) %>%
+ filter(n!=4) %>%
+ .$Strain
+
+safDF %>%
+  filter(Strain %in% non4StrainsSaf) %>%
+  mutate(Sample=paste(Number, Sample, sep=".")) %>%
+  with_groups(Strain, mutate, n=n_distinct(Sample)) %>%
+  with_groups(c("Number", "Strain", "Species", "Protocol", "Batch", "method", "Sample", "BatchRep", "BatchNum", "n"), summarize, safraninM=mean(safraninOD), safraninSD=sd(safraninOD)) %>%
+  ggplot() +
+  geom_boxplot(aes(x=Strain, y=safraninM), alpha=0) +
+  geom_pointrange(aes(x=Strain, y=safraninM, ymin=safraninM-safraninSD, ymax=safraninM+safraninSD, shape=BatchRep), alpha=0.7, position=position_quasirandom(), size=0.3) + 
+  geom_text(aes(x=Strain, y=0.575, label=n)) +
+  theme(axis.text.x = element_text(angle=45, hjust=1)) +
+  labs(x=NULL, y=bquote("Safranin OD"[450]), shape="Batch")
+```  
+
+## Plot
+```{r, message=FALSE, warning=FALSE}
+safPlot <- safDF %>%
+  ggplot(aes(x=Strain, y=safraninOD, color=Species, shape=BatchRep)) +
+  geom_quasirandom(alpha=0.75) + 
+  theme(axis.text.x = element_text(angle=45, hjust=1)) +
+  labs(x=NULL, y=bquote("Safranin OD"[450]), shape="Biological Replicate")
+
+safPlot2 <- safDF %>%
+  with_groups(c("Number", "Strain", "Species", "Protocol", "Batch", "method", "Sample", "BatchRep", "BatchNum"), summarize, safraninM=mean(safraninOD), safraninSD=sd(safraninOD)) %>%
+  ggplot() +
+  geom_boxplot(aes(x=Strain, y=safraninM), alpha=0) +
+  geom_pointrange(aes(x=Strain, y=safraninM, ymin=safraninM-safraninSD, ymax=safraninM+safraninSD, color=Species), alpha=0.7, position=position_quasirandom(), size=0.3) + 
+  speciesColor +
+  theme(axis.text.x = element_text(angle=45, hjust=1),
+        legend.position = "none") +
+  labs(x=NULL, y=bquote("Safranin OD"[450]), shape="Batch")
+
+safPlots <- plot_grid(protocolBar, speciesBar, safPlot2, ncol = 1, rel_heights = c(0.06, 0.06, 1), align = "v", axis = "lr")
+
+safPlots
+```
+
+## Compare Safranin
+### Isolate  ANOVA
+```{r, message=FALSE, warning=FALSE}
+safDF %>%
+  with_groups(c(Sample, Species, Strain, Batch, BioRep), summarize, mSafOD=mean(safraninOD), sdSafOD=sd(safraninOD)) %>%
+  ggplot(aes(sample=mSafOD)) +
+  geom_qq_line() +
+  geom_qq()
+```
+#### One-way ANOVA
+```{r, message=FALSE, warning=FALSE}
+strain_saf_DF <- safDF %>%
+  with_groups(c(Sample, Species, Strain, Batch, BioRep), summarize, mSafOD=mean(safraninOD), sdSafOD=sd(safraninOD))
+
+strain_saf_DF %>%
+  anova_test(mSafOD~Strain) %>%
+  formattable
+```
+
+#### Tukey's HSD
+```{r, message=FALSE, warning=FALSE}
+safPostHoc <- strain_saf_DF %>%
+  tukey_hsd(mSafOD~Strain, p.adjust.method = "BH")
+
+# safPostHoc %>%
+#   arrange(p.adj) %>%
+#   write.xlsx(file=suppTableOut, sheetName="TableS6_safranin_posthoc", col.names=TRUE, append=TRUE)
+```
+  
+```{r, message=FALSE, warning=FALSE, results='hide'}
+pvals <- safPostHoc %>%
+  select(group1, group2, p.adj) %>%
+  dplyr::rename(var1=group2, var2=group1, cor=p.adj) %>%
+  cor_spread() %>%
+  column_to_rownames(var="rowname") %>%
+  as.matrix()
+
+safPostHoc %>%
+  select(group1, group2, estimate) %>%
+  dplyr::rename(var1=group2, var2=group1, cor=estimate) %>%
+  cor_spread() %>%
+  column_to_rownames(var="rowname") %>%
+  as.matrix() %>%
+  corrplot(is.corr=FALSE, type = "lower", tl.col="black", p.mat = pvals, insig = "label_sig", sig.level = c(0.001, 0.01, 0.05), pch.cex = 0.9)
+grid.echo()
+safraninPostHocPlot <- grid.grab()
+```
+
+### Moran's I
+```{r, message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
+# safVals <- strain_saf_DF %>%
+#   with_groups(Strain, summarize, x=mean(mSafOD)) %>%
+#   mutate(Strain=as.character(Strain),
+#          Strain=case_when(Strain=="Gv101"~"101",
+#                           Strain=="Gv5-1"~"5-1",
+#                           Strain %!in% c("101", "5-1")~Strain),
+#          Strain=factor(Strain, levels=strains0)) %>%
+#   .$x
+# names(safVals) <- strains0
+```
+
+  We can now perform the analysis with Moran’s I:
+```{r, message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
+# Moran.I(safVals, W)
+```
+
+
+# Figure 4: Biofilm growth as percent OD and Safranin stain
+```{r, message=FALSE, warning=FALSE, fig.height=5, fig.width=4}
+plot_grid(protocolBar, speciesBar, percentODPlot + speciesColor + theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()), safPlot2, ncol = 1, rel_heights = c(0.07, 0.07, 1, 0.5), align = "v", axis = "lr", labels = c("A", "", "", "B"), label_size = 15)
+#ggsave(file.path(figureOut, paste(Sys.Date(), "Figure4_strain_biofilm.png", sep="_")))
+```
+
+# Figure S3: Post Hoc Test Results
+```{r, message=FALSE, warning=FALSE, fig.width=18, fig.height=5}
+plot_grid(ggplot()+geom_blank(), percODPostHocPlot, ggplot()+geom_blank(), safraninPostHocPlot, nrow = 1, rel_widths = c(0.1, 1, 0.1, 1), labels = c(" ", "A", " ", "B"), label_size = 20)
+#ggsave(file.path(figureOut, paste(Sys.Date(), "FigureS3_biofilm_posthocs.png", sep = "_")))
+```
+
+# Session Info
+```{r}
+sessionInfo()
+```

@@ -1,0 +1,1373 @@
+well,Number,BioRep,OD,Species,Strain,Batch,Protocol,BatchN,Step
+A2,1,A,0.425,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 1
+B2,1,A,0.425,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 1
+C2,1,A,0.43,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 1
+D2,1,A,0.43,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 1
+E2,1,B,0.361,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 1
+F2,1,B,0.352,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 1
+G2,1,B,0.353,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 1
+H2,1,B,0.352,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 1
+A3,2,A,0.528,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 1
+B3,2,A,0.556,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 1
+C3,2,A,0.55,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 1
+D3,2,A,0.545,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 1
+E3,2,B,0.494,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 1
+F3,2,B,0.511,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 1
+G3,2,B,0.516,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 1
+H3,2,B,0.515,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 1
+A4,3,A,0.286,Gardnerella vaginalis,14018,1A1,1,1,Overnight 1
+B4,3,A,0.282,Gardnerella vaginalis,14018,1A1,1,1,Overnight 1
+C4,3,A,0.286,Gardnerella vaginalis,14018,1A1,1,1,Overnight 1
+D4,3,A,0.291,Gardnerella vaginalis,14018,1A1,1,1,Overnight 1
+E4,3,B,0.308,Gardnerella vaginalis,14018,1A1,1,1,Overnight 1
+F4,3,B,0.311,Gardnerella vaginalis,14018,1A1,1,1,Overnight 1
+G4,3,B,0.32,Gardnerella vaginalis,14018,1A1,1,1,Overnight 1
+H4,3,B,0.311,Gardnerella vaginalis,14018,1A1,1,1,Overnight 1
+A5,4,A,0.477,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 1
+B5,4,A,0.512,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 1
+C5,4,A,0.453,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 1
+D5,4,A,0.425,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 1
+E5,4,B,0.51,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 1
+F5,4,B,0.538,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 1
+G5,4,B,0.516,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 1
+H5,4,B,0.484,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 1
+A6,5,A,0.136,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 1
+B6,5,A,0.138,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 1
+C6,5,A,0.124,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 1
+D6,5,A,0.124,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 1
+E6,5,B,0.192,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 1
+F6,5,B,0.192,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 1
+G6,5,B,0.213,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 1
+H6,5,B,0.193,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 1
+A7,6,A,0.216,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 1
+B7,6,A,0.224,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 1
+C7,6,A,0.227,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 1
+D7,6,A,0.231,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 1
+E7,6,B,0.216,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 1
+F7,6,B,0.218,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 1
+G7,6,B,0.219,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 1
+H7,6,B,0.217,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 1
+A8,7,A,0.174,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 1
+B8,7,A,0.149,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 1
+C8,7,A,0.147,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 1
+D8,7,A,0.148,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 1
+E8,7,B,0.198,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 1
+F8,7,B,0.196,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 1
+G8,7,B,0.198,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 1
+H8,7,B,0.2,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 1
+A9,8,A,0.243,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 1
+B9,8,A,0.237,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 1
+C9,8,A,0.238,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 1
+D9,8,A,0.24,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 1
+E9,8,B,0.362,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 1
+F9,8,B,0.366,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 1
+G9,8,B,0.365,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 1
+H9,8,B,0.365,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 1
+A12,Blank,NA,0.051,NA,NA,NA,NA,NA,Overnight 1
+B12,Blank,NA,0.051,NA,NA,NA,NA,NA,Overnight 1
+C12,Blank,NA,0.052,NA,NA,NA,NA,NA,Overnight 1
+D12,Blank,NA,0.051,NA,NA,NA,NA,NA,Overnight 1
+A2,1,A,0.467,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 1
+B2,1,A,0.444,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 1
+C2,1,A,0.46,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 1
+D2,1,A,0.469,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 1
+E2,1,B,0.308,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 1
+F2,1,B,0.307,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 1
+G2,1,B,0.306,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 1
+H2,1,B,0.311,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 1
+A3,2,A,0.606,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 1
+B3,2,A,0.622,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 1
+C3,2,A,0.615,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 1
+D3,2,A,0.795,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 1
+E3,2,B,0.652,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 1
+F3,2,B,0.666,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 1
+G3,2,B,0.667,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 1
+H3,2,B,0.669,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 1
+A4,3,A,0.76,Gardnerella vaginalis,14018,1A2,1,2,Overnight 1
+B4,3,A,0.768,Gardnerella vaginalis,14018,1A2,1,2,Overnight 1
+C4,3,A,0.757,Gardnerella vaginalis,14018,1A2,1,2,Overnight 1
+D4,3,A,0.771,Gardnerella vaginalis,14018,1A2,1,2,Overnight 1
+E4,3,B,0.82,Gardnerella vaginalis,14018,1A2,1,2,Overnight 1
+F4,3,B,0.823,Gardnerella vaginalis,14018,1A2,1,2,Overnight 1
+G4,3,B,0.82,Gardnerella vaginalis,14018,1A2,1,2,Overnight 1
+H4,3,B,0.829,Gardnerella vaginalis,14018,1A2,1,2,Overnight 1
+A5,4,A,0.6,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 1
+B5,4,A,0.606,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 1
+C5,4,A,0.608,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 1
+D5,4,A,0.601,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 1
+E5,4,B,0.54,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 1
+F5,4,B,0.542,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 1
+G5,4,B,0.529,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 1
+H5,4,B,0.548,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 1
+A6,5,A,0.06,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 1
+B6,5,A,0.061,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 1
+C6,5,A,0.058,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 1
+D6,5,A,0.056,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 1
+E6,5,B,0.582,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 1
+F6,5,B,0.581,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 1
+G6,5,B,0.582,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 1
+H6,5,B,0.581,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 1
+A7,6,A,0.523,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 1
+B7,6,A,0.523,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 1
+C7,6,A,0.527,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 1
+D7,6,A,0.532,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 1
+E7,6,B,0.547,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 1
+F7,6,B,0.544,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 1
+G7,6,B,0.542,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 1
+H7,6,B,0.546,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 1
+A8,7,A,0.425,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 1
+B8,7,A,0.427,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 1
+C8,7,A,0.426,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 1
+D8,7,A,0.429,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 1
+E8,7,B,0.432,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 1
+F8,7,B,0.433,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 1
+G8,7,B,0.427,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 1
+H8,7,B,0.435,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 1
+A9,8,A,0.62,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 1
+B9,8,A,0.595,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 1
+C9,8,A,0.6,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 1
+D9,8,A,0.601,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 1
+E9,8,B,0.635,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 1
+F9,8,B,0.637,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 1
+G9,8,B,0.639,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 1
+H9,8,B,0.652,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 1
+A12,Blank,NA,0.056,NA,NA,NA,NA,NA,Overnight 1
+B12,Blank,NA,0.056,NA,NA,NA,NA,NA,Overnight 1
+C12,Blank,NA,0.057,NA,NA,NA,NA,NA,Overnight 1
+D12,Blank,NA,0.055,NA,NA,NA,NA,NA,Overnight 1
+A2,1,A,0.173,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 1
+B2,1,A,0.173,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 1
+C2,1,A,0.171,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 1
+D2,1,A,0.176,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 1
+E2,1,B,0.225,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 1
+F2,1,B,0.221,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 1
+G2,1,B,0.228,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 1
+H2,1,B,0.226,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 1
+A3,2,A,0.215,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 1
+B3,2,A,0.216,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 1
+C3,2,A,0.215,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 1
+D3,2,A,0.218,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 1
+E3,2,B,0.215,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 1
+F3,2,B,0.212,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 1
+G3,2,B,0.212,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 1
+H3,2,B,0.213,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 1
+A4,3,A,0.214,Gardnerella piotii,UM35,3A1,3,1,Overnight 1
+B4,3,A,0.21,Gardnerella piotii,UM35,3A1,3,1,Overnight 1
+C4,3,A,0.209,Gardnerella piotii,UM35,3A1,3,1,Overnight 1
+D4,3,A,0.202,Gardnerella piotii,UM35,3A1,3,1,Overnight 1
+E4,3,B,0.211,Gardnerella piotii,UM35,3A1,3,1,Overnight 1
+F4,3,B,0.219,Gardnerella piotii,UM35,3A1,3,1,Overnight 1
+G4,3,B,0.218,Gardnerella piotii,UM35,3A1,3,1,Overnight 1
+H4,3,B,0.223,Gardnerella piotii,UM35,3A1,3,1,Overnight 1
+A5,4,A,0.152,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 1
+B5,4,A,0.148,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 1
+C5,4,A,0.146,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 1
+D5,4,A,0.146,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 1
+E5,4,B,0.176,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 1
+F5,4,B,0.179,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 1
+G5,4,B,0.18,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 1
+H5,4,B,0.181,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 1
+A12,Blank,NA,0.049,NA,NA,NA,NA,NA,Overnight 1
+B12,Blank,NA,0.049,NA,NA,NA,NA,NA,Overnight 1
+C12,Blank,NA,0.049,NA,NA,NA,NA,NA,Overnight 1
+D12,Blank,NA,0.048,NA,NA,NA,NA,NA,Overnight 1
+A2,1,A,0.774,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 1
+B2,1,A,0.715,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 1
+C2,1,A,0.717,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 1
+D2,1,A,0.719,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 1
+E2,1,B,0.392,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 1
+F2,1,B,0.394,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 1
+G2,1,B,0.396,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 1
+H2,1,B,0.397,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 1
+A3,2,A,0.596,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 1
+B3,2,A,0.607,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 1
+C3,2,A,0.612,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 1
+D3,2,A,0.631,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 1
+E3,2,B,0.603,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 1
+F3,2,B,0.605,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 1
+G3,2,B,0.602,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 1
+H3,2,B,0.598,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 1
+A4,3,A,0.497,Gardnerella piotii,UM35,3A2,3,2,Overnight 1
+B4,3,A,0.478,Gardnerella piotii,UM35,3A2,3,2,Overnight 1
+C4,3,A,0.484,Gardnerella piotii,UM35,3A2,3,2,Overnight 1
+D4,3,A,0.493,Gardnerella piotii,UM35,3A2,3,2,Overnight 1
+E4,3,B,0.529,Gardnerella piotii,UM35,3A2,3,2,Overnight 1
+F4,3,B,0.534,Gardnerella piotii,UM35,3A2,3,2,Overnight 1
+G4,3,B,0.533,Gardnerella piotii,UM35,3A2,3,2,Overnight 1
+H4,3,B,0.527,Gardnerella piotii,UM35,3A2,3,2,Overnight 1
+A5,4,A,0.548,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 1
+B5,4,A,0.549,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 1
+C5,4,A,0.544,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 1
+D5,4,A,0.546,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 1
+E5,4,B,0.54,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 1
+F5,4,B,0.543,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 1
+G5,4,B,0.54,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 1
+H5,4,B,0.537,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 1
+A12,Blank,NA,0.052,NA,NA,NA,NA,NA,Overnight 1
+B12,Blank,NA,0.052,NA,NA,NA,NA,NA,Overnight 1
+C12,Blank,NA,0.051,NA,NA,NA,NA,NA,Overnight 1
+A1,1,A,0.052,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 1
+B1,1,A,0.051,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 1
+C1,1,A,0.051,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 1
+D1,1,A,0.051,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 1
+E1,1,B,0.054,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 1
+F1,1,B,0.053,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 1
+G1,1,B,0.058,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 1
+H1,1,B,0.055,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 1
+A2,2,A,0.052,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 1
+B2,2,A,0.053,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 1
+C2,2,A,0.051,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 1
+D2,2,A,0.052,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 1
+E2,2,B,0.051,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 1
+F2,2,B,0.052,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 1
+G2,2,B,0.053,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 1
+H2,2,B,0.053,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 1
+A3,3,A,0.135,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 1
+B3,3,A,0.12,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 1
+C3,3,A,0.122,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 1
+D3,3,A,0.119,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 1
+E3,3,B,0.147,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 1
+F3,3,B,0.131,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 1
+G3,3,B,0.134,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 1
+H3,3,B,0.134,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 1
+A4,4,A,0.379,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 1
+B4,4,A,0.377,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 1
+C4,4,A,0.375,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 1
+D4,4,A,0.379,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 1
+E4,4,B,0.42,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 1
+F4,4,B,0.424,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 1
+G4,4,B,0.422,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 1
+H4,4,B,0.414,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 1
+A5,5,A,0.362,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 1
+B5,5,A,0.364,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 1
+C5,5,A,0.362,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 1
+D5,5,A,0.361,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 1
+E5,5,B,0.319,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 1
+F5,5,B,0.337,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 1
+G5,5,B,0.333,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 1
+H5,5,B,0.326,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 1
+A6,6,A,0.159,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 1
+B6,6,A,0.16,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 1
+C6,6,A,0.159,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 1
+D6,6,A,0.158,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 1
+E6,6,B,0.152,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 1
+F6,6,B,0.156,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 1
+G6,6,B,0.156,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 1
+H6,6,B,0.154,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 1
+A7,7,A,0.14,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 1
+B7,7,A,0.14,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 1
+C7,7,A,0.138,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 1
+D7,7,A,0.139,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 1
+E7,7,B,0.259,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 1
+F7,7,B,0.211,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 1
+G7,7,B,0.213,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 1
+H7,7,B,0.211,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 1
+A8,8,A,0.219,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 1
+B8,8,A,0.211,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 1
+C8,8,A,0.211,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 1
+D8,8,A,0.213,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 1
+E8,8,B,0.423,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 1
+F8,8,B,0.426,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 1
+G8,8,B,0.425,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 1
+H8,8,B,0.423,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 1
+A9,9,A,0.092,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 1
+B9,9,A,0.091,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 1
+C9,9,A,0.09,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 1
+D9,9,A,0.091,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 1
+E9,9,B,0.085,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 1
+F9,9,B,0.157,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 1
+G9,9,B,0.087,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 1
+H9,9,B,0.087,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 1
+B12,Blank,NA,0.048,NA,NA,NA,NA,NA,Overnight 1
+C12,Blank,NA,0.055,NA,NA,NA,NA,NA,Overnight 1
+D12,Blank,NA,0.046,NA,NA,NA,NA,NA,Overnight 1
+A1,1,A,0.464,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 1
+B1,1,A,0.459,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 1
+C1,1,A,0.46,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 1
+D1,1,A,0.459,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 1
+E1,1,B,0.45,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 1
+F1,1,B,0.452,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 1
+G1,1,B,0.455,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 1
+H1,1,B,0.449,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 1
+A2,2,A,0.204,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 1
+B2,2,A,0.174,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 1
+C2,2,A,0.172,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 1
+D2,2,A,0.171,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 1
+E2,2,B,0.104,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 1
+F2,2,B,0.104,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 1
+G2,2,B,0.105,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 1
+H2,2,B,0.105,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 1
+A3,3,A,0.059,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 1
+B3,3,A,0.058,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 1
+C3,3,A,0.059,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 1
+D3,3,A,0.058,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 1
+E3,3,B,0.104,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 1
+F3,3,B,0.104,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 1
+G3,3,B,0.105,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 1
+H3,3,B,0.106,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 1
+A12,Blank,NA,0.048,NA,NA,NA,NA,NA,Overnight 1
+C12,Blank,NA,0.048,NA,NA,NA,NA,NA,Overnight 1
+A1,1,A,0.072,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 1
+B1,1,A,0.085,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 1
+C1,1,A,0.073,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 1
+D1,1,A,0.072,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 1
+E1,1,B,0.077,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 1
+F1,1,B,0.078,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 1
+G1,1,B,0.078,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 1
+H1,1,B,0.079,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 1
+A2,2,A,0.092,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 1
+B2,2,A,0.053,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 1
+C2,2,A,0.051,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 1
+D2,2,A,0.053,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 1
+E2,2,B,0.064,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 1
+F2,2,B,0.052,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 1
+G2,2,B,0.053,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 1
+H2,2,B,0.053,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 1
+A3,3,A,0.161,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 1
+B3,3,A,0.172,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 1
+C3,3,A,0.161,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 1
+D3,3,A,0.159,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 1
+E3,3,B,0.108,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 1
+F3,3,B,0.106,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 1
+G3,3,B,0.107,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 1
+H3,3,B,0.164,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 1
+A4,4,A,0.312,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 1
+B4,4,A,0.315,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 1
+C4,4,A,0.312,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 1
+D4,4,A,0.309,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 1
+E4,4,B,0.312,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 1
+F4,4,B,0.342,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 1
+G4,4,B,0.315,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 1
+H4,4,B,0.314,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 1
+A5,5,A,0.324,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 1
+B5,5,A,0.332,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 1
+C5,5,A,0.328,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 1
+D5,5,A,0.331,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 1
+E5,5,B,0.343,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 1
+F5,5,B,0.35,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 1
+G5,5,B,0.351,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 1
+H5,5,B,0.356,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 1
+A6,6,A,0.207,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 1
+B6,6,A,0.207,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 1
+C6,6,A,0.207,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 1
+D6,6,A,0.206,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 1
+E6,6,B,0.215,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 1
+F6,6,B,0.22,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 1
+G6,6,B,0.218,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 1
+H6,6,B,0.222,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 1
+A7,7,A,0.304,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 1
+B7,7,A,0.306,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 1
+C7,7,A,0.297,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 1
+D7,7,A,0.301,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 1
+E7,7,B,0.219,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 1
+F7,7,B,0.217,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 1
+G7,7,B,0.22,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 1
+H7,7,B,0.22,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 1
+A12,Blank,NA,0.054,NA,NA,NA,NA,NA,Overnight 1
+B12,Blank,NA,0.053,NA,NA,NA,NA,NA,Overnight 1
+D12,Blank,NA,0.053,NA,NA,NA,NA,NA,Overnight 1
+A8,1,A,0.435,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 1
+B8,1,A,0.441,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 1
+C8,1,A,0.435,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 1
+D8,1,A,0.435,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 1
+E8,1,B,0.418,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 1
+F8,1,B,0.419,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 1
+G8,1,B,0.419,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 1
+H8,1,B,0.42,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 1
+A9,2,A,0.458,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 1
+B9,2,A,0.495,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 1
+C9,2,A,0.497,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 1
+D9,2,A,0.474,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 1
+E9,2,B,0.459,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 1
+F9,2,B,0.454,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 1
+G9,2,B,0.452,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 1
+H9,2,B,0.45,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 1
+A10,3,A,0.093,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 1
+B10,3,A,0.095,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 1
+C10,3,A,0.096,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 1
+D10,3,A,0.094,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 1
+E10,3,B,0.108,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 1
+F10,3,B,0.113,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 1
+G10,3,B,0.11,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 1
+H10,3,B,0.112,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 1
+A1,1,A,0.3093,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 1
+B1,1,A,0.3068,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 1
+C1,1,A,0.3057,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 1
+D1,1,A,0.3032,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 1
+E1,1,B,0.0769,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 1
+F1,1,B,0.0788,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 1
+G1,1,B,0.0776,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 1
+H1,1,B,0.0773,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 1
+A2,2,A,0.2753,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 1
+B2,2,A,0.2758,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 1
+C2,2,A,0.2728,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 1
+D2,2,A,0.2733,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 1
+E2,2,B,0.3898,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 1
+F2,2,B,0.3898,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 1
+G2,2,B,0.3902,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 1
+H2,2,B,0.3903,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 1
+A3,3,A,0.1672,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 1
+B3,3,A,0.1667,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 1
+C3,3,A,0.1662,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 1
+D3,3,A,0.1657,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 1
+E3,3,B,0.1728,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 1
+F3,3,B,0.1733,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 1
+G3,3,B,0.1746,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 1
+H3,3,B,0.1745,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 1
+A4,4,A,0.1938,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 1
+B4,4,A,0.1933,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 1
+C4,4,A,0.1959,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 1
+D4,4,A,0.1942,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 1
+E4,4,B,0.291,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 1
+F4,4,B,0.2943,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 1
+G4,4,B,0.2945,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 1
+H4,4,B,0.2855,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 1
+A12,Blank,NA,0.0528,NA,NA,NA,NA,NA,Overnight 1
+B12,Blank,NA,0.0523,NA,NA,NA,NA,NA,Overnight 1
+C12,Blank,NA,0.0515,NA,NA,NA,NA,NA,Overnight 1
+D12,Blank,NA,0.0513,NA,NA,NA,NA,NA,Overnight 1
+A1,1,A,0.381,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 1
+B1,1,A,0.383,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 1
+C1,1,A,0.381,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 1
+D1,1,A,0.377,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 1
+E1,1,B,0.249,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 1
+F1,1,B,0.258,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 1
+G1,1,B,0.25,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 1
+H1,1,B,0.252,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 1
+A2,2,A,0.275,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 1
+B2,2,A,0.317,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 1
+C2,2,A,0.321,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 1
+D2,2,A,0.305,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 1
+E2,2,B,0.434,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 1
+F2,2,B,0.43,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 1
+G2,2,B,0.427,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 1
+H2,2,B,0.426,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 1
+A3,3,A,0.19,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+B3,3,A,0.187,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+C3,3,A,0.183,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+D3,3,A,0.188,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+E3,3,B,0.171,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+F3,3,B,0.173,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+G3,3,B,0.171,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+H3,3,B,0.174,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+A4,4,A,0.164,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+B4,4,A,0.16,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+C4,4,A,0.157,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+D4,4,A,0.159,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+E4,4,B,0.187,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+F4,4,B,0.187,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+G4,4,B,0.188,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+H4,4,B,0.187,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 1
+A12,Blank,NA,0.085,NA,NA,NA,NA,NA,Overnight 1
+B12,Blank,NA,0.054,NA,NA,NA,NA,NA,Overnight 1
+C12,Blank,NA,0.053,NA,NA,NA,NA,NA,Overnight 1
+A2,1,A,0.546,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 2
+B2,1,A,0.544,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 2
+C2,1,A,0.558,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 2
+D2,1,A,0.54,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 2
+E2,1,B,0.558,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 2
+F2,1,B,0.566,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 2
+G2,1,B,0.57,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 2
+H2,1,B,0.568,Gardnerella vaginalis,C0011E4,1A1,1,1,Overnight 2
+A3,2,A,0.577,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 2
+B3,2,A,0.585,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 2
+C3,2,A,0.598,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 2
+D3,2,A,0.62,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 2
+E3,2,B,0.55,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 2
+F3,2,B,0.572,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 2
+G3,2,B,0.584,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 2
+H3,2,B,0.634,Gardnerella sp. 3,C0040C2,1A1,1,1,Overnight 2
+A4,3,A,0.305,Gardnerella vaginalis,14018,1A1,1,1,Overnight 2
+B4,3,A,0.291,Gardnerella vaginalis,14018,1A1,1,1,Overnight 2
+C4,3,A,0.292,Gardnerella vaginalis,14018,1A1,1,1,Overnight 2
+D4,3,A,0.29,Gardnerella vaginalis,14018,1A1,1,1,Overnight 2
+E4,3,B,0.304,Gardnerella vaginalis,14018,1A1,1,1,Overnight 2
+F4,3,B,0.332,Gardnerella vaginalis,14018,1A1,1,1,Overnight 2
+G4,3,B,0.312,Gardnerella vaginalis,14018,1A1,1,1,Overnight 2
+H4,3,B,0.31,Gardnerella vaginalis,14018,1A1,1,1,Overnight 2
+A5,4,A,0.46,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 2
+B5,4,A,0.468,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 2
+C5,4,A,0.466,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 2
+D5,4,A,0.461,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 2
+E5,4,B,0.485,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 2
+F5,4,B,0.49,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 2
+G5,4,B,0.488,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 2
+H5,4,B,0.491,Gardnerella sp. 8,C0056B5,1A1,1,1,Overnight 2
+A6,5,A,0.345,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 2
+B6,5,A,0.328,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 2
+C6,5,A,0.327,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 2
+D6,5,A,0.327,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 2
+E6,5,B,0.373,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 2
+F6,5,B,0.38,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 2
+G6,5,B,0.378,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 2
+H6,5,B,0.375,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Overnight 2
+A7,6,A,0.368,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 2
+B7,6,A,0.368,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 2
+C7,6,A,0.369,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 2
+D7,6,A,0.367,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 2
+E7,6,B,0.432,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 2
+F7,6,B,0.393,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 2
+G7,6,B,0.393,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 2
+H7,6,B,0.396,Gardnerella vaginalis,315-A,1A1,1,1,Overnight 2
+A8,7,A,0.307,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 2
+B8,7,A,0.31,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 2
+C8,7,A,0.312,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 2
+D8,7,A,0.314,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 2
+E8,7,B,0.346,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 2
+F8,7,B,0.349,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 2
+G8,7,B,0.343,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 2
+H8,7,B,0.346,Gardnerella piotii,JCP8066,1A1,1,1,Overnight 2
+A9,8,A,0.398,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 2
+B9,8,A,0.419,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 2
+C9,8,A,0.403,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 2
+E9,8,B,0.396,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 2
+F9,8,B,0.399,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 2
+G9,8,B,0.405,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 2
+H9,8,B,0.405,Gardnerella sp. 8,Gv101,1A1,1,1,Overnight 2
+A12,Blank,NA,0.048,NA,NA,NA,NA,NA,Overnight 2
+B12,Blank,NA,0.048,NA,NA,NA,NA,NA,Overnight 2
+C12,Blank,NA,0.048,NA,NA,NA,NA,NA,Overnight 2
+D12,Blank,NA,0.047,NA,NA,NA,NA,NA,Overnight 2
+A2,1,A,0.892,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 2
+B2,1,A,0.883,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 2
+C2,1,A,0.899,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 2
+D2,1,A,0.897,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 2
+E2,1,B,0.492,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 2
+F2,1,B,0.489,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 2
+G2,1,B,0.479,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 2
+H2,1,B,0.49,Gardnerella vaginalis,C0011E4,1A2,1,2,Overnight 2
+A3,2,A,0.411,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 2
+B3,2,A,0.413,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 2
+C3,2,A,0.409,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 2
+D3,2,A,0.402,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 2
+E3,2,B,0.474,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 2
+F3,2,B,0.479,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 2
+G3,2,B,0.473,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 2
+H3,2,B,0.513,Gardnerella sp. 3,C0040C2,1A2,1,2,Overnight 2
+A4,3,A,0.783,Gardnerella vaginalis,14018,1A2,1,2,Overnight 2
+B4,3,A,0.78,Gardnerella vaginalis,14018,1A2,1,2,Overnight 2
+C4,3,A,0.786,Gardnerella vaginalis,14018,1A2,1,2,Overnight 2
+D4,3,A,0.783,Gardnerella vaginalis,14018,1A2,1,2,Overnight 2
+E4,3,B,0.761,Gardnerella vaginalis,14018,1A2,1,2,Overnight 2
+F4,3,B,0.769,Gardnerella vaginalis,14018,1A2,1,2,Overnight 2
+G4,3,B,0.76,Gardnerella vaginalis,14018,1A2,1,2,Overnight 2
+H4,3,B,0.765,Gardnerella vaginalis,14018,1A2,1,2,Overnight 2
+A5,4,A,0.579,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 2
+B5,4,A,0.581,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 2
+C5,4,A,0.575,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 2
+D5,4,A,0.569,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 2
+E5,4,B,0.574,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 2
+F5,4,B,0.585,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 2
+G5,4,B,0.578,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 2
+H5,4,B,0.578,Gardnerella sp. 8,C0056B5,1A2,1,2,Overnight 2
+A6,5,A,0.05,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 2
+B6,5,A,0.05,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 2
+C6,5,A,0.05,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 2
+D6,5,A,0.05,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 2
+E6,5,B,0.869,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 2
+F6,5,B,0.868,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 2
+G6,5,B,0.874,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 2
+H6,5,B,0.887,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Overnight 2
+A7,6,A,0.678,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 2
+B7,6,A,0.672,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 2
+C7,6,A,0.662,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 2
+D7,6,A,0.656,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 2
+E7,6,B,0.677,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 2
+F7,6,B,0.671,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 2
+G7,6,B,0.679,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 2
+H7,6,B,0.672,Gardnerella vaginalis,315-A,1A2,1,2,Overnight 2
+A8,7,A,0.668,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 2
+B8,7,A,0.649,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 2
+C8,7,A,0.66,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 2
+D8,7,A,0.665,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 2
+E8,7,B,0.683,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 2
+F8,7,B,0.664,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 2
+G8,7,B,0.662,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 2
+H8,7,B,0.661,Gardnerella piotii,JCP8066,1A2,1,2,Overnight 2
+A9,8,A,0.707,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 2
+B9,8,A,0.705,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 2
+C9,8,A,0.7,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 2
+D9,8,A,0.698,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 2
+E9,8,B,0.698,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 2
+F9,8,B,0.704,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 2
+G9,8,B,0.699,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 2
+H9,8,B,0.714,Gardnerella sp. 8,Gv101,1A2,1,2,Overnight 2
+A12,Blank,NA,0.049,NA,NA,NA,NA,NA,Overnight 2
+B12,Blank,NA,0.05,NA,NA,NA,NA,NA,Overnight 2
+C12,Blank,NA,0.05,NA,NA,NA,NA,NA,Overnight 2
+D12,Blank,NA,0.049,NA,NA,NA,NA,NA,Overnight 2
+A7,1,A,0.719,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 2
+B7,1,A,0.743,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 2
+C7,1,A,0.745,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 2
+D7,1,A,0.704,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 2
+E7,1,B,0.932,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 2
+F7,1,B,0.913,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 2
+G7,1,B,0.919,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 2
+H7,1,B,0.924,Gardnerella sp. 2,C0084H9,3A1,3,1,Overnight 2
+A8,2,A,0.642,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 2
+B8,2,A,0.624,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 2
+C8,2,A,0.618,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 2
+D8,2,A,0.647,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 2
+E8,2,B,0.643,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 2
+F8,2,B,0.628,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 2
+G8,2,B,0.628,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 2
+H8,2,B,0.628,Gardnerella sp. 11,C0101A1,3A1,3,1,Overnight 2
+A9,3,A,0.655,Gardnerella piotii,UM35,3A1,3,1,Overnight 2
+B9,3,A,0.647,Gardnerella piotii,UM35,3A1,3,1,Overnight 2
+C9,3,A,0.651,Gardnerella piotii,UM35,3A1,3,1,Overnight 2
+D9,3,A,0.652,Gardnerella piotii,UM35,3A1,3,1,Overnight 2
+E9,3,B,0.65,Gardnerella piotii,UM35,3A1,3,1,Overnight 2
+F9,3,B,0.655,Gardnerella piotii,UM35,3A1,3,1,Overnight 2
+G9,3,B,0.653,Gardnerella piotii,UM35,3A1,3,1,Overnight 2
+H9,3,B,0.656,Gardnerella piotii,UM35,3A1,3,1,Overnight 2
+A10,4,A,0.595,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 2
+B10,4,A,0.593,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 2
+C10,4,A,0.592,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 2
+D10,4,A,0.592,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 2
+E10,4,B,0.588,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 2
+F10,4,B,0.592,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 2
+G10,4,B,0.599,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 2
+H10,4,B,0.613,Gardnerella piotii,C0093B3,3A1,3,1,Overnight 2
+E12,Blank,NA,0.053,NA,NA,NA,NA,NA,Overnight 2
+F12,Blank,NA,0.054,NA,NA,NA,NA,NA,Overnight 2
+G12,Blank,NA,0.054,NA,NA,NA,NA,NA,Overnight 2
+H12,Blank,NA,0.055,NA,NA,NA,NA,NA,Overnight 2
+A2,1,A,0.743,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 2
+B2,1,A,0.745,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 2
+C2,1,A,0.746,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 2
+D2,1,A,0.753,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 2
+E2,1,B,0.718,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 2
+F2,1,B,0.709,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 2
+G2,1,B,0.712,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 2
+H2,1,B,0.713,Gardnerella sp. 2,C0084H9,3A2,3,2,Overnight 2
+A3,2,A,0.605,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 2
+B3,2,A,0.641,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 2
+C3,2,A,0.626,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 2
+D3,2,A,0.622,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 2
+E3,2,B,0.611,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 2
+F3,2,B,0.624,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 2
+G3,2,B,0.622,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 2
+H3,2,B,0.629,Gardnerella sp. 11,C0101A1,3A2,3,2,Overnight 2
+A4,3,A,0.466,Gardnerella piotii,UM35,3A2,3,2,Overnight 2
+B4,3,A,0.446,Gardnerella piotii,UM35,3A2,3,2,Overnight 2
+C4,3,A,0.448,Gardnerella piotii,UM35,3A2,3,2,Overnight 2
+D4,3,A,0.451,Gardnerella piotii,UM35,3A2,3,2,Overnight 2
+E4,3,B,0.468,Gardnerella piotii,UM35,3A2,3,2,Overnight 2
+F4,3,B,0.468,Gardnerella piotii,UM35,3A2,3,2,Overnight 2
+G4,3,B,0.465,Gardnerella piotii,UM35,3A2,3,2,Overnight 2
+H4,3,B,0.511,Gardnerella piotii,UM35,3A2,3,2,Overnight 2
+A5,4,A,0.666,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 2
+B5,4,A,0.637,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 2
+C5,4,A,0.641,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 2
+D5,4,A,0.646,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 2
+E5,4,B,0.568,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 2
+F5,4,B,0.575,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 2
+G5,4,B,0.572,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 2
+H5,4,B,0.569,Gardnerella piotii,C0093B3,3A2,3,2,Overnight 2
+A12,Blank,NA,0.064,NA,NA,NA,NA,NA,Overnight 2
+B12,Blank,NA,0.049,NA,NA,NA,NA,NA,Overnight 2
+D12,Blank,NA,0.048,NA,NA,NA,NA,NA,Overnight 2
+A1,1,A,0.049,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 2
+B1,1,A,0.05,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 2
+C1,1,A,0.049,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 2
+D1,1,A,0.049,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 2
+E1,1,B,0.056,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 2
+F1,1,B,0.048,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 2
+G1,1,B,0.049,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 2
+H1,1,B,0.049,Gardnerella sp. 10,C0100B2,1B1,1,1,Overnight 2
+A2,2,A,0.05,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 2
+B2,2,A,0.051,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 2
+C2,2,A,0.05,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 2
+D2,2,A,0.05,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 2
+E2,2,B,0.049,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 2
+F2,2,B,0.05,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 2
+G2,2,B,0.051,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 2
+H2,2,B,0.05,Gardnerella sp. 7,C0179B4,1B1,1,1,Overnight 2
+A3,3,A,0.142,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 2
+B3,3,A,0.121,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 2
+C3,3,A,0.123,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 2
+D3,3,A,0.119,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 2
+E3,3,B,0.229,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 2
+F3,3,B,0.245,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 2
+G3,3,B,0.239,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 2
+H3,3,B,0.243,Gardnerella swidsinskii,C0102A2,1B1,1,1,Overnight 2
+A4,4,A,0.542,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 2
+B4,4,A,0.539,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 2
+C4,4,A,0.543,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 2
+D4,4,A,0.551,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 2
+E4,4,B,0.533,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 2
+F4,4,B,0.539,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 2
+G4,4,B,0.534,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 2
+H4,4,B,0.537,Gardnerella sp. 3,JCP8017B,1B1,1,1,Overnight 2
+A5,5,A,0.425,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 2
+B5,5,A,0.422,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 2
+C5,5,A,0.423,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 2
+D5,5,A,0.417,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 2
+E5,5,B,0.375,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 2
+F5,5,B,0.378,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 2
+G5,5,B,0.382,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 2
+H5,5,B,0.377,Gardnerella swidsinskii,UM224,1B1,1,1,Overnight 2
+A6,6,A,0.226,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 2
+B6,6,A,0.237,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 2
+C6,6,A,0.237,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 2
+D6,6,A,0.235,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 2
+E6,6,B,0.24,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 2
+F6,6,B,0.243,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 2
+G6,6,B,0.245,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 2
+H6,6,B,0.245,Gardnerella sp. 2,JCP7275,1B1,1,1,Overnight 2
+A7,7,A,0.409,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 2
+B7,7,A,0.407,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 2
+C7,7,A,0.407,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 2
+D7,7,A,0.403,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 2
+E7,7,B,0.393,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 2
+F7,7,B,0.406,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 2
+G7,7,B,0.406,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 2
+H7,7,B,0.401,Gardnerella sp. 2,JCP8108,1B1,1,1,Overnight 2
+A8,8,A,0.544,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 2
+B8,8,A,0.535,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 2
+C8,8,A,0.534,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 2
+D8,8,A,0.533,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 2
+E8,8,B,0.546,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 2
+F8,8,B,0.551,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 2
+G8,8,B,0.55,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 2
+H8,8,B,0.553,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Overnight 2
+A9,9,A,0.486,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 2
+B9,9,A,0.485,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 2
+C9,9,A,0.488,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 2
+D9,9,A,0.487,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 2
+E9,9,B,0.102,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 2
+F9,9,B,0.101,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 2
+G9,9,B,0.103,Gardnerella sp. 8,Gv101,1B1,1,1,Overnight 2
+B12,Blank,NA,0.047,NA,NA,NA,NA,NA,Overnight 2
+C12,Blank,NA,0.047,NA,NA,NA,NA,NA,Overnight 2
+A1,1,A,0.518,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 2
+B1,1,A,0.523,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 2
+C1,1,A,0.52,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 2
+D1,1,A,0.528,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 2
+E1,1,B,0.472,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 2
+F1,1,B,0.492,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 2
+G1,1,B,0.497,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 2
+H1,1,B,0.498,Gardnerella leopoldii,AMD,2A1,2,1,Overnight 2
+A2,2,A,0.425,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 2
+B2,2,A,0.441,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 2
+C2,2,A,0.429,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 2
+D2,2,A,0.426,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 2
+E2,2,B,0.43,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 2
+F2,2,B,0.428,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 2
+G2,2,B,0.426,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 2
+H2,2,B,0.422,Gardnerella leopoldii,C0096A1,2A1,2,1,Overnight 2
+A3,3,A,0.196,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 2
+B3,3,A,0.197,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 2
+C3,3,A,0.197,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 2
+D3,3,A,0.213,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 2
+E3,3,B,0.354,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 2
+F3,3,B,0.356,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 2
+G3,3,B,0.354,Gardnerella sp. 12,CMW7778B,2A1,2,1,Overnight 2
+D12,Blank,NA,0.046,NA,NA,NA,NA,NA,Overnight 2
+A1,1,A,0.094,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 2
+B1,1,A,0.094,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 2
+C1,1,A,0.094,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 2
+D1,1,A,0.094,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 2
+E1,1,B,0.094,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 2
+F1,1,B,0.095,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 2
+G1,1,B,0.095,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 2
+H1,1,B,0.093,Gardnerella sp. 10,C0100B2,1B2,1,2,Overnight 2
+A2,2,A,0.057,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 2
+B2,2,A,0.055,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 2
+C2,2,A,0.054,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 2
+D2,2,A,0.055,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 2
+E2,2,B,0.054,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 2
+F2,2,B,0.057,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 2
+G2,2,B,0.055,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 2
+H2,2,B,0.057,Gardnerella sp. 7,C0179B4,1B2,1,2,Overnight 2
+A3,3,A,0.258,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 2
+B3,3,A,0.257,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 2
+C3,3,A,0.253,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 2
+D3,3,A,0.259,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 2
+E3,3,B,0.126,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 2
+F3,3,B,0.13,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 2
+G3,3,B,0.129,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 2
+H3,3,B,0.133,Gardnerella swidsinskii,C0102A2,1B2,1,2,Overnight 2
+A4,4,A,0.548,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 2
+B4,4,A,0.582,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 2
+C4,4,A,0.535,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 2
+D4,4,A,0.562,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 2
+E4,4,B,0.537,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 2
+F4,4,B,0.546,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 2
+G4,4,B,0.547,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 2
+H4,4,B,0.544,Gardnerella sp. 3,JCP8017B,1B2,1,2,Overnight 2
+A5,5,A,0.433,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 2
+B5,5,A,0.441,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 2
+C5,5,A,0.445,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 2
+D5,5,A,0.448,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 2
+E5,5,B,0.385,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 2
+F5,5,B,0.396,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 2
+G5,5,B,0.392,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 2
+H5,5,B,0.396,Gardnerella swidsinskii,UM224,1B2,1,2,Overnight 2
+A6,6,A,0.263,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 2
+B6,6,A,0.26,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 2
+C6,6,A,0.262,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 2
+D6,6,A,0.262,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 2
+E6,6,B,0.257,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 2
+F6,6,B,0.263,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 2
+G6,6,B,0.262,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 2
+H6,6,B,0.262,Gardnerella sp. 2,JCP7275,1B2,1,2,Overnight 2
+A7,7,A,0.433,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 2
+B7,7,A,0.433,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 2
+C7,7,A,0.432,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 2
+D7,7,A,0.444,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 2
+E7,7,B,0.41,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 2
+F7,7,B,0.415,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 2
+G7,7,B,0.412,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 2
+H7,7,B,0.424,Gardnerella sp. 2,JCP8108,1B2,1,2,Overnight 2
+A12,Blank,NA,0.05,NA,NA,NA,NA,NA,Overnight 2
+B12,Blank,NA,0.051,NA,NA,NA,NA,NA,Overnight 2
+C12,Blank,NA,0.052,NA,NA,NA,NA,NA,Overnight 2
+D12,Blank,NA,0.052,NA,NA,NA,NA,NA,Overnight 2
+A8,1,A,0.477,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 2
+B8,1,A,0.482,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 2
+C8,1,A,0.483,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 2
+D8,1,A,0.489,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 2
+E8,1,B,0.462,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 2
+F8,1,B,0.466,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 2
+G8,1,B,0.462,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 2
+H8,1,B,0.46,Gardnerella leopoldii,AMD,2A2,2,2,Overnight 2
+A9,2,A,0.52,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 2
+B9,2,A,0.512,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 2
+C9,2,A,0.513,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 2
+D9,2,A,0.51,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 2
+E9,2,B,0.424,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 2
+F9,2,B,0.429,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 2
+G9,2,B,0.429,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 2
+H9,2,B,0.421,Gardnerella leopoldii,C0096A1,2A2,2,2,Overnight 2
+A10,3,A,0.288,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 2
+B10,3,A,0.287,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 2
+C10,3,A,0.29,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 2
+D10,3,A,0.294,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 2
+E10,3,B,0.325,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 2
+F10,3,B,0.332,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 2
+G10,3,B,0.334,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 2
+H10,3,B,0.335,Gardnerella sp. 12,CMW7778B,2A2,2,2,Overnight 2
+A1,1,A,0.402,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 2
+B1,1,A,0.401,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 2
+C1,1,A,0.405,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 2
+D1,1,A,0.402,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 2
+E1,1,B,0.485,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 2
+F1,1,B,0.478,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 2
+G1,1,B,0.478,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 2
+H1,1,B,0.486,Gardnerella sp. 10,C0100B2,1B3,1,NA,Overnight 2
+A2,2,A,0.615,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 2
+B2,2,A,0.615,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 2
+C2,2,A,0.617,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 2
+D2,2,A,0.618,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 2
+E2,2,B,0.666,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 2
+F2,2,B,0.669,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 2
+G2,2,B,0.663,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 2
+H2,2,B,0.664,Gardnerella sp. 7,C0179B4,1B3,1,NA,Overnight 2
+A3,3,A,0.265,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 2
+B3,3,A,0.235,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 2
+C3,3,A,0.237,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 2
+D3,3,A,0.24,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 2
+E3,3,B,0.248,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 2
+F3,3,B,0.256,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 2
+G3,3,B,0.252,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 2
+H3,3,B,0.253,Gardnerella sp. 2,JCP7275,1B3,1,NA,Overnight 2
+A4,4,A,0.622,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 2
+B4,4,A,0.588,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 2
+C4,4,A,0.584,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 2
+D4,4,A,0.588,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 2
+E4,4,B,0.634,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 2
+F4,4,B,0.638,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 2
+G4,4,B,0.636,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 2
+H4,4,B,0.722,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Overnight 2
+A12,Blank,NA,0.054,NA,NA,NA,NA,NA,Overnight 2
+B12,Blank,NA,0.053,NA,NA,NA,NA,NA,Overnight 2
+C12,Blank,NA,0.054,NA,NA,NA,NA,NA,Overnight 2
+D12,Blank,NA,0.053,NA,NA,NA,NA,NA,Overnight 2
+A1,1,A,0.504,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 2
+B1,1,A,0.49,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 2
+C1,1,A,0.485,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 2
+D1,1,A,0.488,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 2
+E1,1,B,0.463,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 2
+F1,1,B,0.448,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 2
+G1,1,B,0.446,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 2
+H1,1,B,0.456,Gardnerella sp. 10,C0100B2,1B4,1,NA,Overnight 2
+A2,2,A,0.604,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 2
+B2,2,A,0.601,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 2
+C2,2,A,0.602,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 2
+D2,2,A,0.596,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 2
+E2,2,B,0.597,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 2
+F2,2,B,0.616,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 2
+G2,2,B,0.601,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 2
+H2,2,B,0.602,Gardnerella sp. 7,C0179B4,1B4,1,NA,Overnight 2
+A3,3,A,0.234,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+B3,3,A,0.233,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+C3,3,A,0.231,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+D3,3,A,0.23,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+E3,3,B,0.243,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+F3,3,B,0.25,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+G3,3,B,0.25,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+H3,3,B,0.253,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+A4,4,A,0.249,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+B4,4,A,0.23,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+C4,4,A,0.231,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+D4,4,A,0.229,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+E4,4,B,0.24,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+F4,4,B,0.243,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+G4,4,B,0.248,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+H4,4,B,0.247,Gardnerella sp. 2,JCP7275,1B4,1,NA,Overnight 2
+A12,Blank,NA,0.053,NA,NA,NA,NA,NA,Overnight 2
+B12,Blank,NA,0.052,NA,NA,NA,NA,NA,Overnight 2
+A2,1,A,0.218,Gardnerella vaginalis,C0011E4,1A1,1,1,Mid Log
+B2,1,A,0.222,Gardnerella vaginalis,C0011E4,1A1,1,1,Mid Log
+C2,1,A,0.223,Gardnerella vaginalis,C0011E4,1A1,1,1,Mid Log
+D2,1,A,0.223,Gardnerella vaginalis,C0011E4,1A1,1,1,Mid Log
+E2,1,B,0.232,Gardnerella vaginalis,C0011E4,1A1,1,1,Mid Log
+F2,1,B,0.217,Gardnerella vaginalis,C0011E4,1A1,1,1,Mid Log
+G2,1,B,0.232,Gardnerella vaginalis,C0011E4,1A1,1,1,Mid Log
+H2,1,B,0.224,Gardnerella vaginalis,C0011E4,1A1,1,1,Mid Log
+A3,2,A,0.18,Gardnerella sp. 3,C0040C2,1A1,1,1,Mid Log
+B3,2,A,0.171,Gardnerella sp. 3,C0040C2,1A1,1,1,Mid Log
+C3,2,A,0.171,Gardnerella sp. 3,C0040C2,1A1,1,1,Mid Log
+D3,2,A,0.18,Gardnerella sp. 3,C0040C2,1A1,1,1,Mid Log
+E3,2,B,0.173,Gardnerella sp. 3,C0040C2,1A1,1,1,Mid Log
+F3,2,B,0.174,Gardnerella sp. 3,C0040C2,1A1,1,1,Mid Log
+G3,2,B,0.177,Gardnerella sp. 3,C0040C2,1A1,1,1,Mid Log
+H3,2,B,0.197,Gardnerella sp. 3,C0040C2,1A1,1,1,Mid Log
+A4,3,A,0.113,Gardnerella vaginalis,14018,1A1,1,1,Mid Log
+B4,3,A,0.12,Gardnerella vaginalis,14018,1A1,1,1,Mid Log
+C4,3,A,0.121,Gardnerella vaginalis,14018,1A1,1,1,Mid Log
+D4,3,A,0.117,Gardnerella vaginalis,14018,1A1,1,1,Mid Log
+E4,3,B,0.116,Gardnerella vaginalis,14018,1A1,1,1,Mid Log
+F4,3,B,0.119,Gardnerella vaginalis,14018,1A1,1,1,Mid Log
+G4,3,B,0.114,Gardnerella vaginalis,14018,1A1,1,1,Mid Log
+H4,3,B,0.12,Gardnerella vaginalis,14018,1A1,1,1,Mid Log
+A5,4,A,0.144,Gardnerella sp. 8,C0056B5,1A1,1,1,Mid Log
+B5,4,A,0.161,Gardnerella sp. 8,C0056B5,1A1,1,1,Mid Log
+C5,4,A,0.174,Gardnerella sp. 8,C0056B5,1A1,1,1,Mid Log
+D5,4,A,0.17,Gardnerella sp. 8,C0056B5,1A1,1,1,Mid Log
+E5,4,B,0.12,Gardnerella sp. 8,C0056B5,1A1,1,1,Mid Log
+F5,4,B,0.116,Gardnerella sp. 8,C0056B5,1A1,1,1,Mid Log
+G5,4,B,0.134,Gardnerella sp. 8,C0056B5,1A1,1,1,Mid Log
+H5,4,B,0.179,Gardnerella sp. 8,C0056B5,1A1,1,1,Mid Log
+A6,5,A,0.148,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Mid Log
+B6,5,A,0.138,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Mid Log
+C6,5,A,0.14,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Mid Log
+D6,5,A,0.136,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Mid Log
+E6,5,B,0.131,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Mid Log
+F6,5,B,0.139,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Mid Log
+G6,5,B,0.143,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Mid Log
+H6,5,B,0.153,Gardnerella swidsinskii,Gv5-1,1A1,1,1,Mid Log
+A7,6,A,0.209,Gardnerella vaginalis,315-A,1A1,1,1,Mid Log
+B7,6,A,0.186,Gardnerella vaginalis,315-A,1A1,1,1,Mid Log
+C7,6,A,0.179,Gardnerella vaginalis,315-A,1A1,1,1,Mid Log
+D7,6,A,0.178,Gardnerella vaginalis,315-A,1A1,1,1,Mid Log
+E7,6,B,0.205,Gardnerella vaginalis,315-A,1A1,1,1,Mid Log
+F7,6,B,0.222,Gardnerella vaginalis,315-A,1A1,1,1,Mid Log
+G7,6,B,0.225,Gardnerella vaginalis,315-A,1A1,1,1,Mid Log
+H7,6,B,0.242,Gardnerella vaginalis,315-A,1A1,1,1,Mid Log
+A8,7,A,0.134,Gardnerella piotii,JCP8066,1A1,1,1,Mid Log
+B8,7,A,0.113,Gardnerella piotii,JCP8066,1A1,1,1,Mid Log
+C8,7,A,0.111,Gardnerella piotii,JCP8066,1A1,1,1,Mid Log
+D8,7,A,0.147,Gardnerella piotii,JCP8066,1A1,1,1,Mid Log
+E8,7,B,0.161,Gardnerella piotii,JCP8066,1A1,1,1,Mid Log
+F8,7,B,0.165,Gardnerella piotii,JCP8066,1A1,1,1,Mid Log
+G8,7,B,0.166,Gardnerella piotii,JCP8066,1A1,1,1,Mid Log
+H8,7,B,0.169,Gardnerella piotii,JCP8066,1A1,1,1,Mid Log
+A9,8,A,0.116,Gardnerella sp. 8,Gv101,1A1,1,1,Mid Log
+B9,8,A,0.13,Gardnerella sp. 8,Gv101,1A1,1,1,Mid Log
+C9,8,A,0.132,Gardnerella sp. 8,Gv101,1A1,1,1,Mid Log
+E9,8,B,0.124,Gardnerella sp. 8,Gv101,1A1,1,1,Mid Log
+F9,8,B,0.137,Gardnerella sp. 8,Gv101,1A1,1,1,Mid Log
+G9,8,B,0.142,Gardnerella sp. 8,Gv101,1A1,1,1,Mid Log
+H9,8,B,0.134,Gardnerella sp. 8,Gv101,1A1,1,1,Mid Log
+A12,Blank,NA,0.053,NA,NA,NA,NA,NA,Mid Log
+B12,Blank,NA,0.049,NA,NA,NA,NA,NA,Mid Log
+C12,Blank,NA,0.053,NA,NA,NA,NA,NA,Mid Log
+D12,Blank,NA,0.049,NA,NA,NA,NA,NA,Mid Log
+A2,1,A,0.201,Gardnerella vaginalis,C0011E4,1A2,1,2,Mid Log
+B2,1,A,0.212,Gardnerella vaginalis,C0011E4,1A2,1,2,Mid Log
+C2,1,A,0.221,Gardnerella vaginalis,C0011E4,1A2,1,2,Mid Log
+D2,1,A,0.215,Gardnerella vaginalis,C0011E4,1A2,1,2,Mid Log
+E2,1,B,0.157,Gardnerella vaginalis,C0011E4,1A2,1,2,Mid Log
+F2,1,B,0.163,Gardnerella vaginalis,C0011E4,1A2,1,2,Mid Log
+G2,1,B,0.161,Gardnerella vaginalis,C0011E4,1A2,1,2,Mid Log
+H2,1,B,0.166,Gardnerella vaginalis,C0011E4,1A2,1,2,Mid Log
+A3,2,A,0.123,Gardnerella sp. 3,C0040C2,1A2,1,2,Mid Log
+B3,2,A,0.123,Gardnerella sp. 3,C0040C2,1A2,1,2,Mid Log
+C3,2,A,0.11,Gardnerella sp. 3,C0040C2,1A2,1,2,Mid Log
+D3,2,A,0.113,Gardnerella sp. 3,C0040C2,1A2,1,2,Mid Log
+E3,2,B,0.126,Gardnerella sp. 3,C0040C2,1A2,1,2,Mid Log
+F3,2,B,0.13,Gardnerella sp. 3,C0040C2,1A2,1,2,Mid Log
+G3,2,B,0.131,Gardnerella sp. 3,C0040C2,1A2,1,2,Mid Log
+H3,2,B,0.137,Gardnerella sp. 3,C0040C2,1A2,1,2,Mid Log
+A4,3,A,0.175,Gardnerella vaginalis,14018,1A2,1,2,Mid Log
+B4,3,A,0.178,Gardnerella vaginalis,14018,1A2,1,2,Mid Log
+C4,3,A,0.177,Gardnerella vaginalis,14018,1A2,1,2,Mid Log
+D4,3,A,0.175,Gardnerella vaginalis,14018,1A2,1,2,Mid Log
+E4,3,B,0.197,Gardnerella vaginalis,14018,1A2,1,2,Mid Log
+F4,3,B,0.183,Gardnerella vaginalis,14018,1A2,1,2,Mid Log
+G4,3,B,0.183,Gardnerella vaginalis,14018,1A2,1,2,Mid Log
+H4,3,B,0.174,Gardnerella vaginalis,14018,1A2,1,2,Mid Log
+A5,4,A,0.159,Gardnerella sp. 8,C0056B5,1A2,1,2,Mid Log
+B5,4,A,0.133,Gardnerella sp. 8,C0056B5,1A2,1,2,Mid Log
+C5,4,A,0.135,Gardnerella sp. 8,C0056B5,1A2,1,2,Mid Log
+D5,4,A,0.12,Gardnerella sp. 8,C0056B5,1A2,1,2,Mid Log
+E5,4,B,0.132,Gardnerella sp. 8,C0056B5,1A2,1,2,Mid Log
+F5,4,B,0.127,Gardnerella sp. 8,C0056B5,1A2,1,2,Mid Log
+G5,4,B,0.13,Gardnerella sp. 8,C0056B5,1A2,1,2,Mid Log
+H5,4,B,0.155,Gardnerella sp. 8,C0056B5,1A2,1,2,Mid Log
+A6,5,A,0.055,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Mid Log
+B6,5,A,0.082,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Mid Log
+C6,5,A,0.055,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Mid Log
+D6,5,A,0.053,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Mid Log
+E6,5,B,0.146,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Mid Log
+F6,5,B,0.146,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Mid Log
+G6,5,B,0.146,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Mid Log
+H6,5,B,0.145,Gardnerella swidsinskii,Gv5-1,1A2,1,2,Mid Log
+A7,6,A,0.193,Gardnerella vaginalis,315-A,1A2,1,2,Mid Log
+B7,6,A,0.197,Gardnerella vaginalis,315-A,1A2,1,2,Mid Log
+C7,6,A,0.187,Gardnerella vaginalis,315-A,1A2,1,2,Mid Log
+D7,6,A,0.193,Gardnerella vaginalis,315-A,1A2,1,2,Mid Log
+E7,6,B,0.19,Gardnerella vaginalis,315-A,1A2,1,2,Mid Log
+F7,6,B,0.169,Gardnerella vaginalis,315-A,1A2,1,2,Mid Log
+G7,6,B,0.164,Gardnerella vaginalis,315-A,1A2,1,2,Mid Log
+H7,6,B,0.16,Gardnerella vaginalis,315-A,1A2,1,2,Mid Log
+A8,7,A,0.166,Gardnerella piotii,JCP8066,1A2,1,2,Mid Log
+B8,7,A,0.173,Gardnerella piotii,JCP8066,1A2,1,2,Mid Log
+C8,7,A,0.176,Gardnerella piotii,JCP8066,1A2,1,2,Mid Log
+D8,7,A,0.18,Gardnerella piotii,JCP8066,1A2,1,2,Mid Log
+E8,7,B,0.185,Gardnerella piotii,JCP8066,1A2,1,2,Mid Log
+F8,7,B,0.178,Gardnerella piotii,JCP8066,1A2,1,2,Mid Log
+G8,7,B,0.176,Gardnerella piotii,JCP8066,1A2,1,2,Mid Log
+H8,7,B,0.161,Gardnerella piotii,JCP8066,1A2,1,2,Mid Log
+A9,8,A,0.118,Gardnerella sp. 8,Gv101,1A2,1,2,Mid Log
+B9,8,A,0.123,Gardnerella sp. 8,Gv101,1A2,1,2,Mid Log
+C9,8,A,0.12,Gardnerella sp. 8,Gv101,1A2,1,2,Mid Log
+D9,8,A,0.121,Gardnerella sp. 8,Gv101,1A2,1,2,Mid Log
+E9,8,B,0.126,Gardnerella sp. 8,Gv101,1A2,1,2,Mid Log
+F9,8,B,0.127,Gardnerella sp. 8,Gv101,1A2,1,2,Mid Log
+G9,8,B,0.115,Gardnerella sp. 8,Gv101,1A2,1,2,Mid Log
+H9,8,B,0.13,Gardnerella sp. 8,Gv101,1A2,1,2,Mid Log
+A12,Blank,NA,0.063,NA,NA,NA,NA,NA,Mid Log
+B12,Blank,NA,0.053,NA,NA,NA,NA,NA,Mid Log
+C12,Blank,NA,0.054,NA,NA,NA,NA,NA,Mid Log
+D12,Blank,NA,0.052,NA,NA,NA,NA,NA,Mid Log
+A2,1,A,0.126,Gardnerella sp. 2,C0084H9,3A1,3,1,Mid Log
+B2,1,A,0.127,Gardnerella sp. 2,C0084H9,3A1,3,1,Mid Log
+C2,1,A,0.117,Gardnerella sp. 2,C0084H9,3A1,3,1,Mid Log
+D2,1,A,0.115,Gardnerella sp. 2,C0084H9,3A1,3,1,Mid Log
+E2,1,B,0.574,Gardnerella sp. 2,C0084H9,3A1,3,1,Mid Log
+F2,1,B,0.573,Gardnerella sp. 2,C0084H9,3A1,3,1,Mid Log
+G2,1,B,0.586,Gardnerella sp. 2,C0084H9,3A1,3,1,Mid Log
+H2,1,B,0.585,Gardnerella sp. 2,C0084H9,3A1,3,1,Mid Log
+A3,2,A,0.297,Gardnerella sp. 11,C0101A1,3A1,3,1,Mid Log
+B3,2,A,0.295,Gardnerella sp. 11,C0101A1,3A1,3,1,Mid Log
+C3,2,A,0.253,Gardnerella sp. 11,C0101A1,3A1,3,1,Mid Log
+D3,2,A,0.257,Gardnerella sp. 11,C0101A1,3A1,3,1,Mid Log
+E3,2,B,0.255,Gardnerella sp. 11,C0101A1,3A1,3,1,Mid Log
+F3,2,B,0.252,Gardnerella sp. 11,C0101A1,3A1,3,1,Mid Log
+G3,2,B,0.284,Gardnerella sp. 11,C0101A1,3A1,3,1,Mid Log
+H3,2,B,0.24,Gardnerella sp. 11,C0101A1,3A1,3,1,Mid Log
+A4,3,A,0.174,Gardnerella piotii,UM35,3A1,3,1,Mid Log
+B4,3,A,0.179,Gardnerella piotii,UM35,3A1,3,1,Mid Log
+C4,3,A,0.16,Gardnerella piotii,UM35,3A1,3,1,Mid Log
+D4,3,A,0.164,Gardnerella piotii,UM35,3A1,3,1,Mid Log
+E4,3,B,0.155,Gardnerella piotii,UM35,3A1,3,1,Mid Log
+F4,3,B,0.142,Gardnerella piotii,UM35,3A1,3,1,Mid Log
+G4,3,B,0.139,Gardnerella piotii,UM35,3A1,3,1,Mid Log
+H4,3,B,0.129,Gardnerella piotii,UM35,3A1,3,1,Mid Log
+A5,4,A,0.339,Gardnerella piotii,C0093B3,3A1,3,1,Mid Log
+B5,4,A,0.356,Gardnerella piotii,C0093B3,3A1,3,1,Mid Log
+C5,4,A,0.36,Gardnerella piotii,C0093B3,3A1,3,1,Mid Log
+D5,4,A,0.354,Gardnerella piotii,C0093B3,3A1,3,1,Mid Log
+E5,4,B,0.343,Gardnerella piotii,C0093B3,3A1,3,1,Mid Log
+F5,4,B,0.352,Gardnerella piotii,C0093B3,3A1,3,1,Mid Log
+G5,4,B,0.368,Gardnerella piotii,C0093B3,3A1,3,1,Mid Log
+H5,4,B,0.389,Gardnerella piotii,C0093B3,3A1,3,1,Mid Log
+B12,Blank,NA,0.058,NA,NA,NA,NA,NA,Mid Log
+C12,Blank,NA,0.057,NA,NA,NA,NA,NA,Mid Log
+D12,Blank,NA,0.057,NA,NA,NA,NA,NA,Mid Log
+A7,1,A,0.28,Gardnerella sp. 2,C0084H9,3A2,3,2,Mid Log
+B7,1,A,0.237,Gardnerella sp. 2,C0084H9,3A2,3,2,Mid Log
+C7,1,A,0.242,Gardnerella sp. 2,C0084H9,3A2,3,2,Mid Log
+D7,1,A,0.237,Gardnerella sp. 2,C0084H9,3A2,3,2,Mid Log
+E7,1,B,0.188,Gardnerella sp. 2,C0084H9,3A2,3,2,Mid Log
+F7,1,B,0.193,Gardnerella sp. 2,C0084H9,3A2,3,2,Mid Log
+G7,1,B,0.183,Gardnerella sp. 2,C0084H9,3A2,3,2,Mid Log
+H7,1,B,0.197,Gardnerella sp. 2,C0084H9,3A2,3,2,Mid Log
+A8,2,A,0.405,Gardnerella sp. 11,C0101A1,3A2,3,2,Mid Log
+B8,2,A,0.328,Gardnerella sp. 11,C0101A1,3A2,3,2,Mid Log
+C8,2,A,0.333,Gardnerella sp. 11,C0101A1,3A2,3,2,Mid Log
+D8,2,A,0.34,Gardnerella sp. 11,C0101A1,3A2,3,2,Mid Log
+E8,2,B,0.362,Gardnerella sp. 11,C0101A1,3A2,3,2,Mid Log
+F8,2,B,0.427,Gardnerella sp. 11,C0101A1,3A2,3,2,Mid Log
+G8,2,B,0.453,Gardnerella sp. 11,C0101A1,3A2,3,2,Mid Log
+H8,2,B,0.555,Gardnerella sp. 11,C0101A1,3A2,3,2,Mid Log
+A9,3,A,0.273,Gardnerella piotii,UM35,3A2,3,2,Mid Log
+B9,3,A,0.274,Gardnerella piotii,UM35,3A2,3,2,Mid Log
+C9,3,A,0.258,Gardnerella piotii,UM35,3A2,3,2,Mid Log
+D9,3,A,0.256,Gardnerella piotii,UM35,3A2,3,2,Mid Log
+E9,3,B,0.179,Gardnerella piotii,UM35,3A2,3,2,Mid Log
+F9,3,B,0.177,Gardnerella piotii,UM35,3A2,3,2,Mid Log
+G9,3,B,0.175,Gardnerella piotii,UM35,3A2,3,2,Mid Log
+H9,3,B,0.169,Gardnerella piotii,UM35,3A2,3,2,Mid Log
+A10,4,A,0.352,Gardnerella piotii,C0093B3,3A2,3,2,Mid Log
+B10,4,A,0.324,Gardnerella piotii,C0093B3,3A2,3,2,Mid Log
+C10,4,A,0.334,Gardnerella piotii,C0093B3,3A2,3,2,Mid Log
+D10,4,A,0.343,Gardnerella piotii,C0093B3,3A2,3,2,Mid Log
+E10,4,B,0.33,Gardnerella piotii,C0093B3,3A2,3,2,Mid Log
+F10,4,B,0.325,Gardnerella piotii,C0093B3,3A2,3,2,Mid Log
+G10,4,B,0.365,Gardnerella piotii,C0093B3,3A2,3,2,Mid Log
+H10,4,B,0.387,Gardnerella piotii,C0093B3,3A2,3,2,Mid Log
+A12,Blank,NA,0.051,NA,NA,NA,NA,NA,Mid Log
+A2,1,A,0.059,Gardnerella sp. 10,C0100B2,1B1,1,1,Mid Log
+B2,1,A,0.059,Gardnerella sp. 10,C0100B2,1B1,1,1,Mid Log
+C2,1,A,0.059,Gardnerella sp. 10,C0100B2,1B1,1,1,Mid Log
+D2,1,A,0.058,Gardnerella sp. 10,C0100B2,1B1,1,1,Mid Log
+E2,1,B,0.057,Gardnerella sp. 10,C0100B2,1B1,1,1,Mid Log
+F2,1,B,0.06,Gardnerella sp. 10,C0100B2,1B1,1,1,Mid Log
+G2,1,B,0.066,Gardnerella sp. 10,C0100B2,1B1,1,1,Mid Log
+H2,1,B,0.067,Gardnerella sp. 10,C0100B2,1B1,1,1,Mid Log
+A3,2,A,0.061,Gardnerella sp. 7,C0179B4,1B1,1,1,Mid Log
+B3,2,A,0.061,Gardnerella sp. 7,C0179B4,1B1,1,1,Mid Log
+C3,2,A,0.063,Gardnerella sp. 7,C0179B4,1B1,1,1,Mid Log
+D3,2,A,0.061,Gardnerella sp. 7,C0179B4,1B1,1,1,Mid Log
+E3,2,B,0.059,Gardnerella sp. 7,C0179B4,1B1,1,1,Mid Log
+F3,2,B,0.064,Gardnerella sp. 7,C0179B4,1B1,1,1,Mid Log
+G3,2,B,0.071,Gardnerella sp. 7,C0179B4,1B1,1,1,Mid Log
+H3,2,B,0.083,Gardnerella sp. 7,C0179B4,1B1,1,1,Mid Log
+A4,3,A,0.099,Gardnerella swidsinskii,C0102A2,1B1,1,1,Mid Log
+B4,3,A,0.092,Gardnerella swidsinskii,C0102A2,1B1,1,1,Mid Log
+C4,3,A,0.091,Gardnerella swidsinskii,C0102A2,1B1,1,1,Mid Log
+D4,3,A,0.089,Gardnerella swidsinskii,C0102A2,1B1,1,1,Mid Log
+E4,3,B,0.113,Gardnerella swidsinskii,C0102A2,1B1,1,1,Mid Log
+F4,3,B,0.114,Gardnerella swidsinskii,C0102A2,1B1,1,1,Mid Log
+G4,3,B,0.122,Gardnerella swidsinskii,C0102A2,1B1,1,1,Mid Log
+H4,3,B,0.119,Gardnerella swidsinskii,C0102A2,1B1,1,1,Mid Log
+A5,4,A,0.159,Gardnerella sp. 3,JCP8017B,1B1,1,1,Mid Log
+B5,4,A,0.168,Gardnerella sp. 3,JCP8017B,1B1,1,1,Mid Log
+C5,4,A,0.172,Gardnerella sp. 3,JCP8017B,1B1,1,1,Mid Log
+D5,4,A,0.168,Gardnerella sp. 3,JCP8017B,1B1,1,1,Mid Log
+E5,4,B,0.161,Gardnerella sp. 3,JCP8017B,1B1,1,1,Mid Log
+F5,4,B,0.167,Gardnerella sp. 3,JCP8017B,1B1,1,1,Mid Log
+G5,4,B,0.159,Gardnerella sp. 3,JCP8017B,1B1,1,1,Mid Log
+H5,4,B,0.173,Gardnerella sp. 3,JCP8017B,1B1,1,1,Mid Log
+A6,5,A,0.157,Gardnerella swidsinskii,UM224,1B1,1,1,Mid Log
+B6,5,A,0.138,Gardnerella swidsinskii,UM224,1B1,1,1,Mid Log
+C6,5,A,0.153,Gardnerella swidsinskii,UM224,1B1,1,1,Mid Log
+D6,5,A,0.142,Gardnerella swidsinskii,UM224,1B1,1,1,Mid Log
+E6,5,B,0.144,Gardnerella swidsinskii,UM224,1B1,1,1,Mid Log
+F6,5,B,0.146,Gardnerella swidsinskii,UM224,1B1,1,1,Mid Log
+G6,5,B,0.146,Gardnerella swidsinskii,UM224,1B1,1,1,Mid Log
+H6,5,B,0.141,Gardnerella swidsinskii,UM224,1B1,1,1,Mid Log
+A7,6,A,0.086,Gardnerella sp. 2,JCP7275,1B1,1,1,Mid Log
+B7,6,A,0.082,Gardnerella sp. 2,JCP7275,1B1,1,1,Mid Log
+C7,6,A,0.087,Gardnerella sp. 2,JCP7275,1B1,1,1,Mid Log
+D7,6,A,0.087,Gardnerella sp. 2,JCP7275,1B1,1,1,Mid Log
+E7,6,B,0.086,Gardnerella sp. 2,JCP7275,1B1,1,1,Mid Log
+F7,6,B,0.087,Gardnerella sp. 2,JCP7275,1B1,1,1,Mid Log
+G7,6,B,0.087,Gardnerella sp. 2,JCP7275,1B1,1,1,Mid Log
+H7,6,B,0.09,Gardnerella sp. 2,JCP7275,1B1,1,1,Mid Log
+A8,7,A,0.117,Gardnerella sp. 2,JCP8108,1B1,1,1,Mid Log
+B8,7,A,0.116,Gardnerella sp. 2,JCP8108,1B1,1,1,Mid Log
+C8,7,A,0.118,Gardnerella sp. 2,JCP8108,1B1,1,1,Mid Log
+D8,7,A,0.124,Gardnerella sp. 2,JCP8108,1B1,1,1,Mid Log
+E8,7,B,0.113,Gardnerella sp. 2,JCP8108,1B1,1,1,Mid Log
+F8,7,B,0.116,Gardnerella sp. 2,JCP8108,1B1,1,1,Mid Log
+G8,7,B,0.116,Gardnerella sp. 2,JCP8108,1B1,1,1,Mid Log
+H8,7,B,0.131,Gardnerella sp. 2,JCP8108,1B1,1,1,Mid Log
+A9,8,A,0.123,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Mid Log
+B9,8,A,0.11,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Mid Log
+C9,8,A,0.112,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Mid Log
+D9,8,A,0.113,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Mid Log
+E9,8,B,0.117,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Mid Log
+F9,8,B,0.115,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Mid Log
+G9,8,B,0.121,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Mid Log
+H9,8,B,0.127,Gardnerella swidsinskii,Gv5-1,1B1,1,1,Mid Log
+A10,9,A,0.2,Gardnerella sp. 8,Gv101,1B1,1,1,Mid Log
+B10,9,A,0.164,Gardnerella sp. 8,Gv101,1B1,1,1,Mid Log
+C10,9,A,0.156,Gardnerella sp. 8,Gv101,1B1,1,1,Mid Log
+D10,9,A,0.172,Gardnerella sp. 8,Gv101,1B1,1,1,Mid Log
+E10,9,B,0.07,Gardnerella sp. 8,Gv101,1B1,1,1,Mid Log
+F10,9,B,0.071,Gardnerella sp. 8,Gv101,1B1,1,1,Mid Log
+G10,9,B,0.073,Gardnerella sp. 8,Gv101,1B1,1,1,Mid Log
+H10,9,B,0.077,Gardnerella sp. 8,Gv101,1B1,1,1,Mid Log
+B12,Blank,NA,0.05,NA,NA,NA,NA,NA,Mid Log
+C12,Blank,NA,0.051,NA,NA,NA,NA,NA,Mid Log
+D12,Blank,NA,0.051,NA,NA,NA,NA,NA,Mid Log
+A2,1,A,0.12,Gardnerella leopoldii,AMD,2A1,2,1,Mid Log
+B2,1,A,0.117,Gardnerella leopoldii,AMD,2A1,2,1,Mid Log
+C2,1,A,0.116,Gardnerella leopoldii,AMD,2A1,2,1,Mid Log
+D2,1,A,0.113,Gardnerella leopoldii,AMD,2A1,2,1,Mid Log
+E2,1,B,0.106,Gardnerella leopoldii,AMD,2A1,2,1,Mid Log
+F2,1,B,0.109,Gardnerella leopoldii,AMD,2A1,2,1,Mid Log
+G2,1,B,0.113,Gardnerella leopoldii,AMD,2A1,2,1,Mid Log
+H2,1,B,0.109,Gardnerella leopoldii,AMD,2A1,2,1,Mid Log
+A3,2,A,0.193,Gardnerella leopoldii,C0096A1,2A1,2,1,Mid Log
+B3,2,A,0.171,Gardnerella leopoldii,C0096A1,2A1,2,1,Mid Log
+C3,2,A,0.17,Gardnerella leopoldii,C0096A1,2A1,2,1,Mid Log
+D3,2,A,0.166,Gardnerella leopoldii,C0096A1,2A1,2,1,Mid Log
+E3,2,B,0.157,Gardnerella leopoldii,C0096A1,2A1,2,1,Mid Log
+F3,2,B,0.164,Gardnerella leopoldii,C0096A1,2A1,2,1,Mid Log
+G3,2,B,0.179,Gardnerella leopoldii,C0096A1,2A1,2,1,Mid Log
+H3,2,B,0.176,Gardnerella leopoldii,C0096A1,2A1,2,1,Mid Log
+A4,3,A,0.157,Gardnerella sp. 12,CMW7778B,2A1,2,1,Mid Log
+B4,3,A,0.155,Gardnerella sp. 12,CMW7778B,2A1,2,1,Mid Log
+C4,3,A,0.152,Gardnerella sp. 12,CMW7778B,2A1,2,1,Mid Log
+D4,3,A,0.148,Gardnerella sp. 12,CMW7778B,2A1,2,1,Mid Log
+E4,3,B,0.142,Gardnerella sp. 12,CMW7778B,2A1,2,1,Mid Log
+F4,3,B,0.151,Gardnerella sp. 12,CMW7778B,2A1,2,1,Mid Log
+G4,3,B,0.164,Gardnerella sp. 12,CMW7778B,2A1,2,1,Mid Log
+H4,3,B,0.195,Gardnerella sp. 12,CMW7778B,2A1,2,1,Mid Log
+B12,Blank,NA,0.051,NA,NA,NA,NA,NA,Mid Log
+C12,Blank,NA,0.052,NA,NA,NA,NA,NA,Mid Log
+D12,Blank,NA,0.053,NA,NA,NA,NA,NA,Mid Log
+A2,1,A,0.078,Gardnerella sp. 10,C0100B2,1B2,1,2,Mid Log
+B2,1,A,0.075,Gardnerella sp. 10,C0100B2,1B2,1,2,Mid Log
+C2,1,A,0.077,Gardnerella sp. 10,C0100B2,1B2,1,2,Mid Log
+D2,1,A,0.074,Gardnerella sp. 10,C0100B2,1B2,1,2,Mid Log
+E2,1,B,0.075,Gardnerella sp. 10,C0100B2,1B2,1,2,Mid Log
+F2,1,B,0.078,Gardnerella sp. 10,C0100B2,1B2,1,2,Mid Log
+G2,1,B,0.078,Gardnerella sp. 10,C0100B2,1B2,1,2,Mid Log
+H2,1,B,0.078,Gardnerella sp. 10,C0100B2,1B2,1,2,Mid Log
+A3,2,A,0.057,Gardnerella sp. 7,C0179B4,1B2,1,2,Mid Log
+B3,2,A,0.056,Gardnerella sp. 7,C0179B4,1B2,1,2,Mid Log
+C3,2,A,0.056,Gardnerella sp. 7,C0179B4,1B2,1,2,Mid Log
+D3,2,A,0.055,Gardnerella sp. 7,C0179B4,1B2,1,2,Mid Log
+E3,2,B,0.054,Gardnerella sp. 7,C0179B4,1B2,1,2,Mid Log
+F3,2,B,0.056,Gardnerella sp. 7,C0179B4,1B2,1,2,Mid Log
+G3,2,B,0.067,Gardnerella sp. 7,C0179B4,1B2,1,2,Mid Log
+H3,2,B,0.058,Gardnerella sp. 7,C0179B4,1B2,1,2,Mid Log
+A4,3,A,0.123,Gardnerella swidsinskii,C0102A2,1B2,1,2,Mid Log
+B4,3,A,0.119,Gardnerella swidsinskii,C0102A2,1B2,1,2,Mid Log
+C4,3,A,0.118,Gardnerella swidsinskii,C0102A2,1B2,1,2,Mid Log
+D4,3,A,0.117,Gardnerella swidsinskii,C0102A2,1B2,1,2,Mid Log
+E4,3,B,0.09,Gardnerella swidsinskii,C0102A2,1B2,1,2,Mid Log
+F4,3,B,0.093,Gardnerella swidsinskii,C0102A2,1B2,1,2,Mid Log
+G4,3,B,0.094,Gardnerella swidsinskii,C0102A2,1B2,1,2,Mid Log
+H4,3,B,0.096,Gardnerella swidsinskii,C0102A2,1B2,1,2,Mid Log
+A5,4,A,0.185,Gardnerella sp. 3,JCP8017B,1B2,1,2,Mid Log
+B5,4,A,0.18,Gardnerella sp. 3,JCP8017B,1B2,1,2,Mid Log
+C5,4,A,0.181,Gardnerella sp. 3,JCP8017B,1B2,1,2,Mid Log
+D5,4,A,0.197,Gardnerella sp. 3,JCP8017B,1B2,1,2,Mid Log
+E5,4,B,0.166,Gardnerella sp. 3,JCP8017B,1B2,1,2,Mid Log
+F5,4,B,0.173,Gardnerella sp. 3,JCP8017B,1B2,1,2,Mid Log
+G5,4,B,0.165,Gardnerella sp. 3,JCP8017B,1B2,1,2,Mid Log
+H5,4,B,0.157,Gardnerella sp. 3,JCP8017B,1B2,1,2,Mid Log
+A6,5,A,0.167,Gardnerella swidsinskii,UM224,1B2,1,2,Mid Log
+B6,5,A,0.163,Gardnerella swidsinskii,UM224,1B2,1,2,Mid Log
+C6,5,A,0.163,Gardnerella swidsinskii,UM224,1B2,1,2,Mid Log
+D6,5,A,0.18,Gardnerella swidsinskii,UM224,1B2,1,2,Mid Log
+E6,5,B,0.161,Gardnerella swidsinskii,UM224,1B2,1,2,Mid Log
+F6,5,B,0.163,Gardnerella swidsinskii,UM224,1B2,1,2,Mid Log
+G6,5,B,0.17,Gardnerella swidsinskii,UM224,1B2,1,2,Mid Log
+H6,5,B,0.158,Gardnerella swidsinskii,UM224,1B2,1,2,Mid Log
+A7,6,A,0.08,Gardnerella sp. 2,JCP7275,1B2,1,2,Mid Log
+B7,6,A,0.08,Gardnerella sp. 2,JCP7275,1B2,1,2,Mid Log
+C7,6,A,0.083,Gardnerella sp. 2,JCP7275,1B2,1,2,Mid Log
+D7,6,A,0.083,Gardnerella sp. 2,JCP7275,1B2,1,2,Mid Log
+E7,6,B,0.083,Gardnerella sp. 2,JCP7275,1B2,1,2,Mid Log
+F7,6,B,0.087,Gardnerella sp. 2,JCP7275,1B2,1,2,Mid Log
+G7,6,B,0.085,Gardnerella sp. 2,JCP7275,1B2,1,2,Mid Log
+H7,6,B,0.082,Gardnerella sp. 2,JCP7275,1B2,1,2,Mid Log
+A8,7,A,0.146,Gardnerella sp. 2,JCP8108,1B2,1,2,Mid Log
+B8,7,A,0.151,Gardnerella sp. 2,JCP8108,1B2,1,2,Mid Log
+C8,7,A,0.147,Gardnerella sp. 2,JCP8108,1B2,1,2,Mid Log
+D8,7,A,0.149,Gardnerella sp. 2,JCP8108,1B2,1,2,Mid Log
+E8,7,B,0.134,Gardnerella sp. 2,JCP8108,1B2,1,2,Mid Log
+F8,7,B,0.136,Gardnerella sp. 2,JCP8108,1B2,1,2,Mid Log
+G8,7,B,0.149,Gardnerella sp. 2,JCP8108,1B2,1,2,Mid Log
+H8,7,B,0.152,Gardnerella sp. 2,JCP8108,1B2,1,2,Mid Log
+A12,Blank,NA,0.049,NA,NA,NA,NA,NA,Mid Log
+C12,Blank,NA,0.049,NA,NA,NA,NA,NA,Mid Log
+A2,1,A,0.112,Gardnerella leopoldii,AMD,2A2,2,2,Mid Log
+B2,1,A,0.111,Gardnerella leopoldii,AMD,2A2,2,2,Mid Log
+C2,1,A,0.113,Gardnerella leopoldii,AMD,2A2,2,2,Mid Log
+D2,1,A,0.114,Gardnerella leopoldii,AMD,2A2,2,2,Mid Log
+E2,1,B,0.107,Gardnerella leopoldii,AMD,2A2,2,2,Mid Log
+F2,1,B,0.11,Gardnerella leopoldii,AMD,2A2,2,2,Mid Log
+G2,1,B,0.107,Gardnerella leopoldii,AMD,2A2,2,2,Mid Log
+H2,1,B,0.112,Gardnerella leopoldii,AMD,2A2,2,2,Mid Log
+A3,2,A,0.161,Gardnerella leopoldii,C0096A1,2A2,2,2,Mid Log
+B3,2,A,0.161,Gardnerella leopoldii,C0096A1,2A2,2,2,Mid Log
+C3,2,A,0.153,Gardnerella leopoldii,C0096A1,2A2,2,2,Mid Log
+D3,2,A,0.156,Gardnerella leopoldii,C0096A1,2A2,2,2,Mid Log
+E3,2,B,0.136,Gardnerella leopoldii,C0096A1,2A2,2,2,Mid Log
+F3,2,B,0.138,Gardnerella leopoldii,C0096A1,2A2,2,2,Mid Log
+G3,2,B,0.146,Gardnerella leopoldii,C0096A1,2A2,2,2,Mid Log
+H3,2,B,0.145,Gardnerella leopoldii,C0096A1,2A2,2,2,Mid Log
+A4,3,A,0.17,Gardnerella sp. 12,CMW7778B,2A2,2,2,Mid Log
+B4,3,A,0.176,Gardnerella sp. 12,CMW7778B,2A2,2,2,Mid Log
+C4,3,A,0.178,Gardnerella sp. 12,CMW7778B,2A2,2,2,Mid Log
+D4,3,A,0.171,Gardnerella sp. 12,CMW7778B,2A2,2,2,Mid Log
+E4,3,B,0.166,Gardnerella sp. 12,CMW7778B,2A2,2,2,Mid Log
+F4,3,B,0.173,Gardnerella sp. 12,CMW7778B,2A2,2,2,Mid Log
+G4,3,B,0.182,Gardnerella sp. 12,CMW7778B,2A2,2,2,Mid Log
+H4,3,B,0.218,Gardnerella sp. 12,CMW7778B,2A2,2,2,Mid Log
+D12,Blank,NA,0.05,NA,NA,NA,NA,NA,Mid Log
+A7,1,A,0.269,Gardnerella sp. 10,C0100B2,1B3,1,NA,Mid Log
+B7,1,A,0.258,Gardnerella sp. 10,C0100B2,1B3,1,NA,Mid Log
+C7,1,A,0.251,Gardnerella sp. 10,C0100B2,1B3,1,NA,Mid Log
+D7,1,A,0.244,Gardnerella sp. 10,C0100B2,1B3,1,NA,Mid Log
+E7,1,B,0.273,Gardnerella sp. 10,C0100B2,1B3,1,NA,Mid Log
+F7,1,B,0.258,Gardnerella sp. 10,C0100B2,1B3,1,NA,Mid Log
+G7,1,B,0.243,Gardnerella sp. 10,C0100B2,1B3,1,NA,Mid Log
+H7,1,B,0.249,Gardnerella sp. 10,C0100B2,1B3,1,NA,Mid Log
+A8,2,A,0.255,Gardnerella sp. 7,C0179B4,1B3,1,NA,Mid Log
+B8,2,A,0.253,Gardnerella sp. 7,C0179B4,1B3,1,NA,Mid Log
+C8,2,A,0.254,Gardnerella sp. 7,C0179B4,1B3,1,NA,Mid Log
+D8,2,A,0.257,Gardnerella sp. 7,C0179B4,1B3,1,NA,Mid Log
+E8,2,B,0.274,Gardnerella sp. 7,C0179B4,1B3,1,NA,Mid Log
+F8,2,B,0.296,Gardnerella sp. 7,C0179B4,1B3,1,NA,Mid Log
+G8,2,B,0.264,Gardnerella sp. 7,C0179B4,1B3,1,NA,Mid Log
+H8,2,B,0.276,Gardnerella sp. 7,C0179B4,1B3,1,NA,Mid Log
+A9,3,A,0.098,Gardnerella sp. 2,JCP7275,1B3,1,NA,Mid Log
+B9,3,A,0.101,Gardnerella sp. 2,JCP7275,1B3,1,NA,Mid Log
+C9,3,A,0.095,Gardnerella sp. 2,JCP7275,1B3,1,NA,Mid Log
+D9,3,A,0.097,Gardnerella sp. 2,JCP7275,1B3,1,NA,Mid Log
+E9,3,B,0.095,Gardnerella sp. 2,JCP7275,1B3,1,NA,Mid Log
+F9,3,B,0.099,Gardnerella sp. 2,JCP7275,1B3,1,NA,Mid Log
+G9,3,B,0.098,Gardnerella sp. 2,JCP7275,1B3,1,NA,Mid Log
+H9,3,B,0.1,Gardnerella sp. 2,JCP7275,1B3,1,NA,Mid Log
+A10,4,A,0.336,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Mid Log
+B10,4,A,0.323,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Mid Log
+C10,4,A,0.332,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Mid Log
+D10,4,A,0.327,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Mid Log
+E10,4,B,0.344,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Mid Log
+F10,4,B,0.345,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Mid Log
+G10,4,B,0.343,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Mid Log
+H10,4,B,0.366,Gardnerella swidsinskii,C0102A2,1B3,1,NA,Mid Log
+A7,1,A,0.154,Gardnerella sp. 10,C0100B2,1B4,1,NA,Mid Log
+B7,1,A,0.145,Gardnerella sp. 10,C0100B2,1B4,1,NA,Mid Log
+C7,1,A,0.146,Gardnerella sp. 10,C0100B2,1B4,1,NA,Mid Log
+D7,1,A,0.142,Gardnerella sp. 10,C0100B2,1B4,1,NA,Mid Log
+E7,1,B,0.16,Gardnerella sp. 10,C0100B2,1B4,1,NA,Mid Log
+F7,1,B,0.164,Gardnerella sp. 10,C0100B2,1B4,1,NA,Mid Log
+G7,1,B,0.167,Gardnerella sp. 10,C0100B2,1B4,1,NA,Mid Log
+H7,1,B,0.183,Gardnerella sp. 10,C0100B2,1B4,1,NA,Mid Log
+A8,2,A,0.223,Gardnerella sp. 7,C0179B4,1B4,1,NA,Mid Log
+B8,2,A,0.211,Gardnerella sp. 7,C0179B4,1B4,1,NA,Mid Log
+C8,2,A,0.219,Gardnerella sp. 7,C0179B4,1B4,1,NA,Mid Log
+D8,2,A,0.225,Gardnerella sp. 7,C0179B4,1B4,1,NA,Mid Log
+E8,2,B,0.225,Gardnerella sp. 7,C0179B4,1B4,1,NA,Mid Log
+F8,2,B,0.21,Gardnerella sp. 7,C0179B4,1B4,1,NA,Mid Log
+G8,2,B,0.234,Gardnerella sp. 7,C0179B4,1B4,1,NA,Mid Log
+H8,2,B,0.241,Gardnerella sp. 7,C0179B4,1B4,1,NA,Mid Log
+A9,3,A,0.125,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+B9,3,A,0.134,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+C9,3,A,0.135,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+D9,3,A,0.134,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+E9,3,B,0.136,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+F9,3,B,0.14,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+G9,3,B,0.14,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+H9,3,B,0.143,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+A10,4,A,0.152,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+B10,4,A,0.162,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+C10,4,A,0.167,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+D10,4,A,0.163,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+E10,4,B,0.157,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+F10,4,B,0.159,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+G10,4,B,0.169,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+H10,4,B,0.175,Gardnerella sp. 2,JCP7275,1B4,1,NA,Mid Log
+A12,Blank,NA,0.05,NA,NA,NA,NA,NA,Mid Log

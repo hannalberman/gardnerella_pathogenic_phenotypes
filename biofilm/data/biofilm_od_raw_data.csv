@@ -1,0 +1,485 @@
+well,OD,Measure,Number,BioRep,Strain,Species,Protocol,Batch
+A2,0.117,Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A1
+B2,0.128,Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A1
+C2,0.134,Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A1
+D2,0.142,Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A1
+E2,0.203,Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A1
+F2,0.272,Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A1
+G2,0.159,Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A1
+H2,0.148,Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A1
+A3,0.168,Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A1
+B3,0.222,Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A1
+C3,0.2,Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A1
+D3,0.165,Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A1
+E3,0.155,Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A1
+F3,0.158,Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A1
+G3,0.19,Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A1
+H3,0.273,Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A1
+A4,0.092,Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A1
+B4,0.144,Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A1
+C4,0.167,Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A1
+D4,0.148,Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A1
+E4,0.165,Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A1
+F4,0.183,Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A1
+G4,0.186,Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A1
+H4,0.183,Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A1
+A5,0.209,Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A1
+B5,0.342,Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A1
+C5,0.322,Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A1
+D5,0.365,Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A1
+E5,0.111,Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A1
+F5,0.133,Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A1
+G5,0.175,Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A1
+H5,0.185,Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A1
+A6,0.096,Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A1
+B6,0.233,Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A1
+C6,0.24,Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A1
+D6,0.25,Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A1
+A7,0.086,Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A1
+B7,0.175,Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A1
+C7,0.189,Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A1
+D7,0.213,Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A1
+E7,0.257,Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A1
+F7,0.298,Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A1
+G7,0.331,Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A1
+H7,0.346,Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A1
+A8,0.114,Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A1
+B8,0.195,Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A1
+C8,0.21,Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A1
+D8,0.233,Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A1
+E8,0.242,Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A1
+F8,0.265,Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A1
+G8,0.246,Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A1
+H8,0.227,Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A1
+A9,0.156,Biofilm OD,8,A,JCP8066,Gardnerella piotii,1,1A1
+B9,0.27,Biofilm OD,8,A,JCP8066,Gardnerella piotii,1,1A1
+C9,0.313,Biofilm OD,8,A,JCP8066,Gardnerella piotii,1,1A1
+D9,0.298,Biofilm OD,8,A,JCP8066,Gardnerella piotii,1,1A1
+E9,0.242,Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A1
+F9,0.274,Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A1
+G9,0.329,Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A1
+H9,0.387,Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A1
+A12,0.051,Biofilm OD,Blank,NA,NA,NA,NA,1A1
+B12,0.051,Biofilm OD,Blank,NA,NA,NA,NA,1A1
+C12,0.051,Biofilm OD,Blank,NA,NA,NA,NA,1A1
+D12,0.05,Biofilm OD,Blank,NA,NA,NA,NA,1A1
+A3,0.318,Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A1
+B3,0.306,Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A1
+C3,0.358,Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A1
+D3,0.341,Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A1
+E3,0.351,Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A1
+F3,0.355,Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A1
+G3,0.361,Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A1
+H3,0.323,Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A1
+A4,0.111,Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A1
+B4,0.084,Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A1
+C4,0.109,Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A1
+D4,0.087,Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A1
+E4,0.104,Biofilm OD,11,B,C0096A1,Gardnerella leopoldii,2,2A1
+F4,0.115,Biofilm OD,11,B,C0096A1,Gardnerella leopoldii,2,2A1
+G4,0.121,Biofilm OD,11,B,C0096A1,Gardnerella leopoldii,2,2A1
+H4,0.142,Biofilm OD,11,B,C0096A1,Gardnerella leopoldii,2,2A1
+A12,0.053,Biofilm OD,Blank,NA,NA,NA,NA,2A1
+B12,0.053,Biofilm OD,Blank,NA,NA,NA,NA,2A1
+C12,0.052,Biofilm OD,Blank,NA,NA,NA,NA,2A1
+D12,0.052,Biofilm OD,Blank,NA,NA,NA,NA,2A1
+A2,0.142,Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A2
+B2,0.155,Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A2
+C2,0.158,Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A2
+D2,0.154,Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A2
+E2,0.177,Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A2
+F2,0.179,Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A2
+G2,0.167,Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A2
+H2,0.134,Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A2
+A3,0.243,Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A2
+B3,0.25,Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A2
+C3,0.27,Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A2
+D3,0.258,Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A2
+E3,0.272,Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A2
+F3,0.308,Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A2
+G3,0.222,Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A2
+H3,0.218,Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A2
+A4,0.147,Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A2
+B4,0.187,Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A2
+C4,0.189,Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A2
+D4,0.186,Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A2
+E4,0.18,Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A2
+F4,0.19,Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A2
+G4,0.186,Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A2
+H4,0.169,Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A2
+A5,0.2,Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A2
+B5,0.215,Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A2
+C5,0.233,Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A2
+D5,0.216,Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A2
+E5,0.192,Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A2
+F5,0.212,Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A2
+G5,0.234,Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A2
+H5,0.233,Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A2
+A6,0.221,Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A2
+B6,0.279,Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A2
+C6,0.275,Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A2
+D6,0.286,Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A2
+E6,0.225,Biofilm OD,5,B,C0100B2,Gardnerella sp. 10,1,1A2
+F6,0.278,Biofilm OD,5,B,C0100B2,Gardnerella sp. 10,1,1A2
+G6,0.263,Biofilm OD,5,B,C0100B2,Gardnerella sp. 10,1,1A2
+H6,0.228,Biofilm OD,5,B,C0100B2,Gardnerella sp. 10,1,1A2
+A7,0.238,Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A2
+B7,0.288,Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A2
+C7,0.284,Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A2
+D7,0.277,Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A2
+E7,0.359,Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A2
+F7,0.367,Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A2
+G7,0.374,Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A2
+H7,0.324,Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A2
+A8,0.232,Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A2
+B8,0.239,Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A2
+C8,0.247,Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A2
+D8,0.245,Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A2
+E8,0.216,Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A2
+F8,0.228,Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A2
+G8,0.216,Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A2
+H8,0.212,Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A2
+E9,0.253,Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A2
+F9,0.233,Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A2
+G9,0.256,Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A2
+H9,0.28,Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A2
+A12,0.048,Biofilm OD,Blank,NA,NA,NA,NA,1A2
+B12,0.043,Biofilm OD,Blank,NA,NA,NA,NA,1A2
+C12,0.049,Biofilm OD,Blank,NA,NA,NA,NA,1A2
+D12,0.049,Biofilm OD,Blank,NA,NA,NA,NA,1A2
+A3,0.268,Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A2
+B3,0.285,Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A2
+C3,0.281,Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A2
+D3,0.333,Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A2
+E3,0.289,Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A2
+F3,0.344,Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A2
+G3,0.309,Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A2
+H3,0.274,Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A2
+A4,0.06,Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A2
+B4,0.069,Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A2
+C4,0.059,Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A2
+D4,0.056,Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A2
+E4,0.193,Biofilm OD,11,B,C0096A1,Gardnerella leopoldii,2,2A2
+F4,0.191,Biofilm OD,11,B,C0096A1,Gardnerella leopoldii,2,2A2
+H4,0.105,Biofilm OD,11,B,C0096A1,Gardnerella leopoldii,2,2A2
+A12,0.048,Biofilm OD,Blank,NA,NA,NA,NA,2A2
+B12,0.048,Biofilm OD,Blank,NA,NA,NA,NA,2A2
+C12,0.048,Biofilm OD,Blank,NA,NA,NA,NA,2A2
+D12,0.048,Biofilm OD,Blank,NA,NA,NA,NA,2A2
+A2,0.293,Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B1
+B2,0.488,Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B1
+C2,0.492,Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B1
+D2,0.498,Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B1
+E2,0.503,Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B1
+F2,0.478,Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B1
+G2,0.505,Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B1
+H2,0.469,Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B1
+A3,0.117,Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B1
+B3,0.221,Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B1
+C3,0.215,Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B1
+D3,0.167,Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B1
+E3,0.362,Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B1
+F3,0.418,Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B1
+G3,0.529,Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B1
+H3,0.532,Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B1
+A4,0.155,Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B1
+B4,0.191,Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B1
+C4,0.209,Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B1
+D4,0.21,Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B1
+E4,0.279,Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B1
+F4,0.307,Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B1
+G4,0.322,Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B1
+H4,0.32,Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B1
+A5,0.125,Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B1
+B5,0.171,Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B1
+C5,0.162,Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B1
+D5,0.166,Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B1
+E5,0.186,Biofilm OD,4,B,Gv5-1,Gardnerella swidsinskii,1,1B1
+F5,0.18,Biofilm OD,4,B,Gv5-1,Gardnerella swidsinskii,1,1B1
+G5,0.193,Biofilm OD,4,B,Gv5-1,Gardnerella swidsinskii,1,1B1
+H5,0.26,Biofilm OD,4,B,Gv5-1,Gardnerella swidsinskii,1,1B1
+A6,0.486,Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B1
+B6,0.403,Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B1
+C6,0.472,Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B1
+D6,0.398,Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B1
+E6,0.437,Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B1
+F6,0.483,Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B1
+G6,0.532,Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B1
+H6,0.564,Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B1
+A7,0.072,Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B1
+B7,0.098,Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B1
+C7,0.103,Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B1
+D7,0.093,Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B1
+E7,0.107,Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B1
+F7,0.123,Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B1
+G7,0.164,Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B1
+H7,0.16,Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B1
+A8,0.066,Biofilm OD,7,A,JCP8108,Gardnerella sp. 2,1,1B1
+B8,0.085,Biofilm OD,7,A,JCP8108,Gardnerella sp. 2,1,1B1
+C8,0.097,Biofilm OD,7,A,JCP8108,Gardnerella sp. 2,1,1B1
+D8,0.099,Biofilm OD,7,A,JCP8108,Gardnerella sp. 2,1,1B1
+E8,0.228,Biofilm OD,7,B,JCP8108,Gardnerella sp. 2,1,1B1
+F8,0.239,Biofilm OD,7,B,JCP8108,Gardnerella sp. 2,1,1B1
+G8,0.274,Biofilm OD,7,B,JCP8108,Gardnerella sp. 2,1,1B1
+H8,0.302,Biofilm OD,7,B,JCP8108,Gardnerella sp. 2,1,1B1
+A12,0.05,Biofilm OD,Blank,NA,NA,NA,NA,1B1
+B12,0.05,Biofilm OD,Blank,NA,NA,NA,NA,1B1
+C12,0.051,Biofilm OD,Blank,NA,NA,NA,NA,1B1
+D12,0.049,Biofilm OD,Blank,NA,NA,NA,NA,1B1
+A2,0.345,Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B2
+B2,0.517,Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B2
+C2,0.527,Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B2
+D2,0.517,Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B2
+E2,0.515,Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B2
+F2,0.502,Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B2
+G2,0.523,Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B2
+H2,0.477,Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B2
+A3,0.169,Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B2
+B3,0.277,Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B2
+C3,0.302,Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B2
+D3,0.255,Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B2
+E3,0.306,Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B2
+F3,0.314,Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B2
+G3,0.301,Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B2
+H3,0.341,Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B2
+A4,0.107,Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B2
+B4,0.16,Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B2
+C4,0.162,Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B2
+D4,0.138,Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B2
+E4,0.202,Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B2
+F4,0.189,Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B2
+G4,0.21,Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B2
+H4,0.211,Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B2
+A5,0.141,Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B2
+B5,0.227,Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B2
+C5,0.249,Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B2
+D5,0.214,Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B2
+A6,0.271,Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B2
+B6,0.351,Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B2
+C6,0.355,Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B2
+D6,0.36,Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B2
+E6,0.384,Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B2
+F6,0.403,Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B2
+G6,0.417,Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B2
+H6,0.444,Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B2
+A7,0.061,Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B2
+B7,0.097,Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B2
+C7,0.086,Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B2
+D7,0.087,Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B2
+E7,0.113,Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B2
+F7,0.11,Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B2
+G7,0.094,Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B2
+H7,0.111,Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B2
+A12,0.052,Biofilm OD,Blank,NA,NA,NA,NA,1B2
+B12,0.051,Biofilm OD,Blank,NA,NA,NA,NA,1B2
+C12,0.051,Biofilm OD,Blank,NA,NA,NA,NA,1B2
+D12,0.052,Biofilm OD,Blank,NA,NA,NA,NA,1B2
+B2,0.191,Biofilm OD,8,A,C0093B3,Gardnerella piotii,3,3A1
+C2,0.235,Biofilm OD,8,A,C0093B3,Gardnerella piotii,3,3A1
+D2,0.203,Biofilm OD,8,A,C0093B3,Gardnerella piotii,3,3A1
+E2,0.18,Biofilm OD,8,B,C0093B3,Gardnerella piotii,3,3A1
+F2,0.19,Biofilm OD,8,B,C0093B3,Gardnerella piotii,3,3A1
+G2,0.175,Biofilm OD,8,B,C0093B3,Gardnerella piotii,3,3A1
+B3,0.171,Biofilm OD,9,A,C0084H9,Gardnerella sp. 2,3,3A1
+C3,0.194,Biofilm OD,9,A,C0084H9,Gardnerella sp. 2,3,3A1
+D3,0.185,Biofilm OD,9,A,C0084H9,Gardnerella sp. 2,3,3A1
+E3,0.274,Biofilm OD,9,B,C0084H9,Gardnerella sp. 2,3,3A1
+F3,0.256,Biofilm OD,9,B,C0084H9,Gardnerella sp. 2,3,3A1
+G3,0.245,Biofilm OD,9,B,C0084H9,Gardnerella sp. 2,3,3A1
+B4,0.189,Biofilm OD,10,A,C0101A1,Gardnerella sp. 11,3,3A1
+C4,0.266,Biofilm OD,10,A,C0101A1,Gardnerella sp. 11,3,3A1
+D4,0.218,Biofilm OD,10,A,C0101A1,Gardnerella sp. 11,3,3A1
+E4,0.164,Biofilm OD,10,B,C0101A1,Gardnerella sp. 11,3,3A1
+F4,0.141,Biofilm OD,10,B,C0101A1,Gardnerella sp. 11,3,3A1
+G4,0.153,Biofilm OD,10,B,C0101A1,Gardnerella sp. 11,3,3A1
+B5,0.194,Biofilm OD,11,A,UM35,Gardnerella piotii,3,3A1
+C5,0.219,Biofilm OD,11,A,UM35,Gardnerella piotii,3,3A1
+D5,0.184,Biofilm OD,11,A,UM35,Gardnerella piotii,3,3A1
+A12,0.053,Biofilm OD,Blank,NA,NA,NA,NA,3A1
+B12,0.054,Biofilm OD,Blank,NA,NA,NA,NA,3A1
+C12,0.06,Biofilm OD,Blank,NA,NA,NA,NA,3A1
+D12,0.054,Biofilm OD,Blank,NA,NA,NA,NA,3A1
+A1,0.039,Biofilm OD,1,A,C0093B3,Gardnerella piotii,3,3A2
+B1,0.038,Biofilm OD,1,A,C0093B3,Gardnerella piotii,3,3A2
+C1,0.038,Biofilm OD,1,A,C0093B3,Gardnerella piotii,3,3A2
+D1,0.033,Biofilm OD,1,A,C0093B3,Gardnerella piotii,3,3A2
+E1,0.031,Biofilm OD,1,B,C0093B3,Gardnerella piotii,3,3A2
+F1,0.033,Biofilm OD,1,B,C0093B3,Gardnerella piotii,3,3A2
+G1,0.032,Biofilm OD,1,B,C0093B3,Gardnerella piotii,3,3A2
+H1,0.036,Biofilm OD,1,B,C0093B3,Gardnerella piotii,3,3A2
+A2,0.132,Biofilm OD,2,A,C0084H9,Gardnerella sp. 2,3,3A2
+B2,0.159,Biofilm OD,2,A,C0084H9,Gardnerella sp. 2,3,3A2
+C2,0.15,Biofilm OD,2,A,C0084H9,Gardnerella sp. 2,3,3A2
+D2,0.134,Biofilm OD,2,A,C0084H9,Gardnerella sp. 2,3,3A2
+E2,0.127,Biofilm OD,2,B,C0084H9,Gardnerella sp. 2,3,3A2
+F2,0.12,Biofilm OD,2,B,C0084H9,Gardnerella sp. 2,3,3A2
+G2,0.111,Biofilm OD,2,B,C0084H9,Gardnerella sp. 2,3,3A2
+H2,0.098,Biofilm OD,2,B,C0084H9,Gardnerella sp. 2,3,3A2
+A3,0.244,Biofilm OD,3,A,C0101A1,Gardnerella sp. 11,3,3A2
+B3,0.277,Biofilm OD,3,A,C0101A1,Gardnerella sp. 11,3,3A2
+C3,0.288,Biofilm OD,3,A,C0101A1,Gardnerella sp. 11,3,3A2
+D3,0.277,Biofilm OD,3,A,C0101A1,Gardnerella sp. 11,3,3A2
+E3,0.118,Biofilm OD,3,B,C0101A1,Gardnerella sp. 11,3,3A2
+F3,0.124,Biofilm OD,3,B,C0101A1,Gardnerella sp. 11,3,3A2
+G3,0.15,Biofilm OD,3,B,C0101A1,Gardnerella sp. 11,3,3A2
+H3,0.125,Biofilm OD,3,B,C0101A1,Gardnerella sp. 11,3,3A2
+A4,0.243,Biofilm OD,4,A,UM35,Gardnerella piotii,3,3A2
+B4,0.26,Biofilm OD,4,A,UM35,Gardnerella piotii,3,3A2
+C4,0.299,Biofilm OD,4,A,UM35,Gardnerella piotii,3,3A2
+D4,0.306,Biofilm OD,4,A,UM35,Gardnerella piotii,3,3A2
+E4,0.155,Biofilm OD,4,B,UM35,Gardnerella piotii,3,3A2
+F4,0.157,Biofilm OD,4,B,UM35,Gardnerella piotii,3,3A2
+G4,0.141,Biofilm OD,4,B,UM35,Gardnerella piotii,3,3A2
+H4,0.124,Biofilm OD,4,B,UM35,Gardnerella piotii,3,3A2
+A12,0.049,Biofilm OD,Blank,NA,NA,NA,NA,3A2
+B12,0.049,Biofilm OD,Blank,NA,NA,NA,NA,3A2
+C12,0.049,Biofilm OD,Blank,NA,NA,NA,NA,3A2
+D12,0.049,Biofilm OD,Blank,NA,NA,NA,NA,3A2
+A2,0.107,Biofilm OD,1,A,Gv5-1,Gardnerella swidsinskii,1,1AB3
+B2,0.116,Biofilm OD,1,A,Gv5-1,Gardnerella swidsinskii,1,1AB3
+C2,0.161,Biofilm OD,1,A,Gv5-1,Gardnerella swidsinskii,1,1AB3
+D2,0.151,Biofilm OD,1,A,Gv5-1,Gardnerella swidsinskii,1,1AB3
+E2,0.099,Biofilm OD,1,B,Gv5-1,Gardnerella swidsinskii,1,1AB3
+F2,0.126,Biofilm OD,1,B,Gv5-1,Gardnerella swidsinskii,1,1AB3
+G2,0.098,Biofilm OD,1,B,Gv5-1,Gardnerella swidsinskii,1,1AB3
+H2,0.069,Biofilm OD,1,B,Gv5-1,Gardnerella swidsinskii,1,1AB3
+A3,0.201,Biofilm OD,2,A,C0179B4,Gardnerella sp. 7,1,1AB3
+B3,0.235,Biofilm OD,2,A,C0179B4,Gardnerella sp. 7,1,1AB3
+C3,0.28,Biofilm OD,2,A,C0179B4,Gardnerella sp. 7,1,1AB3
+D3,0.234,Biofilm OD,2,A,C0179B4,Gardnerella sp. 7,1,1AB3
+E3,0.208,Biofilm OD,2,B,C0179B4,Gardnerella sp. 7,1,1AB3
+F3,0.263,Biofilm OD,2,B,C0179B4,Gardnerella sp. 7,1,1AB3
+G3,0.191,Biofilm OD,2,B,C0179B4,Gardnerella sp. 7,1,1AB3
+H3,0.228,Biofilm OD,2,B,C0179B4,Gardnerella sp. 7,1,1AB3
+A4,0.063,Biofilm OD,3,A,JCP7275,Gardnerella sp. 2,1,1AB3
+B4,0.075,Biofilm OD,3,A,JCP7275,Gardnerella sp. 2,1,1AB3
+C4,0.072,Biofilm OD,3,A,JCP7275,Gardnerella sp. 2,1,1AB3
+D4,0.067,Biofilm OD,3,A,JCP7275,Gardnerella sp. 2,1,1AB3
+E4,0.071,Biofilm OD,3,B,JCP7275,Gardnerella sp. 2,1,1AB3
+F4,0.08,Biofilm OD,3,B,JCP7275,Gardnerella sp. 2,1,1AB3
+G4,0.114,Biofilm OD,3,B,JCP7275,Gardnerella sp. 2,1,1AB3
+H4,0.112,Biofilm OD,3,B,JCP7275,Gardnerella sp. 2,1,1AB3
+A5,0.111,Biofilm OD,4,A,JCP8108,Gardnerella sp. 2,1,1AB3
+B5,0.134,Biofilm OD,4,A,JCP8108,Gardnerella sp. 2,1,1AB3
+C5,0.147,Biofilm OD,4,A,JCP8108,Gardnerella sp. 2,1,1AB3
+D5,0.135,Biofilm OD,4,A,JCP8108,Gardnerella sp. 2,1,1AB3
+E5,0.144,Biofilm OD,4,B,JCP8108,Gardnerella sp. 2,1,1AB3
+F5,0.156,Biofilm OD,4,B,JCP8108,Gardnerella sp. 2,1,1AB3
+G5,0.151,Biofilm OD,4,B,JCP8108,Gardnerella sp. 2,1,1AB3
+H5,0.132,Biofilm OD,4,B,JCP8108,Gardnerella sp. 2,1,1AB3
+A6,0.195,Biofilm OD,5,A,JCP8066,Gardnerella piotii,1,1AB3
+B6,0.19,Biofilm OD,5,A,JCP8066,Gardnerella piotii,1,1AB3
+C6,0.166,Biofilm OD,5,A,JCP8066,Gardnerella piotii,1,1AB3
+D6,0.173,Biofilm OD,5,A,JCP8066,Gardnerella piotii,1,1AB3
+E6,0.181,Biofilm OD,5,B,JCP8066,Gardnerella piotii,1,1AB3
+F6,0.205,Biofilm OD,5,B,JCP8066,Gardnerella piotii,1,1AB3
+G6,0.183,Biofilm OD,5,B,JCP8066,Gardnerella piotii,1,1AB3
+H6,0.216,Biofilm OD,5,B,JCP8066,Gardnerella piotii,1,1AB3
+A7,0.503,Biofilm OD,6,A,C0040C2,Gardnerella sp. 3,1,1AB3
+B7,0.524,Biofilm OD,6,A,C0040C2,Gardnerella sp. 3,1,1AB3
+C7,0.528,Biofilm OD,6,A,C0040C2,Gardnerella sp. 3,1,1AB3
+D7,0.515,Biofilm OD,6,A,C0040C2,Gardnerella sp. 3,1,1AB3
+E7,0.531,Biofilm OD,6,B,C0040C2,Gardnerella sp. 3,1,1AB3
+F7,0.515,Biofilm OD,6,B,C0040C2,Gardnerella sp. 3,1,1AB3
+G7,0.566,Biofilm OD,6,B,C0040C2,Gardnerella sp. 3,1,1AB3
+H7,0.579,Biofilm OD,6,B,C0040C2,Gardnerella sp. 3,1,1AB3
+A9,0.24,Biofilm OD,8,A,C0102A2,Gardnerella swidsinskii,1,1AB3
+B9,0.258,Biofilm OD,8,A,C0102A2,Gardnerella swidsinskii,1,1AB3
+C9,0.252,Biofilm OD,8,A,C0102A2,Gardnerella swidsinskii,1,1AB3
+D9,0.245,Biofilm OD,8,A,C0102A2,Gardnerella swidsinskii,1,1AB3
+E9,0.254,Biofilm OD,8,B,C0102A2,Gardnerella swidsinskii,1,1AB3
+F9,0.27,Biofilm OD,8,B,C0102A2,Gardnerella swidsinskii,1,1AB3
+G9,0.262,Biofilm OD,8,B,C0102A2,Gardnerella swidsinskii,1,1AB3
+H9,0.257,Biofilm OD,8,B,C0102A2,Gardnerella swidsinskii,1,1AB3
+A12,0.05,Biofilm OD,Blank,NA,NA,NA,NA,1AB3
+B12,0.05,Biofilm OD,Blank,NA,NA,NA,NA,1AB3
+C12,0.05,Biofilm OD,Blank,NA,NA,NA,NA,1AB3
+D12,0.049,Biofilm OD,Blank,NA,NA,NA,NA,1AB3
+A2,0.081,Biofilm OD,1,A,JCP7275,Gardnerella sp. 2,1,1AB4
+B2,0.083,Biofilm OD,1,A,JCP7275,Gardnerella sp. 2,1,1AB4
+C2,0.085,Biofilm OD,1,A,JCP7275,Gardnerella sp. 2,1,1AB4
+D2,0.092,Biofilm OD,1,A,JCP7275,Gardnerella sp. 2,1,1AB4
+A3,0.199,Biofilm OD,2,A,JCP8108,Gardnerella sp. 2,1,1AB4
+B3,0.151,Biofilm OD,2,A,JCP8108,Gardnerella sp. 2,1,1AB4
+C3,0.129,Biofilm OD,2,A,JCP8108,Gardnerella sp. 2,1,1AB4
+D3,0.131,Biofilm OD,2,A,JCP8108,Gardnerella sp. 2,1,1AB4
+E3,0.135,Biofilm OD,2,B,JCP8108,Gardnerella sp. 2,1,1AB4
+F3,0.146,Biofilm OD,2,B,JCP8108,Gardnerella sp. 2,1,1AB4
+G3,0.135,Biofilm OD,2,B,JCP8108,Gardnerella sp. 2,1,1AB4
+H3,0.126,Biofilm OD,2,B,JCP8108,Gardnerella sp. 2,1,1AB4
+A4,0.2,Biofilm OD,3,A,C0100B2,Gardnerella sp. 10,1,1AB4
+B4,0.195,Biofilm OD,3,A,C0100B2,Gardnerella sp. 10,1,1AB4
+C4,0.187,Biofilm OD,3,A,C0100B2,Gardnerella sp. 10,1,1AB4
+D4,0.182,Biofilm OD,3,A,C0100B2,Gardnerella sp. 10,1,1AB4
+E4,0.17,Biofilm OD,3,B,C0100B2,Gardnerella sp. 10,1,1AB4
+F4,0.186,Biofilm OD,3,B,C0100B2,Gardnerella sp. 10,1,1AB4
+G4,0.181,Biofilm OD,3,B,C0100B2,Gardnerella sp. 10,1,1AB4
+H4,0.177,Biofilm OD,3,B,C0100B2,Gardnerella sp. 10,1,1AB4
+A6,0.051,Biofilm OD,Blank,NA,NA,NA,NA,1AB4
+B6,0.051,Biofilm OD,Blank,NA,NA,NA,NA,1AB4
+C6,0.051,Biofilm OD,Blank,NA,NA,NA,NA,1AB4
+D6,0.05,Biofilm OD,Blank,NA,NA,NA,NA,1AB4
+A2,0.045,Biofilm OD,4,A,C0096A1,Gardnerella leopoldii,2,2A3
+B2,0.06,Biofilm OD,4,A,C0096A1,Gardnerella leopoldii,2,2A3
+C2,0.053,Biofilm OD,4,A,C0096A1,Gardnerella leopoldii,2,2A3
+D2,0.058,Biofilm OD,4,A,C0096A1,Gardnerella leopoldii,2,2A3
+E2,0.166,Biofilm OD,4,B,C0096A1,Gardnerella leopoldii,2,2A3
+F2,0.2,Biofilm OD,4,B,C0096A1,Gardnerella leopoldii,2,2A3
+G2,0.203,Biofilm OD,4,B,C0096A1,Gardnerella leopoldii,2,2A3
+H2,0.202,Biofilm OD,4,B,C0096A1,Gardnerella leopoldii,2,2A3
+A3,0.155,Biofilm OD,5,A,CMW7778B,Gardnerella sp. 12,2,2A3
+B3,0.123,Biofilm OD,5,A,CMW7778B,Gardnerella sp. 12,2,2A3
+C3,0.091,Biofilm OD,5,A,CMW7778B,Gardnerella sp. 12,2,2A3
+D3,0.088,Biofilm OD,5,A,CMW7778B,Gardnerella sp. 12,2,2A3
+E3,0.089,Biofilm OD,5,B,CMW7778B,Gardnerella sp. 12,2,2A3
+F3,0.092,Biofilm OD,5,B,CMW7778B,Gardnerella sp. 12,2,2A3
+G3,0.103,Biofilm OD,5,B,CMW7778B,Gardnerella sp. 12,2,2A3
+H3,0.11,Biofilm OD,5,B,CMW7778B,Gardnerella sp. 12,2,2A3
+A4,0.12,Biofilm OD,6,A,CMW7778B,Gardnerella sp. 12,2,2A3
+B4,0.104,Biofilm OD,6,A,CMW7778B,Gardnerella sp. 12,2,2A3
+C4,0.097,Biofilm OD,6,A,CMW7778B,Gardnerella sp. 12,2,2A3
+D4,0.088,Biofilm OD,6,A,CMW7778B,Gardnerella sp. 12,2,2A3
+E4,0.091,Biofilm OD,6,B,CMW7778B,Gardnerella sp. 12,2,2A3
+F4,0.101,Biofilm OD,6,B,CMW7778B,Gardnerella sp. 12,2,2A3
+G4,0.105,Biofilm OD,6,B,CMW7778B,Gardnerella sp. 12,2,2A3
+H4,0.097,Biofilm OD,6,B,CMW7778B,Gardnerella sp. 12,2,2A3
+A6,0.052,Biofilm OD,Blank,NA,NA,NA,NA,2A3
+B6,0.052,Biofilm OD,Blank,NA,NA,NA,NA,2A3
+C6,0.053,Biofilm OD,Blank,NA,NA,NA,NA,2A3
+D6,0.052,Biofilm OD,Blank,NA,NA,NA,NA,2A3
+A2,0.107,Biofilm OD,1,A,UM35,Gardnerella piotii,3,3A3
+B2,0.132,Biofilm OD,1,A,UM35,Gardnerella piotii,3,3A3
+C2,0.126,Biofilm OD,1,A,UM35,Gardnerella piotii,3,3A3
+D2,0.132,Biofilm OD,1,A,UM35,Gardnerella piotii,3,3A3
+E2,0.132,Biofilm OD,1,B,UM35,Gardnerella piotii,3,3A3
+F2,0.133,Biofilm OD,1,B,UM35,Gardnerella piotii,3,3A3
+G2,0.129,Biofilm OD,1,B,UM35,Gardnerella piotii,3,3A3
+H2,0.112,Biofilm OD,1,B,UM35,Gardnerella piotii,3,3A3
+A3,0.136,Biofilm OD,2,A,UM35,Gardnerella piotii,3,3A3
+B3,0.168,Biofilm OD,2,A,UM35,Gardnerella piotii,3,3A3
+C3,0.134,Biofilm OD,2,A,UM35,Gardnerella piotii,3,3A3
+D3,0.128,Biofilm OD,2,A,UM35,Gardnerella piotii,3,3A3
+E3,0.123,Biofilm OD,2,B,UM35,Gardnerella piotii,3,3A3
+F3,0.126,Biofilm OD,2,B,UM35,Gardnerella piotii,3,3A3
+G3,0.135,Biofilm OD,2,B,UM35,Gardnerella piotii,3,3A3
+H3,0.152,Biofilm OD,2,B,UM35,Gardnerella piotii,3,3A3
+A4,0.084,Biofilm OD,3,A,C0084H9,Gardnerella sp. 2,3,3A3
+B4,0.105,Biofilm OD,3,A,C0084H9,Gardnerella sp. 2,3,3A3
+C4,0.125,Biofilm OD,3,A,C0084H9,Gardnerella sp. 2,3,3A3
+D4,0.12,Biofilm OD,3,A,C0084H9,Gardnerella sp. 2,3,3A3
+E4,0.135,Biofilm OD,3,B,C0084H9,Gardnerella sp. 2,3,3A3
+F4,0.139,Biofilm OD,3,B,C0084H9,Gardnerella sp. 2,3,3A3
+G4,0.124,Biofilm OD,3,B,C0084H9,Gardnerella sp. 2,3,3A3
+H4,0.121,Biofilm OD,3,B,C0084H9,Gardnerella sp. 2,3,3A3
+A5,0.09,Biofilm OD,4,A,C0093B3,Gardnerella piotii,3,3A3
+B5,0.112,Biofilm OD,4,A,C0093B3,Gardnerella piotii,3,3A3
+C5,0.124,Biofilm OD,4,A,C0093B3,Gardnerella piotii,3,3A3
+D5,0.135,Biofilm OD,4,A,C0093B3,Gardnerella piotii,3,3A3
+E5,0.189,Biofilm OD,4,B,C0093B3,Gardnerella piotii,3,3A3
+F5,0.186,Biofilm OD,4,B,C0093B3,Gardnerella piotii,3,3A3
+G5,0.191,Biofilm OD,4,B,C0093B3,Gardnerella piotii,3,3A3
+H5,0.174,Biofilm OD,4,B,C0093B3,Gardnerella piotii,3,3A3
+A12,0.056,Biofilm OD,Blank,NA,NA,NA,NA,3A3
+B12,0.05,Biofilm OD,Blank,NA,NA,NA,NA,3A3
+C12,0.049,Biofilm OD,Blank,NA,NA,NA,NA,3A3
+D12,0.052,Biofilm OD,Blank,NA,NA,NA,NA,3A3

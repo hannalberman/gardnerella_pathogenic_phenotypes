@@ -1,0 +1,69 @@
+Number,Strain,BioRep,Species
+1,Gv5-1,20230708,Gardnerella swidsinskii
+2,C0102A2,20230708,Gardnerella swidsinskii
+3,C0100B2,20230708,Gardnerella sp. 10
+4,315-A,20230708,Gardnerella vaginalis
+5,C0011E4,20230708,Gardnerella vaginalis
+6,UM224,20230708,Gardnerella swidsinskii
+7,JCP8066,20230708,Gardnerella piotii
+8,JCP8017B,20230708,Gardnerella sp. 3
+9,14018,20230708,Gardnerella vaginalis
+10,AMD,20230708,Gardnerella leopoldii
+11,C0040C2,20230708,Gardnerella sp. 3
+12,C0056B5,20230708,Gardnerella sp. 8
+13,Gv101,20230708,Gardnerella sp. 8
+14,C0179B4,20230708,Gardnerella sp. 7
+15,C0096A1,20230708,Gardnerella leopoldii
+16,JCP7275,20230708,Gardnerella sp. 2
+17,JCP8108,20230708,Gardnerella sp. 2
+18,CMW7778B,20230708,Gardnerella sp. 12
+19,UM35,20230708,Gardnerella piotii
+20,C0093B3,20230708,Gardnerella piotii
+21,C0084H9,20230708,Gardnerella sp. 2
+22,C0101A1,20230708,Gardnerella sp. 11
+1,C0100B2,20230711,Gardnerella sp. 10
+2,315-A,20230711,Gardnerella vaginalis
+3,Gv5-1,20230711,Gardnerella swidsinskii
+4,C0102A2,20230711,Gardnerella swidsinskii
+5,JCP8017B,20230711,Gardnerella sp. 3
+6,C0011E4,20230711,Gardnerella vaginalis
+7,UM224,20230711,Gardnerella swidsinskii
+8,JCP8066,20230711,Gardnerella piotii
+9,C0040C2,20230711,Gardnerella sp. 3
+10,C0056B5,20230711,Gardnerella sp. 8
+11,14018,20230711,Gardnerella vaginalis
+12,AMD,20230711,Gardnerella leopoldii
+13,C0179B4,20230711,Gardnerella sp. 7
+14,Gv101,20230711,Gardnerella sp. 8
+15,C0096A1,20230711,Gardnerella leopoldii
+16,JCP7275,20230711,Gardnerella sp. 2
+17,JCP8108,20230711,Gardnerella sp. 2
+18,CMW7778B,20230711,Gardnerella sp. 12
+19,C0101A1,20230711,Gardnerella sp. 11
+20,C0084H9,20230711,Gardnerella sp. 2
+21,C0093B3,20230711,Gardnerella piotii
+22,UM35,20230711,Gardnerella piotii
+1,Gv5-1,20230716,Gardnerella swidsinskii
+2,C0102A2,20230716,Gardnerella swidsinskii
+3,C0100B2,20230716,Gardnerella sp. 10
+4,C0011E4,20230716,Gardnerella vaginalis
+5,JCP8017B,20230716,Gardnerella sp. 3
+6,C0096A1,20230716,Gardnerella leopoldii
+7,JCP8108,20230716,Gardnerella sp. 2
+8,C0101A1,20230716,Gardnerella sp. 11
+9,C0084H9,20230716,Gardnerella sp. 2
+1,C0100B2,20230806,Gardnerella sp. 10
+2,C0011E4,20230806,Gardnerella vaginalis
+3,C0096A1,20230806,Gardnerella leopoldii
+4,C0084H9,20230806,Gardnerella sp. 2
+5,C0101A1,20230806,Gardnerella sp. 11
+1,C0100B2,20230809A,Gardnerella sp. 10
+2,C0100B2,20230809B,Gardnerella sp. 10
+3,C0011E4,20230809,Gardnerella vaginalis
+4,C0096A1,20230809,Gardnerella leopoldii
+5,JCP7275,20230809A,Gardnerella sp. 2
+6,JCP7275,20230809B,Gardnerella sp. 2
+7,UM35,20230809A,Gardnerella piotii
+8,UM35,20230809B,Gardnerella piotii
+9,C0084H9,20230809,Gardnerella sp. 2
+10,C0101A1,20230809,Gardnerella sp. 11

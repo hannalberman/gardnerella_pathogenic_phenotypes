@@ -1,0 +1,485 @@
+well,OD,Measure,Number,BioRep,Strain,Species,Protocol,Batch
+A2,0.245,Safranin Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A1
+B2,0.26,Safranin Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A1
+C2,0.275,Safranin Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A1
+D2,0.244,Safranin Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A1
+E2,0.222,Safranin Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A1
+F2,0.146,Safranin Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A1
+G2,0.126,Safranin Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A1
+H2,0.13,Safranin Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A1
+A3,0.245,Safranin Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A1
+B3,0.491,Safranin Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A1
+C3,0.424,Safranin Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A1
+D3,0.42,Safranin Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A1
+E3,0.408,Safranin Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A1
+F3,0.421,Safranin Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A1
+G3,0.446,Safranin Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A1
+H3,0.489,Safranin Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A1
+A4,0.111,Safranin Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A1
+B4,0.127,Safranin Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A1
+C4,0.131,Safranin Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A1
+D4,0.132,Safranin Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A1
+E4,0.138,Safranin Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A1
+F4,0.155,Safranin Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A1
+G4,0.144,Safranin Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A1
+H4,0.142,Safranin Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A1
+A5,0.217,Safranin Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A1
+B5,0.232,Safranin Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A1
+C5,0.251,Safranin Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A1
+D5,0.251,Safranin Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A1
+E5,0.05,Safranin Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A1
+F5,0.051,Safranin Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A1
+G5,0.052,Safranin Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A1
+H5,0.049,Safranin Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A1
+A6,0.088,Safranin Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A1
+B6,0.121,Safranin Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A1
+C6,0.139,Safranin Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A1
+D6,0.128,Safranin Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A1
+A7,0.126,Safranin Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A1
+B7,0.125,Safranin Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A1
+C7,0.131,Safranin Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A1
+D7,0.153,Safranin Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A1
+E7,0.126,Safranin Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A1
+F7,0.085,Safranin Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A1
+G7,0.15,Safranin Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A1
+H7,0.17,Safranin Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A1
+A8,0.128,Safranin Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A1
+B8,0.173,Safranin Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A1
+C8,0.161,Safranin Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A1
+D8,0.191,Safranin Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A1
+E8,0.165,Safranin Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A1
+F8,0.151,Safranin Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A1
+G8,0.14,Safranin Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A1
+H8,0.144,Safranin Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A1
+A9,0.203,Safranin Biofilm OD,8,A,JCP8066,Gardnerella piotii,1,1A1
+B9,0.179,Safranin Biofilm OD,8,A,JCP8066,Gardnerella piotii,1,1A1
+C9,0.188,Safranin Biofilm OD,8,A,JCP8066,Gardnerella piotii,1,1A1
+D9,0.196,Safranin Biofilm OD,8,A,JCP8066,Gardnerella piotii,1,1A1
+E9,0.236,Safranin Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A1
+F9,0.206,Safranin Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A1
+G9,0.204,Safranin Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A1
+H9,0.156,Safranin Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A1
+A12,0.044,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1A1
+B12,0.043,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1A1
+C12,0.044,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1A1
+D12,0.045,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1A1
+A3,0.094,Safranin Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A1
+B3,0.238,Safranin Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A1
+C3,0.218,Safranin Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A1
+D3,0.229,Safranin Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A1
+E3,0.208,Safranin Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A1
+F3,0.215,Safranin Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A1
+G3,0.238,Safranin Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A1
+H3,0.261,Safranin Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A1
+A4,0.068,Safranin Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A1
+B4,0.081,Safranin Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A1
+C4,0.08,Safranin Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A1
+D4,0.099,Safranin Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A1
+E4,0.096,Safranin Biofilm OD,11,B,C0096A1,Gardnerella leopoldii,2,2A1
+F4,0.1,Safranin Biofilm OD,11,B,C0096A1,Gardnerella leopoldii,2,2A1
+G4,0.112,Safranin Biofilm OD,11,B,C0096A1,Gardnerella leopoldii,2,2A1
+H4,0.104,Safranin Biofilm OD,11,B,C0096A1,Gardnerella leopoldii,2,2A1
+A12,0.042,Safranin Biofilm OD,Blank,NA,NA,NA,NA,2A1
+B12,0.044,Safranin Biofilm OD,Blank,NA,NA,NA,NA,2A1
+C12,0.041,Safranin Biofilm OD,Blank,NA,NA,NA,NA,2A1
+D12,0.043,Safranin Biofilm OD,Blank,NA,NA,NA,NA,2A1
+A2,0.113,Safranin Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A2
+B2,0.157,Safranin Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A2
+C2,0.193,Safranin Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A2
+D2,0.213,Safranin Biofilm OD,1,A,C0011E4,Gardnerella vaginalis,1,1A2
+E2,0.245,Safranin Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A2
+F2,0.267,Safranin Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A2
+G2,0.27,Safranin Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A2
+H2,0.182,Safranin Biofilm OD,1,B,C0011E4,Gardnerella vaginalis,1,1A2
+A3,0.491,Safranin Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A2
+B3,0.525,Safranin Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A2
+C3,0.521,Safranin Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A2
+D3,0.526,Safranin Biofilm OD,2,A,UM224,Gardnerella swidsinskii,1,1A2
+E3,0.496,Safranin Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A2
+F3,0.491,Safranin Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A2
+G3,0.544,Safranin Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A2
+H3,0.451,Safranin Biofilm OD,2,B,UM224,Gardnerella swidsinskii,1,1A2
+A4,0.164,Safranin Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A2
+B4,0.188,Safranin Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A2
+C4,0.219,Safranin Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A2
+D4,0.254,Safranin Biofilm OD,3,A,14018,Gardnerella vaginalis,1,1A2
+E4,0.227,Safranin Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A2
+F4,0.332,Safranin Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A2
+G4,0.208,Safranin Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A2
+H4,0.152,Safranin Biofilm OD,3,B,14018,Gardnerella vaginalis,1,1A2
+A5,0.322,Safranin Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A2
+B5,0.363,Safranin Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A2
+C5,0.373,Safranin Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A2
+D5,0.42,Safranin Biofilm OD,4,A,C0102A2,Gardnerella swidsinskii,1,1A2
+E5,0.39,Safranin Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A2
+F5,0.411,Safranin Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A2
+G5,0.436,Safranin Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A2
+H5,0.427,Safranin Biofilm OD,4,B,C0102A2,Gardnerella swidsinskii,1,1A2
+A6,0.174,Safranin Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A2
+B6,0.289,Safranin Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A2
+C6,0.255,Safranin Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A2
+D6,0.303,Safranin Biofilm OD,5,A,C0100B2,Gardnerella sp. 10,1,1A2
+E6,0.254,Safranin Biofilm OD,5,B,C0100B2,Gardnerella sp. 10,1,1A2
+F6,0.233,Safranin Biofilm OD,5,B,C0100B2,Gardnerella sp. 10,1,1A2
+G6,0.263,Safranin Biofilm OD,5,B,C0100B2,Gardnerella sp. 10,1,1A2
+H6,0.17,Safranin Biofilm OD,5,B,C0100B2,Gardnerella sp. 10,1,1A2
+A7,0.214,Safranin Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A2
+B7,0.243,Safranin Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A2
+C7,0.263,Safranin Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A2
+D7,0.304,Safranin Biofilm OD,6,A,315-A,Gardnerella vaginalis,1,1A2
+E7,0.277,Safranin Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A2
+F7,0.229,Safranin Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A2
+G7,0.243,Safranin Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A2
+H7,0.196,Safranin Biofilm OD,6,B,315-A,Gardnerella vaginalis,1,1A2
+A8,0.145,Safranin Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A2
+B8,0.171,Safranin Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A2
+C8,0.207,Safranin Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A2
+D8,0.272,Safranin Biofilm OD,7,A,JCP8017B,Gardnerella sp. 3,1,1A2
+E8,0.248,Safranin Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A2
+F8,0.265,Safranin Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A2
+G8,0.209,Safranin Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A2
+H8,0.181,Safranin Biofilm OD,7,B,JCP8017B,Gardnerella sp. 3,1,1A2
+E9,0.262,Safranin Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A2
+F9,0.286,Safranin Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A2
+G9,0.32,Safranin Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A2
+H9,0.203,Safranin Biofilm OD,8,B,JCP8066,Gardnerella piotii,1,1A2
+A12,0.042,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1A2
+B12,0.046,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1A2
+C12,0.057,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1A2
+D12,0.055,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1A2
+A3,0.255,Safranin Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A2
+B3,0.236,Safranin Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A2
+C3,0.249,Safranin Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A2
+D3,0.232,Safranin Biofilm OD,10,A,AMD,Gardnerella leopoldii,2,2A2
+E3,0.208,Safranin Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A2
+F3,0.231,Safranin Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A2
+G3,0.225,Safranin Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A2
+H3,0.192,Safranin Biofilm OD,10,B,AMD,Gardnerella leopoldii,2,2A2
+A4,0.052,Safranin Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A2
+B4,0.053,Safranin Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A2
+C4,0.053,Safranin Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A2
+D4,0.061,Safranin Biofilm OD,11,A,C0096A1,Gardnerella leopoldii,2,2A2
+E4,0.09,Safranin Biofilm OD,11,B,C0096A1,Gardnerella leopoldii,2,2A2
+F4,0.086,Safranin Biofilm OD,11,B,C0096A1,Gardnerella leopoldii,2,2A2
+H4,0.082,Safranin Biofilm OD,11,B,C0096A1,Gardnerella leopoldii,2,2A2
+A12,0.044,Safranin Biofilm OD,Blank,NA,NA,NA,NA,2A2
+B12,0.043,Safranin Biofilm OD,Blank,NA,NA,NA,NA,2A2
+C12,0.046,Safranin Biofilm OD,Blank,NA,NA,NA,NA,2A2
+D12,0.043,Safranin Biofilm OD,Blank,NA,NA,NA,NA,2A2
+A2,0.173,Safranin Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B1
+B2,0.224,Safranin Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B1
+C2,0.15,Safranin Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B1
+D2,0.187,Safranin Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B1
+E2,0.207,Safranin Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B1
+F2,0.213,Safranin Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B1
+G2,0.206,Safranin Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B1
+H2,0.161,Safranin Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B1
+A3,0.053,Safranin Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B1
+B3,0.05,Safranin Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B1
+C3,0.059,Safranin Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B1
+D3,0.114,Safranin Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B1
+E3,0.076,Safranin Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B1
+F3,0.085,Safranin Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B1
+G3,0.1,Safranin Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B1
+H3,0.076,Safranin Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B1
+A4,0.145,Safranin Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B1
+B4,0.113,Safranin Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B1
+C4,0.107,Safranin Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B1
+D4,0.129,Safranin Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B1
+E4,0.133,Safranin Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B1
+F4,0.131,Safranin Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B1
+G4,0.145,Safranin Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B1
+H4,0.116,Safranin Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B1
+A5,0.185,Safranin Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B1
+B5,0.082,Safranin Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B1
+C5,0.122,Safranin Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B1
+D5,0.136,Safranin Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B1
+E5,0.09,Safranin Biofilm OD,4,B,Gv5-1,Gardnerella swidsinskii,1,1B1
+F5,0.09,Safranin Biofilm OD,4,B,Gv5-1,Gardnerella swidsinskii,1,1B1
+G5,0.364,Safranin Biofilm OD,4,B,Gv5-1,Gardnerella swidsinskii,1,1B1
+H5,0.255,Safranin Biofilm OD,4,B,Gv5-1,Gardnerella swidsinskii,1,1B1
+A6,0.25,Safranin Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B1
+B6,0.428,Safranin Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B1
+C6,0.285,Safranin Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B1
+D6,0.452,Safranin Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B1
+E6,0.589,Safranin Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B1
+F6,0.496,Safranin Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B1
+G6,0.647,Safranin Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B1
+H6,0.562,Safranin Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B1
+A7,0.058,Safranin Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B1
+B7,0.072,Safranin Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B1
+C7,0.087,Safranin Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B1
+D7,0.08,Safranin Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B1
+E7,0.088,Safranin Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B1
+F7,0.095,Safranin Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B1
+G7,0.103,Safranin Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B1
+H7,0.103,Safranin Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B1
+A8,0.05,Safranin Biofilm OD,7,A,JCP8108,Gardnerella sp. 2,1,1B1
+B8,0.059,Safranin Biofilm OD,7,A,JCP8108,Gardnerella sp. 2,1,1B1
+C8,0.065,Safranin Biofilm OD,7,A,JCP8108,Gardnerella sp. 2,1,1B1
+D8,0.07,Safranin Biofilm OD,7,A,JCP8108,Gardnerella sp. 2,1,1B1
+E8,0.107,Safranin Biofilm OD,7,B,JCP8108,Gardnerella sp. 2,1,1B1
+F8,0.119,Safranin Biofilm OD,7,B,JCP8108,Gardnerella sp. 2,1,1B1
+G8,0.128,Safranin Biofilm OD,7,B,JCP8108,Gardnerella sp. 2,1,1B1
+H8,0.125,Safranin Biofilm OD,7,B,JCP8108,Gardnerella sp. 2,1,1B1
+A12,0.045,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1B1
+B12,0.046,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1B1
+C12,0.044,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1B1
+D12,0.044,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1B1
+A2,0.364,Safranin Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B2
+B2,0.478,Safranin Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B2
+C2,0.487,Safranin Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B2
+D2,0.5,Safranin Biofilm OD,1,A,C0040C2,Gardnerella sp. 3,1,1B2
+E2,0.474,Safranin Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B2
+F2,0.473,Safranin Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B2
+G2,0.496,Safranin Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B2
+H2,0.501,Safranin Biofilm OD,1,B,C0040C2,Gardnerella sp. 3,1,1B2
+A3,0.162,Safranin Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B2
+B3,0.205,Safranin Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B2
+C3,0.24,Safranin Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B2
+D3,0.231,Safranin Biofilm OD,2,A,C0056B5,Gardnerella sp. 8,1,1B2
+E3,0.241,Safranin Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B2
+F3,0.243,Safranin Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B2
+G3,0.239,Safranin Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B2
+H3,0.217,Safranin Biofilm OD,2,B,C0056B5,Gardnerella sp. 8,1,1B2
+A4,0.115,Safranin Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B2
+B4,0.117,Safranin Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B2
+C4,0.128,Safranin Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B2
+D4,0.138,Safranin Biofilm OD,3,A,Gv101,Gardnerella sp. 8,1,1B2
+E4,0.152,Safranin Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B2
+F4,0.183,Safranin Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B2
+G4,0.168,Safranin Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B2
+H4,0.151,Safranin Biofilm OD,3,B,Gv101,Gardnerella sp. 8,1,1B2
+A5,0.116,Safranin Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B2
+B5,0.125,Safranin Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B2
+C5,0.16,Safranin Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B2
+D5,0.169,Safranin Biofilm OD,4,A,Gv5-1,Gardnerella swidsinskii,1,1B2
+A6,0.266,Safranin Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B2
+B6,0.307,Safranin Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B2
+C6,0.253,Safranin Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B2
+D6,0.261,Safranin Biofilm OD,5,A,C0179B4,Gardnerella sp. 7,1,1B2
+E6,0.16,Safranin Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B2
+F6,0.159,Safranin Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B2
+G6,0.219,Safranin Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B2
+H6,0.213,Safranin Biofilm OD,5,B,C0179B4,Gardnerella sp. 7,1,1B2
+A7,0.087,Safranin Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B2
+B7,0.113,Safranin Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B2
+C7,0.11,Safranin Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B2
+D7,0.109,Safranin Biofilm OD,6,A,JCP7275,Gardnerella sp. 2,1,1B2
+E7,0.097,Safranin Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B2
+F7,0.108,Safranin Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B2
+G7,0.102,Safranin Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B2
+H7,0.111,Safranin Biofilm OD,6,B,JCP7275,Gardnerella sp. 2,1,1B2
+A12,0.039,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1B2
+B12,0.04,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1B2
+C12,0.039,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1B2
+D12,0.042,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1B2
+B2,0.134,Safranin Biofilm OD,8,A,C0093B3,Gardnerella piotii,3,3A1
+C2,0.137,Safranin Biofilm OD,8,A,C0093B3,Gardnerella piotii,3,3A1
+D2,0.133,Safranin Biofilm OD,8,A,C0093B3,Gardnerella piotii,3,3A1
+E2,0.134,Safranin Biofilm OD,8,B,C0093B3,Gardnerella piotii,3,3A1
+F2,0.129,Safranin Biofilm OD,8,B,C0093B3,Gardnerella piotii,3,3A1
+G2,0.103,Safranin Biofilm OD,8,B,C0093B3,Gardnerella piotii,3,3A1
+B3,0.104,Safranin Biofilm OD,9,A,C0084H9,Gardnerella sp. 2,3,3A1
+C3,0.109,Safranin Biofilm OD,9,A,C0084H9,Gardnerella sp. 2,3,3A1
+D3,0.141,Safranin Biofilm OD,9,A,C0084H9,Gardnerella sp. 2,3,3A1
+E3,0.186,Safranin Biofilm OD,9,B,C0084H9,Gardnerella sp. 2,3,3A1
+F3,0.229,Safranin Biofilm OD,9,B,C0084H9,Gardnerella sp. 2,3,3A1
+G3,0.186,Safranin Biofilm OD,9,B,C0084H9,Gardnerella sp. 2,3,3A1
+B4,0.179,Safranin Biofilm OD,10,A,C0101A1,Gardnerella sp. 11,3,3A1
+C4,0.168,Safranin Biofilm OD,10,A,C0101A1,Gardnerella sp. 11,3,3A1
+D4,0.134,Safranin Biofilm OD,10,A,C0101A1,Gardnerella sp. 11,3,3A1
+E4,0.124,Safranin Biofilm OD,10,B,C0101A1,Gardnerella sp. 11,3,3A1
+F4,0.128,Safranin Biofilm OD,10,B,C0101A1,Gardnerella sp. 11,3,3A1
+G4,0.097,Safranin Biofilm OD,10,B,C0101A1,Gardnerella sp. 11,3,3A1
+B5,0.174,Safranin Biofilm OD,11,A,UM35,Gardnerella piotii,3,3A1
+C5,0.123,Safranin Biofilm OD,11,A,UM35,Gardnerella piotii,3,3A1
+D5,0.109,Safranin Biofilm OD,11,A,UM35,Gardnerella piotii,3,3A1
+A12,0.05,Safranin Biofilm OD,Blank,NA,NA,NA,NA,3A1
+B12,0.045,Safranin Biofilm OD,Blank,NA,NA,NA,NA,3A1
+C12,0.048,Safranin Biofilm OD,Blank,NA,NA,NA,NA,3A1
+D12,0.047,Safranin Biofilm OD,Blank,NA,NA,NA,NA,3A1
+A1,0.038,Safranin Biofilm OD,1,A,C0093B3,Gardnerella piotii,3,3A2
+B1,0.036,Safranin Biofilm OD,1,A,C0093B3,Gardnerella piotii,3,3A2
+C1,0.037,Safranin Biofilm OD,1,A,C0093B3,Gardnerella piotii,3,3A2
+D1,0.038,Safranin Biofilm OD,1,A,C0093B3,Gardnerella piotii,3,3A2
+E1,0.038,Safranin Biofilm OD,1,B,C0093B3,Gardnerella piotii,3,3A2
+F1,0.038,Safranin Biofilm OD,1,B,C0093B3,Gardnerella piotii,3,3A2
+G1,0.038,Safranin Biofilm OD,1,B,C0093B3,Gardnerella piotii,3,3A2
+H1,0.04,Safranin Biofilm OD,1,B,C0093B3,Gardnerella piotii,3,3A2
+A2,0.093,Safranin Biofilm OD,2,A,C0084H9,Gardnerella sp. 2,3,3A2
+B2,0.105,Safranin Biofilm OD,2,A,C0084H9,Gardnerella sp. 2,3,3A2
+C2,0.108,Safranin Biofilm OD,2,A,C0084H9,Gardnerella sp. 2,3,3A2
+D2,0.113,Safranin Biofilm OD,2,A,C0084H9,Gardnerella sp. 2,3,3A2
+E2,0.123,Safranin Biofilm OD,2,B,C0084H9,Gardnerella sp. 2,3,3A2
+F2,0.107,Safranin Biofilm OD,2,B,C0084H9,Gardnerella sp. 2,3,3A2
+G2,0.125,Safranin Biofilm OD,2,B,C0084H9,Gardnerella sp. 2,3,3A2
+H2,0.106,Safranin Biofilm OD,2,B,C0084H9,Gardnerella sp. 2,3,3A2
+A3,0.105,Safranin Biofilm OD,3,A,C0101A1,Gardnerella sp. 11,3,3A2
+B3,0.136,Safranin Biofilm OD,3,A,C0101A1,Gardnerella sp. 11,3,3A2
+C3,0.144,Safranin Biofilm OD,3,A,C0101A1,Gardnerella sp. 11,3,3A2
+D3,0.16,Safranin Biofilm OD,3,A,C0101A1,Gardnerella sp. 11,3,3A2
+E3,0.081,Safranin Biofilm OD,3,B,C0101A1,Gardnerella sp. 11,3,3A2
+F3,0.062,Safranin Biofilm OD,3,B,C0101A1,Gardnerella sp. 11,3,3A2
+G3,0.086,Safranin Biofilm OD,3,B,C0101A1,Gardnerella sp. 11,3,3A2
+H3,0.077,Safranin Biofilm OD,3,B,C0101A1,Gardnerella sp. 11,3,3A2
+A4,0.165,Safranin Biofilm OD,4,A,UM35,Gardnerella piotii,3,3A2
+B4,0.211,Safranin Biofilm OD,4,A,UM35,Gardnerella piotii,3,3A2
+C4,0.211,Safranin Biofilm OD,4,A,UM35,Gardnerella piotii,3,3A2
+D4,0.263,Safranin Biofilm OD,4,A,UM35,Gardnerella piotii,3,3A2
+E4,0.069,Safranin Biofilm OD,4,B,UM35,Gardnerella piotii,3,3A2
+F4,0.108,Safranin Biofilm OD,4,B,UM35,Gardnerella piotii,3,3A2
+G4,0.098,Safranin Biofilm OD,4,B,UM35,Gardnerella piotii,3,3A2
+H4,0.097,Safranin Biofilm OD,4,B,UM35,Gardnerella piotii,3,3A2
+A12,0.045,Safranin Biofilm OD,Blank,NA,NA,NA,NA,3A2
+B12,0.052,Safranin Biofilm OD,Blank,NA,NA,NA,NA,3A2
+C12,0.042,Safranin Biofilm OD,Blank,NA,NA,NA,NA,3A2
+D12,0.045,Safranin Biofilm OD,Blank,NA,NA,NA,NA,3A2
+A2,0.102,Safranin Biofilm OD,1,A,Gv5-1,Gardnerella swidsinskii,1,1AB3
+B2,0.12,Safranin Biofilm OD,1,A,Gv5-1,Gardnerella swidsinskii,1,1AB3
+C2,0.105,Safranin Biofilm OD,1,A,Gv5-1,Gardnerella swidsinskii,1,1AB3
+D2,0.116,Safranin Biofilm OD,1,A,Gv5-1,Gardnerella swidsinskii,1,1AB3
+E2,0.105,Safranin Biofilm OD,1,B,Gv5-1,Gardnerella swidsinskii,1,1AB3
+F2,0.065,Safranin Biofilm OD,1,B,Gv5-1,Gardnerella swidsinskii,1,1AB3
+G2,0.062,Safranin Biofilm OD,1,B,Gv5-1,Gardnerella swidsinskii,1,1AB3
+H2,0.074,Safranin Biofilm OD,1,B,Gv5-1,Gardnerella swidsinskii,1,1AB3
+A3,0.044,Safranin Biofilm OD,2,A,C0179B4,Gardnerella sp. 7,1,1AB3
+B3,0.047,Safranin Biofilm OD,2,A,C0179B4,Gardnerella sp. 7,1,1AB3
+C3,0.048,Safranin Biofilm OD,2,A,C0179B4,Gardnerella sp. 7,1,1AB3
+D3,0.048,Safranin Biofilm OD,2,A,C0179B4,Gardnerella sp. 7,1,1AB3
+E3,0.112,Safranin Biofilm OD,2,B,C0179B4,Gardnerella sp. 7,1,1AB3
+F3,0.148,Safranin Biofilm OD,2,B,C0179B4,Gardnerella sp. 7,1,1AB3
+G3,0.133,Safranin Biofilm OD,2,B,C0179B4,Gardnerella sp. 7,1,1AB3
+H3,0.144,Safranin Biofilm OD,2,B,C0179B4,Gardnerella sp. 7,1,1AB3
+A4,0.069,Safranin Biofilm OD,3,A,JCP7275,Gardnerella sp. 2,1,1AB3
+B4,0.062,Safranin Biofilm OD,3,A,JCP7275,Gardnerella sp. 2,1,1AB3
+C4,0.067,Safranin Biofilm OD,3,A,JCP7275,Gardnerella sp. 2,1,1AB3
+D4,0.07,Safranin Biofilm OD,3,A,JCP7275,Gardnerella sp. 2,1,1AB3
+E4,0.068,Safranin Biofilm OD,3,B,JCP7275,Gardnerella sp. 2,1,1AB3
+F4,0.068,Safranin Biofilm OD,3,B,JCP7275,Gardnerella sp. 2,1,1AB3
+G4,0.067,Safranin Biofilm OD,3,B,JCP7275,Gardnerella sp. 2,1,1AB3
+H4,0.061,Safranin Biofilm OD,3,B,JCP7275,Gardnerella sp. 2,1,1AB3
+A5,0.079,Safranin Biofilm OD,4,A,JCP8108,Gardnerella sp. 2,1,1AB3
+B5,0.069,Safranin Biofilm OD,4,A,JCP8108,Gardnerella sp. 2,1,1AB3
+C5,0.086,Safranin Biofilm OD,4,A,JCP8108,Gardnerella sp. 2,1,1AB3
+D5,0.123,Safranin Biofilm OD,4,A,JCP8108,Gardnerella sp. 2,1,1AB3
+E5,0.072,Safranin Biofilm OD,4,B,JCP8108,Gardnerella sp. 2,1,1AB3
+F5,0.12,Safranin Biofilm OD,4,B,JCP8108,Gardnerella sp. 2,1,1AB3
+G5,0.125,Safranin Biofilm OD,4,B,JCP8108,Gardnerella sp. 2,1,1AB3
+H5,0.114,Safranin Biofilm OD,4,B,JCP8108,Gardnerella sp. 2,1,1AB3
+A6,0.103,Safranin Biofilm OD,5,A,JCP8066,Gardnerella piotii,1,1AB3
+B6,0.103,Safranin Biofilm OD,5,A,JCP8066,Gardnerella piotii,1,1AB3
+C6,0.105,Safranin Biofilm OD,5,A,JCP8066,Gardnerella piotii,1,1AB3
+D6,0.113,Safranin Biofilm OD,5,A,JCP8066,Gardnerella piotii,1,1AB3
+E6,0.108,Safranin Biofilm OD,5,B,JCP8066,Gardnerella piotii,1,1AB3
+F6,0.112,Safranin Biofilm OD,5,B,JCP8066,Gardnerella piotii,1,1AB3
+G6,0.119,Safranin Biofilm OD,5,B,JCP8066,Gardnerella piotii,1,1AB3
+H6,0.119,Safranin Biofilm OD,5,B,JCP8066,Gardnerella piotii,1,1AB3
+A7,0.424,Safranin Biofilm OD,6,A,C0040C2,Gardnerella sp. 3,1,1AB3
+B7,0.485,Safranin Biofilm OD,6,A,C0040C2,Gardnerella sp. 3,1,1AB3
+C7,0.479,Safranin Biofilm OD,6,A,C0040C2,Gardnerella sp. 3,1,1AB3
+D7,0.477,Safranin Biofilm OD,6,A,C0040C2,Gardnerella sp. 3,1,1AB3
+E7,0.434,Safranin Biofilm OD,6,B,C0040C2,Gardnerella sp. 3,1,1AB3
+F7,0.441,Safranin Biofilm OD,6,B,C0040C2,Gardnerella sp. 3,1,1AB3
+G7,0.455,Safranin Biofilm OD,6,B,C0040C2,Gardnerella sp. 3,1,1AB3
+H7,0.399,Safranin Biofilm OD,6,B,C0040C2,Gardnerella sp. 3,1,1AB3
+A9,0.18,Safranin Biofilm OD,8,A,C0102A2,Gardnerella swidsinskii,1,1AB3
+B9,0.173,Safranin Biofilm OD,8,A,C0102A2,Gardnerella swidsinskii,1,1AB3
+C9,0.171,Safranin Biofilm OD,8,A,C0102A2,Gardnerella swidsinskii,1,1AB3
+D9,0.16,Safranin Biofilm OD,8,A,C0102A2,Gardnerella swidsinskii,1,1AB3
+E9,0.172,Safranin Biofilm OD,8,B,C0102A2,Gardnerella swidsinskii,1,1AB3
+F9,0.166,Safranin Biofilm OD,8,B,C0102A2,Gardnerella swidsinskii,1,1AB3
+G9,0.202,Safranin Biofilm OD,8,B,C0102A2,Gardnerella swidsinskii,1,1AB3
+H9,0.181,Safranin Biofilm OD,8,B,C0102A2,Gardnerella swidsinskii,1,1AB3
+A12,0.04,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1AB3
+B12,0.043,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1AB3
+C12,0.043,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1AB3
+D12,0.046,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1AB3
+A2,0.038,Safranin Biofilm OD,1,A,JCP7275,Gardnerella sp. 2,1,1AB4
+B2,0.037,Safranin Biofilm OD,1,A,JCP7275,Gardnerella sp. 2,1,1AB4
+C2,0.037,Safranin Biofilm OD,1,A,JCP7275,Gardnerella sp. 2,1,1AB4
+D2,0.037,Safranin Biofilm OD,1,A,JCP7275,Gardnerella sp. 2,1,1AB4
+A3,0.036,Safranin Biofilm OD,2,A,JCP8108,Gardnerella sp. 2,1,1AB4
+B3,0.037,Safranin Biofilm OD,2,A,JCP8108,Gardnerella sp. 2,1,1AB4
+C3,0.037,Safranin Biofilm OD,2,A,JCP8108,Gardnerella sp. 2,1,1AB4
+D3,0.037,Safranin Biofilm OD,2,A,JCP8108,Gardnerella sp. 2,1,1AB4
+E3,0.037,Safranin Biofilm OD,2,B,JCP8108,Gardnerella sp. 2,1,1AB4
+F3,0.036,Safranin Biofilm OD,2,B,JCP8108,Gardnerella sp. 2,1,1AB4
+G3,0.036,Safranin Biofilm OD,2,B,JCP8108,Gardnerella sp. 2,1,1AB4
+H3,0.037,Safranin Biofilm OD,2,B,JCP8108,Gardnerella sp. 2,1,1AB4
+A4,0.036,Safranin Biofilm OD,3,A,C0100B2,Gardnerella sp. 10,1,1AB4
+B4,0.036,Safranin Biofilm OD,3,A,C0100B2,Gardnerella sp. 10,1,1AB4
+C4,0.036,Safranin Biofilm OD,3,A,C0100B2,Gardnerella sp. 10,1,1AB4
+D4,0.036,Safranin Biofilm OD,3,A,C0100B2,Gardnerella sp. 10,1,1AB4
+E4,0.036,Safranin Biofilm OD,3,B,C0100B2,Gardnerella sp. 10,1,1AB4
+F4,0.036,Safranin Biofilm OD,3,B,C0100B2,Gardnerella sp. 10,1,1AB4
+G4,0.036,Safranin Biofilm OD,3,B,C0100B2,Gardnerella sp. 10,1,1AB4
+H4,0.036,Safranin Biofilm OD,3,B,C0100B2,Gardnerella sp. 10,1,1AB4
+A6,0.036,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1AB4
+B6,0.035,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1AB4
+C6,0.036,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1AB4
+D6,0.035,Safranin Biofilm OD,Blank,NA,NA,NA,NA,1AB4
+A2,0.04,Safranin Biofilm OD,4,A,C0096A1,Gardnerella leopoldii,2,2A3
+B2,0.037,Safranin Biofilm OD,4,A,C0096A1,Gardnerella leopoldii,2,2A3
+C2,0.037,Safranin Biofilm OD,4,A,C0096A1,Gardnerella leopoldii,2,2A3
+D2,0.037,Safranin Biofilm OD,4,A,C0096A1,Gardnerella leopoldii,2,2A3
+E2,0.037,Safranin Biofilm OD,4,B,C0096A1,Gardnerella leopoldii,2,2A3
+F2,0.037,Safranin Biofilm OD,4,B,C0096A1,Gardnerella leopoldii,2,2A3
+G2,0.037,Safranin Biofilm OD,4,B,C0096A1,Gardnerella leopoldii,2,2A3
+H2,0.038,Safranin Biofilm OD,4,B,C0096A1,Gardnerella leopoldii,2,2A3
+A3,0.039,Safranin Biofilm OD,5,A,CMW7778B,Gardnerella sp. 12,2,2A3
+B3,0.037,Safranin Biofilm OD,5,A,CMW7778B,Gardnerella sp. 12,2,2A3
+C3,0.038,Safranin Biofilm OD,5,A,CMW7778B,Gardnerella sp. 12,2,2A3
+D3,0.037,Safranin Biofilm OD,5,A,CMW7778B,Gardnerella sp. 12,2,2A3
+E3,0.039,Safranin Biofilm OD,5,B,CMW7778B,Gardnerella sp. 12,2,2A3
+F3,0.037,Safranin Biofilm OD,5,B,CMW7778B,Gardnerella sp. 12,2,2A3
+G3,0.036,Safranin Biofilm OD,5,B,CMW7778B,Gardnerella sp. 12,2,2A3
+H3,0.036,Safranin Biofilm OD,5,B,CMW7778B,Gardnerella sp. 12,2,2A3
+A4,0.04,Safranin Biofilm OD,6,A,CMW7778B,Gardnerella sp. 12,2,2A3
+B4,0.036,Safranin Biofilm OD,6,A,CMW7778B,Gardnerella sp. 12,2,2A3
+C4,0.037,Safranin Biofilm OD,6,A,CMW7778B,Gardnerella sp. 12,2,2A3
+D4,0.036,Safranin Biofilm OD,6,A,CMW7778B,Gardnerella sp. 12,2,2A3
+E4,0.037,Safranin Biofilm OD,6,B,CMW7778B,Gardnerella sp. 12,2,2A3
+F4,0.036,Safranin Biofilm OD,6,B,CMW7778B,Gardnerella sp. 12,2,2A3
+G4,0.036,Safranin Biofilm OD,6,B,CMW7778B,Gardnerella sp. 12,2,2A3
+H4,0.036,Safranin Biofilm OD,6,B,CMW7778B,Gardnerella sp. 12,2,2A3
+A6,0.036,Safranin Biofilm OD,Blank,NA,NA,NA,NA,2A3
+B6,0.036,Safranin Biofilm OD,Blank,NA,NA,NA,NA,2A3
+C6,0.037,Safranin Biofilm OD,Blank,NA,NA,NA,NA,2A3
+D6,0.035,Safranin Biofilm OD,Blank,NA,NA,NA,NA,2A3
+A2,0.069,Safranin Biofilm OD,1,A,UM35,Gardnerella piotii,3,3A3
+B2,0.069,Safranin Biofilm OD,1,A,UM35,Gardnerella piotii,3,3A3
+C2,0.067,Safranin Biofilm OD,1,A,UM35,Gardnerella piotii,3,3A3
+D2,0.07,Safranin Biofilm OD,1,A,UM35,Gardnerella piotii,3,3A3
+E2,0.063,Safranin Biofilm OD,1,B,UM35,Gardnerella piotii,3,3A3
+F2,0.061,Safranin Biofilm OD,1,B,UM35,Gardnerella piotii,3,3A3
+G2,0.06,Safranin Biofilm OD,1,B,UM35,Gardnerella piotii,3,3A3
+H2,0.067,Safranin Biofilm OD,1,B,UM35,Gardnerella piotii,3,3A3
+A3,0.076,Safranin Biofilm OD,2,A,UM35,Gardnerella piotii,3,3A3
+B3,0.078,Safranin Biofilm OD,2,A,UM35,Gardnerella piotii,3,3A3
+C3,0.073,Safranin Biofilm OD,2,A,UM35,Gardnerella piotii,3,3A3
+D3,0.072,Safranin Biofilm OD,2,A,UM35,Gardnerella piotii,3,3A3
+E3,0.085,Safranin Biofilm OD,2,B,UM35,Gardnerella piotii,3,3A3
+F3,0.078,Safranin Biofilm OD,2,B,UM35,Gardnerella piotii,3,3A3
+G3,0.081,Safranin Biofilm OD,2,B,UM35,Gardnerella piotii,3,3A3
+H3,0.06,Safranin Biofilm OD,2,B,UM35,Gardnerella piotii,3,3A3
+A4,0.07,Safranin Biofilm OD,3,A,C0084H9,Gardnerella sp. 2,3,3A3
+B4,0.077,Safranin Biofilm OD,3,A,C0084H9,Gardnerella sp. 2,3,3A3
+C4,0.071,Safranin Biofilm OD,3,A,C0084H9,Gardnerella sp. 2,3,3A3
+D4,0.077,Safranin Biofilm OD,3,A,C0084H9,Gardnerella sp. 2,3,3A3
+E4,0.076,Safranin Biofilm OD,3,B,C0084H9,Gardnerella sp. 2,3,3A3
+F4,0.077,Safranin Biofilm OD,3,B,C0084H9,Gardnerella sp. 2,3,3A3
+G4,0.081,Safranin Biofilm OD,3,B,C0084H9,Gardnerella sp. 2,3,3A3
+H4,0.089,Safranin Biofilm OD,3,B,C0084H9,Gardnerella sp. 2,3,3A3
+A5,0.085,Safranin Biofilm OD,4,A,C0093B3,Gardnerella piotii,3,3A3
+B5,0.101,Safranin Biofilm OD,4,A,C0093B3,Gardnerella piotii,3,3A3
+C5,0.11,Safranin Biofilm OD,4,A,C0093B3,Gardnerella piotii,3,3A3
+D5,0.124,Safranin Biofilm OD,4,A,C0093B3,Gardnerella piotii,3,3A3
+E5,0.136,Safranin Biofilm OD,4,B,C0093B3,Gardnerella piotii,3,3A3
+F5,0.131,Safranin Biofilm OD,4,B,C0093B3,Gardnerella piotii,3,3A3
+G5,0.133,Safranin Biofilm OD,4,B,C0093B3,Gardnerella piotii,3,3A3
+H5,0.138,Safranin Biofilm OD,4,B,C0093B3,Gardnerella piotii,3,3A3
+A12,0.043,Safranin Biofilm OD,Blank,NA,NA,NA,NA,3A3
+B12,0.042,Safranin Biofilm OD,Blank,NA,NA,NA,NA,3A3
+C12,0.041,Safranin Biofilm OD,Blank,NA,NA,NA,NA,3A3
+D12,0.041,Safranin Biofilm OD,Blank,NA,NA,NA,NA,3A3

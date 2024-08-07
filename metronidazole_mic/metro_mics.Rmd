@@ -1,0 +1,183 @@
+---
+title: "Metronidazole MICs"
+author: "Hanna Berman"
+date: "2023"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+**Purpose:**
+  To assess the minimum inhibitory concentration of metronidazole on *Gardnerella* isolates. 
+  
+**Protocol:**
+  
+* Streak strains onto BHI agar plates with 1% yeast extract and 0.5% dextrose
+* Inoculate colonies into 1mL NYC-III media and incubate for 24 hours at 37&deg;C anaerobically (48 hours for strains C0084H9, C0093B3, C0101A1, UM35)
+* Measure OD~600~ of culture are dilute to 0.1 in PBS
+  + If cultures OD~600~ is not greater than or equal to 0.1, back dilute 1:100 and incubate another 24 or 48 hours
+  + Cultures with OD~600~ < 0.1 not used
+* Plate lawns (two technical replicates per culture) onto BHI with 1% yeast extract and 0.5% dextrose
+* Place a metronidazole MIC test strip into center of plate
+* Incubate at 37&deg;C anaerobically for 48 hours
+* Observe MIC as lowest dose where growth is inhibited
+* Perform again for second biological replicate
+
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(cowplot)
+library(formattable)
+`%!in%` <- negate(`%in%`)
+```
+  Short cuts
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+
+strains <- c("14018", "315-A", "C0011E4", "JCP7275", "C0084H9", "JCP8108", "JCP8017B", "C0040C2" , "UM35",  "JCP8066", "C0093B3", "AMD", "C0096A1", "C0102A2",  "UM224", "Gv5-1", "C0179B4", "C0056B5", "Gv101", "C0100B2", "C0101A1", "CMW7778B")
+
+species <- c("Gardnerella vaginalis", "Gardnerella sp. 2", "Gardnerella sp. 3", "Gardnerella piotii", "Gardnerella leopoldii", "Gardnerella swidsinskii", "Gardnerella sp. 7", "Gardnerella sp. 8", "Gardnerella sp. 10", "Gardnerella sp. 11", "Gardnerella sp. 12")
+
+speciesAbbrevs <- c("G. vag", "G. sp. 2", "G. sp. 3", "G. pio.", "G. leo.", "G. swi.", "7", "G. sp. 8", "10", "11", "12")
+
+metroDoses <- c("0.016", "0.023", "0.032", "0.047", "0.064", "0.094", "0.125", "0.19", "0.25", "0.38", "0.50", "0.75", "1.0", "1.5", "2", "3", "4", "6", "8", "12", "16", "24", "32", "48", "64", "96", "128", "192", "256", ">256")
+
+h48Strains <- c("C0084H9", "C0093B3", "C0101A1", "UM35")
+
+figureOut <- "../../experiments_figures"
+```
+
+  Import data
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+
+strainIDs  <- read_csv("./data/strainIDs.csv")
+
+strainODs <-  read_csv("./data/strainODs.csv")
+
+strainMICs <- read_csv("./data/strainMICs.csv")
+
+strainSpecies <- strainIDs %>%
+  select(Strain, Species) %>%
+  unique
+
+```
+
+
+  Plot settings
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+
+theme_set(theme_bw())
+
+speciesColor <- scale_color_manual(values=c("#CC79A7", "#D55E00", "#56B4E9", "#0072B2", "#E69F00", "#009E73", 
+                                                 "darkgreen", "gold3", "darkred", "darkblue",
+                                                 "mediumpurple4"))
+
+speciesFill <- scale_fill_manual(values=c("#CC79A7", "#D55E00", "#56B4E9", "#0072B2", "#E69F00", "#009E73", 
+                                                 "darkgreen", "gold3", "darkred", "darkblue",
+                                                 "mediumpurple4"))
+
+
+```
+
+# Growth QC by Optical Density
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+odDF <- strainODs %>%
+  left_join(strainIDs) %>%
+  with_groups(Strain, mutate, BioRepRank=dense_rank(BioRep)) %>%
+  with_groups(c(Strain, BioRepRank), mutate, ODmeasure=as.character(dense_rank(ODdate))) %>%
+  mutate(incubationPeriod=case_when(Strain %in% h48Strains~"48",
+                                  !(Strain %in% h48Strains)~"24"))
+```
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+xAxisColors0 <- odDF %>%
+  select(Strain, incubationPeriod) %>%
+  unique %>%
+  arrange(Strain) %>%
+  .$incubationPeriod
+xAxisColors <- ifelse(xAxisColors0=="24", "black", "blue")
+
+odDF %>%
+  ggplot(aes(x=Strain, y=OD, color=ODmeasure)) +
+  geom_point(size=3, alpha=0.5) +
+  geom_hline(yintercept=0.1, color="gray", linetype=2) +
+  scale_x_discrete(drop=FALSE) +
+  #scale_shape_manual(values=c(3, 4)) +
+  theme(axis.text.x = element_text(angle=45, hjust=1, color=xAxisColors)) +
+  labs(x=NULL, y="OD600", shape="Biological Replicate")
+```
+
+  Strain names listed in blue are in the 48-hour to stationary phase group. Points in teal indicate 1:100 back dilution in fresh NYC-III media from broth culture and subsequent incubation.
+
+# Metronidazole Minimum Inhibitory Concentrations
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+micDF <- strainMICs %>%
+    left_join(strainIDs)
+
+micDF1 <- micDF %>%
+  filter(MIC != "hard to read",
+         MIC != "unable to read",
+         MIC != "too streaky to read", 
+         MIC != "Streaky") %>%
+  replace_na(list(Notes="None")) %>%
+  with_groups(Strain, mutate, BioRepRank=dense_rank(BioRep)) %>%
+  mutate(MIC=factor(MIC, levels=metroDoses),
+         Strain=factor(Strain, levels=strains),
+         BioRepRank=as.character(BioRepRank), 
+         ColoniesThroughout=str_detect(Notes, "colonies"))
+```
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+micPlot <- micDF1 %>%
+  mutate(Strain=factor(Strain, levels = strains),
+         Species=factor(Species, levels = species)) %>%
+    ggplot(aes(x=Strain, y=MIC, shape=BioRepRank, color=ColoniesThroughout)) +
+    geom_point(size=3, alpha=0.5) +
+    scale_x_discrete(drop=FALSE) +
+    scale_y_discrete(drop=FALSE) +
+    scale_shape_manual(values=c(3, 4, 5, 6)) +
+    scale_color_manual(values = c("black", "blue")) +
+    theme(axis.text.x = element_text(angle=45, hjust=1)) +
+    labs(x=NULL, y="Metronidazole MIC", shape="Biological Replicate", color="Colonies Throughout")
+
+speciesBar <- strainSpecies %>%
+  mutate(Strain=factor(Strain, levels = strains),
+         Species=factor(Species, levels = species),
+         SpeciesLab=factor(Species, levels=species, labels=speciesAbbrevs)) %>%
+  with_groups(Species, mutate, num=rank(Strain)) %>%
+  mutate(SpeciesLab=case_when(num==1~SpeciesLab,
+                              num!=1~"")) %>%
+  ggplot() +
+    geom_bar(aes(x=Strain, y=1, fill=Species), stat="identity", width=1.1) +
+    geom_text(aes(x=Strain, y=0.5, label=SpeciesLab), color="white", hjust = 0.25, size=3) +
+    speciesFill +
+    theme_void() +
+    theme(legend.position = "none")
+
+plot_grid(speciesBar, micPlot, ncol=1, rel_heights = c(0.08, 1),  align = "v", axis = "lr")
+ggsave(file.path(figureOut, paste(Sys.Date(), "Figure6_metro_mic.png", sep="_")))
+```
+
+  The MIC of most strains was >256. Results were reproduced with most strains. UM35 displayed variability among biological replicates. The MIC for biological replicate 1 was >256 and 16 for replicate 2. Two additional biological replicates yielded results between these values: MICs of 24, 64, 96.
+  
+  Points that are labeled in blue are cases where there was no lawn past the MIC but there were colonies. These occurred in two isolates in *Gardnerella* species 2. One of these isolates, C0084H9 displayed one biological replicate with this result and one with an MIC >256. The third species 2 isolate, JCP7275 had an MIC of >256.
+  
+# Missing Replicates
+  Aimed to have two biological replicates with two technical replicates each, but the following isolates have fewer that two biological replicates:
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+s1 <- micDF1 %>%
+  with_groups(Strain, summarize, n=n_distinct(BioRep)) %>%
+  filter(n<2) 
+s1 %>%
+  bind_rows(., list(Strain=setdiff(strainIDs$Strain, micDF1$Strain),n=0)) %>%
+  dplyr::rename("n biological replicates"=n) %>%
+  formattable
+```
+
+Two strains, JCP8017B and C0096A1, have only 1 biological replicate and C0100B2 did not grow well enough to perform the experiment.
+
+
+# Session Info:
+```{r, message=FALSE, warning=FALSE}
+sessionInfo()
+```
