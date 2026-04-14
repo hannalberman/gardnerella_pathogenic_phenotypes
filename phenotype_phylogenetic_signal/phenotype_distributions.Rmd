@@ -1,0 +1,834 @@
+---
+title: "Phenotype Distribution of Gardnerella spp. Strains"
+author: "Spencer Toth"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+  pdf_document: default
+---
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(phylosignal)
+library(broom)
+library(rstatix)
+library(adephylo)
+library(ape)
+library(phylobase)
+library(formattable)
+library(corrplot)
+library(ggbeeswarm)
+library(cowplot)
+library(ggpubr)
+library(grid)
+library(gridGraphics)
+library(ggplot2)
+library(readr) 
+library(dplyr)
+library(tidyr)
+library(patchwork)
+`%!in%` <- negate(`%in%`)
+```
+
+# Import and Prepare input files 
+## Import files and edit strain names 
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+
+strainIDs <- read.csv("/Users/spencertoth/Desktop/Research/gardnerella_phylogenetic_signal/gardnerella_pathogenic_phenotypes/strain_phylogeny/strainIDs.csv", stringsAsFactors = FALSE)
+strainIDs$strain <- as.character(strainIDs$strain)
+
+# Growth Rates
+carrying_capacity_data_file <- read_csv("../formatted_phenotype_data/carrying_capacity.csv")
+growth_rate_data_file <- read_csv("../formatted_phenotype_data/growth_rate.csv")
+
+# Biofilm formation
+percent_biofilm_od_data_file  <- read_csv("../formatted_phenotype_data/percent_biofilm_od.csv")
+safranin_od_data_file <- read_csv("../formatted_phenotype_data/safranin_od.csv")
+
+# Minimum pH Growth
+pH_growth_data_file <- read_csv("../formatted_phenotype_data/pH_growth.csv")
+
+# Metronidazole MIC
+metro_mic_data_file <- read.csv("../formatted_phenotype_data/metro_mic.csv")
+
+
+#Update names with genomospecies 
+update_strain_gs <- function(df) {
+  df %>%
+    mutate(Strain = as.character(Strain)) %>%
+    left_join(select(strainIDs, strain, genomospecies), by = c("Strain" = "strain")) %>%
+    mutate(Strain = paste0(Strain, "_", genomospecies)) %>%
+    select(-any_of(c("genomospecies", "strain")))
+}
+
+# Carrying Capacity 
+carrying_capacity_data_file <- update_strain_gs(carrying_capacity_data_file)
+#n_strains <- length(unique(carrying_capacity_data_file$Strain))
+#n_observations <-length(carrying_capacity_data_file$maxOD)
+
+carrying_capacity_means <- carrying_capacity_data_file %>%
+  mutate(Strain = as.character(Strain)) %>%
+  group_by(Strain) %>%
+  summarise(n_isolates = n(), mean_maxOD = mean(maxOD, na.rm = TRUE), .groups = "drop") %>%
+  arrange(mean_maxOD) %>%
+  mutate(Strain = factor(Strain, levels = Strain)) %>%
+  mutate(n_strains = length(unique(Strain))) 
+
+
+#Growth Rate
+growth_rate_data_file <- update_strain_gs(growth_rate_data_file)
+
+#n_strains <- length(unique(growth_rate_data_file$Strain))
+#n_observations <-length(growth_rate_data_file$mSlope)
+
+growth_rate_means <- growth_rate_data_file %>%
+  mutate(Strain = as.character(Strain)) %>%
+  group_by(Strain) %>%
+  summarise(n_isolates = n(),mean_growth_rate = mean(mSlope, na.rm = TRUE), .groups = "drop") %>%   
+  arrange(mean_growth_rate) %>%
+  mutate(Strain = factor(Strain, levels = Strain)) %>%
+  mutate(n_strains = length(unique(Strain))) 
+
+
+# Percent Biofilm  
+percent_biofilm_od_data_file <- update_strain_gs(percent_biofilm_od_data_file)
+percent_biofilm_transformed <- percent_biofilm_od_data_file %>%
+  mutate(Strain = as.character(Strain),
+        arcsq_mPercentOD = asin(sqrt(mPercentOD/100))) 
+#n_strains <- length(unique(percent_biofilm_transformed$Strain))
+#n_observations <-length(percent_biofilm_transformed$arcsq_mPercentOD)
+percent_biofilm_means <- percent_biofilm_transformed %>%
+  group_by(Strain) %>%
+  summarise(n_isolates = n(), mean_arcsq_mPercentOD = mean(arcsq_mPercentOD, na.rm = TRUE), 
+            .groups = "drop") %>%
+  arrange(mean_arcsq_mPercentOD) %>%
+  mutate(Strain = factor(Strain, levels = Strain)) %>%
+  mutate(n_strains = length(unique(Strain))) 
+
+# Safranin (OD450) 
+safranin_od_data_file <- update_strain_gs(safranin_od_data_file)
+
+#n_strains <- length(unique(safranin_od_data_file$Strain))
+#n_observations <-length(safranin_od_data_file$mSafOD)
+
+safranin_means <- safranin_od_data_file %>%
+  mutate(Strain = as.character(Strain)) %>%
+  group_by(Strain) %>%
+  summarise(n_isolates = n(), mean_safranin_od = mean(mSafOD, na.rm = TRUE), .groups = "drop") %>%  # adjust
+  arrange(mean_safranin_od) %>%
+  mutate(Strain = factor(Strain, levels = Strain)) %>%
+  mutate(n_strains = length(unique(Strain))) 
+
+
+# MDZ-MIC
+metro_mic_data_file <- update_strain_gs(metro_mic_data_file)
+
+metro_mic_filtered <- metro_mic_data_file %>%
+  filter(!grepl("*read",
+                MIC, ignore.case = TRUE)) %>%
+  mutate(MIC = case_when(
+    grepl("^>256$", MIC) ~ 257,  # Numeric 257, not string "257"
+    TRUE ~ as.numeric(MIC)       # Convert all to numeric
+  )) %>%
+  filter(!is.na(MIC)) %>%
+  mutate(n_strains = length(unique(Strain)))
+
+#n_strains <- length(unique(metro_mic_filtered$Strain))
+#n_observations <-length(metro_mic_filtered$MIC)
+
+mic_means <- metro_mic_filtered %>%
+  mutate(Strain = as.character(Strain)) %>%
+  group_by(Strain) %>%
+  summarise(n_isolates = n(), mean_mic = mean(MIC, na.rm = TRUE), .groups = "drop") %>%  # adjust
+  arrange(mean_mic) %>%
+  mutate(Strain = factor(Strain, levels = Strain))
+
+
+mic_numeric <- metro_mic_filtered %>%
+  mutate(
+    MIC_num = case_when(
+      grepl("^>256$", MIC) ~ 257,
+      grepl("^[0-9]+$", MIC) ~ as.numeric(MIC),
+      TRUE ~ NA_real_
+    ),
+    MIC_original = case_when(
+      MIC_num == 257 ~ ">256",
+      TRUE ~ ifelse(is.na(MIC_num), MIC, as.character(MIC_num))
+    ),
+    resistant = MIC_num >= 32
+  ) %>%
+  filter(!is.na(MIC_num))
+
+
+mic_plot_data <- mic_numeric  
+
+strain_counts <- mic_plot_data %>%
+  count(Strain, sort = FALSE) %>%  
+  arrange(n)  # sort least to greatest
+mic_plot_data$Strain_sorted <- factor(mic_plot_data$Strain, 
+                                     levels = strain_counts$Strain)
+
+
+# Calculate MIC90 per strain (90th percentile of MIC values)
+mic90_results <- mic_numeric %>%
+  group_by(Strain) %>%
+  summarise(
+    n_isolates = n(),
+    MIC50 = round(quantile(MIC_num, 0.5, na.rm = TRUE), 1),
+    MIC90 = round(quantile(MIC_num, 0.9, na.rm = TRUE), 1),
+    isolates_ge_MIC90 = sum(MIC_num >= MIC90, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  arrange(desc(MIC90))
+
+mic90_results
+
+
+# Before/after MIC filtering
+total_original <- nrow(metro_mic_data_file)
+cat("Total MIC observations:", total_original, "\n")
+
+filtered_out <- metro_mic_data_file %>%
+  filter(grepl("*read",
+               MIC, ignore.case = TRUE)) %>%
+  count(Strain, sort = TRUE) %>%
+  mutate(n_filtered = n)
+
+total_filtered <- sum(filtered_out$n_filtered)
+cat("Total MIC observations filtered out:", total_filtered, "\n")
+cat("Remaining MIC observations:", total_original - total_filtered, "\n\n")
+print(filtered_out)
+
+# Create binarized dataframe from mic_numeric (MIC >=32 = 1, <32 = 0)
+mic_binarized <- mic_numeric %>%
+  mutate(
+    MIC_binary = case_when(
+      MIC_num >= 32 ~ 1,    # Resistant
+      MIC_num < 32 ~ 0,     # Susceptible
+      TRUE ~ NA_real_
+    ),
+    MIC_original = case_when(
+      MIC_num == 257 ~ ">256",
+      TRUE ~ as.character(MIC_num)
+    )
+  ) %>%
+  filter(!is.na(MIC_binary))
+
+# Verify binary distribution
+table(mic_binarized$MIC_binary, useNA = "always")
+prop.table(table(mic_binarized$MIC_binary))
+
+
+# Mean binary resistance per strain
+resistance_means <- mic_binarized %>%
+  group_by(Strain) %>%
+  summarise(
+    prop_resistant = mean(MIC_binary),
+    n_isolates = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(Strain = factor(Strain, levels = Strain[order(prop_resistant)]))
+resistance_means_sorted <- resistance_means[order(resistance_means$n_isolates), ]
+print(resistance_means_sorted)
+```
+### MDZ-MIC Threshold Reference 
+
+Landlinger C, Oberbauer V, Podpera Tisakova L, Schwebs T, Berdaguer R, Van Simaey L, Vaneechoutte M, Corsini L. 2022. Preclinical Data on the Gardnerella-Specific Endolysin PM-477 Indicate Its Potential to Improve the Treatment of Bacterial Vaginosis through Enhanced Biofilm Removal and Avoidance of Resistance. Antimicrob Agents Chemother 66:e02319-21.
+https://doi.org/10.1128/aac.02319-21
+
+> “However, topical intravaginal antibiotic administration is recommended for BV therapy, which allows the drugs to reach concentrations of active ingredients in the mg/mL range. Therefore, in this study, we used resistance breakpoints of ≥8μg/mL and ≥32μg/mL for CLI and MDZ, respectively, as previously described for BV-related bacteria" 
+
+Petrina MAB, Cosentino LA, Rabe LK, Hillier SL. 2017. Susceptibility of bacterial vaginosis (BV)-associated bacteria to secnidazole compared to metronidazole, tinidazole and clindamycin. Anaerobe 47:115–119. 
+
+> "Gardnerella vaginalis (128; 64; 32)" MIC90 = 32 μg/mL 
+
+
+### Using t-test to identify the minimum pH value where non-zero growth (OD600 >0.01) occurred for each strain
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+pH_growth_data <- pH_growth_data_file %>%
+  group_by(Strain, pH) %>%
+  t_test(mOD ~ 1, mu = 0.01, alternative = "greater") %>%
+  add_significance("p") %>%
+  filter(p.signif != "ns") %>%
+  mutate(n_strains = length(unique(Strain))) %>%
+  group_by(Strain) %>%
+  arrange(pH) %>%
+  filter(pH == min(pH)) %>%
+  mutate(pH = as.numeric(pH)) 
+
+ph_vector <- setNames(pH_growth_data$pH, pH_growth_data$Strain)
+ph_range <- range(ph_vector, na.rm = TRUE)
+ph_cv <- (sd(ph_vector) / mean(ph_vector))  
+cat("pH_growth_data")
+cat("Mean: ", mean(ph_vector), "\n")
+cat("SD: ", sd(ph_vector), "\n")
+cat("CV: ", ph_cv, "\n")
+
+
+pH_growth_data <- update_strain_gs(pH_growth_data) 
+pH_growth_data <- pH_growth_data %>%
+    mutate(n_isolates = n()) 
+pH_growth_data <- pH_growth_data[order(pH_growth_data$pH), ] 
+#n_strains <- length(unique(pH_growth_data$Strain))
+#n_observations <-length(pH_growth_data$pH)
+```
+# Plot replicate information for each strains (Count, Observed Values and Average per Strain)
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+
+# Carrying Capacity 
+# Replicate values and averages per strain 
+p1 <- ggplot(carrying_capacity_data_file, aes(x = Strain, y = maxOD)) +
+  geom_jitter(width = 0.1, height = 0, alpha = 0.7) +
+  geom_crossbar(data = carrying_capacity_means, aes(y = mean_maxOD, ymin = mean_maxOD, ymax = mean_maxOD),
+                width = 0.5, colour = "red", size = 0.8) +
+  ggtitle("Carrying Capacity", subtitle = paste0("n = ", carrying_capacity_means$n_strains[1], " strains")) +
+  labs(y = "OD600") +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1),
+        plot.title = element_text(hjust = 0.5, size = 14, face = "bold"))
+
+#Growth Rate
+# Replicate values and averages per strain 
+p2 <- ggplot(growth_rate_data_file, aes(x = Strain, y = mSlope)) +   
+  geom_jitter(width = 0.1, height = 0, alpha = 0.7) +
+  geom_crossbar(data = growth_rate_means, aes(y = mean_growth_rate, ymin = mean_growth_rate, ymax = mean_growth_rate),
+                width = 0.5, colour = "red", size = 0.8) +
+  ggtitle("Exponential Growth Rate", subtitle = paste0("n = ", growth_rate_means$n_strains[1], " strains")) +
+  labs(y = "μ/hour") +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1),
+        plot.title = element_text(hjust = 0.5, size = 14, face = "bold"))
+
+# Percent Biofilm  
+p3 <- ggplot(percent_biofilm_transformed, aes(x = Strain, y = arcsq_mPercentOD)) +
+  geom_jitter(width = 0.1, height = 0, alpha = 0.7) +
+  geom_crossbar(data = percent_biofilm_means, 
+                aes(y = mean_arcsq_mPercentOD, ymin = mean_arcsq_mPercentOD, ymax = mean_arcsq_mPercentOD),
+                width = 0.5, colour = "red", size = 0.8) +
+  ggtitle("Biofilm Formation", subtitle = paste0("n = ", percent_biofilm_means$n_strains[1], " strains")) +
+  labs(y = "Arcsin√(% Biofilm)") +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1),
+        plot.title = element_text(hjust = 0.5, size = 14, face = "bold")) 
+
+# Safranin (OD450) 
+p4 <- ggplot(safranin_od_data_file, aes(x = Strain, y = mSafOD)) +  
+  geom_jitter(width = 0.1, height = 0, alpha = 0.7) +
+  geom_crossbar(data = safranin_means, aes(y = mean_safranin_od, ymin = mean_safranin_od, ymax = mean_safranin_od),
+                width = 0.5, colour = "red", size = 0.8) +
+  ggtitle("Biofilm Density", subtitle = paste0("n = ", safranin_means$n_strains[1], " strains")) +
+  labs(y = "Safranin OD450") +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1),
+        plot.title = element_text(hjust = 0.5, size = 14, face = "bold")) 
+
+# Minimum pH Growth
+p5 <- ggplot(pH_growth_data, aes(x = reorder(Strain, pH), y = pH)) +  
+  geom_jitter(width = 0.1, height = 0, alpha = 0.7, size = 2) +
+  ggtitle("Lowest pH (3.5–6) with OD600 ≥ 0.01", subtitle = paste0("n = ", pH_growth_data$n_strains[1], " strains")) +
+  labs(y = "pH") +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1),
+        plot.title = element_text(hjust = 0.5, size = 14, face = "bold")) 
+
+# MDZ-MIC
+p6 <- ggplot(metro_mic_filtered, aes(x = Strain, y = MIC)) +
+  geom_jitter(width = 0.1, height = 0, alpha = 0.7) +
+  geom_crossbar(data = mic_means, aes(y = mean_mic, ymin = mean_mic, ymax = mean_mic),
+                width = 0.5, colour = "red", size = 0.8) +
+  ggtitle("Metronidazole Susceptibility", subtitle = paste0("n = ", metro_mic_filtered$n_strains[1], " strains")) +
+  labs(y = "Minimum Inhibition Concentration (MIC)") +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1),
+        plot.title = element_text(hjust = 0.5, size = 14, face = "bold"))
+
+p7 <- ggplot(mic_plot_data, 
+                     aes(x = Strain_sorted, y = MIC_num, fill = resistant)) +
+  geom_jitter(width = 0.2, height = 0, shape = 21, size = 3.5, 
+              alpha = 0.7, stroke = 0.4, color = "black") +
+  geom_hline(yintercept = 32, linetype = "dashed", color = "red", size = 1.2) +
+  scale_fill_manual(values = c("FALSE" = "blue", "TRUE" = "red"), 
+                    name = "MIC ≥32", labels = c("Susceptible", "Resistant")) +
+  scale_y_log10() +
+  labs(title = "Individual MIC Values by Gardnerella Strain (n=22)",
+       subtitle = "Red dashed = 32 µg/mL resistance cutoff",
+       x = "Strain", y = "MIC (µg/mL)") +
+  theme_bw() +
+  theme(axis.text.x = element_text(size = 9, angle = 90, hjust = 1),
+        plot.title = element_text(hjust = 0.5, size = 14, face = "bold"))
+
+# Plot: mean binary resistance per strain
+p8 <- ggplot(resistance_means_sorted,
+                             aes(reorder(Strain, n_isolates), y = prop_resistant,
+                                 fill = prop_resistant > 0.5)) +
+  geom_hline(yintercept = 0.5, linetype = "dashed", color = "black", size = 1.2) +
+  geom_point(shape = 21, size = 4, alpha = 1.0, stroke = 0.5) +
+  scale_fill_manual(values = c("FALSE" = "blue", "TRUE" = "red"),
+                    name = "Mean Binarized MIC Value", labels = c("≤0.5", ">0.5")) +
+  scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1)) +
+  labs(title = "MDZ Susceptibility: Average of Binarized MIC", 
+       subtitle = ">=32µg/mL MIC = 1 (Resistant) and <32µg/mL MIC = 0 (Susceptible), n strains = 22",
+       x = "Strain", y = "Average of Binarized MIC") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 9, angle = 90, hjust = 1),
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold")
+  )
+
+
+# Number of replicates per strain 
+p9 <- ggplot(carrying_capacity_means,
+             aes(x = reorder(Strain, n_isolates), y = n_isolates)) +   
+  geom_col(fill = "gray", alpha = 0.8, color = "black", size = 0.2) +
+  geom_text(stat = "summary", fun = "sum", 
+            aes(label = after_stat(y), vjust = -0.3),
+            size = 3.5, fontface = "bold", color = "black") +
+    scale_y_continuous(limits = c(0, 6),
+                     breaks = seq(0, 6, by = 1),
+                     expand = expansion(mult = c(0, 0.15))) + 
+  labs(title = "Carrying Capacity", 
+       subtitle = paste0("Measured as max OD600 over incubation period; ", "n = ", carrying_capacity_means$n_strains[1], " strains"),
+       x = "Strain", 
+       y = "Replicate Count") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 9, angle = 90, hjust = 1),
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+    axis.text.y = element_text(size = 10)
+  )
+
+
+# Number of replicates per strain 
+p10 <- ggplot(growth_rate_means,
+             aes(x = reorder(Strain, n_isolates), y = n_isolates)) +   
+  geom_col(fill = "gray", alpha = 0.8, color = "black", size = 0.2) +
+  geom_text(stat = "summary", fun = "sum", 
+            aes(label = after_stat(y), vjust = -0.3),
+            size = 3.5, fontface = "bold", color = "black") +
+    scale_y_continuous(limits = c(0, 6),
+                     breaks = seq(0, 6, by = 1),
+                     expand = expansion(mult = c(0, 0.15))) + 
+  labs(title = "Exponential Growth Rate", 
+       subtitle = paste0("n = ", growth_rate_means$n_strains[1], " strains"),
+       x = "Strain", 
+       y = "Replicate Count") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 9, angle = 90, hjust = 1),
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+    axis.text.y = element_text(size = 10)
+  )
+
+
+
+p11 <- ggplot(percent_biofilm_means,
+             aes(x = reorder(Strain, n_isolates), y = n_isolates)) +   
+  geom_col(fill = "gray", alpha = 0.8, color = "black", size = 0.2) +
+  geom_text(stat = "summary", fun = "sum", 
+            aes(label = after_stat(y), vjust = -0.3),
+            size = 3.5, fontface = "bold", color = "black") +
+    scale_y_continuous(limits = c(0, 6),
+                     breaks = seq(0, 6, by = 1),
+                     expand = expansion(mult = c(0, 0.15))) + 
+  labs(title = "Biofilm Formation (Arcsin√(% Biofilm))", 
+       subtitle = paste0("n = ", percent_biofilm_means$n_strains[1], " strains"),
+       x = "Strain", 
+       y = "Replicate Count") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 9, angle = 90, hjust = 1),
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+    axis.text.y = element_text(size = 10)
+  )
+
+
+p12 <- ggplot(safranin_means,
+             aes(x = reorder(Strain, n_isolates), y = n_isolates)) +   
+  geom_col(fill = "gray", alpha = 0.8, color = "black", size = 0.2) +
+  geom_text(stat = "summary", fun = "sum", 
+            aes(label = after_stat(y), vjust = -0.3),
+            size = 3.5, fontface = "bold", color = "black") +
+    scale_y_continuous(limits = c(0, 6),
+                     breaks = seq(0, 6, by = 1),
+                     expand = expansion(mult = c(0, 0.15))) + 
+  labs(title = "Biofilm Density (Safranin OD450)", 
+       subtitle = paste0("n = ", safranin_means$n_strains[1], " strains"),
+       x = "Strain", 
+       y = "Replicate Count") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 9, angle = 90, hjust = 1),
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+    axis.text.y = element_text(size = 10)
+  )
+
+p13 <- ggplot(resistance_means_sorted,
+             aes(x = reorder(Strain, n_isolates), y = n_isolates)) +   
+  geom_col(fill = "gray", alpha = 0.8, color = "black", size = 0.2) +
+  geom_text(stat = "summary", fun = "sum", 
+            aes(label = after_stat(y), vjust = -0.3),
+            size = 3.5, fontface = "bold", color = "black") +
+   scale_y_continuous(limits = c(0, 6),
+                     breaks = seq(0, 6, by = 1),
+                     expand = expansion(mult = c(0, 0.15))) + 
+  labs(title = "Metronidazole (MDZ) Minimum Inhibition Concentration (MIC)", 
+       subtitle = paste0("n = ", metro_mic_filtered$n_strains[1], " strains"),
+       x = "Strain", 
+       y = "Replicate Count") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 9, angle = 90, hjust = 1),
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+    axis.text.y = element_text(size = 10)
+  )
+
+
+p14 <- ggplot(pH_growth_data,
+             aes(x = reorder(Strain, n_isolates), y = n_isolates)) +   
+  geom_col(fill = "gray", alpha = 0.8, color = "black", size = 0.2) +
+  geom_text(stat = "summary", fun = "sum", 
+            aes(label = after_stat(y), vjust = -0.3),
+            size = 3.5, fontface = "bold", color = "black") +
+  scale_y_continuous(limits = c(0, 6),
+                     breaks = seq(0, 6, by = 1),
+                     expand = expansion(mult = c(0, 0.15))) + 
+  labs(title = "Minimum pH with Growth", 
+       subtitle = paste0("Lowest pH (3.5–6) with OD600 ≥ 0.01; ", "n = ", pH_growth_data$n_strains[1], " strains"),
+       x = "Strain", 
+       y = "Replicate Count") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 9, angle = 90, hjust = 1),
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+    axis.text.y = element_text(size = 10)
+  )
+
+
+# View plots
+p1; p2; p3; p4; p5; p6; p7; p8; p9; p10; p11; p12; p13; p14
+
+
+combined_plot <- (p1 | p2 | p3) / (p4 | p6 | p5) + 
+  #plot_annotation(title = "Individual and Averaged Replicate Values") +
+  plot_layout(guides = "collect") &
+ # theme(plot.title = element_text(size = 14, face = "bold", hjust = 0.5)) &  
+  theme(
+    plot.title    = element_text(size = 12, face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(size = 8, hjust = 0.5),
+    axis.text.x   = element_text(size = 8, colour = "black", face = "bold"),
+    axis.text.y   = element_text(size = 8, colour = "black", face = "bold"),
+    axis.title    = element_text(size = 9, face = "bold"),
+    plot.margin   = margin(6, 6, 6, 6)
+  )
+
+print(combined_plot)
+ggsave("strain_phenotype_averages.png", 
+       plot = combined_plot, 
+       width = 14, height = 10, 
+       dpi = 400, 
+       bg = "white")
+
+combined_plot <- (p9 | p10 | p11) / (p12 | p13 | p14) + 
+  #plot_annotation(title = "Replicate Count per Gardnerella Strain") + 
+  plot_layout(guides = "collect") &
+  theme(
+    plot.title    = element_text(size = 12, face = "bold", hjust = 0.5),
+    #plot.annotation.title = element_text(size = 12, face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(size = 8, hjust = 0.5),
+    axis.text.x   = element_text(size = 8, colour = "black", face = "bold"),
+    axis.text.y   = element_text(size = 8, colour = "black", face = "bold"),
+    axis.title    = element_text(size = 9, face = "bold"),
+    plot.margin   = margin(6, 6, 6, 6)
+  )
+
+print(combined_plot)
+ggsave("strain_phenotype_replicate_numbers.png", 
+       plot = combined_plot, 
+       width = 14, height = 10, 
+       dpi = 400, 
+       bg = "white")
+```
+
+# Average the phenotype values across replicates per strain  
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+carrying_capacity_data <- carrying_capacity_data_file %>%
+  mutate(Strain = as.character(Strain)) %>%
+  group_by(Strain) %>% summarise(mean_maxOD = mean(maxOD, na.rm = TRUE))
+
+cc_vector <- setNames(carrying_capacity_data$mean_maxOD, carrying_capacity_data$Strain)
+cc_range <- range(cc_vector, na.rm = TRUE)
+cc_cv_between <- (sd(cc_vector) / mean(cc_vector)) 
+cat("\ncarrying_capacity_data\n")
+cat("Mean: ", mean(cc_vector), "\n")
+cat("SD: ", sd(cc_vector), "\n")
+cat("CV: ", cc_cv_between, "\n")
+
+
+growth_rate_data <- growth_rate_data_file %>%
+  mutate(Strain = as.character(Strain)) %>%
+  group_by(Strain) %>% summarise(mean_mSlope = mean(mSlope, na.rm = TRUE))
+gr_vector <- setNames(growth_rate_data$mean_mSlope, growth_rate_data$Strain)
+gr_range <- range(gr_vector, na.rm = TRUE)
+gr_cv_between <- (sd(gr_vector) / mean(gr_vector)) 
+cat("\ngrowth_rate_data\n")
+cat("Mean: ", mean(gr_vector), "\n")
+cat("SD: ", sd(gr_vector), "\n")
+cat("CV: ", gr_cv_between, "\n")
+
+# Transform percent_biofilm by applying asin(sqrt(x))
+percent_biofilm_od_data <- percent_biofilm_od_data_file %>%
+  mutate(Strain = as.character(Strain),
+         arcsq_mPercentOD = asin(sqrt(mPercentOD/100))) %>%
+  group_by(Strain) %>% 
+  summarise(mean_arcsq_mPercentOD = mean(arcsq_mPercentOD, na.rm = TRUE))   
+pb_vector <- setNames(percent_biofilm_od_data$mean_arcsq_mPercentOD, percent_biofilm_od_data$Strain)
+pb_range <- range(pb_vector, na.rm = TRUE)
+pb_cv_between <- (sd(pb_vector) / mean(pb_vector)) 
+cat("\npercent_biofilm_od_data\n")
+cat("Mean: ", mean(pb_vector), "\n")
+cat("SD: ", sd(pb_vector), "\n")
+cat("CV: ", pb_cv_between, "\n")
+
+safranin_od_data <- safranin_od_data_file %>%
+  mutate(Strain = as.character(Strain)) %>%
+  group_by(Strain) %>% summarise(mean_mSafOD = mean(mSafOD, na.rm = TRUE))
+sf_vector <- setNames(safranin_od_data$mean_mSafOD, safranin_od_data$Strain)
+sf_range <- range(sf_vector, na.rm = TRUE)
+sf_cv_between <- (sd(sf_vector) / mean(sf_vector)) 
+cat("\nsafranin_od_data\n")
+cat("Mean: ", mean(sf_vector), "\n")
+cat("SD: ", sd(sf_vector), "\n")
+cat("CV: ", sf_cv_between, "\n")
+
+# MIC: Mean binary resistance per strain
+mic_data <- metro_mic_data_file %>%
+   filter(!grepl("*read",
+                 MIC, ignore.case = TRUE)) %>%
+  mutate(
+    Strain = as.character(Strain),
+    MIC_binary = case_when(
+      grepl("^>256$", MIC) ~ 1,
+      grepl("^[0-9]+$", MIC) & as.numeric(MIC) >= 32 ~ 1,
+      TRUE ~ 0
+    )
+  ) %>%
+  group_by(Strain) %>%
+  summarise(
+    mean_MIC_binary = mean(MIC_binary, na.rm = TRUE),
+    n_isolates = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    Strain = factor(Strain, levels = Strain[order(mean_MIC_binary)])   
+  )
+
+mic_vector <- setNames(mic_data$mean_MIC_binary, mic_data$Strain)
+mic_range <- range(mic_vector, na.rm = TRUE)
+
+mic_cv_between <- sd(mic_vector) / mean(mic_vector)
+
+cat("\nmic_data\n")
+cat("Mean: ", mean(mic_vector), "\n")
+cat("SD: ", sd(mic_vector), "\n")
+cat("CV: ", mic_cv_between, "\n")
+```
+
+### Rename complete-numeric strains (e.g. 14018)  
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+# Strain 14018 not present in: pb_vector, sf_vector (did not pass QC for these experiments)
+vecs <- list(ph=ph_vector, cc=cc_vector, gr=gr_vector, mic=mic_vector)
+vecs[] <- lapply(vecs, function(v) {
+  idx <- names(v) == "14018"   
+  if(any(idx)) names(v)[idx] <- "S14018"   
+  v
+})
+
+({cc_vector<<-vecs$cc; gr_vector<<-vecs$gr; ph_vector<<-vecs$ph; mic_vecotr<<-vecs$mic})
+names(ph_vector)
+```
+
+# Phenotype Distribution Visualizations
+```{r, message=FALSE, warning=FALSE}
+# Okabe–Ito palette  
+# Orange       #E69F00
+# Sky blue     #56B4E9
+# Bluish green #009E73
+# Yellow       #F0E442
+# Blue         #0072B2
+# Vermillion   #D55E00
+# Reddish purp #CC79A7
+# Grey         #999999
+# Black        #000000
+
+p1 <- ggplot(carrying_capacity_data, aes(x = mean_maxOD)) +
+  geom_histogram(binwidth = 0.1, color = "black", fill = "#0072B2") +  # blue
+  geom_text(
+    stat = "bin", binwidth = 0.1,
+    aes(label = ifelse(after_stat(count) == 0, "", after_stat(count))),
+    position = position_stack(vjust = 0.8),
+    color = "black", size = 5
+  ) +
+  coord_cartesian(xlim = c(cc_range[1] - 0.05, cc_range[2] + 0.05)) +
+  scale_x_continuous(breaks = seq(0, 1, by = 0.10), labels = function(x) round(x, 2)) +
+  labs(
+    title    = "Carrying Capacity",
+   subtitle = "Measured as max OD600 over incubation period; n = 22",
+    x        = "Average Max OD600",
+    y        = "Number of Strains"
+  ) +
+  theme(
+    axis.text.x   = element_text(size = 11, colour = "black"),
+    axis.text.y   = element_text(size = 11, colour = "black"),
+    plot.title    = element_text(hjust = 0.5, size = 14, face = "bold"),
+    plot.subtitle = element_text(hjust = 0.5)
+  )
+
+p2 <- ggplot(growth_rate_data, aes(x = mean_mSlope)) +
+  geom_histogram(binwidth = 0.1, color = "black", fill = "#E69F00") +  # orange
+  geom_text(
+    stat = "bin", binwidth = 0.1,
+    aes(label = ifelse(after_stat(count) == 0, "", after_stat(count))),
+    position = position_stack(vjust = 0.8),
+    color = "black", size = 5
+  ) +
+  coord_cartesian(xlim = c(gr_range[1] - 0.05, gr_range[2] + 0.05)) +
+  scale_x_continuous(breaks = seq(0, 1, by = 0.10), labels = function(x) round(x, 2)) +
+  labs(
+    title    = "Exponential Growth Rate",
+    subtitle = "n = 22",
+    x        = "Average Exponential Growth Rate",
+    y        = "Number of Strains"
+  ) +
+  theme(
+    axis.text.x   = element_text(size = 11, colour = "black"),
+    axis.text.y   = element_text(size = 11, colour = "black"),
+    plot.title    = element_text(hjust = 0.5, size = 14, face = "bold"),
+    plot.subtitle = element_text(hjust = 0.5)
+  )
+
+p3 <- ggplot(pH_growth_data, aes(x = pH)) +
+  geom_histogram(binwidth = 0.5, color = "black", fill = "#009E73") +  # bluish green
+  geom_text(
+    stat = "bin", binwidth = 0.5,
+    aes(label = ifelse(after_stat(count) == 0, "", after_stat(count))),
+    position = position_stack(vjust = 0.8),
+    color = "black", size = 5
+  ) +
+  coord_cartesian(xlim = c(ph_range[1] - 0.1, ph_range[2] + 0.1)) +
+  scale_x_continuous(breaks = seq(3, 6, by = 0.5), labels = function(x) round(x, 1)) +
+  labs(
+    title    = "Minimum pH with Growth",
+    subtitle = "Lowest pH (3.5–6) with OD600 ≥ 0.01; n = 22",
+    x        = "Average Minimum pH",
+    y        = "Number of Strains"
+  ) +
+  theme(
+    axis.text.x   = element_text(size = 11, colour = "black"),
+    axis.text.y   = element_text(size = 11, colour = "black"),
+    plot.title    = element_text(hjust = 0.5, size = 14, face = "bold"),
+    plot.subtitle = element_text(hjust = 0.5)
+  )
+
+p4 <- ggplot(percent_biofilm_od_data, aes(x = mean_arcsq_mPercentOD)) +
+  geom_histogram(binwidth = 0.1, color = "black", fill = "#D55E00") +  # vermillion
+  geom_text(
+    stat = "bin", binwidth = 0.1,
+    aes(label = ifelse(after_stat(count) > 0, after_stat(count), "")),
+    position = position_stack(vjust = 0.8),
+    color = "black", size = 4
+  ) +
+  coord_cartesian(xlim = c(pb_range[1] - 0.1, pb_range[2] + 0.1)) +
+  scale_x_continuous(breaks = seq(0.5, 1.5, by = 0.10), labels = function(x) round(x, 2)) +
+  labs(
+    title    = "Biofilm Formation",
+   subtitle = paste("n =", nrow(percent_biofilm_od_data)),
+    x        = "Average Arcsine-Sqrt(Percent Biofilm)",
+    y        = "Number of Strains"
+  ) +
+  theme(
+    axis.text.x   = element_text(size = 11, colour = "black"),
+    axis.text.y   = element_text(size = 11, colour = "black"),
+    plot.title    = element_text(hjust = 0.5, size = 14, face = "bold"),
+    plot.subtitle = element_text(hjust = 0.5)
+  )
+
+p5 <- ggplot(safranin_od_data, aes(x = mean_mSafOD)) +
+  geom_histogram(binwidth = 0.1, color = "black", fill = "#CC79A7") +  # reddish purple
+  geom_text(
+    stat = "bin", binwidth = 0.1,
+    aes(label = ifelse(after_stat(count) == 0, "", after_stat(count))),
+    position = position_stack(vjust = 0.8),
+    color = "black", size = 5
+  ) +
+  coord_cartesian(xlim = c(sf_range[1] - 0.1, sf_range[2] + 0.1)) +
+  #scale_x_continuous(breaks = pretty(sf_range, n = 10), labels = function(x) round(x, 2)) +
+  scale_x_continuous(breaks = seq(0, 0.5, by = 0.10), labels = function(x) round(x, 2)) +
+  labs(
+    title    = "Biofilm Density",
+    subtitle = "n = 21",
+    x        = "Average Safranin Stain OD450",
+    y        = "Number of Strains"
+  ) +
+  theme(
+    axis.text.x   = element_text(size = 11, colour = "black"),
+    axis.text.y   = element_text(size = 11, colour = "black"),
+    plot.title    = element_text(hjust = 0.5, size = 14, face = "bold"),
+    plot.subtitle = element_text(hjust = 0.5)
+  )
+
+p6 <- ggplot(mic_data, aes(x = mean_MIC_binary)) +
+  geom_histogram(
+    binwidth = 0.1,
+    color    = "black",
+    fill     = "#F0E442",    
+    boundary = 0.05
+  ) +
+  geom_text(
+    stat     = "bin",
+    binwidth = 0.1,
+    aes(label = ifelse(after_stat(count) == 0, "", after_stat(count))),
+    position = position_stack(vjust = 0.65),
+    hjust    = 0.6,
+    color    = "black",
+    size     = 4.5
+  ) +
+  coord_cartesian(xlim = c(0, 1)) +
+  scale_x_continuous(breaks = seq(0, 1, by = 0.10), labels = function(x) round(x, 2)) +
+  labs(
+    title    = "MDZ Susceptibility",
+    subtitle = "≥32 µg/mL MIC → 1 (Resistant), <32 µg/mL MIC → 0 (Susceptible); n strains = 22",
+    x        = "Average of Binarized MIC Across Strain Isolates",
+    y        = "Number of Strains"
+  ) +
+  theme(
+    axis.text.x   = element_text(size = 11, colour = "black"),
+    axis.text.y   = element_text(size = 11, colour = "black"),
+    plot.title    = element_text(hjust = 0.5, size = 14, face = "bold"),
+    plot.subtitle = element_text(hjust = 0.5)
+  )
+
+print(p1); print(p2); print(p3); print(p4); print(p5); print(p6)
+
+
+```
+
+```{r, message=FALSE, warning=FALSE}
+combined_plot <- (p1 | p2 | p4) / (p5 | p6 | p3) + 
+  plot_layout(guides = "collect") &
+  theme(
+    plot.title    = element_text(size = 12, face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(size = 8, hjust = 0.5, colour = "black", face = "bold"),
+    axis.text.x   = element_text(size = 8, colour = "black", face = "bold"),
+    axis.text.y   = element_text(size = 8, colour = "black", face = "bold"),
+    axis.title    = element_text(size = 9, face = "bold"),
+    plot.margin   = margin(6, 6, 6, 6)
+  )
+combined_plot
+print(combined_plot)
+ggsave("strain_phenotype_histograms.png", 
+       plot = combined_plot, 
+       width = 14, height = 10, 
+       dpi = 400, 
+       bg = "white")
+```

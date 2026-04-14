@@ -1,170 +1,1016 @@
 ---
-title: "Testing Phylogenetic Signal in Phenotypic Data"
-output: html_document
+title: "Testing Phylogenetic Signal in Garderella Phenotypic Data"
+author: "Spencer Toth"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+  pdf_document: default
 ---
 
 **Purpose:**
   To assess phylogenetic association of *Gardnerella* phenotypes related to pathogenicity.
+  
+**Overview**
+  For each observed phenotype across 22 Gardnerella spp. strains, phylosignal (v1.3.1) was implemented to conduct Moran's I and Pagel's Lambda tests to assess for phylogenetic signal. The original maximum likelihood (ML) phylogenetic tree was used for Moran's I tests across phenotypes and for Pagel's Lambda the ML tree was converted to an ultrametric tree using the chronoMPL function from the R package ape (v5.8.1). Statistical signficance was determined using package's default permutation test for Moran's I, and Likelihood Ratio Test (LRT) for Pagel's Lambda; an additional custom random permutation test was implemented for Pagel's Lambda values. 
 
-  Packages
+# Load R Packages
 ```{r, message=FALSE, warning=FALSE}
-library(tidyverse)
+library(readr)
+library(tidyverse)    
+library(ggtree)
+library(phylosignal)
+library(adephylo)
 library(ape)
-library(rstatix)
-
+library(phylobase)
+library(ggbeeswarm)
+library(cowplot)
+library(ggpubr)
+library(patchwork)
+library(phytools)
+library(gridExtra)
+library(knitr)
+library(gtsummary)
+library(gt)
+library(dplyr)
+library(tibble)
 `%!in%` <- negate(`%in%`)
 ```
 
-  Phenotype data
-```{r}
-# Growth Rates
-growth_rate_DF <- read_csv("../formatted_phenotype_data/growth_rate.csv")
-carrying_capacity_DF <- read_csv("../formatted_phenotype_data/carrying_capacity.csv")
+# Import: Phylogeny + Phenotype
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+# Full, Rooted Phylogenetic tree 
+tr <- read.tree("../strain_phylogeny/rootedGardPhylogeny_noOutgroup.tre")
+is.rooted(tr)
 
-# Biofilm formation
-percent_biofilm_od_DF <- read_csv("../formatted_phenotype_data/percent_biofilm_od.csv")
-safranin_od_DF <- read_csv("../formatted_phenotype_data/safranin_od.csv")
+# Phenotype files 
+growth_rate_data_file <- read_csv("../formatted_phenotype_data/growth_rate.csv")
+car_cap_data_file <- read_csv("../formatted_phenotype_data/carrying_capacity.csv")
+percent_biofilm_od_data_file  <- read_csv("../formatted_phenotype_data/percent_biofilm_od.csv")
+safranin_od_data_file <- read_csv("../formatted_phenotype_data/safranin_od.csv")
 
-# Growth over pH
-pH_growth_DF <- read_csv("../formatted_phenotype_data/pH_growth.csv")
-
-# Metronidazole pH
-metro_mic_DF <- read_csv("../metronidazole_mic/data/strainMICs.csv")
+# Strain IDs + genomospecies 
+strainIDs <- read.csv("../strain_phylogeny/strainIDs.csv", stringsAsFactors = FALSE)
 ```
 
-  Short cuts
-```{r}
-strains <- c("14018", "315-A", "C0011E4", "JCP7275", "C0084H9", "JCP8108", "JCP8017B", "C0040C2" , "UM35",  "JCP8066", "C0093B3", "AMD", "C0096A1", "C0102A2",  "UM224", "Gv5-1", "C0179B4", "C0056B5", "Gv101", "C0100B2", "C0101A1", "CMW7778B")
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+# Rename tree nodes to match strain names in strain-phenotype data 
+numeric_tips <- tr$tip.label[tr$tip.label %in% c("101", "5-1")]
+tr$tip.label[match(numeric_tips, tr$tip.label)] <- paste0("Gv", numeric_tips)
+tip_labels <- tr$tip.label
 
-#strain names that match the phylogeny, as Gv was added to strains 5-1 and 101 to prevent Excel errors
-strains0 <- c("14018", "315-A", "C0011E4", "JCP7275", "C0084H9", "JCP8108", "JCP8017B", "C0040C2" , "UM35",  "JCP8066", "C0093B3", "AMD", "C0096A1", "C0102A2",  "UM224", "5-1", "C0179B4", "C0056B5", "101", "C0100B2", "C0101A1", "CMW7778B")
+# Append genomospecies to strain name in tree  
+strainIDs$strain <- as.character(strainIDs$strain)
+tip_labels <- tr$tip.label
+idx <- match(tip_labels, strainIDs$strain)
+new_tip_labels <- paste0(tip_labels, "_", strainIDs$genomospecies[idx])
+tr$tip.label <- new_tip_labels
 
-species <- c("Gardnerella vaginalis", "Gardnerella sp. 2", "Gardnerella sp. 3", "Gardnerella piotii", "Gardnerella leopoldii", "Gardnerella swidsinskii", "Gardnerella sp. 7", "Gardnerella sp. 8", "Gardnerella sp. 10", "Gardnerella sp. 11", "Gardnerella sp. 12")
+# Append genomospecies to strain names in phenotype files  
+add_gs <- function(df) {
+  df %>%
+    mutate(Strain = as.character(Strain)) %>%
+    left_join(strainIDs %>%
+                select(strain, genomospecies),
+              by = c("Strain" = "strain")) %>%
+    mutate(Strain = paste0(Strain, "_", genomospecies)) %>%
+    select(-genomospecies)
+}
+
+# Exponential growth rate 
+growth_rate_data <- growth_rate_data_file %>%
+  add_gs() %>%
+  group_by(Strain) %>% summarise(mean_mSlope = mean(mSlope, na.rm = TRUE))
+gr_vector <- setNames(growth_rate_data$mean_mSlope, growth_rate_data$Strain)
+
+# Carrying capacity 
+car_cap_data <- car_cap_data_file %>%
+  add_gs() %>%
+  group_by(Strain) %>% summarise(mean_maxOD = mean(maxOD, na.rm = TRUE))
+cc_vector <- setNames(car_cap_data$mean_maxOD, car_cap_data$Strain)
+
+# Percent Growth as biofilm (transformed dataset using arc-sin(sqrt))
+percent_biofilm_od_data <- percent_biofilm_od_data_file %>%
+   add_gs() %>%
+   mutate(arcsq_mPercentOD = asin(sqrt(mPercentOD/100))) %>%
+  group_by(Strain) %>% 
+  summarise(mean_mPercentOD = mean(arcsq_mPercentOD, na.rm = TRUE))   
+pb_vector <- setNames(percent_biofilm_od_data$mean_mPercentOD, percent_biofilm_od_data$Strain)
+
+# Safranin OD450 stain: Density of biofilm formation 
+safranin_od_data <- safranin_od_data_file %>%
+  add_gs() %>%
+  group_by(Strain) %>% summarise(mean_mSafOD = mean(mSafOD, na.rm = TRUE))
+sf_vector <- setNames(safranin_od_data$mean_mSafOD, safranin_od_data$Strain)
 ```
 
+## Subset full phylogenetic tree to the strains with corresponding phenotype information and generate ultrametric tree  
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+# Phylogeny with 22 strains: carrying capacity, exponential growth rate and minimum pH growth
+data_tips <- intersect(names(gr_vector), tr$tip.label)  
+tr_subset  <- keep.tip(tr, data_tips)
 
-  Phylogeny
-```{r}
-tree_path <- "../strain_phylogeny/RAxML_bestTree.gardTree" # designate tree path
-tr <- read.tree(tree_path) # load tree
+tip_labels <- tr_subset$tip.label
+n_strains <- length(tip_labels)  
+
+# Plot original tree
+tr_subset_plot <- ggtree(tr_subset) +
+  geom_rootedge(rootedge = 0.05, colour = "black", linewidth = 1) +
+  geom_tiplab(size = 4) +
+  xlim(NA, 0.75)
+tr_subset_plot
+
+# Generate ultrametric tree using chronoMPL()
+tr_subset_ultra <- chronoMPL(tr_subset)  
+tr_subset_ultra$edge.length[tr_subset_ultra$edge.length <= 0] <- 1e-6
+
+# Plot ultrametric tree
+tr_subset_ultra_plot <- ggtree(tr_subset_ultra) +
+  geom_rootedge(rootedge = 0.05, colour = "black", linewidth = 1) +
+  geom_tiplab(size = 4) +
+  xlim(NA, 0.75)
+tr_subset_ultra_plot
+
+
+# Phylogeny with 21 strains: biofilm density (safranin stain) and biofilm formation  
+# strain 14018 did not pass the QC step in these experiments
+data_tips_02 <- intersect(names(sf_vector), tr$tip.label)  
+tr_subset_02  <- keep.tip(tr, data_tips_02)
+tip_labels_02 <- tr_subset_02$tip.label
+n_strains_02 <- length(tip_labels_02)    
+
+tr_subset_ultra_02 <- chronoMPL(tr_subset_02) 
+tr_subset_ultra_02$edge.length[tr_subset_ultra_02$edge.length <= 0] <- 1e-6
+``` 
+
+# Phenotype Analysis: Exponential Growth Rate
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+set.seed(42)
+
+# Generate randomized dataset using observed values 
+# Permute the actual growth_rate values (scramble across tree tips)
+random <- sample(gr_vector, size = length(tip_labels), replace = FALSE)
+
+# Brownian Motion Simulated Dataset (Using the original tree for Moran's I Test) 
+observed <- gr_vector[match(tip_labels, names(gr_vector))]
+target_mean <- mean(observed)
+target_sd <- sd(observed)
+
+# Scale to match observed growth_rate mean and standard deviation  
+bm_raw <- rTraitCont(tr_subset, model = "BM")
+bm <- (bm_raw - mean(bm_raw)) / sd(bm_raw) * target_sd + target_mean
+
+# Verify same mean and std. as dataset 
+sprintf("Observed: mean=%.3f, sd=%.3f", target_mean, target_sd)
+sprintf("BM sim:   mean=%.3f, sd=%.3f", mean(bm), sd(bm))
+
+dat_growth_rate <- data.frame(
+  growth_rate = gr_vector[match(tip_labels, names(gr_vector))],   
+  random      = random,
+  bm          = bm
+  
+)
+rownames(dat_growth_rate) <- tip_labels
+p4d_growth_rate <- phylo4d(tr_subset, dat_growth_rate)
+
+
+# Brownian Motion Simulated Dataset (Ultrametric Tree for Pagel's Lambda Test) 
+bm_raw_ultra <- rTraitCont(tr_subset_ultra, model = "BM")
+bm_ultra <- (bm_raw_ultra - mean(bm_raw_ultra)) / sd(bm_raw_ultra) * target_sd + target_mean
+
+dat_growth_rate_ultra <- data.frame(
+  growth_rate = gr_vector[match(tip_labels, names(gr_vector))],   
+  random      = random,
+  bm          = bm_ultra
+  
+)
+rownames(dat_growth_rate_ultra) <- tip_labels
+
+p4d_growth_rate_ultra <- phylo4d(tr_subset_ultra, dat_growth_rate_ultra)
+# Observed traits on phylogenetic tree 
+barplot.phylo4d(p4d_growth_rate_ultra, tree.type = "phylo", tree.ladderize = TRUE, center = FALSE, scale = FALSE)
+# Z-scores 
+barplot.phylo4d(p4d_growth_rate_ultra, tree.type = "phylo", tree.ladderize = TRUE)
 ```
 
+## Moran's I
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+set.seed(42)
+results <- phyloSignal(p4d = p4d_growth_rate, methods = c("I"))
+results
+gr_moran <- results$stat["growth_rate", "I"]
+gr_moran_p <- results$pvalue["growth_rate", "I"]
 
-# Moran's I
-  Choose the weights as $_{wij} = 1/d_{ij}$ , where the d’s is the distances measured on the tree:
-```{r}
-w <- 1/cophenetic(tr)
-diag(w) <- 0 # set diagonals to zero
+# Phylogenetic correlogram (uses Local Moran's I autocorrelation)
+growth_rate.crlg <- phyloCorrelogram(p4d_growth_rate, trait = "growth_rate")
+random.crlg <- phyloCorrelogram(p4d_growth_rate, trait = "random")
+bm.crlg <- phyloCorrelogram(p4d_growth_rate, trait = "bm")
+
+plot(bm.crlg, main = "Brownian Motion Simulation")
+plot(random.crlg, main = "Random")
+plot(growth_rate.crlg, main = "Phenotype: Growth Rate")
 ```
 
-```{r}
-W <- w[rownames(w) %in% strains0 ,colnames(w) %in% strains0] # select strains from phylogeny with tested phenotypes
-W
+## Pagel's Lambda
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+set.seed(42)
+results <- phyloSignal(p4d = p4d_growth_rate_ultra, methods = c("Lambda"))
+gr_pagel <- results$stat["growth_rate", "Lambda"]
+gr_pagel_p <- results$pvalue["growth_rate", "Lambda"]
 ```
+### Pagel's Lambda Permutation Test
+```{r, message=FALSE, warning=FALSE, echo=TRUE, results="hide"}
+# Extract tree + observed and simulated traits  
+tree <- as(p4d_growth_rate_ultra, "phylo")
+trait_data <- p4d_growth_rate_ultra@data  # (growth_rate, random, bm)
+trait_names <- colnames(trait_data)
 
-## Growth Rates
-### Exponential Growth Rate
-```{r}
-growthRates <- growth_rate_DF %>%
-  with_groups(Strain, summarize, x=mean(mSlope)) %>%
-  mutate(Strain=as.character(Strain),
-         Strain=case_when(Strain=="Gv101"~"101", # fix differences between these strain name styles
-                          Strain=="Gv5-1"~"5-1",
-                          Strain %!in% c("101", "5-1")~Strain),
-         Strain=factor(Strain, levels=strains0)) %>%
-  .$x
-names(growthRates) <- strains0
+# Number of permutations
+n_perm <- 999
+set.seed(42)
 
-# perfrm Moran's I
-Moran.I(growthRates, W)
+# Store results for all traits
+results <- list()
+
+# Loop through each trait
+for(j in 1:ncol(trait_data)) {
+  trait <- trait_data[[j]]
+  trait_name <- trait_names[j]
+  
+  cat("\n---", trait_name, "---\n")
+  
+ # Pagel's λ  
+  obs_lambda <- phylosig(tree, trait, method = "lambda")$lambda
+  
+  # Generate null distribution using 999 permutations of trait data
+  lambda_null <- numeric(n_perm)
+  for(i in 1:n_perm) {
+    shuffled_trait <- sample(trait)
+    lambda_null[i] <- phylosig(tree, shuffled_trait, method = "lambda")$lambda
+  }
+  
+  # right-tailed (We reject H₀ if observed λ is unexpectedly large)
+  p_val <- mean(lambda_null >= obs_lambda)
+  
+  results[[trait_name]] <- list(
+    obs_lambda = obs_lambda,
+    p_value = p_val,
+    null_dist = lambda_null
+  )
+  
+  cat("Observed λ =", round(obs_lambda, 4), "\n")
+  cat("p-value =", round(p_val, 4), "\n")
+}
 ```
-
-### Carrying Capacity
-### Moran's I
-```{r}
-carCapacities <- carrying_capacity_DF %>%
-  with_groups(Strain, summarize, x=mean(maxOD)) %>%
-  mutate(Strain=as.character(Strain),
-         Strain=case_when(Strain=="Gv101"~"101",
-                          Strain=="Gv5-1"~"5-1",
-                          Strain %!in% c("101", "5-1")~Strain),
-         Strain=factor(Strain, levels=strains0)) %>%
-  .$x
-names(carCapacities) <- strains0
-
-# perfrm Moran's I
-Moran.I(carCapacities, W)
-```
-
-
-
-## Biofilm Formation
-### Percent Biofilm Optical Density
-```{r}
-biofilmStrains <- strains0[2:22] # 14018 did not pass quality checks
-
-odVals <- percent_biofilm_od_DF %>%
-  with_groups(Strain, summarize, x=mean(mPercentOD)) %>%
-  mutate(Strain=as.character(Strain),
-         Strain=case_when(Strain=="Gv101"~"101",
-                          Strain=="Gv5-1"~"5-1",
-                          Strain %!in% c("101", "5-1")~Strain),
-         Strain=factor(Strain, levels=biofilmStrains)) %>%
-  .$x
-names(odVals) <- biofilmStrains
-
-# remove 14018 from W matrix
-biofilmW <- w[rownames(w) %in% biofilmStrains ,colnames(w) %in% biofilmStrains]
-
-#perform Moran's I
-Moran.I(odVals, biofilmW) 
-```
-
-### Biofilm by Safranin Stain
-```{r}
-safVals <- safranin_od_DF %>%
- with_groups(Strain, summarize, x=mean(mSafOD)) %>%
- mutate(Strain=as.character(Strain),
-        Strain=case_when(Strain=="Gv101"~"101",
-                         Strain=="Gv5-1"~"5-1",
-                         Strain %!in% c("101", "5-1")~Strain),
-        Strain=factor(Strain, levels=biofilmStrains)) %>%
- .$x
-names(safVals) <- biofilmStrains
-
-#perform Moran's I
-Moran.I(safVals, biofilmW) 
-```
-
-## pH growth
-### Minimim pH with growth
-```{r}
-#Perform ttest to determine lowest pH with non-zero growth
-pH_ttest <- pH_growth_DF %>%
-  group_by(Species, Strain, pH) %>%
-  t_test(mOD~1, mu=0.01, alternative = "greater") %>%
-  add_significance("p")
-
-#get minimum pH values with growth
-minpHGrowth0 <- pH_ttest %>%
-   group_by(Strain, Species) %>%
-   filter(p.signif!="ns") %>%
-   filter(pH==min(pH)) %>%
-   mutate(Strain=as.character(Strain),
-          Strain=case_when(Strain=="Gv101"~"101",
-                           Strain=="Gv5-1"~"5-1",
-                           Strain %!in% c("101", "5-1")~Strain),
-          Strain=factor(Strain, levels=strains0),
-          pH=as.numeric(pH))
  
-minpHGrowth <- set_names(minpHGrowth0$pH, minpHGrowth0$Strain)
-minpHGrowth
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+# Plot null distribution 
+par(mfrow=c(1,3), mar=c(4,4,2,1))
+for(trait_name in names(results)) {
+  res <- results[[trait_name]]
+  dens <- density(res$null_dist)
+  
+  plot(dens, main=trait_name, xlab="λ", lwd=2, 
+       xlim=c(0,1), ylim=c(0,max(dens$y)*1.2))
+  abline(v=res$obs_lambda, col="red", lwd=3, lty=2)
+  
+  # Shade area beyond observed
+  x_tail <- seq(res$obs_lambda, 1, len=100)
+  y_tail <- approx(dens$x, dens$y, xout=x_tail)$y
+  polygon(c(res$obs_lambda, x_tail, 1), c(0, y_tail, 0), 
+          col=rgb(1,0,0,0.3), border=NA)
+}
 
-Moran.I(minpHGrowth, W)
+# Print results 
+results_df <- data.frame(
+  trait = trait_names,
+  lambda = sapply(results, function(x) round(x$obs_lambda, 4)),
+  p_value = sapply(results, function(x) round(x$p_value, 4))
+)
+print(results_df)
+
+gr_pagel_p_perm <- results_df["growth_rate", "p_value"]
+
+# Rank Order Plot 
+rank_plots <- list()
+for(trait_name in names(results)) {
+  res <- results[[trait_name]]
+  sorted_null <- sort(res$null_dist)  
+  null_df <- data.frame(
+    lambda = sorted_null,                    
+    rank = 1:length(sorted_null),            
+    above_obs = sorted_null >= res$obs_lambda   
+  )
+  
+  p <- ggplot(null_df, aes(x = rank, y = lambda, color = above_obs)) +
+    geom_point(size = 1.5, alpha = 0.8) +
+    scale_color_manual(values = c("TRUE" = "red"), 
+                   labels = c("≥ Observed λ"), 
+                   name = "Null values:") +
+    geom_hline(yintercept = res$obs_lambda, linetype = "dashed", 
+               color = "blue", size = 1.0) +
+    labs(x = "Rank (lowest to highest λ)", y = "Pagel's λ statistic",
+         title = trait_name,
+         subtitle = sprintf("Observed λ = %.4f (p = %.4f)", 
+                           res$obs_lambda, res$p_value)) +
+    scale_x_continuous(expand = c(0.01, 0.01)) +
+  theme_minimal() +
+theme(
+  legend.position = "top",
+  legend.key.size = unit(0.4, "cm"),        
+  legend.text = element_text(size = 7),   
+  legend.title = element_text(size = 7),   
+  plot.title = element_text(size = 9, hjust = 0.5, face = "bold"),
+  plot.subtitle = element_text(size = 8, hjust = 0.5),
+  axis.title = element_text(size = 9)
+)
+  
+  rank_plots[[trait_name]] <- p
+}
+
+grid.arrange(grobs = rank_plots, ncol = 3, top = "Pagel's λ Permutation Test: Rank Order Plots")
+
 ```
 
-## Metrnidazole_MIC
-  not previously completed
+# Phenotype: Carrying Capacity 
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+set.seed(42)
+random <- sample(cc_vector, size = length(tip_labels), replace = FALSE)
+observed <- cc_vector[match(tip_labels, names(cc_vector))]
+target_mean <- mean(observed)
+target_sd <- sd(observed)
+
+
+bm_raw <- rTraitCont(tr_subset, model = "BM")
+bm <- (bm_raw - mean(bm_raw)) / sd(bm_raw) * target_sd + target_mean
+
+sprintf("Observed: mean=%.3f, sd=%.3f", target_mean, target_sd)
+sprintf("BM sim:   mean=%.3f, sd=%.3f", mean(bm), sd(bm))
+
+dat_carrying_capacity <- data.frame(
+  carrying_capacity = cc_vector[match(tip_labels, names(cc_vector))],   
+  random      = random,
+  bm          = bm
+  
+)
+rownames(dat_carrying_capacity) <- tip_labels
+p4d_carrying_capacity <- phylo4d(tr_subset, dat_carrying_capacity)
+
+
+bm_raw_ultra <- rTraitCont(tr_subset_ultra, model = "BM")
+bm_ultra <- (bm_raw_ultra - mean(bm_raw_ultra)) / sd(bm_raw_ultra) * target_sd + target_mean
+
+dat_carrying_capacity_ultra <- data.frame(
+  carrying_capacity = cc_vector[match(tip_labels, names(cc_vector))],   
+  random      = random,
+  bm          = bm_ultra
+  
+)
+rownames(dat_carrying_capacity_ultra) <- tip_labels
+
+p4d_carrying_capacity_ultra <- phylo4d(tr_subset_ultra, dat_carrying_capacity_ultra)
+
+barplot.phylo4d(p4d_carrying_capacity_ultra, tree.type = "phylo", tree.ladderize = TRUE, center = FALSE, scale = FALSE)
+
+barplot.phylo4d(p4d_carrying_capacity_ultra, tree.type = "phylo", tree.ladderize = TRUE)
+```
+
+## Moran's I
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+set.seed(42)
+results <- phyloSignal(p4d = p4d_carrying_capacity, methods = c("I"))
+cc_moran <- results$stat["carrying_capacity", "I"]
+cc_moran_p <- results$pvalue["carrying_capacity", "I"]
+
+# Phylogenetic correlogram (uses Local Moran's I autocorrelation)
+carrying_capacity.crlg <- phyloCorrelogram(p4d_carrying_capacity, trait = "carrying_capacity")
+random.crlg <- phyloCorrelogram(p4d_carrying_capacity, trait = "random")
+bm.crlg <- phyloCorrelogram(p4d_carrying_capacity, trait = "bm")
+
+plot(bm.crlg, main = "Brownian Motion Simulation")
+plot(random.crlg, main = "Random")
+plot(carrying_capacity.crlg, main = "Phenotype: Carrying Capacity")
+
+```
+
+## Pagel's Lambda
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+set.seed(42)
+results <- phyloSignal(p4d = p4d_carrying_capacity_ultra, methods = c("Lambda"))
+cc_pagel <- results$stat["carrying_capacity", "Lambda"]
+cc_pagel_p <- results$pvalue["carrying_capacity", "Lambda"]
+```
+
+### Pagel's Lambda Permutation Test
+```{r, message=FALSE, warning=FALSE, echo=TRUE, results="hide"}
+
+tree <- as(p4d_carrying_capacity_ultra, "phylo")
+trait_data <- p4d_carrying_capacity_ultra@data  # (growth_rate, random, bm) 
+trait_names <- colnames(trait_data)
+
+n_perm <- 999
+set.seed(42)
+results <- list()
+
+for(j in 1:ncol(trait_data)) {
+  trait <- trait_data[[j]]
+  trait_name <- trait_names[j]
+  cat("\n---", trait_name, "---\n")
+  obs_lambda <- phylosig(tree, trait, method = "lambda")$lambda
+  lambda_null <- numeric(n_perm)
+  for(i in 1:n_perm) {
+    shuffled_trait <- sample(trait)
+    lambda_null[i] <- phylosig(tree, shuffled_trait, method = "lambda")$lambda
+  }
+  p_val <- mean(lambda_null >= obs_lambda)
+  results[[trait_name]] <- list(
+    obs_lambda = obs_lambda,
+    p_value = p_val,
+    null_dist = lambda_null
+  )
+  
+  cat("Observed λ =", round(obs_lambda, 4), "\n")
+  cat("p-value =", round(p_val, 4), "\n")
+}
+
+```
+ 
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+# Plot null distribution 
+par(mfrow=c(1,3), mar=c(4,4,2,1))
+for(trait_name in names(results)) {
+  res <- results[[trait_name]]
+  dens <- density(res$null_dist)
+  
+  plot(dens, main=trait_name, xlab="λ", lwd=2, 
+       xlim=c(0,1), ylim=c(0,max(dens$y)*1.2))
+  abline(v=res$obs_lambda, col="red", lwd=3, lty=2)
+  x_tail <- seq(res$obs_lambda, 1, len=100)
+  y_tail <- approx(dens$x, dens$y, xout=x_tail)$y
+  polygon(c(res$obs_lambda, x_tail, 1), c(0, y_tail, 0), 
+          col=rgb(1,0,0,0.3), border=NA)
+}
+
+results_df <- data.frame(
+  trait = trait_names,
+  lambda = sapply(results, function(x) round(x$obs_lambda, 4)),
+  p_value = sapply(results, function(x) round(x$p_value, 4))
+)
+print(results_df)
+
+cc_pagel_p_perm <- results_df["carrying_capacity", "p_value"]
+
+# Rank Order Plot 
+rank_plots <- list()
+for(trait_name in names(results)) {
+  res <- results[[trait_name]]
+  sorted_null <- sort(res$null_dist)   
+  null_df <- data.frame(
+    lambda = sorted_null,                     
+    rank = 1:length(sorted_null),          
+    above_obs = sorted_null >= res$obs_lambda  # Red if ≥ observed
+  )
+  
+  p <- ggplot(null_df, aes(x = rank, y = lambda, color = above_obs)) +
+    geom_point(size = 1.5, alpha = 0.8) +
+    scale_color_manual(values = c("TRUE" = "red"), 
+                   labels = c("≥ Observed λ"), 
+                   name = "Null values:") +
+    geom_hline(yintercept = res$obs_lambda, linetype = "dashed", 
+               color = "blue", size = 1.0) +
+    labs(x = "Rank (lowest to highest λ)", y = "Pagel's λ statistic",
+         title = trait_name,
+         subtitle = sprintf("Observed λ = %.4f (p = %.4f)", 
+                           res$obs_lambda, res$p_value)) +
+    scale_x_continuous(expand = c(0.01, 0.01)) +
+  theme_minimal() +
+theme(
+  legend.position = "top",
+  legend.key.size = unit(0.4, "cm"),        
+  legend.text = element_text(size = 7),   
+  legend.title = element_text(size = 7),   
+  plot.title = element_text(size = 9, hjust = 0.5, face = "bold"),
+  plot.subtitle = element_text(size = 8, hjust = 0.5),
+  axis.title = element_text(size = 9)
+)
+  
+  rank_plots[[trait_name]] <- p
+}
+
+grid.arrange(grobs = rank_plots, ncol = 3, top = "Pagel's λ Permutation Test: Rank Order Plots")
+
+
+```
+
+
+# Phenotype: Biofilm Formation -- Percent Biofilm Optical Density
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+set.seed(42)
+
+# Permute the actual growth_rate values (scramble across tree tips)
+random <- sample(pb_vector, size = length(tip_labels_02), replace = FALSE)
+observed <- pb_vector[match(tip_labels_02, names(pb_vector))]
+target_mean <- mean(observed)
+target_sd <- sd(observed)
+
+
+
+bm_raw <- rTraitCont(tr_subset_02, model = "BM")
+bm <- (bm_raw - mean(bm_raw)) / sd(bm_raw) * target_sd + target_mean
+
+sprintf("Observed: mean=%.3f, sd=%.3f", target_mean, target_sd)
+sprintf("BM sim:   mean=%.3f, sd=%.3f", mean(bm), sd(bm))
+
+dat_percent_biofilm <- data.frame(
+  percent_biofilm = pb_vector[match(tip_labels_02, names(pb_vector))],   
+  random      = random,
+  bm          = bm
+)
+rownames(dat_percent_biofilm) <- tip_labels_02
+p4d_percent_biofilm <- phylo4d(tr_subset_02, dat_percent_biofilm)
+
+
+
+bm_raw_ultra <- rTraitCont(tr_subset_ultra_02, model = "BM")
+bm_ultra <- (bm_raw_ultra - mean(bm_raw_ultra)) / sd(bm_raw_ultra) * target_sd + target_mean
+
+dat_percent_biofilm_ultra <- data.frame(
+  percent_biofilm = pb_vector[match(tip_labels_02, names(pb_vector))],   
+  random      = random,
+  bm          = bm_ultra
+)
+rownames(dat_percent_biofilm_ultra) <- tip_labels_02
+
+p4d_percent_biofilm_ultra <- phylo4d(tr_subset_ultra_02, dat_percent_biofilm_ultra)
+
+barplot.phylo4d(p4d_percent_biofilm_ultra, tree.type = "phylo", tree.ladderize = TRUE, center = FALSE, scale = FALSE)
+
+barplot.phylo4d(p4d_percent_biofilm_ultra, tree.type = "phylo", tree.ladderize = TRUE)
+```
+
+## Moran's I
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+set.seed(42)
+results <- phyloSignal(p4d = p4d_percent_biofilm, methods = c("I"))
+pb_moran <- results$stat["percent_biofilm", "I"]
+pb_moran_p <- results$pvalue["percent_biofilm", "I"]
+
+
+# Phylogenetic correlogram (uses Local Moran's I autocorrelation)
+percent_biofilm.crlg <- phyloCorrelogram(p4d_percent_biofilm, trait = "percent_biofilm")
+random.crlg <- phyloCorrelogram(p4d_percent_biofilm, trait = "random")
+bm.crlg <- phyloCorrelogram(p4d_percent_biofilm, trait = "bm")
+
+plot(bm.crlg, main = "Brownian Motion Simulation")
+plot(random.crlg, main = "Random")
+plot(percent_biofilm.crlg, main = "Phenotype: Biofilm Formation (Proportion of Growth)")
+```
+
+## Pagel's Lambda
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+set.seed(42)
+results <- phyloSignal(p4d = p4d_percent_biofilm_ultra, methods = c("Lambda"))
+pb_pagel <- results$stat["percent_biofilm", "Lambda"]
+pb_pagel_p <- results$pvalue["percent_biofilm", "Lambda"]
+```
+
+### Pagel's Lambda Permutation Test
+```{r, message=FALSE, warning=FALSE, echo=TRUE, results="hide"}
+tree <- as(p4d_percent_biofilm_ultra, "phylo")
+trait_data <- p4d_percent_biofilm_ultra@data  # (growth_rate, random, bm) 
+trait_names <- colnames(trait_data)
+
+# Number of permutations
+n_perm <- 999
+set.seed(42)
+
+# Store results for all traits
+results <- list()
+
+# Loop through each trait
+for(j in 1:ncol(trait_data)) {
+  trait <- trait_data[[j]]
+  trait_name <- trait_names[j]
+  cat("\n---", trait_name, "---\n")
+  
+ # Conduct Pagel's λ Test
+  obs_lambda <- phylosig(tree, trait, method = "lambda")$lambda
+  
+  # Generate null distribution using 999 permutations of trait data
+  lambda_null <- numeric(n_perm)
+  for(i in 1:n_perm) {
+    shuffled_trait <- sample(trait)
+    lambda_null[i] <- phylosig(tree, shuffled_trait, method = "lambda")$lambda
+  }
+  p_val <- mean(lambda_null >= obs_lambda)
+  results[[trait_name]] <- list(
+    obs_lambda = obs_lambda,
+    p_value = p_val,
+    null_dist = lambda_null
+  )
+  cat("Observed λ =", round(obs_lambda, 4), "\n")
+  cat("p-value =", round(p_val, 4), "\n")
+}
+
+```
+ 
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+# Plot null distribution 
+par(mfrow=c(1,3), mar=c(4,4,2,1))
+for(trait_name in names(results)) {
+  res <- results[[trait_name]]
+  dens <- density(res$null_dist)
+  
+  plot(dens, main=trait_name, xlab="λ", lwd=2, 
+       xlim=c(0,1), ylim=c(0,max(dens$y)*1.2))
+  abline(v=res$obs_lambda, col="red", lwd=3, lty=2)
+  
+  x_tail <- seq(res$obs_lambda, 1, len=100)
+  y_tail <- approx(dens$x, dens$y, xout=x_tail)$y
+  polygon(c(res$obs_lambda, x_tail, 1), c(0, y_tail, 0), 
+          col=rgb(1,0,0,0.3), border=NA)
+}
+
+# Print Results 
+results_df <- data.frame(
+  trait = trait_names,
+  lambda = sapply(results, function(x) round(x$obs_lambda, 4)),
+  p_value = sapply(results, function(x) round(x$p_value, 4))
+)
+print(results_df)
+pb_pagel_p_perm <- results_df["percent_biofilm", "p_value"]
+
+
+# Rank Order Plot 
+rank_plots <- list()
+for(trait_name in names(results)) {
+  res <- results[[trait_name]]
+  sorted_null <- sort(res$null_dist)  
+  null_df <- data.frame(
+    lambda = sorted_null,                 
+    rank = 1:length(sorted_null),         
+    above_obs = sorted_null >= res$obs_lambda  
+  )
+  
+
+  p <- ggplot(null_df, aes(x = rank, y = lambda, color = above_obs)) +
+    geom_point(size = 1.5, alpha = 0.8) +
+    scale_color_manual(values = c("TRUE" = "red"), 
+                   labels = c("≥ Observed λ"), 
+                   name = "Null values:") +
+    geom_hline(yintercept = res$obs_lambda, linetype = "dashed", 
+               color = "blue", size = 1.0) +
+    labs(x = "Rank (lowest to highest λ)", y = "Pagel's λ statistic",
+         title = trait_name,
+         subtitle = sprintf("Observed λ = %.4f (p = %.4f)", 
+                           res$obs_lambda, res$p_value)) +
+    scale_x_continuous(expand = c(0.01, 0.01)) +
+  theme_minimal() +
+theme(
+  legend.position = "top",
+  legend.key.size = unit(0.4, "cm"),        
+  legend.text = element_text(size = 7),   
+  legend.title = element_text(size = 7),   
+  plot.title = element_text(size = 9, hjust = 0.5, face = "bold"),
+  plot.subtitle = element_text(size = 8, hjust = 0.5),
+  axis.title = element_text(size = 9)
+)
+  
+  rank_plots[[trait_name]] <- p
+}
+
+grid.arrange(grobs = rank_plots, ncol = 3, top = "Pagel's λ Permutation Test: Rank Order Plots")
+```
+
+# Phenotype: Biofilm Formation -- Safranin OD450 (Biofilm Density) 
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+set.seed(42)
+# Permute the actual growth_rate values (scramble across tree tips)
+random <- sample(sf_vector, size = length(tip_labels_02), replace = FALSE)
+observed <- sf_vector[match(tip_labels_02, names(sf_vector))]
+target_mean <- mean(observed)
+target_sd <- sd(observed)
+
+
+bm_raw <- rTraitCont(tr_subset_02, model = "BM")
+bm <- (bm_raw - mean(bm_raw)) / sd(bm_raw) * target_sd + target_mean
+
+sprintf("Observed: mean=%.3f, sd=%.3f", target_mean, target_sd)
+sprintf("BM sim:   mean=%.3f, sd=%.3f", mean(bm), sd(bm))
+
+dat_safranin <- data.frame(
+  safranin = sf_vector[match(tip_labels_02, names(sf_vector))],   
+  random      = random,
+  bm          = bm
+  
+)
+rownames(dat_safranin) <- tip_labels_02
+p4d_safranin <- phylo4d(tr_subset_02, dat_safranin)
+
+
+bm_raw_ultra <- rTraitCont(tr_subset_ultra_02, model = "BM")
+bm_ultra <- (bm_raw_ultra - mean(bm_raw_ultra)) / sd(bm_raw_ultra) * target_sd + target_mean
+
+dat_safranin_ultra <- data.frame(
+  safranin = sf_vector[match(tip_labels_02, names(sf_vector))],   
+  random      = random,
+  bm          = bm_ultra
+  
+)
+rownames(dat_safranin_ultra) <- tip_labels_02
+
+p4d_safranin_ultra <- phylo4d(tr_subset_ultra_02, dat_safranin_ultra)
+barplot.phylo4d(p4d_safranin_ultra, tree.type = "phylo", tree.ladderize = TRUE, center = FALSE, scale = FALSE)
+barplot.phylo4d(p4d_safranin_ultra, tree.type = "phylo", tree.ladderize = TRUE)
+``` 
+
+## Moran's I
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+set.seed(42)
+results <- phyloSignal(p4d = p4d_safranin, methods = c("I"))
+sf_moran <- results$stat["safranin", "I"]
+sf_moran_p <- results$pvalue["safranin", "I"]
+
+# Phylogenetic correlogram (uses Local Moran's I autocorrelation)
+safranin.crlg <- phyloCorrelogram(p4d_safranin, trait = "safranin")
+random.crlg <- phyloCorrelogram(p4d_safranin, trait = "random")
+bm.crlg <- phyloCorrelogram(p4d_safranin, trait = "bm")
+
+plot(bm.crlg, main = "Brownian Motion Simulation")
+plot(random.crlg, main = "Random")
+plot(safranin.crlg, main = "Phenotype: Biofilm Density (Safranin OD450)")
+```
+
+## Pagel's Lambda
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+set.seed(42)
+results <- phyloSignal(p4d = p4d_safranin_ultra, methods = c("Lambda"))
+sf_pagel <- results$stat["safranin", "Lambda"]
+sf_pagel_p <- results$pvalue["safranin", "Lambda"]
+```
+
+### Pagel's Lambda Permutation Test
+```{r, message=FALSE, warning=FALSE, echo=TRUE, results="hide"}
+tree <- as(p4d_safranin_ultra, "phylo")
+trait_data <- p4d_safranin_ultra@data  # (growth_rate, random, bm)
+trait_names <- colnames(trait_data)
+
+n_perm <- 999
+set.seed(42)
+results <- list()
+
+
+for(j in 1:ncol(trait_data)) {
+  trait <- trait_data[[j]]
+  trait_name <- trait_names[j]
+  cat("\n---", trait_name, "---\n")
+  obs_lambda <- phylosig(tree, trait, method = "lambda")$lambda
+  lambda_null <- numeric(n_perm)
+  for(i in 1:n_perm) {
+    shuffled_trait <- sample(trait)
+    lambda_null[i] <- phylosig(tree, shuffled_trait, method = "lambda")$lambda
+  }
+  p_val <- mean(lambda_null >= obs_lambda)
+  results[[trait_name]] <- list(
+    obs_lambda = obs_lambda,
+    p_value = p_val,
+    null_dist = lambda_null
+  )
+  
+  cat("Observed λ =", round(obs_lambda, 4), "\n")
+  cat("p-value =", round(p_val, 4), "\n")
+}
+
+```
+
+
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+# Plot null distribution 
+par(mfrow=c(1,3), mar=c(4,4,2,1))
+for(trait_name in names(results)) {
+  res <- results[[trait_name]]
+  dens <- density(res$null_dist)
+  
+  plot(dens, main=trait_name, xlab="λ", lwd=2, 
+       xlim=c(0,1), ylim=c(0,max(dens$y)*1.2))
+  abline(v=res$obs_lambda, col="red", lwd=3, lty=2)
+  x_tail <- seq(res$obs_lambda, 1, len=100)
+  y_tail <- approx(dens$x, dens$y, xout=x_tail)$y
+  polygon(c(res$obs_lambda, x_tail, 1), c(0, y_tail, 0), 
+          col=rgb(1,0,0,0.3), border=NA)
+}
+
+# Print Results 
+results_df <- data.frame(
+  trait = trait_names,
+  lambda = sapply(results, function(x) round(x$obs_lambda, 4)),
+  p_value = sapply(results, function(x) round(x$p_value, 4))
+)
+print(results_df)
+
+sf_pagel_p_perm <- results_df["safranin", "p_value"]
+
+# Rank Order Plot 
+rank_plots <- list()
+for(trait_name in names(results)) {
+  res <- results[[trait_name]]
+  sorted_null <- sort(res$null_dist)   
+  null_df <- data.frame(
+    lambda = sorted_null,                    
+    rank = 1:length(sorted_null),          
+    above_obs = sorted_null >= res$obs_lambda  
+  )
+  
+  p <- ggplot(null_df, aes(x = rank, y = lambda, color = above_obs)) +
+    geom_point(size = 1.5, alpha = 0.8) +
+    scale_color_manual(values = c("TRUE" = "red"), 
+                   labels = c("≥ Observed λ"), 
+                   name = "Null values:") +
+    geom_hline(yintercept = res$obs_lambda, linetype = "dashed", 
+               color = "blue", size = 1.0) +
+    labs(x = "Rank (lowest to highest λ)", y = "Pagel's λ statistic",
+         title = trait_name,
+         subtitle = sprintf("Observed λ = %.4f (p = %.4f)", 
+                           res$obs_lambda, res$p_value)) +
+    scale_x_continuous(expand = c(0.01, 0.01)) +
+  theme_minimal() +
+theme(
+  legend.position = "top",
+  legend.key.size = unit(0.4, "cm"),        
+  legend.text = element_text(size = 7),   
+  legend.title = element_text(size = 7),   
+  plot.title = element_text(size = 9, hjust = 0.5, face = "bold"),
+  plot.subtitle = element_text(size = 8, hjust = 0.5),
+  axis.title = element_text(size = 9)
+)
+  
+  rank_plots[[trait_name]] <- p
+}
+
+grid.arrange(grobs = rank_plots, ncol = 3, top = "Pagel's λ Permutation Test: Rank Order Plots")
+
+
+```
+
+
+
+# Summary Table
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+set_gtsummary_theme(theme_gtsummary_compact())
+
+phylo_tbl <-
+  tibble::tribble(
+    ~Phenotype,                       ~Pagels_lambda, ~lambda_p_LRT, ~lambda_p_perm, ~Morans_I, ~I_p_perm,
+    "Exponential Growth Rate",        gr_pagel,       gr_pagel_p,         gr_pagel_p_perm,          gr_moran,    gr_moran_p,
+    "Carrying Capacity",              cc_pagel,       cc_pagel_p,         cc_pagel_p_perm,          cc_moran,   cc_moran_p,
+    "Biofilm Formation (% of Growth)", pb_pagel,          pb_pagel_p,         pb_pagel_p_perm,         pb_moran,     pb_moran_p,
+    "Biofilm Density (Safranin OD450)", sf_pagel,      sf_pagel_p,         sf_pagel_p_perm,          sf_moran,   sf_moran_p
+  )
+
+
+phylo_tbl %>%
+  transmute(
+    Phenotype,
+    `Pagel's λ` = Pagels_lambda,
+    `λ p LRT` = lambda_p_LRT,
+    `λ p perm` = lambda_p_perm,
+    `Moran's I` = Morans_I,
+    `I p perm` = I_p_perm
+  ) %>%
+  gt() %>%
+  tab_header(
+    title = md("Table 1. Phylogenetic Signal Test Results")
+  ) %>%
+  tab_style(
+    style = cell_borders(
+      sides = "bottom",
+      color = "black",
+      weight = px(2),
+      style = "solid"
+    ),
+    locations = cells_title(groups = "title")
+  ) %>%
+  cols_label(
+    Phenotype = md("Phenotype"),
+    `Pagel's λ` = md("Pagel’s λ"),
+    `λ p LRT` = md("p-value (LRT)"),
+    `λ p perm` = md("p-value (perm)"),
+    `Moran's I` = md("Moran’s I"),
+    `I p perm` = md("p-value (perm)")
+  ) %>%
+  tab_style(
+    style = cell_borders(
+      sides = "top",
+      color = "black",
+      weight = px(0.5),
+      style = "solid"
+    ),
+    locations = cells_column_labels()
+  ) %>%
+  tab_style(
+    style = cell_borders(
+      sides = "bottom",
+      color = "black",
+      weight = px(0.5),
+      style = "solid"
+    ),
+    locations = cells_column_labels()
+  ) %>%
+  cols_align(
+  align = "left",
+  columns = Phenotype
+) %>%
+cols_align(
+  align = "center",
+  columns = -Phenotype
+) %>%
+  tab_options(
+  table.font.size = px(12),
+
+  column_labels.font.size = px(12),
+  column_labels.font.weight = "normal",
+  column_labels.border.bottom.color = "black",
+  column_labels.border.bottom.width = px(1),
+  column_labels.border.bottom.style = "solid",
+
+  heading.title.font.size = px(12),
+  heading.title.font.weight = "normal",
+
+  table_body.border.bottom.color = "black",
+  table_body.border.bottom.width = px(2),
+  table_body.border.bottom.style = "solid",
+  table_body.border.top.color = "black",
+  table_body.border.top.width = px(2),
+  table_body.border.top.style = "solid",
+
+  table.border.top.color = "transparent",
+  table.border.top.width = px(1),
+  table.border.bottom.color = "black",
+  table.border.bottom.width = px(1),
+
+  table.align = "left",
+  data_row.padding = px(4),
+  heading.align = "left"
+)
+
+```
+
+
+# phylosignal: Original vs. Ultrametric Tree
+
+## Moran's I and Pagel's Lambda: Phylogenetic Signal along BM Gradient for Phylogenetic Tree (22 Gardnerella Strains)
+```{r, message=FALSE, warning=FALSE, echo=TRUE, results="hide"}
+# Distribution of Test Statistic as percentage of BM increases
+set.seed(42)
+phylosim_ultra <- phyloSim(tree = tr_subset_ultra, methods = c("I", "Lambda"), model = "BM", pb = FALSE)
+phylosim <- phyloSim(tree = tr_subset, methods = c("I", "Lambda"), model = "BM", pb = FALSE)
+```
+### Original (Non-Ultrametric) Tree 
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+plot(phylosim, stacked.methods = FALSE, quantiles = c(0, 1), ylab = "Phylogenetic Signal Value")
+plot.phylosim(phylosim, what = "pval", stacked.methods = TRUE)
+
+# 0% BM  
+# Moran's I
+mean_0bm_I <- mean(phylosim$sim.stat[1, 1, ])   
+# Pagel's λ
+mean_0bm_lambda <- mean(phylosim$sim.stat[1, 2, ])   
+
+print(paste("Original Tree:"))
+print(paste("Moran's I at 0% BM:", round(mean_0bm_I, 4)))
+print(paste("Pagel's λ at 0% BM:", round(mean_0bm_lambda, 4)))
+
+# 100% BM 
+# Moran's I
+mean_100bm_I <- mean(phylosim$sim.stat[101, 1, ])      
+# Pagel's λ
+mean_100bm_lambda <- mean(phylosim$sim.stat[101, 2, ])  
+
+print(paste("Moran's I at 100% BM:", round(mean_100bm_I, 4)))
+print(paste("Pagel's λ at 100% BM:", round(mean_100bm_lambda, 4)))
+``` 
+
+### Ultrametric Tree 
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+plot(phylosim_ultra, stacked.methods = FALSE, quantiles = c(0, 1), ylab = "Phylogenetic Signal Value")
+plot.phylosim(phylosim_ultra, what = "pval", stacked.methods = TRUE)
+
+#0% BM 
+mean_0bm_I_ultra <- mean(phylosim_ultra$sim.stat[1, 1, ])  # I at 0% BM 
+mean_0bm_lambda_ultra <- mean(phylosim_ultra$sim.stat[1, 2, ])   # Lambda at 0% BM 
+
+print(paste("Ultrametric Tree:"))
+print(paste("Moran's I at 0% BM:", round(mean_0bm_I_ultra, 4)))
+print(paste("Pagel's λ at 0% BM:", round(mean_0bm_lambda_ultra, 4)))
+
+# 100% BM 
+mean_100bm_I <- mean(phylosim_ultra$sim.stat[101, 1, ])      # Moran's I at 100% BM
+mean_100bm_lambda <- mean(phylosim_ultra$sim.stat[101, 2, ]) # Pagel's λ at 100% BM
+
+print(paste("Moran's I at 100% BM:", round(mean_100bm_I, 4)))
+print(paste("Pagel's λ at 100% BM:", round(mean_100bm_lambda, 4)))
+``` 
 
 # Session Info
 ```{r}
