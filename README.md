@@ -15,10 +15,16 @@ Verify the phylogenetic identity of the 22 *Garderella* isolate strains.
    + `roaryCoreGenome.sh`:  Define core genome of *Gardnerella* isolate strain genomes and reference genomes using [Roary](https://sanger-pathogens.github.io/Roary/) and perform multiple alignment.
    + `MLPhylogeny.sh`: Use [RAxML](https://github.com/stamatak/standard-RAxML) to reconstruct phylogeny.
    + `MLPhylogeny_root.sh`: Root phylogeny with *Bifidobacterium longum*
+* `core_genome_alignments`: input alignments for `MLPhylogeny.sh` and `MLPhylogeny_root.sh`
+* `ml_phylogeny_output`: output of `MLPhylogeny.sh`
+* `epa_output`: output of `MLPhylogeny_root.sh`
 * `strainIDs.csv`: Strain names, species names, and GenBank accessions of strains with a genome deposited in GenBank
-* `gard_strain_phylogenetics.Rmd`: R code for phylogenetic comparison of strains.
-* `RAxML_bestTree.gardTree`: Output tree used for measuring phylogenetic signal
-  
+* `2024mSystems_GardnerellaMetadata.csv`: metadata for strains used phylogeny from [Berman et al (2024) *mSystems*](https://journals.asm.org/doi/10.1128/msystems.01339-23)
+* `2024mSystems_refGardnerellaCladesGenomos.csv`: clade and species identities of strains in phylogeny from [Berman et al (2024) *mSystems*](https://journals.asm.org/doi/10.1128/msystems.01339-23)
+* `gard_strain_phylogeny.Rmd`: R code for phylogenetic comparison of strains and Figure 1 *Gardnerella* strain phylogeny
+* `rootedGardPhylogeny_noOutgroup.tre`: Output tree used for measuring phylogenetic signal
+
+
 ## growth_curves
 Measure the exponential growth rate and carrying capacity of each strain.
 * `data`:
