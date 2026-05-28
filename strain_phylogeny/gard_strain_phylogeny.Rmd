@@ -1,0 +1,319 @@
+---
+title: "Gardnerella strain species and phylogeny"
+author: "Hanna Berman"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+**Purpose:**
+  Reconstruct *Gardnerella* spp. phylogeny with 22 genomes of *Gardnerella* strains and other genomes from phylogeny in Berman et al. (2024) (see references below)
+
+**Overview:**
+  Thirteen genomes of strains from our collection were added to the *Gardnerella* 85 genomes previously curated in Berman et al., 2024. Genomes UM224 and UM35 were sequenced on an Illumina MiSeq. Sequences were quality checked with FastQC v0.11.9 and assembled with Spades v3.15.3. Other assemblies were downloaded from GenBank or received from the Ravel Lab (see table below). Assemblies were annotated with Prokka v1.146, and the core genome was determined using Roary v3.13.0 with an 80% blastp threshold. The core genes were aligned with MAFFT within Roary and used to reconstruct a maximum likelihood core-genome phylogeny with RAxML v8.2.12 using a GTR+Gamma model. Confidence values were determined with 5 bootstrap replicates, as determined using the autoFC algorithm in RAxML. The phylogeny was rooted with Bifidobacterium longum 51A (NZ_CP026999.1) as an outgroup using the Evolutionary Placement Algorithm in RAxML. 
+  
+  The genomes not on the previous phylogeny were aligned to the reference *Gardnerella* genomes with Mash v2.3 to assess species assignment. Then, a phylogeny of all genomes in collection and 77 genomes from the previous Berman et al. (2024) phylogeny was plotted. The phylogeny was re-rooted at the outgroup with ape v5.8-1 and the outgroup tip removed. The bootstrap confidence values were added to the phylogeny with Phangorn v2.12.1, and the tree was visualized with ggtree v4.0.4.
+     
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(formattable)
+library(ape)
+library(phangorn)
+library(ggtree)
+library(kableExtra)
+`%!in%` <- negate(`%in%`)
+```
+
+```{r, message=FALSE, warning=FALSE}
+figure_out <- "../../experiments_figures"
+
+species <- c("Gardnerella vaginalis", "Gardnerella lacydonensis", "Gardnerella pickettii", "Gardnerella piotii", "Gardnerella leopoldii", "Gardnerella swidsinskii", "Gardnerella sp. 7", "Gardnerella greenwoodii", "Gardnerella bretellae", "Gardnerella sp. 10", "Gardnerella sp. 11", "Gardnerella sp. 12", "Gardnerella sp. 13", "Gardnerella massiliensis")
+
+species_names <- tribble(~species_name, ~refGenomospecies, ~name_reference,
+      "Gardnerella vaginalis", "GS1", "Vaneechoutte 2019",
+      "Gardnerella lacydonensis", "GS2", "Allini Ntiguemassa 2026",
+      "Gardnerella pickettii", "GS3", "Sousa 2023",
+      "Gardnerella piotii", "GS4", "Vaneechoutte 2019", 
+      "Gardnerella leopoldii", "GS5", "Vaneechoutte 2019",
+      "Gardnerella swidsinskii", "GS6", "Vaneechoutte 2019",
+      "Gardnerella sp. 7", "GS7", NA,
+      "Gardnerella greenwoodii", "GS8", "Sousa 2023",
+      "Gardnerella bretellae", "GS9", "Allini Ntiguemassa 2026",
+      "Gardnerella sp. 10", "GS10", NA,
+      "Gardnerella sp. 11", "GS11", NA,
+      "Gardnerella sp. 12", "GS12", NA,
+      "Gardnerella sp. 13", "GS13", NA,
+      "Gardnerella massiliensis", "GS14", "Allini Ntiguemassa 2026")
+```
+
+
+```{r}
+# Set paths
+
+#Newly sequenced strain data (genomes not on Berman et al., 2024 mSystems paper phylogeny)
+metadata_path <- "./strainIDs.csv" # strain metadata
+new_genomes_path <- "../../strain_genomes/prokka_annotated_genomes" # path to strain assemblies
+
+#Metadata and sequences from Berman et al., 2024 mSystems paper for comparisons
+ref_metadata_path <- "./2024mSystems_GardnerellaMetadata.csv" # reference Gardnerella dataframe
+ref_clades_species_path <- "./2024mSystems_refGardnerellaCladesGenomos.csv" # clade and species identity of reference Gardnerella strains
+ref_genomes_path <- "../../../gardPhylogeny/prokka_annotated_genomes/fna" #reference Gardnerella genomes
+
+# Strain phylogeny
+outgroup_tree_path <- "./ml_phylogeny_output/RAxML_labelledTree.rootedGardTree"
+bootstraps_path <- "./ml_phylogeny_output/RAxML_bootstrap.FCBootstrap"
+```
+
+
+# Genomes
+## Isolates
+  Isolate genome files and metadata from isolate genomes not on Berman et al. (2024) phylogeny (new genomes)
+```{r, message=FALSE, warning=FALSE}
+strainIDs <- read_csv(metadata_path)
+
+new_genomes <- file.path(new_genomes_path, "fna") |> #list of newly sequenced strain assemblies
+  list.files(full.names = TRUE)
+```
+
+## Reference genomes
+  Read in genomes and metadata from isolate genomes on previous phylogeny (reference genomes)
+```{r, message=FALSE, warning=FALSE}
+# reference Gardnerella metadata dataframe
+gard_ref_metadata <- read_csv(ref_metadata_path) |>
+  select(Strain, GenBank_accession) |>
+  dplyr::rename(refStrain=Strain)
+
+# list of reference genomes
+ref_genomes <- list.files(ref_genomes_path, full.names = TRUE) 
+
+# clade and species names
+ref_clades_species <- read_csv(ref_clades_species_path) |> 
+  dplyr::rename(refStrain=Strain,
+                refClade=Clade,
+                refGenomospecies=Genomospecies)
+```
+
+## Genome tables
+  Table S1: Isolate species, sources, and sequences
+```{r, message=FALSE, warning=FALSE}
+strain_table <- strainIDs %>%
+  select(strain, species_name, ncsu_sequence, genbank_accession, source) %>%
+  replace_na(list(ncsu_sequence="",
+                  genbank_accession="")) %>%
+  mutate(species_name=factor(species_name, species)) %>%
+  arrange(species_name) %>%
+  dplyr::rename(`Strain ID`=strain,
+                `Species Name`=species_name,
+                `Sequenced as Part of this Study`=ncsu_sequence,
+                `GenBank Accession`=genbank_accession,
+                Source=source) %>%
+  kbl(align=c("llcl"), caption ="Table S1. Strain Species and Genomes") %>%
+  kable_classic(full_width=TRUE, html_font = "Arial")
+
+
+strain_table
+
+#strain_table %>%
+#  save_kable(file = file.path(figure_out, paste(Sys.Date(), "TableS1_StrainSpeciesGenomes.png")), zoom=5)
+```
+
+  Table S2: Strain species and GenBank accessions for all genomes on phylogeny that are not strains tested in this study
+```{r, message=FALSE, warning=FALSE}
+ref_table <- ref_clades_species %>%
+  filter(refStrain %!in% c(strainIDs$strain, "101", "5-1")) %>%
+  left_join(gard_ref_metadata) %>%
+  left_join(species_names) %>%
+  select(refStrain, species_name, GenBank_accession) %>%
+  mutate(species_name=factor(species_name, levels=species)) %>%
+  arrange(species_name) %>%
+  dplyr::rename(Strain=refStrain,
+                `Species Name`=species_name,
+                `GenBank Accession`=GenBank_accession) %>%
+  kbl(caption="Table S2. Refence Gardnerella Genomes") %>%
+  kable_classic(full_width=TRUE, html_font = "Arial")
+
+ref_table
+  
+#ref_table %>%  
+#  save_kable(file = file.path(figure_out, paste(Sys.Date(), "TableS2_refStrainGenomes.png")), zoom=5)
+```
+
+
+# Annotation Stats
+  Genome sizes and gene counts from Prokka outputs for new genomes
+```{r, message=FALSE, warning=FALSE}
+anno_stats0 <- file.path(new_genomes_path, "txt") %>%
+  list.files(full.names = TRUE) %>%
+  map(read_tsv) %>%
+  map(~separate(.x, 1, c("cat", "count"), ": "))
+
+names(anno_stats0) <- list.files(file.path(new_genomes_path, "txt"))
+
+anno_stats <- anno_stats0 %>%
+  map2(., names(.), ~mutate(.x, Strain=.y)) %>%
+  map(~spread(.x, cat, count)) %>%
+  purrr::reduce(full_join) %>%
+  mutate(Strain=str_extract(Strain, ".*(?=\\.txt)"))
+```
+
+# Species of strains not on previous phylogeny
+  Compute approximate average nucleotide identity with Mash v2.3
+```{r, warning=FALSE, message=FALSE}
+# compute alignments and keep match of smallest distance (closest reference genome)
+getGenomospecies <- function(inputGenome){
+  genomospecies <- ref_genomes %>%
+    map(~system(paste("mash dist", inputGenome,  .x), intern = TRUE)) %>%
+    map(as.data.frame) %>%
+    map(~separate(.x, 1, c("strain", "refStrain", "distance", "p", "matching_hashes"), sep="\t")) %>%
+    map(~mutate(.x, strain=str_extract(strain, "(?<=fna/).*(?=\\.fna)"))) %>%
+    map(~mutate(.x, refStrain=str_extract(refStrain, "(?<=fna/).*(?=\\.fna)"))) %>%
+    purrr::reduce(full_join) %>%
+    mutate_at(vars("distance", "p"), as.numeric) %>%
+    left_join(strainIDs[,c("strain","genomospecies", "species_name")], by="strain") %>%
+    left_join(ref_clades_species[,c("refStrain", "refGenomospecies")], by="refStrain") %>%
+    filter(distance==min(distance)) %>%
+    mutate(ANI=round((1-distance)*100, 2)) %>%
+  return(genomospecies)
+}
+
+# add assigned genomospecies of strain and reference genomes
+species_table <- new_genomes %>%
+  map(getGenomospecies) %>%
+  purrr::reduce(full_join)
+
+# print table
+species_table %>%
+  dplyr::rename("Reference Strain"=refStrain,
+                "Strain Genomospecies"=genomospecies,
+                "Species Name"=species_name,
+                "Reference Genomospecies"=refGenomospecies,
+                "ANI (%)"=ANI) %>%
+  select(strain, `Reference Strain`, `Species Name`, `Strain Genomospecies`, `Reference Genomospecies`, `ANI (%)`) %>%
+  formattable()
+```
+  
+  C0100B2 was provided by Ravel Lab as *Gardnerella* sp. 10, but best match is *Gardnerella* sp. 9. Check additional matches.
+
+```{r, message=FALSE, warning=FALSE}
+C0100B2_path <- file.path(new_genomes_path, "fna", "C0100B2.fna")
+
+ref_genomes %>%
+    map(~system(paste("mash dist", C0100B2_path,  .x), intern = TRUE)) %>%
+    map(as.data.frame) %>%
+    map(~separate(.x, 1, c("strain", "refStrain", "distance", "p", "matching_hashes"), sep="\t")) %>%
+    map(~mutate(.x, strain=str_extract(strain, "(?<=fna/).*(?=\\.fna)"))) %>%
+    map(~mutate(.x, refStrain=str_extract(refStrain, "(?<=fna/).*(?=\\.fna)"))) %>%
+    purrr::reduce(full_join) %>%
+    mutate_at(vars("distance", "p"), as.numeric) %>%
+    left_join(strainIDs[,c("strain","genomospecies", "species_name")], by="strain") %>%
+    left_join(ref_clades_species[,c("refStrain", "refGenomospecies")], by="refStrain") %>%
+    mutate(ANI=round((1-distance)*100, 2)) %>%
+    filter(ANI>90) %>%
+    formattable() %>%
+    arrange(-ANI) %>%
+    dplyr::rename("Reference Strain"=refStrain,
+                "Strain Genomospecies"=genomospecies,
+                "Species Name"=species_name,
+                "Reference Genomospecies"=refGenomospecies,
+                "ANI (%)"=ANI) %>%
+  select(strain, `Reference Strain`, `Species Name`, `Strain Genomospecies`, `Reference Genomospecies`, `ANI (%)`) %>%
+  formattable()
+```
+
+  Average nucleotide identity with *Gardnerella* sp. 10 strain 1500E is greater than 96%, the cutoff for species identity determined by Ciufo et al. (2018).
+
+# Figure 1: Phylogeny
+## Tree before rooting
+  Maximum likelihood *Gardnerella* phylogeny with *Bifidobacterium longum* 51A (GCA_004936435.1) placed onto phylogeny with Evolutionary Placement Algorithm (EPA) implemented in RAxML.
+```{r, message=FALSE, warning=FALSE, fig.height=20, fig.width=15}
+outgroup_tree <- ape::read.tree(outgroup_tree_path)
+plot(outgroup_tree)
+```
+
+## Root tree
+  Re-root the tree at the outgroup.
+```{r, message=FALSE, warning=FALSE, fig.height=20, fig.width=15}
+rooted_tree <- ape::root(outgroup_tree, outgroup = "QUERY___B_longum_51A", resolve.root = TRUE) |> # re-root at outgroup
+  drop.tip(tip="QUERY___B_longum_51A") |> # remove outgroup tip
+  ladderize(right = FALSE)
+plot(rooted_tree)
+nodelabels() # show nodelabel numbers
+#write.tree(rooted_tree, "./rootedGardPhylogeny_noOutgroup.tre") # save outgroup rooted tree
+```
+
+## Add bootstraps
+  Add bipartition bootstrap confidence information to nodes.
+```{r, message=FALSE, warning=FALSE, fig.height=20, fig.width=15}
+bootstraps <- ape::read.tree(bootstraps_path) # read bipartition bootstrap trees
+
+bs_rooted_tree <- phangorn::plotBS(rooted_tree, bootstraps, type="none", method="FBP", digits = 3) # Add bipartition bootstrap values to nodes
+bs_rooted_tree$node.label <- bs_rooted_tree$node.label*100
+```
+
+## Plot
+ Add tree metadata to show which strains are in our collection for this study.
+```{r, message=FALSE, warning=FALSE}
+tree_metadata <- tibble(strain=bs_rooted_tree$tip.label) |>
+  mutate(in_collection=strain %in% strainIDs$strain)
+```
+  
+## Figure 1: Gardnerella strain phylogeny
+```{r, message=FALSE, warning=FALSE, fig.width=7.5, fig.height=10.5}
+ggtree(bs_rooted_tree) %>%
+     flip(192, 192) %>%
+     rotate(191) %<+% tree_metadata +
+     geom_rootedge(rootedge = 0.05, colour = "black", linewidth = 0.5) +
+     geom_tiplab(aes(color=in_collection), align = TRUE, linetype = "dashed", linesize = 0.2, show.legend=FALSE, size=3) +
+  scale_color_manual(values = c("black", "#B22222")) +
+  geom_tippoint(aes(alpha=in_collection), color="#B22222", show.legend = FALSE) +
+  scale_alpha_manual(values=c(0,1)) +
+  geom_nodelab(hjust=1.3, vjust=-0.4, size = 2.5) +
+  ggtree::geom_treescale(linesize = 1, x=0, y=0, fontsize = 3, offset = -1.25, width = 0.05) +
+  ggplot2::xlim(-0.05, 1.1) +
+  geom_striplab("14018", "UMB0736", label="G. vaginalis",  offset = 0.16, offset.text = 0.005, barsize = 0.6, fontsize = 4, fontface=3) + #GS1
+  geom_striplab("JCP8108", "C0084H9", label="G. lacydonensis", offset = 0.16, offset.text = 0.005, barsize = 0.6, fontsize = 4, fontface=3) + #GS2
+  geom_striplab("JCP8017B", "W11", label="G. pickettii", offset = 0.16, offset.text = 0.005, barsize = 0.6, fontsize = 4, fontface=3) + #GS3
+  geom_striplab("JCP8151B", "JCP8070", label="G. piotii", offset = 0.16, offset.text = 0.005, barsize = 0.6, fontsize = 4, fontface=3) + #GS4
+  geom_strip("C0101A1", "GED7760B", label="paste(italic(' Gardnerella'),' sp. 11')", offset = 0.16, offset.text = 0.005, barsize = 0.6, fontsize = 4, parse=TRUE) + #GS11
+  geom_strip("CMW7778B", "KA00735", label="paste(italic(' Gardnerella'),' sp. 12')", offset = 0.16, offset.text = 0.005, barsize = 0.6, fontsize = 4, parse = TRUE) + #GS12
+  geom_strip("KA00225", "KA00225", label="paste(italic(' Gardnerella'),' sp. 13')", offset = 0.16, offset.text = 0.005, barsize = 0.6, fontsize = 4, parse = TRUE, extend=0.5) + #GS13
+  geom_striplab("GV37", "UMB0264", label="G. swidsinskii", offset = 0.16, offset.text = 0.005, barsize = 0.6, fontsize = 4, fontface=3) + #GS6
+  geom_striplab("UMB1489", "6420B", label="G. leopoldii", offset = 0.16, offset.text = 0.005, barsize = 0.6, fontsize = 4, fontface=3) + #GS5
+  geom_striplab("101", "UMB1686", label="G. greenwoodii", offset = 0.16, offset.text = 0.005, barsize = 0.6, fontsize = 4, fontface=3) + #GS8
+  geom_striplab("N160", "6119V5", label="G. bretellae", offset = 0.16, offset.text = 0.005, barsize = 0.6, fontsize = 4, fontface=3) + #GS9
+  geom_strip("C0100B2", "1500E", label="paste(italic(' Gardnerella'),' sp. 10')", offset = 0.16, offset.text = 0.005, barsize = 0.6, fontsize = 4, parse=TRUE, extend=0.5) + #GS10
+  geom_strip("PSS_7772B", "C0179B4", label="paste(italic(' Gardnerella'),' sp. 7')", offset = 0.16, offset.text = 0.005, barsize = 0.6, fontsize = 4, parse=TRUE) + #GS7
+  geom_striplab("NR010", "NR010", label="G. massiliensis", offset = 0.16, offset.text = 0.005, barsize = 0.6, fontsize = 4, fontface=3, extend=0.5) #GS14
+
+#ggsave(filename = file.path(figure_out, paste(Sys.Date(), "Figure1_strain_phylogeny.png", sep="_")))
+```
+
+# References
+  Andrews S (2010) FastQC: A Quality Control Tool for High Throughput Sequence Data. Available at: <https://www.bioinformatics.babraham.ac.uk/projects/fastqc/>.
+  
+  Bankevich A, Nurk S, Antipov D, et al. (2012) SPAdes: a new genome assembly algorithm and its applications to single-cell sequencing. *Journal of Computational Biology* 19(5): 455–477. <https://doi.org/10.1089/cmb.2012.0021>
+  
+  Berman HL, Goltsman DSA, Anderson M, et al. (2024) Gardnerella diversity and ecology in pregnancy and preterm birth. mSystems 9(6). *American Society for Microbiology*: e0133923.  <https://doi.org/10.1128/msystems.01339-23>
+  
+  Ciufo S, Kannan S, Sharma S, et al. (2018) Using average nucleotide identity to improve taxonomic assignments in prokaryotic genomes at the NCBI. *International Journal of Systematic and Evolutionary Microbiology* 68(7): 2386–2392. <https://doi.org/10.1099/ijsem.0.002809>
+  Ondov BD, Treangen TJ, Melsted P, et al. (2016) Mash: fast genome and metagenome distance estimation using MinHash. Genome biology 17(1): 132. <http://doi.org/10.1186/s13059-016-0997-x>
+  
+  Paradis E and Schliep K (2019) ape 5.0: an environment for modern phylogenetics and evolutionary analyses in R. *Bioinformatics* 35(3): 526–528. <https://doi.org/10.1093/bioinformatics/bty633> 
+  
+  Schliep KP (2011) phangorn: phylogenetic analysis in R. *Bioinformatics* 27(4): 592–593. <https://doi.org10.1093/bioinformatics/btq706>
+  
+  Seemann T (2014) Prokka: rapid prokaryotic genome annotation. *Bioinformatics* 30(14): 2068–2069. <https://doi.org/10.1093/bioinformatics/btu153>
+  
+  Stamatakis A (2014) RAxML version 8: a tool for phylogenetic analysis and post-analysis of large phylogenies. *Bioinformatics* 30(9): 1312–1313. <https://doi.org/10.1093/bioinformatics/btu033>
+  
+  Yu G, Smith DK, Zhu H, et al. (2017) Ggtree: An r package for visualization and annotation of phylogenetic trees with their covariates and other associated data. *Methods in Ecology and Evolution* 8(1): 28–36. <https://doi.org/10.1111/2041-210x.12628>
+  
+
+  
+# Session Info
+```{r}
+sessionInfo()
+```

@@ -1,42 +1,17 @@
-#  Strain Identity by WGS
+#  Gardnerella Strain Phylogeny
 
-Date: September 2021
+## New strain genome sources and assembly methods 
+Strains with genomes not in Berman et al. (2024) *mSystems* phylogeny
 
-# Strains sequenced at NCSU - round 1
-*Gardnerella* VC04, VM224, VM35
+### Strains sequenced at NCSU
+*Gardnerella* UM224, UM35
 
-Isolate DNA with Qiagen DNeasy Ultraclean microbial kit
-Lyndy in Thakur lab sequenced
+Isolate DNA with Qiagen DNeasy Ultraclean microbial kit ()
+Sequenced on Illumina MiSeq
 Check quality with FastQC v0.11.9
 Assemble with Spades v3.15.3 (spades_assembly.sh)
-Annotate with Prokka v1.14.6 (prokka_annotate.sh)
-Re-organize Prokka outputs (organizeProkkaOutput.R)
-Check identity with Mash v2.2 (gard_strains_genomes.Rmd)
 
-# Strains sequenced at NCSU - round 2
-Sequence strains that could not be confirmed by *cpn60* sequence
-*Gardnerella* C0093B3, C0179E1, CMW7778B
-
-readsIsolate DNA with Qiagen DNeasy Ultraclean microbial kit
-Lyndy in Thakur lab sequenced
-Check quality with FastQC v0.11.9
-Assemble with Spades v. 3.15.3 (spades_assembly.sh)
-Annotate with Prokka v. 1.14.6 (prokka_annotate.sh)
-Check identity with Mash v. 2.2 (gard_strains_genomes.Rmd)
-Check identity of failed isolates with blastn v2.10.1+ against nt
-
- 
-# Strains sequenced at VCU
-*Gardnerella* EX88479VC03, EX88479VC04
-*Lactobacillus crispatus* EX533959VC03, EX849587VC01 
-Note: EX88479VC04 analyzed above, not using this assembly
-
-*Gardnerella* EX88479VC03 assembly analyzed as follows:
-Annotate with Prokka v. 1.14.6 (prokka_annotate.sh)
-Check identity with Mash v. 2.2
-Check identity with Mash v. 2.2 (vcu_gard_genomes.Rmd)
-
-# Strains sequenced from Jaques Ravel
+### Strains sequenced from Jaques Ravel Lab
 *Gardnerella vaginalis* C0011E4
 *Gardnerella*  sp. 2 C0084H9
 *Gardnerella* sp. 3 C0040C2
@@ -52,29 +27,21 @@ Check identity with Mash v. 2.2 (vcu_gard_genomes.Rmd)
 Genomes provided by Michael France on September 15th 2021
 Annotate with Prokka v. 1.14.6 (prokka_annotate.sh)
 
-# ATCC 14018
-*Gardnerella vaginalis 14018*
-Most recent phylogeny made September 2020 was dereplicated, has ATCC 14019 instead of ATCC 14018 (genomes suggest they are identical strains)
-Download complete genome of ATCC 14019 on 10/19/2021:
-NZ_AP012332.1 from RefSeq. Assembly ID ASM104265v1, Organism name Gardnerella vaginalis ATCC 14018 = HCM 11026
-Place this genome in the `./ATCC 14018 Genome` directory
-Annotate with Prokka v. 1.14.6 (prokka_annotate.sh)
+### NCBI Assemblies
+*Gardnerella vaginalis* 14018 NZ_AP012332.1
+*Gardnerella pickettii* JCP8017B from GenBank
 
-
-# Assess all genomes and add to phylogeny
-1) Run Mash in `gard_strain_phylogenetics.Rmd`
-2) Run roary to determine core genome with blastp thresholds of 60% and 95% using `/scripts/roaryCoreGenome.sh`
-`docker container ls -a` to determine container names with output directories
-`docker cp 05f82792ed61:/20221026_Roary_60 '/Volumes/GoogleDrive-103667279570938865306/My Drive/Callahan Lab/gardnerella_experiments/strain_genomes'`  and 
-`docker cp 2c3602cdf52e:/20221026_Roary_95 '/Volumes/GoogleDrive-103667279570938865306/My Drive/Callahan Lab/gardnerella_experiments/strain_genomes'` to copy output directories to repository
+## Assess all genomes and add to phylogeny
+1) Annotate with Prokka v. 1.14.6 (prokka_annotate.sh) and re-organize Prokka outputs (organizeProkkaOutput.R)
+2) Compare new genomes to Berman et al., 2024 genomes using Mash in `gard_strain_phylogeny.Rmd`
+3) Run roary to determine core genome with blastp thresholds of 60% and 95% using `./scripts/roaryCoreGenome.sh`
 Also run roary on 80% blastp results based on output from 60% threshold results. copy output with:
 `docker cp 39935359e4ca:/20221031_Roary_80 '/Volumes/GoogleDrive-103667279570938865306/My Drive/Callahan Lab/gardnerella_experiments/strain_genomes'`
-3) Build phylogeny for 80% alignments using RAxML version 8 with `/scripts/MLPhylogeny.sh`. Output phylogeny used is `RAxML_bestTree.gardTree`
-4) Root phylogeny with *Bifidobacterium longum* 51A (GCA_004936435.1) as outgroup
-* run roary for outgroup `./scripts/roaryCoreGenome.sh` but with *B. longum* genome added to input (previously annotated with Prokka for 2024 mSystems paper
-+ retrieve with `docker container ls -a` to determine container name
-+ `docker cp c14a0d64f1a5:/20260208_Roary_outgroup '/Users/hannaberman/Library/CloudStorage/GoogleDrive-hlberman@ncsu.edu/My Drive/Callahan Lab/gardnerella_experiments/strain_genomes'` to copy output directories to repository  
-* Root phylogeny with EPA algorithm in RAxML version 8 with `/scripts/MLPhylogeny_root.sh`
-+ `unrootedGardPhylogeny_withOutgroup.tre` has the *Bifidobacterium longum* outgroup but is not rooted
-+ `rootedGardPhylogeny_noOutgroup.tre` has been rooted at the outgroup node and outgroup tip deleted
+4) Build phylogeny for 80% alignments and perform bootstrap analyses for support using RAxML version 8 with `./scripts/MLPhylogeny.sh`. Resulting alignmnet can be found in `./core_genome_alignments/core_gene_alignment.aln`
+5) Root `./ml_phylogeny_output/RAxML_bestTree.gardTree` phylogeny with *Bifidobacterium longum* 51A (GCA_004936435.1) as outgroup
+* Input alignment can be found in `./core_genome_alignments/outgroup_core_gene_alignment.aln`
+* Run roary for outgroup `./scripts/roaryCoreGenome.sh` but with *B. longum* genome added to input
+* Place outgroup onto phylogeny with EPA algorithm in RAxML version 8 with `./scripts/MLPhylogeny_root.sh`
+*  `rootedGardPhylogeny_noOutgroup.tre` has been rooted at the outgroup node and outgroup tip deleted using iToL. This phylogeny was used as input for phenotype phylogenetic signal testing.
+6) The phylogeny was re-rooted at the outgroup with ape v5.8-1 and the outgroup tip removed. The bootstrap confidence values were added to the phylogeny with Phangorn v2.12.1, and the tree was visualized with ggtree v4.0.4 in `gard_strain_phylogeny.Rmd`
 
