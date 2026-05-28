@@ -491,42 +491,6 @@ strain_perc_OD_DF %>%
   formattable()
 ```
 
-<!--- ### Moran's I
-```{r, message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
-# odVals <- strain_perc_OD_DF %>%
-#   with_groups(Strain, summarize, x=mean(mPercentOD)) %>%
-#   mutate(Strain=as.character(Strain),
-#          Strain=case_when(Strain=="Gv101"~"101",
-#                           Strain=="Gv5-1"~"5-1",
-#                           Strain %!in% c("101", "5-1")~Strain),
-#          Strain=factor(Strain, levels=strains0)) %>%
-#   .$x
-# names(odVals) <- strains0
-```
-
-  Load tree
-```{r, message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
-# tr <- read.tree("../strain_genomes/20221101_ml_phylogeny/RAxML_bestTree.gardTree")
-```
-
-  We choose the weights as $_{wij} = 1/d_{ij}$ , where the d’s is the distances measured on the
-tree:
-```{r, message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
-# w <- 1/cophenetic(tr)
-# diag(w) <- 0 # set diagonals to zero
-```
-
-```{r, message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
-# W <- w[rownames(w) %in% strains0 ,colnames(w) %in% strains0]
-# W
-```
-
-  We can now perform the analysis with Moran’s I:
-```{r, message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
-# Moran.I(odVals, W)
-```
---->
-
 # Safranin
 ```{r, message=FALSE, warning=FALSE}
 safPlankODDF <- rawSafPlanktonicODs %>% 
@@ -693,25 +657,6 @@ safraninPostHocPlot <- grid.grab()
 ```{r, message=FALSE,warning=FALSE, echo=FALSE}
 plot_grid(safraninPostHocPlot)
 ```
-
-<!--- ### Moran's I
-```{r, message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
-# safVals <- strain_saf_DF %>%
-#   with_groups(Strain, summarize, x=mean(mSafOD)) %>%
-#   mutate(Strain=as.character(Strain),
-#          Strain=case_when(Strain=="Gv101"~"101",
-#                           Strain=="Gv5-1"~"5-1",
-#                           Strain %!in% c("101", "5-1")~Strain),
-#          Strain=factor(Strain, levels=strains0)) %>%
-#   .$x
-# names(safVals) <- strains0
-```
-
-  We can now perform the analysis with Moran’s I:
-```{r, message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
-# Moran.I(safVals, W)
-```
---->
 
 # Figure 4: Biofilm growth as percent OD and Safranin stain
 ```{r, message=FALSE, warning=FALSE, fig.height=5, fig.width=4}

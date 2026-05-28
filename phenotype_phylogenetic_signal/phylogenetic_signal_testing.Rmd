@@ -31,11 +31,9 @@ library(patchwork)
 library(phytools)
 library(gridExtra)
 library(knitr)
-library(gtsummary)
-library(gt)
+library(kableExtra)
 library(dplyr)
 library(tibble)
-`%!in%` <- negate(`%in%`)
 ```
 
 # Import: Phylogeny + Phenotype
@@ -52,6 +50,8 @@ safranin_od_data_file <- read_csv("../formatted_phenotype_data/safranin_od.csv")
 
 # Strain IDs + genomospecies 
 strainIDs <- read.csv("../strain_phylogeny/strainIDs.csv", stringsAsFactors = FALSE)
+
+figure_out <- "../../experiments_figures"
 ```
 
 ```{r, message=FALSE, warning=FALSE, echo=TRUE}
@@ -380,6 +380,7 @@ barplot.phylo4d(p4d_carrying_capacity_ultra, tree.type = "phylo", tree.ladderize
 ```{r, message=FALSE, warning=FALSE, echo=TRUE}
 set.seed(42)
 results <- phyloSignal(p4d = p4d_carrying_capacity, methods = c("I"))
+results
 cc_moran <- results$stat["carrying_capacity", "I"]
 cc_moran_p <- results$pvalue["carrying_capacity", "I"]
 
@@ -553,6 +554,7 @@ barplot.phylo4d(p4d_percent_biofilm_ultra, tree.type = "phylo", tree.ladderize =
 ```{r, message=FALSE, warning=FALSE, echo=TRUE}
 set.seed(42)
 results <- phyloSignal(p4d = p4d_percent_biofilm, methods = c("I"))
+results
 pb_moran <- results$stat["percent_biofilm", "I"]
 pb_moran_p <- results$pvalue["percent_biofilm", "I"]
 
@@ -729,6 +731,7 @@ barplot.phylo4d(p4d_safranin_ultra, tree.type = "phylo", tree.ladderize = TRUE)
 ```{r, message=FALSE, warning=FALSE, echo=TRUE}
 set.seed(42)
 results <- phyloSignal(p4d = p4d_safranin, methods = c("I"))
+results
 sf_moran <- results$stat["safranin", "I"]
 sf_moran_p <- results$pvalue["safranin", "I"]
 
@@ -856,9 +859,8 @@ grid.arrange(grobs = rank_plots, ncol = 3, top = "Pagel's λ Permutation Test: R
 
 
 # Summary Table
+Table 3. Phylogenetic signal test statistics
 ```{r, message=FALSE, warning=FALSE, echo=TRUE}
-set_gtsummary_theme(theme_gtsummary_compact())
-
 phylo_tbl <-
   tibble::tribble(
     ~Phenotype,                       ~Pagels_lambda, ~lambda_p_LRT, ~lambda_p_perm, ~Morans_I, ~I_p_perm,
@@ -868,92 +870,18 @@ phylo_tbl <-
     "Biofilm Density (Safranin OD450)", sf_pagel,      sf_pagel_p,         sf_pagel_p_perm,          sf_moran,   sf_moran_p
   )
 
+figure3_summarytable <- phylo_tbl %>%
+  transmute(Phenotype,
+            `Pagel’s λ` = formatC(Pagels_lambda, format="e", digits=2),
+            `λ p-value (LRT)` = round(lambda_p_LRT, 3),
+            `λ p-value (perm)` = round(lambda_p_perm, 3),
+            `Moran’s I` = round(Morans_I, 4),
+            `I p-value (perm)` = I_p_perm) %>%
+  kbl(caption="Table 3. Phylogenetic signal test statistics") %>%
+  kable_classic(full_width=TRUE, html_font = "Arial")
+figure3_summarytable
 
-phylo_tbl %>%
-  transmute(
-    Phenotype,
-    `Pagel's λ` = Pagels_lambda,
-    `λ p LRT` = lambda_p_LRT,
-    `λ p perm` = lambda_p_perm,
-    `Moran's I` = Morans_I,
-    `I p perm` = I_p_perm
-  ) %>%
-  gt() %>%
-  tab_header(
-    title = md("Table 1. Phylogenetic Signal Test Results")
-  ) %>%
-  tab_style(
-    style = cell_borders(
-      sides = "bottom",
-      color = "black",
-      weight = px(2),
-      style = "solid"
-    ),
-    locations = cells_title(groups = "title")
-  ) %>%
-  cols_label(
-    Phenotype = md("Phenotype"),
-    `Pagel's λ` = md("Pagel’s λ"),
-    `λ p LRT` = md("p-value (LRT)"),
-    `λ p perm` = md("p-value (perm)"),
-    `Moran's I` = md("Moran’s I"),
-    `I p perm` = md("p-value (perm)")
-  ) %>%
-  tab_style(
-    style = cell_borders(
-      sides = "top",
-      color = "black",
-      weight = px(0.5),
-      style = "solid"
-    ),
-    locations = cells_column_labels()
-  ) %>%
-  tab_style(
-    style = cell_borders(
-      sides = "bottom",
-      color = "black",
-      weight = px(0.5),
-      style = "solid"
-    ),
-    locations = cells_column_labels()
-  ) %>%
-  cols_align(
-  align = "left",
-  columns = Phenotype
-) %>%
-cols_align(
-  align = "center",
-  columns = -Phenotype
-) %>%
-  tab_options(
-  table.font.size = px(12),
-
-  column_labels.font.size = px(12),
-  column_labels.font.weight = "normal",
-  column_labels.border.bottom.color = "black",
-  column_labels.border.bottom.width = px(1),
-  column_labels.border.bottom.style = "solid",
-
-  heading.title.font.size = px(12),
-  heading.title.font.weight = "normal",
-
-  table_body.border.bottom.color = "black",
-  table_body.border.bottom.width = px(2),
-  table_body.border.bottom.style = "solid",
-  table_body.border.top.color = "black",
-  table_body.border.top.width = px(2),
-  table_body.border.top.style = "solid",
-
-  table.border.top.color = "transparent",
-  table.border.top.width = px(1),
-  table.border.bottom.color = "black",
-  table.border.bottom.width = px(1),
-
-  table.align = "left",
-  data_row.padding = px(4),
-  heading.align = "left"
-)
-
+#save_kable(figure3_summarytable, file = file.path(figure_out, paste(Sys.Date(), "Table3_phylosignalTable.png", sep="_")), zoom=6)
 ```
 
 

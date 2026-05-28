@@ -371,47 +371,6 @@ minpHtable
 #save_kable(minpHtable, file = file.path(figureOut, paste(Sys.Date(), "Table1_minpHTable.png", sep="_")), zoom=6)
 ```
 
-<!---### Moran's I
-  Is minimum pH phylogenetically correlated by Moran's I?
-```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=FALSE}
-# pHvals0 <- ttest %>%
-#   group_by(Strain, Species) %>%
-#   filter(p.signif!="ns") %>%
-#   filter(pH==min(pH)) %>%
-#   mutate(Strain=as.character(Strain),
-#          Strain=case_when(Strain=="Gv101"~"101",
-#                           Strain=="Gv5-1"~"5-1",
-#                           Strain %!in% c("101", "5-1")~Strain),
-#          Strain=factor(Strain, levels=strains0),
-#          pH=as.numeric(pH))
-# 
-# pHvals <- set_names(pHvals0$pH, pHvals0$Strain)
-# pHvals
-```
-
-  Load tree
-```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=FALSE}
-# tr <- read.tree("../strain_genomes/20221101_ml_phylogeny/RAxML_bestTree.gardTree")
-```
-
-  We choose the weights as $_{wij} = 1/d_{ij}$ , where the d’s is the distances measured on the
-tree:
-```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=FALSE}
-# w <- 1/cophenetic(tr)
-# diag(w) <- 0 # set diagonals to zero
-```
-
-```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=FALSE}
-# W <- w[rownames(w) %in% names(pHvals),colnames(w) %in% names(pHvals)]
-# W
-```
-
-  We can now perform the analysis with Moran’s I:
-```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=FALSE}
-# Moran.I(pHvals, W)
-```
---->
-
 ## Compare growth at pHs
 ### Isolate Anova
 #### One-way Anovas
@@ -475,27 +434,6 @@ makeCorrPlots <- function(inputMatrix, pvalMatrix) {
 pHODcorrPlots <- map2(pHODcorplotInput, pHODpvals, makeCorrPlots)
 ```
 
-<!---#### Moran's I
-```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=FALSE}
-# pHODs0 <- DF %>%
-#   with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
-#   with_groups(c(pH, Strain), summarize, OD=mean(mOD)) %>%
-#   mutate(Strain=as.character(Strain),
-#          Strain=case_when(Strain=="Gv101"~"101",
-#                           Strain=="Gv5-1"~"5-1",
-#                           Strain %!in% c("101", "5-1")~Strain),
-#          Strain=factor(Strain, levels=strains0)) %>%
-#   split(.$pH)
-#
-# pHODs <- map(pHODs0, ~set_names(.x$OD, .x$Strain))
-```
-
-```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=FALSE}
-#map(pHODs, ~Moran.I(.x, W))
-```
---->
-
-# Proportion of pH 7 growth
 ```{r, message=FALSE, warning=FALSE}
 ratioDF <- DF %>%
   with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD)) %>%
@@ -595,7 +533,7 @@ plot_grid(pHGrowthPlot+theme(axis.title.y = element_text(size=18), strip.text.x 
 ```
 
 # Figure S4: Post Hoc Test Results
-```{r, message=FALSE, warning=FALSE, fig.width=16, fig.height=32.5} 
+```{r, message=FALSE, warning=FALSE, fig.width=16, fig.height=32.5`} 
 ODPostHocPlots <- plot_grid(pHODcorrPlots$`3.5`, pHODcorrPlots$`4`, pHODcorrPlots$`4.5`, pHODcorrPlots$`5`, pHODcorrPlots$`5.5`, pHODcorrPlots$`6`, pHODcorrPlots$`7`, ncol=1,  labels = c("A", "C", "E", "G", "I", "K", "M"), label_size = 20)
 
 ratioPostHocPlots <- plot_grid(pHratiocorrPlots$`3.5`, pHratiocorrPlots$`4`,pHratiocorrPlots$`4.5`, pHratiocorrPlots$`5`, pHratiocorrPlots$`5.5`, pHratiocorrPlots$`6`, ggplot+geom_blank(),  ncol=1, labels = c("B", "D", "F", "H",  "J",  "L", " "), label_size = 20)
