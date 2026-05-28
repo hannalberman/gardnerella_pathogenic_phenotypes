@@ -139,7 +139,7 @@ micDF1 <- micDF %>%
          BioRepRank=as.character(BioRepRank),   
          ColoniesThroughout=str_detect(Notes, "colonies")) # create a true/false column for samples with colonies throughout 
 ```
-## Figure 6: Metronidazole MICs
+## Figure: Metronidazole MICs
 ```{r, message=FALSE, warning=FALSE}
 micPlot <- micDF1 %>%
   mutate(Strain=factor(Strain, levels = strains),
@@ -168,7 +168,7 @@ speciesBar <- strainSpecies %>%
     theme(legend.position = "none")
 
 plot_grid(speciesBar, micPlot, ncol=1, rel_heights = c(0.08, 1),  align = "v", axis = "lr")
-#ggsave(file.path(figureOut, paste(Sys.Date(), "Figure6_metro_mic.png", sep="_")))
+#ggsave(file.path(figureOut, paste(Sys.Date(), "Figure_metro_mic.png", sep="_")))
 ```
 
   The MIC of most strains was >256. Results were reproduced with most strains. UM35 displayed variability among biological replicates. The MIC for biological replicate 1 was >256 and 16 for replicate 2. Two additional biological replicates yielded results between these values: MICs of 24, 64, 96.
@@ -183,10 +183,10 @@ MICtable <- micDF1 %>%
          MICnum = str_extract(MIC, "[^>]+$") %>% as.numeric()) %>% # create a numeric column of MIC
   group_by(Strain, Species) %>%
   summarize(minMIC=min(MICnum), maxMIC=max(MICnum), CT=any(ColoniesThroughout==TRUE)) %>%
-  mutate(`Metronidazole resistance`=case_when(minMIC>=32 & maxMIC>=32 & CT==FALSE ~ "+",
-                             minMIC<32 & maxMIC<32 & CT==FALSE ~ "-",
-                             minMIC<32 & maxMIC >= 32 ~ "variable",
-                             CT==TRUE ~ "variable"),
+  mutate(`Metronidazole resistance`=case_when(minMIC>=32 & maxMIC>=32 & CT==FALSE ~ "\\+",
+                             minMIC<32 & maxMIC<32 & CT==FALSE ~ "\\-",
+                             minMIC<32 & maxMIC >= 32 ~ "\\*",
+                             CT==TRUE ~ "**"),
          minMIC=as.character(minMIC),
          maxMIC=as.character(maxMIC),
          minMIC=paste0("[", minMIC, "]"),
@@ -199,10 +199,12 @@ MICtable <- micDF1 %>%
                                minMIC==maxMIC ~ maxMIC),
          `Colonies`=case_when(CT==TRUE~"*",
                               CT==FALSE~"")) %>%
-  select(Species, Strain, `MIC range`, `Metronidazole resistance`, Colonies) %>%
-  kbl(caption="Table 2. Minimum inhibitory concentration and resistance of metronidazole") %>%
-  kable_classic(full_width=TRUE, html_font = "Arial")
-
+  select(Species, Strain, `MIC range`, `Metronidazole resistance`) %>%
+  kbl(escape=FALSE, caption="Table 2. Minimum inhibitory concentration and resistance of metronidazole", align="lllc") %>%
+  kable_classic(full_width=TRUE, html_font = "Arial") %>%
+  #kable_styling(protect_latex = TRUE) %>%
+  footnote(general="+ Resistant; - Susceptible; * Variable susceptibility; ** Zone of inhibtion with colonies throughout", general_title = "")
+  
 MICtable
 
 #save_kable(MICtable, file = file.path(figureOut, paste(Sys.Date(), "Table2_MICTable.png", sep="_")), zoom=6)
