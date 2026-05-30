@@ -11,7 +11,7 @@
 
 <meta name="author" content="Hanna Berman" />
 
-<meta name="date" content="2026-05-19" />
+<meta name="date" content="2026-05-30" />
 
 <title>Gardnerella Strain Metronidazole MICs</title>
 
@@ -1705,7 +1705,7 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">Gardnerella Strain Metronidazole MICs</h1>
 <h4 class="author">Hanna Berman</h4>
-<h4 class="date">May 19, 2026</h4>
+<h4 class="date">May 30, 2026</h4>
 
 </div>
 
@@ -1863,11 +1863,11 @@ The MIC for biological replicate 1 was &gt;256 and 16 for replicate 2.
 Two additional biological replicates yielded results between these
 values: MICs of 24, 64, 96.</p>
 <p>Points that are labeled in blue are cases where there was no lawn
-past the MIC but there were colonies. These occurred in two isolates in
-<em>Gardnerella Gardnerella lacydonensis</em>. One of these isolates,
-C0084H9 displayed one biological replicate with this result and one with
-an MIC &gt;256. The third <em>G. lacydonensis</em> isolate, JCP7275 had
-an MIC of &gt;256.</p>
+past the MIC but there were colonies (heteroresistance). These occurred
+in two isolates in <em>Gardnerella Gardnerella lacydonensis</em>. One of
+these isolates, C0084H9 displayed one biological replicate with this
+result and one with an MIC &gt;256. The third <em>G. lacydonensis</em>
+isolate, JCP7275 had an MIC of &gt;256.</p>
 </div>
 <div id="table-2-mic-ranges-and-susceptibility-of-metronidazole" class="section level2">
 <h2>Table 2: MIC Ranges and Susceptibility of Metronidazole</h2>
@@ -1897,7 +1897,7 @@ MICtable &lt;- micDF1 %&gt;%
   kbl(escape=FALSE, caption=&quot;Table 2. Minimum inhibitory concentration and resistance of metronidazole&quot;, align=&quot;lllc&quot;) %&gt;%
   kable_classic(full_width=TRUE, html_font = &quot;Arial&quot;) %&gt;%
   #kable_styling(protect_latex = TRUE) %&gt;%
-  footnote(general=&quot;+ Resistant; - Susceptible; * Variable susceptibility; ** Zone of inhibtion with colonies throughout&quot;, general_title = &quot;&quot;)
+  footnote(general=&quot;+ Resistant; - Susceptible; * Variable susceptibility; ** Heteroresistant (zone of inhibtion with colonies throughout)&quot;, general_title = &quot;&quot;)
   
 MICtable</code></pre>
 <table class=" lightable-classic" style="font-family: Arial; margin-left: auto; margin-right: auto;border-bottom: 0;">
@@ -2221,7 +2221,7 @@ CMW7778B
 <tr>
 <td style="padding: 0; " colspan="100%">
 <sup></sup> + Resistant; - Susceptible; * Variable susceptibility; **
-Zone of inhibtion with colonies throughout
+Heteroresistant (zone of inhibtion with colonies throughout)
 </td>
 </tr>
 </tfoot>

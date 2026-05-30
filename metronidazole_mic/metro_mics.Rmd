@@ -173,7 +173,7 @@ plot_grid(speciesBar, micPlot, ncol=1, rel_heights = c(0.08, 1),  align = "v", a
 
   The MIC of most strains was >256. Results were reproduced with most strains. UM35 displayed variability among biological replicates. The MIC for biological replicate 1 was >256 and 16 for replicate 2. Two additional biological replicates yielded results between these values: MICs of 24, 64, 96.
   
-  Points that are labeled in blue are cases where there was no lawn past the MIC but there were colonies. These occurred in two isolates in *Gardnerella Gardnerella lacydonensis*. One of these isolates, C0084H9 displayed one biological replicate with this result and one with an MIC >256. The third *G. lacydonensis* isolate, JCP7275 had an MIC of >256.
+  Points that are labeled in blue are cases where there was no lawn past the MIC but there were colonies (heteroresistance). These occurred in two isolates in *Gardnerella Gardnerella lacydonensis*. One of these isolates, C0084H9 displayed one biological replicate with this result and one with an MIC >256. The third *G. lacydonensis* isolate, JCP7275 had an MIC of >256.
 
 ## Table 2: MIC Ranges and Susceptibility of Metronidazole 
 ```{r, message=FALSE, warning=FALSE}
@@ -203,7 +203,7 @@ MICtable <- micDF1 %>%
   kbl(escape=FALSE, caption="Table 2. Minimum inhibitory concentration and resistance of metronidazole", align="lllc") %>%
   kable_classic(full_width=TRUE, html_font = "Arial") %>%
   #kable_styling(protect_latex = TRUE) %>%
-  footnote(general="+ Resistant; - Susceptible; * Variable susceptibility; ** Zone of inhibtion with colonies throughout", general_title = "")
+  footnote(general="+ Resistant; - Susceptible; * Variable susceptibility; ** Heteroresistant (zone of inhibtion with colonies throughout)", general_title = "")
   
 MICtable
 
