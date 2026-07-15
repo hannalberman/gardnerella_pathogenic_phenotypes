@@ -246,32 +246,30 @@ DF0 %>%
   Look at issues with low pH 7 results
 ```{r, message=FALSE, warning=FALSE}
 DF0 %>%
-  filter(Strain %in% c("14018", "315-A", "C0011E4", "AMD", "Gv5-1", "Gv101"), 
-         pH==7) %>%
+  filter(Strain %in% c("AMD", "Gv5-1", "Gv101", "C0102A2", "C0056B5", "C0093B3")) %>%  
+#         pH==7) %>%
   mutate(PlateSet=str_extract(Batch, "(?<=[A|B])[1|2]"), 
          BatchRep=paste(Batch, BioRep, sep="."),
-         BioRep=case_when(BatchRep=="1A1.A"~"A",
-                          BatchRep=="1A1.B"~"B",
-                          BatchRep=="1A2.A"~"C",
-                          BatchRep=="1A2.B"~"D",
-                          BatchRep=="1B1.A"~"E",
-                          BatchRep=="1B1.B"~"F",
-                          BatchRep=="2A1.A"~"A",
-                          BatchRep=="2A1.B"~"B",
-                          BatchRep=="2A2.A"~"C",
-                          BatchRep=="2A2.B"~"D")) %>%
-  ggplot(aes(x=Strain, y=OD, color=BioRep)) +
+         Strain=as.character(Strain)) %>%
+  #ggplot(aes(x=Strain, y=OD, color=BatchRep)) +
+  split(.$Strain) %>%
+  map(~ggplot(.x, aes(x=pH, y=OD, color=BatchRep)) +
   geom_quasirandom(size=2, alpha=0.5) +
-  labs(y=bquote(OD[600]), x=NULL)
+  geom_hline(yintercept = 0.01, linetype=2, color="red") +
+  facet_wrap(~Strain) +
+  labs(y=bquote(OD[600]), x=NULL))
   
 ```
-
-  All of Gv101 biological replicate A and one technical replicate of AMD
+Issues found in:
+* One technical replicate of AMD
+* C0102A2 biological replicate A from 1B1, and B from 1B2
+* Gv101 biological replicate A from batch 1A1, and B from 1B1
+* Gv5-1 Biological replicate A from batch 1A2
 
 ```{r, warning=FALSE, message=FALSE}
 filterWells <- DF0 %>%
   filter(pH==7, 
-         OD<0.005) %>%
+         OD<0.01) %>% # samples w
   mutate(SampleWell=paste(Sample, well, sep=".")) %>%
   .$SampleWell
 filterWells
@@ -302,16 +300,18 @@ filterpHwells
 ```
   Create final data frame
 ```{r, measure=FALSE, warning=FALSE}
-DF <- DF0 %>%
+DF1 <- DF0 %>%
   mutate(SampleWell=paste(Sample, well, sep=".")) %>%
   filter(SampleWell %!in% filterWells,
          Sample %!in% filterSamples,
-         SampleWell %!in% filterpHwells)
+         SampleWell %!in% c(filterpHwells, "2A2.AMD.A.H3")) %>% # filter pH 6 protocol 3 and the pH 7 well of AMD that was below 0.01
+  mutate(OD=case_when(OD<0.003~0,
+                      OD>=0.003~OD)) # measurements below the limit of detection (0.003) become 0
 ```
 
   Save formatted data
 ```{r, message=FALSE, warning=FALSE}
-pH_DF_save <- DF %>%
+pH_DF_save <- DF1 %>%
   with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
   mutate(pH=as.numeric(pH),
          Sample=paste(Strain, Batch, BioRep, pH, sep=".")) %>%
@@ -320,18 +320,22 @@ pH_DF_save <- DF %>%
 # write_csv(pH_DF_save, file.path(formattedPhenDataOut, "pH_growth.csv"))
 ```
 
+  Data frame used for testing
+```{r, message=FALSE, warning=FALSE}
+DF <- DF1 %>%
+  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD))
+```
+
 
 ## Plot
 ```{r, message=FALSE, warning=FALSE}
 annotationDF <- DF %>%
   filter(pH==7) %>%
-  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
   with_groups(c(Species, Strain), summarize, y=mean(mOD)) %>%
   with_groups(Species, mutate, y=1.2-.2*rank(Strain))
 
 
 pHGrowthPlot <- DF %>%
-  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
   mutate(pH=as.numeric(pH)) %>%
   ggplot() +
   stat_summary(aes(x=pH, y=mOD, group=Strain, linetype=Strain, color=Strain), fun="mean", geom = "line", show.legend = FALSE) +
@@ -350,7 +354,6 @@ pHGrowthPlot
 ### T-test
 ```{r message=FALSE, warning=FALSE}
 ttest <- DF %>%
-  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
   group_by(Species, Strain, pH) %>%
   t_test(mOD~1, mu=0.01, alternative = "greater") %>%
   add_significance("p")
@@ -362,13 +365,15 @@ minpHtable <- ttest %>%
   filter(p.signif!="ns") %>%
   filter(pH==min(pH)) %>%
   select(Species, Strain, pH) %>%
-  arrange(pH) %>%
+  arrange(pH)
+
+minpHtableFigure <- minpHtable %>%
   kbl(caption="Table 1. Minimum pH with growth") %>%
   kable_classic(full_width=TRUE, html_font = "Arial")
 
-minpHtable
+minpHtableFigure
 
-#save_kable(minpHtable, file = file.path(figureOut, paste(Sys.Date(), "Table1_minpHTable.png", sep="_")), zoom=6)
+#save_kable(minpHtableFigure, file = file.path(figureOut, paste(Sys.Date(), "Table1_minpHTable.png", sep="_")), zoom=6)
 ```
 
 ## Compare growth at pHs
@@ -376,7 +381,6 @@ minpHtable
 #### One-way Anovas
 ```{r, message=FALSE, warning=FALSE}
 DF %>%
-  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
   select(Species, Strain, Protocol, pH, mOD, sdOD) %>%
   group_by(pH) %>%
   anova_test(mOD~Strain) %>%
@@ -386,7 +390,6 @@ DF %>%
 #### Tukey's HSD
 ```{r, message=FALSE, warning=FALSE}
 odPostHocs <- DF %>%
-  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
   select(Species, Strain, Protocol, pH, mOD, sdOD) %>%
   group_by(pH) %>%
   tukey_hsd(mOD~Strain, p.adjust.method = "BH")
@@ -436,7 +439,7 @@ pHODcorrPlots <- map2(pHODcorplotInput, pHODpvals, makeCorrPlots)
 
 ```{r, message=FALSE, warning=FALSE}
 ratioDF <- DF %>%
-  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD)) %>%
+  select(-sdOD) %>%
   spread(pH, mOD) %>%
   mutate_at(vars("3.5", "4", "4.5", "5", "5.5", "6", "7"), ~.x/`7`) %>%
   gather("pH", "ratio", c("3.5", "4", "4.5", "5", "5.5", "6", "7"))
@@ -444,24 +447,23 @@ ratioDF <- DF %>%
 
 ## Plot
 ```{r, message=FALSE, warning=FALSE}
-
 annotationDFratio <- DF %>%
   filter(pH==7) %>%
-  with_groups(c(Number, Species, Strain, pH, Batch, Plate, BioRep, Protocol), summarize, mOD=mean(OD), sdOD=sd(OD)) %>%
   with_groups(c(Species, Strain), summarize, y=mean(mOD)) %>%
-  with_groups(Species, mutate, y=2.5-.5*rank(Strain))
+  with_groups(Species, mutate, y=160-20*rank(Strain))
 
 pHratioPlot <- ratioDF %>%
-  mutate(pH=as.numeric(pH)) %>%
+  mutate(pH=as.numeric(pH),
+         percent=ratio*100) %>%
   ggplot() +
-  stat_summary(aes(x=pH, y=ratio, group=Strain, linetype=Strain, color=Strain), fun="mean", geom = "line", show.legend = FALSE) +
-  geom_point(aes(x=pH, y=ratio, color=Strain, shape=Strain), show.legend = FALSE) +
+  stat_summary(aes(x=pH, y=percent, group=Strain, linetype=Strain, color=Strain), fun="mean", geom = "line", show.legend = FALSE) +
+  geom_point(aes(x=pH, y=percent, color=Strain, shape=Strain), show.legend = FALSE) +
   geom_text(data=annotationDFratio, aes(label=Strain, color=Strain, x=3.5, y=y), size=3, show.legend = FALSE, hjust=0) +
   facet_wrap(~Species) +
   scale_shape_manual(values=c(15, 16, 17, 15, 16, 17, 15, 16, 15, 16, 17, 15, 16, 15, 16, 17, 15, 15, 16, 15, 15, 15)) +
   scale_linetype_manual(values=c(1, 2, 3, 1, 2, 3, 1, 2, 1, 2, 3, 1, 2, 3, 1, 2, 1, 1, 2, 1, 1, 1)) +
   scale_color_manual(values=c("black", "gray47", "brown", "black", "gray47", "brown", "black", "gray47", "black", "gray47", "brown", "black", "gray47", "black", "gray47",  "brown", "black", "black", "gray47", "black", "black", "black")) +
-  labs(y="Proportion pH 7 growth", x="pH")
+  labs(y="Percent pH 7 growth", x="pH")
 pHratioPlot
 ```
 
@@ -473,6 +475,41 @@ ratioDF %>%
   with_groups(pH, summarize, perc=mean(ratio, na.rm=TRUE)*100)
 ```
 
+### Average OD at low pH with significant strains only
+```{r, message=FALSE, warning=FALSE}
+pH3.5_4Strains <- minpHtable %>%
+  filter(pH<4.5) %>%
+  mutate(Strain=as.character(Strain)) %>%
+  .$Strain
+
+pH4.5Strains <- minpHtable %>%
+  filter(pH<5) %>%
+  mutate(Strain=as.character(Strain)) %>%
+  .$Strain
+```
+  
+Average ratio of pH 7 growth at each pH of 315-A
+```{r, message=FALSE, warning=FALSE}
+DF %>%
+  select(-sdOD) %>%
+  filter(Strain %in% pH3.5_4Strains) %>% # 315-A only
+  spread(pH, mOD) %>%
+  mutate_at(vars("3.5", "4", "4.5", "5", "5.5", "6", "7"), ~.x/`7`) %>%
+  gather("pH", "ratio", c("3.5", "4", "4.5", "5", "5.5", "6", "7")) %>%
+  filter(pH!=7) %>%
+  with_groups(pH, summarize, perc=mean(ratio, na.rm=TRUE)*100)
+```
+    
+Ratios of pH 7 growth at pH 4.5 of surviving strains
+```{r, message=FALSE, warning=FALSE}
+DF %>%
+  select(-sdOD) %>%
+  filter(Strain %in% pH4.5Strains) %>% # 315-A only
+  filter(pH %in% c(4.5, 7)) %>%
+  spread(pH, mOD) %>%
+  mutate(ratio4.5=`4.5`/`7`*100) %>%
+  with_groups(Strain, summarize, mean=mean(ratio4.5), sd=sd(ratio4.5))
+```
 
 ### Isolate Anova
 #### One-way Anovas
@@ -533,7 +570,7 @@ plot_grid(pHGrowthPlot+theme(axis.title.y = element_text(size=18), strip.text.x 
 ```
 
 # Figure S4: Post Hoc Test Results
-```{r, message=FALSE, warning=FALSE, fig.width=16, fig.height=32.5`} 
+```{r, message=FALSE, warning=FALSE, fig.width=16, fig.height=32.5} 
 ODPostHocPlots <- plot_grid(pHODcorrPlots$`3.5`, pHODcorrPlots$`4`, pHODcorrPlots$`4.5`, pHODcorrPlots$`5`, pHODcorrPlots$`5.5`, pHODcorrPlots$`6`, pHODcorrPlots$`7`, ncol=1,  labels = c("A", "C", "E", "G", "I", "K", "M"), label_size = 20)
 
 ratioPostHocPlots <- plot_grid(pHratiocorrPlots$`3.5`, pHratiocorrPlots$`4`,pHratiocorrPlots$`4.5`, pHratiocorrPlots$`5`, pHratiocorrPlots$`5.5`, pHratiocorrPlots$`6`, ggplot+geom_blank(),  ncol=1, labels = c("B", "D", "F", "H",  "J",  "L", " "), label_size = 20)
